@@ -1,0 +1,287 @@
+:root {
+    /* ---------------Colors---------------*/
+    --color-blue-filled: #008dff;
+    --color-blue-hover: #0079eb;
+    --color-blue-disabled: #e5e7eb;
+    --color-gray-filled: #374151;
+    --color-gray-hover: #111827;
+    --color-gray-disabled: #e5e7eb;
+
+    --background-gray-03: #e7eef5;
+    --background-gray-02: #f4f6f8;
+    --background-gray-01: #fcfcfc;
+    --background-white-01: #ffffff;
+    --background-blue-01: #008dff;
+
+    --stroke-gray-04: #374151;
+    --stroke-gray-03: #687280;
+    --stroke-gray-02: #9ca3af;
+    --stroke-gray-01: #d1d5db;
+    --stroke-blue-01: #008dff;
+    --stroke-red-01: #ef4444;
+
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --text-third: #9ca3af;
+    --text-disabled: rgba(17, 24, 39, 0.2);
+    --text-white: #ffffff;
+    --text-blue: #008dff;
+    --text-sub-blue: #99d2fe;
+    --text-red: #ef4444;
+    --text-sub-red: #f87171;
+    /* ------------------------------------*/
+}
+
+/* ---------------reset--------------- */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+button,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* ------------------------------------*/
+
+/* ----------------Font----------------*/
+[class*='title'] {
+    font-family: 'Pretendard';
+    font-style: 'normal';
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: -0.01em;
+}
+
+.page-title-03 {
+    font-size: 48px;
+}
+
+.page-title-02 {
+    font-size: 40px;
+}
+
+.page-title-01 {
+    font-size: 36px;
+}
+
+.title-03 {
+    font-size: 32px;
+}
+
+.title-02 {
+    font-size: 28px;
+}
+
+.title-01 {
+    font-size: 24px;
+}
+
+.subtitle-03 {
+    font-size: 20px;
+}
+
+.subtitle-02 {
+    font-size: 16px;
+}
+
+.subtitle-03 {
+    font-size: 14px;
+}
+
+[class^='body'] {
+    font-family: 'Pretendard';
+    font-style: 'normal';
+    line-height: 160%;
+    letter-spacing: -0.01em;
+}
+
+[class$='-me'] {
+    font-weight: 500;
+}
+
+[class$='-bd'] {
+    font-weight: 700;
+}
+
+[class^='body-05'] {
+    font-size: 20px;
+}
+
+[class^='body-04'] {
+    font-size: 18px;
+}
+
+[class^='body-03'] {
+    font-size: 16px;
+}
+
+[class^='body-02'] {
+    font-size: 14px;
+}
+
+[class^='body-01'] {
+    font-size: 12px;
+}
+
+.body-caption {
+    font-weight: 500;
+    font-size: 10px;
+}
+/* ------------------------------------*/
+
+/* ---------------Round----------------*/
+.round-04 {
+    border-radius: 4px;
+}
+
+.round-08 {
+    border-radius: 8px;
+}
+
+.round-12 {
+    border-radius: 12px;
+}
+
+.round-16 {
+    border-radius: 16px;
+}
+
+.round-20 {
+    border-radius: 20px;
+}
+/* ------------------------------------*/
+
+/* ---------------Shadow---------------*/
+.shadow-01 {
+    box-shadow: 0px 0px 1px rgba(66, 66, 66, 0.04),
+        0px 2px 4px rgba(117, 117, 117, 0.16);
+}
+
+.shadow-02 {
+    box-shadow: 0px 1px 2px rgba(66, 66, 66, 0.04),
+        0px 4px 8px rgba(117, 117, 117, 0.16);
+}
+
+.shadow-03 {
+    box-shadow: 0px 2px 4px rgba(66, 66, 66, 0.04),
+        0px 8px 16px rgba(117, 117, 117, 0.16);
+}
+/* ------------------------------------*/

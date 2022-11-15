@@ -3,7 +3,6 @@ customElements.define(
     class extends HTMLElement {
         connectedCallback() {
             this.attachShadow({ mode: 'open' });
-
             const style = this.getAttribute('style_') ?? 'primary';
             const state = this.getAttribute('state') ?? 'default';
             const size = this.getAttribute('size') ?? 'm';
@@ -93,6 +92,8 @@ customElements.define(
                             </svg>`,
                             'body-05-me',
                         ];
+                    case 'modal':
+                        return [46, '10px 12px', 10, '', 'body-03-me'];
                     default:
                         return [
                             38,
@@ -120,8 +121,11 @@ customElements.define(
                 }
             };
 
+            const width = this.style.width;
+
             this.style = `
                 cursor: pointer;
+                width: ${width};
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
@@ -130,7 +134,7 @@ customElements.define(
                 gap: ${gap}px;
                 color: ${font_color};
                 height: ${height}px;
-
+                box-sizing: border-box;
                 ${
                     state === 'default'
                         ? `
@@ -140,7 +144,7 @@ customElements.define(
                         ? `background: ${color_disabled};`
                         : ''
                 }
-                border-radius: 4px;
+                border-radius: ${size === 'modal' ? '2' : '4'}px;
                 ${
                     style === 'outline'
                         ? `
@@ -163,7 +167,6 @@ customElements.define(
                 `;
             });
         }
-        setContent(content) {}
     },
 );
 
@@ -250,6 +253,8 @@ customElements.define(
 </svg>`;
                             },
                         ];
+                    case 'modal':
+                        return [10, 'body-03-me', undefined];
                     default:
                         return [
                             icon === 'none' ? 10 : 2,
@@ -264,14 +269,30 @@ customElements.define(
 
             this.classList += font_class;
 
-            const arrow = getArrow(color_filled);
-            setTimeout(() => {
-                this.content = this.innerHTML;
+            const setInnerHTML = (color) => {
+                const arrow = getArrow?.(color);
                 this.button.innerHTML = `
                     ${icon === 'left' ? arrow : ''}
                     <div style="margin: 0 0.3em;">${this.content}</div>
                     ${icon === 'right' ? arrow : ''}
                 `;
+            };
+
+            this.onmouseover = () => {
+                if (state === 'default') {
+                    setInnerHTML(color_hover);
+                }
+            };
+
+            this.onmouseout = () => {
+                if (state === 'deault') {
+                    setInnerHTML(color_filled);
+                }
+            };
+
+            setTimeout(() => {
+                this.content = this.innerHTML;
+                setInnerHTML(color_filled);
             });
 
             const stylesheet = document.createElement('style');
@@ -288,10 +309,31 @@ customElements.define(
                         state === 'default' ? color_filled : color_disabled
                     };
                     ${underline === 'true' ? 'text-decoration: underline;' : ''}
+                    ${size === 'modal' ? 'height: 46px;' : ''}
+                    width: 100%;
+                    background: none;
+                }
+
+                ${
+                    state === 'default'
+                        ? `
+                        .btn:hover {
+                            color: ${color_hover}
+                        }
+                    `
+                        : ''
                 }
             `;
 
-            shadow.append(stylesheet, this.button);
+            const link1 = document.createElement('link');
+            link1.setAttribute('href', '../css/common.css');
+            link1.setAttribute('rel', 'stylesheet');
+
+            const link2 = document.createElement('link');
+            link2.setAttribute('href', '../css/reset.css');
+            link2.setAttribute('rel', 'stylesheet');
+
+            shadow.append(link1, link2, stylesheet, this.button);
         }
     },
 );
@@ -306,7 +348,7 @@ customElements.define(
             this.button.setAttribute('class', 'btn');
         }
         connectedCallback() {
-            this.attachShadow({ mode: 'open' });
+            const shadow = this.attachShadow({ mode: 'open' });
 
             const style = this.getAttribute('style_') ?? 'primary';
             const state = this.getAttribute('state') ?? 'default';
@@ -430,7 +472,7 @@ customElements.define(
                 }
             `;
 
-            this.shadowRoot.append(stylesheet, this.button);
+            shadow.append(stylesheet, this.button);
         }
     },
 );

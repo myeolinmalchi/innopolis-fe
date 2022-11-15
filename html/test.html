@@ -11,8 +11,32 @@
             type="text/javascript"
             src="../js/components/button.js"
         ></script>
+        <script type="text/javascript" src="../js/components/modal.js"></script>
+        <script
+            type="text/javascript"
+            src="../js/components/footer.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="../js/components/text-field.js"
+        ></script>
+
+        <custom-modal
+            title="이것은 제목입니다."
+            content="이것은 내용입니다."
+            btn-count="2"
+            btn1-value="btn1"
+            btn1-type="primary"
+            btn2-value="btn2"
+            btn2-type="text"
+            btn-direction="vertical"
+            use-img="true"
+            img-src=""
+        ></custom-modal>
 
         <div style="display: flex; gap: 10px; margin: 10px">
+            <textfield-search placeholder="test"></textfield-search>
+
             <button-default type="priamry" state="default" size="s">
                 기본 버튼
             </button-default>
@@ -158,7 +182,7 @@
         </div>
 
         <div style="display: flex; gap: 10px; margin: 10px">
-            <button-text>텍스트 버튼</button-text>
+            <button-text icon="left">텍스트 버튼</button-text>
             <button-default state="disabled" size="s">
                 기본 버튼
             </button-default>

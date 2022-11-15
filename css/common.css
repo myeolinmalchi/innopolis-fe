@@ -92,23 +92,23 @@
     font-weight: 700;
 }
 
-[class^='body-05'] {
+[class*='body-05'] {
     font-size: 20px;
 }
 
-[class^='body-04'] {
+[class*='body-04'] {
     font-size: 18px;
 }
 
-[class^='body-03'] {
+[class*='body-03'] {
     font-size: 16px;
 }
 
-[class^='body-02'] {
+[class*='body-02'] {
     font-size: 14px;
 }
 
-[class^='body-01'] {
+[class*='body-01'] {
     font-size: 12px;
 }
 

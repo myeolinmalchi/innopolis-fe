@@ -20,23 +20,41 @@
             type="text/javascript"
             src="../js/components/text-field.js"
         ></script>
-
-        <custom-modal
-            title="이것은 제목입니다."
-            content="이것은 내용입니다."
-            btn-count="2"
-            btn1-value="btn1"
-            btn1-type="primary"
-            btn2-value="btn2"
-            btn2-type="text"
-            btn-direction="vertical"
-            use-img="true"
-            img-src=""
-        ></custom-modal>
+        <script type="text/javascript" src="../js/components/tab.js"></script>
+        <div style="display: flex; gap: 10px; margin: 10px">
+            <tab-default state="default" style_="primary">인사말</tab-default>
+            <tab-default state="active" style_="primary">인사말</tab-default>
+            <tab-default state="default" style_="secondary">인사말</tab-default>
+            <tab-default state="active" style_="secondary">인사말</tab-default>
+        </div>
 
         <div style="display: flex; gap: 10px; margin: 10px">
-            <textfield-search placeholder="test"></textfield-search>
+            <modal-default
+                title="이것은 제목입니다."
+                content="이것은 내용입니다."
+                btn-count="2"
+                btn1-value="btn1"
+                btn1-type="primary"
+                btn2-value="btn2"
+                btn2-type="text"
+                btn-direction="vertical"
+                use-img="true"
+                img-src=""
+            ></modal-default>
+        </div>
 
+        <div style="display: flex; gap: 10px; margin: 10px">
+            <textfield-default></textfield-default>
+            <textfield-count
+                max="30"
+                state="disabled"
+                placeholder="test"
+            ></textfield-count>
+            <textfield-number max="30" min="-10"></textfield-number>
+            <textfield-search></textfield-search>
+            <textfield-area max="30" type="count"></textfield-area>
+        </div>
+        <div style="display: flex; gap: 10px; margin: 10px">
             <button-default type="priamry" state="default" size="s">
                 기본 버튼
             </button-default>
@@ -50,7 +68,7 @@
                 기본 버튼
             </button-default>
             <button-default
-                type="priamry"
+                style_="priamry"
                 state="default"
                 size="s"
                 icon="right"
@@ -58,7 +76,7 @@
                 기본 버튼
             </button-default>
             <button-default
-                type="priamry"
+                style_="priamry"
                 state="default"
                 size="m"
                 icon="right"
@@ -66,7 +84,7 @@
                 기본 버튼
             </button-default>
             <button-default
-                type="priamry"
+                style_="priamry"
                 state="default"
                 size="l"
                 icon="right"
@@ -74,20 +92,35 @@
                 기본 버튼
             </button-default>
             <button-default
-                type="priamry"
+                style_="priamry"
                 state="default"
                 size="xl"
                 icon="right"
             >
                 기본 버튼
             </button-default>
-            <button-default type="priamry" state="default" size="s" icon="left">
+            <button-default
+                style_="priamry"
+                state="default"
+                size="s"
+                icon="left"
+            >
                 기본 버튼
             </button-default>
-            <button-default type="priamry" state="default" size="m" icon="left">
+            <button-default
+                style_="priamry"
+                state="default"
+                size="m"
+                icon="left"
+            >
                 기본 버튼
             </button-default>
-            <button-default type="priamry" state="default" size="l" icon="left">
+            <button-default
+                style_="priamry"
+                state="default"
+                size="l"
+                icon="left"
+            >
                 기본 버튼
             </button-default>
             <button-default
@@ -103,20 +136,20 @@
         </div>
 
         <div style="display: flex; gap: 10px; margin: 10px">
-            <button-default type="secondary" state="default" size="s">
+            <button-default style_="secondary" state="default" size="s">
                 기본 버튼
             </button-default>
-            <button-default type="secondary" state="default" size="m">
+            <button-default style_="secondary" state="default" size="m">
                 기본 버튼
             </button-default>
-            <button-default type="secondary" state="default" size="l">
+            <button-default style_="secondary" state="default" size="l">
                 기본 버튼
             </button-default>
-            <button-default type="secondary" state="default" size="xl">
+            <button-default style_="secondary" state="default" size="xl">
                 기본 버튼
             </button-default>
             <button-default
-                type="secondary"
+                style_="secondary"
                 state="default"
                 size="s"
                 icon="right"
@@ -124,7 +157,7 @@
                 기본 버튼
             </button-default>
             <button-default
-                type="secondary"
+                style_="secondary"
                 state="default"
                 size="m"
                 icon="right"
@@ -132,7 +165,7 @@
                 기본 버튼
             </button-default>
             <button-default
-                type="secondary"
+                style_="secondary"
                 state="default"
                 size="l"
                 icon="right"
@@ -140,7 +173,7 @@
                 기본 버튼
             </button-default>
             <button-default
-                type="secondary"
+                style_="secondary"
                 state="default"
                 size="xl"
                 icon="right"
@@ -148,7 +181,7 @@
                 기본 버튼
             </button-default>
             <button-default
-                type="secondary"
+                style_="secondary"
                 state="default"
                 size="s"
                 icon="left"
@@ -156,7 +189,7 @@
                 기본 버튼
             </button-default>
             <button-default
-                type="secondary"
+                style_="secondary"
                 state="default"
                 size="m"
                 icon="left"
@@ -164,7 +197,7 @@
                 기본 버튼
             </button-default>
             <button-default
-                type="secondary"
+                style_="secondary"
                 state="default"
                 size="l"
                 icon="left"
@@ -172,7 +205,7 @@
                 기본 버튼
             </button-default>
             <button-default
-                type="secondary"
+                style_="secondary"
                 state="default"
                 size="xl"
                 icon="left"

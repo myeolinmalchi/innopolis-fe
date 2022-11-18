@@ -14,21 +14,32 @@
         <script type="text/javascript" src="../js/components/modal.js"></script>
         <script
             type="text/javascript"
-            src="../js/components/footer.js"
-        ></script>
-        <script
-            type="text/javascript"
             src="../js/components/text-field.js"
         ></script>
         <script type="text/javascript" src="../js/components/tab.js"></script>
         <script
             type="text/javascript"
+            src="../js/components/dropdown.js"
+        ></script>
+        <script
+            type="text/javascript"
             src="../js/components/checkbox.js"
         ></script>
 
-        <div style="display: flex; gap: 10px; margin: 10px">
-            <checkbox-default></checkbox-default>
-        </div>
+        <dropdown-container>
+            <dropdown-header value="TEXT" state="disabled" type="default">
+            </dropdown-header>
+            <dropdown-content>
+                <span>TEST1</span>
+                <span>TEST2</span>
+                <span>TEST3</span>
+                <span>TEST4</span>
+                <span>TEST5</span>
+                <span>TEST6</span>
+                <span>TEST7</span>
+                <span>TEST8</span>
+            </dropdown-content>
+        </dropdown-container>
 
         <div style="display: flex; gap: 10px; margin: 10px">
             <tab-default state="default" style_="primary">인사말</tab-default>

@@ -42,6 +42,7 @@ customElements.define(
             if(state === 'disabled'){
                 radio.disabled= true;
             }
+            
             style.textContent = `
                 .size{
                     height : ${height};

@@ -511,8 +511,6 @@ customElements.define(
     },
 );
 
-//customElements.define('textfield-timeline', class extends HTMLElement {});
-
 customElements.define(
     'textfield-area',
     class extends HTMLElement {
@@ -670,6 +668,601 @@ customElements.define(
             }
 
             shadow.append(link1, link2, stylesheet, this.container);
+        }
+    },
+);
+
+customElements.define(
+    'textfield-time',
+    class extends HTMLElement {
+        start_time;
+        end_time;
+
+        start;
+        end;
+        hyphen;
+        constructor() {
+            super();
+            this.start_time = document.createElement('input');
+            this.end_time = document.createElement('input');
+
+            this.start_time.setAttribute('placeholder', '00:00:00');
+            this.end_time.setAttribute('placeholder', '00:00:00');
+
+            this.start_time.classList.add('body-02-me', 'input');
+            this.end_time.classList.add('body-02-me', 'input');
+
+            this.start_time.style = `
+                text-align: center;
+                width: 59px;
+            `;
+
+            this.end_time.style = `
+                text-align: center;
+                width: 59px;
+            `;
+
+            this.start_time.onchange = (e) => {
+                const value = e.target.value;
+                let [hour, minute, second] = value.split(':');
+
+                if (hour != undefined) {
+                    if (hour < 0) {
+                        hour = 0;
+                    } else if (hour > 23) {
+                        hour = hour % 24;
+                    }
+                    if (minute != undefined) {
+                        if (minute < 0) {
+                            minute = 0;
+                        } else if (minute > 59) {
+                            minute = 59;
+                        }
+                        if (second != undefined) {
+                            if (second < 0) {
+                                second = 0;
+                            } else if (second > 59) {
+                                second = 59;
+                            }
+                        } else {
+                            second = 0;
+                        }
+                    } else {
+                        minute = 0;
+                        second = 0;
+                    }
+                }
+                this.start = new Date(0, 0, 0, hour, minute, second, 0);
+                const [_hour, _minute, _second] = [
+                    hour.toString().padStart(2, '0'),
+                    minute.toString().padStart(2, '0'),
+                    second.toString().padStart(2, '0'),
+                ];
+                e.target.value = `${_hour}:${_minute}:${_second}`;
+            };
+
+            this.end_time.onchange = (e) => {
+                const value = e.target.value;
+                let [hour, minute, second] = value.split(':');
+
+                if (hour != undefined) {
+                    if (hour < 0) {
+                        hour = 0;
+                    } else if (hour > 23) {
+                        hour = hour % 24;
+                    }
+                    if (minute != undefined) {
+                        if (minute < 0) {
+                            minute = 0;
+                        } else if (minute > 59) {
+                            minute = 59;
+                        }
+                        if (second != undefined) {
+                            if (second < 0) {
+                                second = 0;
+                            } else if (second > 59) {
+                                second = 59;
+                            }
+                        } else {
+                            second = 0;
+                        }
+                    } else {
+                        minute = 0;
+                        second = 0;
+                    }
+                }
+                this.end = new Date(0, 0, 0, hour, minute, second, 0);
+                const [_hour, _minute, _second] = [
+                    hour.toString().padStart(2, '0'),
+                    minute.toString().padStart(2, '0'),
+                    second.toString().padStart(2, '0'),
+                ];
+                e.target.value = `${_hour}:${_minute}:${_second}`;
+            };
+
+            this.start_time.setAttribute('type', 'text');
+            this.end_time.setAttribute('type', 'text');
+
+            this.hyphen = document.createElement('span');
+            this.hyphen.innerText = '-';
+            this.hyphen.classList.add('body-02-me');
+        }
+        connectedCallback() {
+            const [
+                type, //default, period
+                state, //default, disabled
+                size, // s, l
+            ] = [
+                this.getAttribute('type') ?? 'default',
+                this.getAttribute('state') ?? 'default',
+                this.getAttribute('size') ?? 's',
+            ];
+
+            if (state === 'disabled') {
+                this.start_time.setAttribute('disabled', true);
+                this.end_time.setAttribute('disabled', true);
+                this.classList.add('container-disabled');
+            } else {
+                this.classList.add('container');
+            }
+
+            this.style.height = size === 's' ? '38px' : '54px';
+            this.style.padding = '8px 16px';
+
+            switch (type) {
+                case 'default':
+                    this.append(this.start_time);
+                    break;
+                case 'period':
+                    this.start_time.style.marginRight = '8px';
+                    this.end_time.style.marginLeft = '8px';
+                    this.append(this.start_time, this.hyphen, this.end_time);
+                    break;
+            }
+        }
+    },
+);
+
+customElements.define(
+    'textfield-date',
+    class extends HTMLElement {
+        start_time;
+        end_time;
+
+        start;
+        end;
+        hyphen;
+        constructor() {
+            super();
+            this.start_time = document.createElement('input');
+            this.end_time = document.createElement('input');
+
+            this.start_time.setAttribute('placeholder', 'YY.MM.DD');
+            this.end_time.setAttribute('placeholder', 'YY.MM.DD');
+
+            this.start_time.classList.add('body-02-me', 'input');
+            this.end_time.classList.add('body-02-me', 'input');
+
+            this.start_time.style = `
+                text-align: center;
+                width: 68px;
+            `;
+
+            this.end_time.style = `
+                text-align: center;
+                width: 68px;
+            `;
+
+            this.start_time.onchange = (e) => {
+                const value = e.target.value;
+                let [year, month, day] = value.split('.');
+
+                if (year != undefined) {
+                    if (year < 0) {
+                        year = 0;
+                    } else if (year > 99) {
+                        year = 99;
+                    }
+                    if (month != undefined) {
+                        if (month < 1) {
+                            month = 1;
+                        } else if (month > 12) {
+                            month = 12;
+                        }
+                        const lastday = new Date(
+                            2000 + Number(year),
+                            month,
+                            0,
+                        ).getDate();
+                        if (day != undefined) {
+                            if (day < 1) {
+                                day = 1;
+                            } else if (day > lastday) {
+                                day = lastday;
+                            }
+                        } else {
+                            day = 1;
+                        }
+                    } else {
+                        month = 1;
+                        day = 1;
+                    }
+                }
+                const temp = new Date(2000 + Number(year), month - 1, day);
+                if (this.end && temp > this.end) {
+                    alert('종료일은 시작일보다 빠를 수 없습니다.');
+                    return;
+                }
+                this.start = temp;
+                const [_year, _month, _day] = [
+                    year.toString().padStart(2, '0'),
+                    month.toString().padStart(2, '0'),
+                    day.toString().padStart(2, '0'),
+                ];
+                e.target.value = `${_year}.${_month}.${_day}`;
+            };
+
+            this.end_time.onchange = (e) => {
+                const value = e.target.value;
+                let [year, month, day] = value.split('.');
+
+                if (year != undefined) {
+                    if (year < 0) {
+                        year = 0;
+                    } else if (year > 99) {
+                        year = 99;
+                    }
+                    if (month != undefined) {
+                        if (month < 1) {
+                            month = 1;
+                        } else if (month > 12) {
+                            month = 12;
+                        }
+                        const lastday = new Date(
+                            2000 + Number(year),
+                            month,
+                            0,
+                        ).getDate();
+                        if (day != undefined) {
+                            if (day < 1) {
+                                day = 1;
+                            } else if (day > lastday) {
+                                day = lastday;
+                            }
+                        } else {
+                            day = 1;
+                        }
+                    } else {
+                        month = 1;
+                        day = 1;
+                    }
+                }
+                const temp = new Date(2000 + Number(year), month - 1, day);
+                if (this.start && temp < this.start) {
+                    alert('종료일은 시작일보다 빠를 수 없습니다.');
+                    return;
+                }
+                this.end = temp;
+                const [_year, _month, _day] = [
+                    year.toString().padStart(2, '0'),
+                    month.toString().padStart(2, '0'),
+                    day.toString().padStart(2, '0'),
+                ];
+                e.target.value = `${_year}.${_month}.${_day}`;
+            };
+
+            this.start_time.setAttribute('type', 'text');
+            this.end_time.setAttribute('type', 'text');
+
+            this.hyphen = document.createElement('span');
+            this.hyphen.innerText = '-';
+            this.hyphen.classList.add('body-02-me');
+        }
+        connectedCallback() {
+            const [
+                type, //default, period
+                state, //default, disabled
+                size, // s, l
+            ] = [
+                this.getAttribute('type') ?? 'default',
+                this.getAttribute('state') ?? 'default',
+                this.getAttribute('size') ?? 's',
+            ];
+
+            if (state === 'disabled') {
+                this.start_time.setAttribute('disabled', true);
+                this.end_time.setAttribute('disabled', true);
+                this.classList.add('container-disabled');
+            } else {
+                this.classList.add('container');
+            }
+
+            this.style.height = size === 's' ? '38px' : '54px';
+            this.style.padding = '8px 16px';
+
+            switch (type) {
+                case 'default':
+                    this.append(this.start_time);
+                    break;
+                case 'period':
+                    this.start_time.style.marginRight = '8px';
+                    this.end_time.style.marginLeft = '8px';
+                    this.append(this.start_time, this.hyphen, this.end_time);
+                    break;
+            }
+        }
+
+        setStartday(date) {
+            this.start = date;
+            if (!date) {
+                this.start_time.value = '';
+                return;
+            }
+            const [year, month, day] = [
+                date?.getFullYear(),
+                date?.getMonth() + 1,
+                date?.getDate(),
+            ];
+            this.start_time.value = `${year}.${month
+                .toString()
+                .padStart(2, '0')}.${day.toString().padStart(2, '0')}`;
+        }
+    },
+);
+
+customElements.define(
+    'textfield-fulldate',
+    class extends HTMLElement {
+        start_time;
+        end_time;
+
+        start;
+        end;
+        hyphen;
+        constructor() {
+            super();
+            this.start_time = document.createElement('input');
+            this.end_time = document.createElement('input');
+
+            this.start_time.setAttribute('placeholder', 'YY.MM.DD 00:00:00');
+            this.end_time.setAttribute('placeholder', 'YY.MM.DD 00:00:00');
+
+            this.start_time.classList.add('body-02-me', 'input');
+            this.end_time.classList.add('body-02-me', 'input');
+
+            this.start_time.style = `
+                text-align: center;
+                width: 131px;
+            `;
+
+            this.end_time.style = `
+                text-align: center;
+                width: 131px;
+            `;
+
+            this.start_time.onchange = (e) => {
+                const value = e.target.value;
+                let [date, time] = value.split(' ');
+                let [year, month, day] = date.split('.');
+                let [hour, minute, second] = time?.split(':') ?? [];
+
+                if (year != undefined) {
+                    if (year < 0) {
+                        year = 0;
+                    } else if (year > 99) {
+                        year = 99;
+                    }
+                    if (month != undefined) {
+                        if (month < 1) {
+                            month = 1;
+                        } else if (month > 12) {
+                            month = 12;
+                        }
+                        const lastday = new Date(
+                            2000 + Number(year),
+                            month,
+                            0,
+                        ).getDate();
+                        if (day != undefined) {
+                            if (day < 1) {
+                                day = 1;
+                            } else if (day > lastday) {
+                                day = lastday;
+                            }
+                        } else {
+                            day = 1;
+                        }
+                    } else {
+                        month = 1;
+                        day = 1;
+                    }
+                }
+
+                if (hour != undefined) {
+                    if (hour < 0) {
+                        hour = 0;
+                    } else if (hour > 23) {
+                        hour = hour % 24;
+                    }
+                    if (minute != undefined) {
+                        if (minute < 0) {
+                            minute = 0;
+                        } else if (minute > 59) {
+                            minute = 59;
+                        }
+                        if (second != undefined) {
+                            if (second < 0) {
+                                second = 0;
+                            } else if (second > 59) {
+                                second = 59;
+                            }
+                        } else {
+                            second = 0;
+                        }
+                    } else {
+                        minute = 0;
+                        second = 0;
+                    }
+                } else {
+                    hour = 0;
+                    minute = 0;
+                    second = 0;
+                }
+                const temp = new Date(
+                    2000 + Number(year),
+                    month - 1,
+                    day,
+                    hour,
+                    minute,
+                    second,
+                );
+                if (this.end && temp > this.end) {
+                    alert('종료일은 시작일보다 빠를 수 없습니다.');
+                    return;
+                }
+                this.start = temp;
+                const [_year, _month, _day, _hour, _minute, _second] = [
+                    year.toString().padStart(2, '0'),
+                    month.toString().padStart(2, '0'),
+                    day.toString().padStart(2, '0'),
+                    hour.toString().padStart(2, '0'),
+                    minute.toString().padStart(2, '0'),
+                    second.toString().padStart(2, '0'),
+                ];
+                e.target.value = `${_year}.${_month}.${_day} ${_hour}:${_minute}:${_second}`;
+            };
+
+            this.end_time.onchange = (e) => {
+                const value = e.target.value;
+                let [date, time] = value.split(' ');
+                let [year, month, day] = date.split('.');
+                let [hour, minute, second] = time?.split(':') ?? [];
+
+                if (year != undefined) {
+                    if (year < 0) {
+                        year = 0;
+                    } else if (year > 99) {
+                        year = 99;
+                    }
+                    if (month != undefined) {
+                        if (month < 1) {
+                            month = 1;
+                        } else if (month > 12) {
+                            month = 12;
+                        }
+                        const lastday = new Date(
+                            2000 + Number(year),
+                            month,
+                            0,
+                        ).getDate();
+                        if (day != undefined) {
+                            if (day < 1) {
+                                day = 1;
+                            } else if (day > lastday) {
+                                day = lastday;
+                            }
+                        } else {
+                            day = 1;
+                        }
+                    } else {
+                        month = 1;
+                        day = 1;
+                    }
+                }
+
+                if (hour != undefined) {
+                    if (hour < 0) {
+                        hour = 0;
+                    } else if (hour > 23) {
+                        hour = hour % 24;
+                    }
+                    if (minute != undefined) {
+                        if (minute < 0) {
+                            minute = 0;
+                        } else if (minute > 59) {
+                            minute = 59;
+                        }
+                        if (second != undefined) {
+                            if (second < 0) {
+                                second = 0;
+                            } else if (second > 59) {
+                                second = 59;
+                            }
+                        } else {
+                            second = 0;
+                        }
+                    } else {
+                        minute = 0;
+                        second = 0;
+                    }
+                } else {
+                    hour = 0;
+                    minute = 0;
+                    second = 0;
+                }
+                const temp = new Date(
+                    2000 + Number(year),
+                    month - 1,
+                    day,
+                    hour,
+                    minute,
+                    second,
+                );
+                if (this.start && this.start > temp) {
+                    alert('종료일은 시작일보다 빠를 수 없습니다.');
+                    return;
+                }
+                this.end = temp;
+                const [_year, _month, _day, _hour, _minute, _second] = [
+                    year.toString().padStart(2, '0'),
+                    month.toString().padStart(2, '0'),
+                    day.toString().padStart(2, '0'),
+                    hour.toString().padStart(2, '0'),
+                    minute.toString().padStart(2, '0'),
+                    second.toString().padStart(2, '0'),
+                ];
+                e.target.value = `${_year}.${_month}.${_day} ${_hour}:${_minute}:${_second}`;
+            };
+
+            this.start_time.setAttribute('type', 'text');
+            this.end_time.setAttribute('type', 'text');
+
+            this.hyphen = document.createElement('span');
+            this.hyphen.innerText = '-';
+            this.hyphen.classList.add('body-02-me');
+        }
+        connectedCallback() {
+            const [
+                type, //default, period
+                state, //default, disabled
+                size, // s, l
+            ] = [
+                this.getAttribute('type') ?? 'default',
+                this.getAttribute('state') ?? 'default',
+                this.getAttribute('size') ?? 's',
+            ];
+
+            if (state === 'disabled') {
+                this.start_time.setAttribute('disabled', true);
+                this.end_time.setAttribute('disabled', true);
+                this.classList.add('container-disabled');
+            } else {
+                this.classList.add('container');
+            }
+
+            this.style.height = size === 's' ? '38px' : '54px';
+            this.style.padding = '8px 16px';
+
+            switch (type) {
+                case 'default':
+                    this.append(this.start_time);
+                    break;
+                case 'period':
+                    this.start_time.style.marginRight = '8px';
+                    this.end_time.style.marginLeft = '8px';
+                    this.append(this.start_time, this.hyphen, this.end_time);
+                    break;
+            }
         }
     },
 );

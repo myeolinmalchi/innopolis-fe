@@ -10,21 +10,22 @@ customElements.define(
                 this['state'] = 'default';
             }
 
-            this.resetColor(this['type'], this['state']);
+            this.resetColor(this.getAttribute('type'), this['state']);
 
             this.classList.add('title-01');
             this.style.cursor = 'pointer';
 
             this.onmouseover = () => {
-                if (this['type'] === 'primary') {
+                const type = this.getAttribute('type');
+                if (type === 'primary') {
                     this.style.color = 'var(--color-blue-hover)';
-                } else if (this['type'] === 'secondary') {
+                } else if (type === 'secondary') {
                     this.style.color = 'var(--color-gray-hover)';
                 }
             };
 
             this.onmouseout = () => {
-                this.resetColor(this['type'], this['state']);
+                this.resetColor(this.getAttribute('type'), this['state']);
             };
         }
 
@@ -35,7 +36,7 @@ customElements.define(
         attributeChangedCallback(attrName, _, newVal) {
             switch (attrName) {
                 case 'state':
-                    this.resetColor(this['type'], newVal);
+                    this.resetColor(this.getAttribute('type'), newVal);
                     this['state'] = newVal;
             }
         }

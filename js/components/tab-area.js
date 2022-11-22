@@ -5,12 +5,7 @@ customElements.define(
         tab_container;
 
         connectedCallback() {
-            this.style = `
-                display: flex;
-                flex-direction: column;
-                justifyContent: center;
-                padding: 64px 170px;
-            `;
+            this.classList.add('tab-area');
             setTimeout(() => {
                 this.content_area = this.nextElementSibling;
                 this.tab_container =
@@ -41,11 +36,7 @@ customElements.define(
     class extends HTMLElement {
         tabs;
         connectedCallback() {
-            this.style.display = 'flex';
-            this.style.flexDirection = 'row';
-            this.style.boxSizing = 'border-box';
-            this.style.marginTop = '48px';
-            this.style.gap = '32px';
+            this.classList.add('inner-content', 'tab-container');
             setTimeout(() => {
                 this.tabs = [...this.getElementsByTagName('tab-default')];
                 this.tabs.forEach((t, idx) => {
@@ -62,7 +53,7 @@ customElements.define(
     'tab-introduce-text',
     class extends HTMLElement {
         connectedCallback() {
-            this.classList.add('title-03');
+            this.classList.add('title', 'inner-content', 'introduce');
             this.style.color = 'var(--text-primary)';
         }
     },

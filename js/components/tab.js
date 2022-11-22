@@ -12,7 +12,7 @@ customElements.define(
 
             this.resetColor(this.getAttribute('type'), this['state']);
 
-            this.classList.add('title-01');
+            this.classList.add('tab', 'title');
             this.style.cursor = 'pointer';
 
             this.onmouseover = () => {

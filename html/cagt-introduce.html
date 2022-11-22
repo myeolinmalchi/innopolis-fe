@@ -7,11 +7,14 @@
         <link rel="stylesheet" href="../css/reset.css" />
         <link rel="stylesheet" href="../css/common.css" />
         <link rel="stylesheet" href="../css/tab-area.css" />
-        <link rel="stylesheet" href="../css/cagt-introduce.css" />
         <script type="text/javascript" src="../js/components/tab.js"></script>
         <script
             type="text/javascript"
             src="../js/components/tab-area.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="../js/components/pages/cagt-introduce.js"
         ></script>
     </head>
     <body>
@@ -28,144 +31,325 @@
         </tab-area>
         <tab-content-area>
             <tab-content>
-                <img src="" alt="" class="top-img" />
-                <div class="content-wrapper">
-                    <img src="" alt="" class="center-img" />
-                    <span class="large-text-wrapper title">
-                        미래 자동차 산업 패러다임을<br />
-                        선도하는 새로운 혁신성장의 거점<br />
-                        <span class="text-accent"
-                            >천안아산 강소연구개발특구</span
-                        >를 방문해주신 여러분을 환영합니다.
-                    </span>
-                    <span class="small-text-wrapper body-me">
-                        자동차 산업 생태계가 ICT 기술과의 융복합 및 공유사회로의
-                        진보에 따라 혁신적인 변화를 겪고 있는 상황에서 자동차는
-                        고유의 기능을 넘어 연결성, 자율성 및 공유성 확대,
-                        친환경화 및 전동화 확대, 타 기술과의 융복합화를 통한
-                        고기능‧고감성‧고편의 및 고안전 수송 수단으로 진화
-                        중입니다.<br /><br />
-                        이러한 자동차 산업 패러다임 변화에 신속히 대처하고자,
-                        충남 천안아산 강소연구개발특구는 국내 유일의 자동차 전문
-                        연구기관인 한국자동차연구원을 기술핵심기관으로 ‘차세대
-                        자동차 부품’에 특화된 강소특구로 2020년 8월 새롭게
-                        지정되었습니다.<br /><br />특화분야 (차량용
-                        디스플레이‧인포테인먼트, 차세대 배터리 소재‧부품, 미래형
-                        자동차 융복합 부품) 맞춤형으로 차세대 자동차 부품
-                        기술사업화 우수기술 발굴, 자동차 부품 기업의 新성장 동력
-                        확보를 위한 기술사업화 지원, 기술사업화 오픈 플랫폼을
-                        활용한 기업 육성 강화, 산업성장 생태계 구축을 위한 혁신
-                        인프라 제공을 추진과제로 차세대 자동차 부품산업 혁신
-                        클러스터를 조성하여 글로벌 자동차 산업 클러스터로
-                        발전하고자 합니다.<br /><br />
-                        특구 내‧외 기업 경쟁력 확보 및 창업 활성화 등 자동차
-                        산업의 혁신성장 지원을 위해 산‧학‧연‧관의 협력으로
-                        창의적 역량을 결집할 수 있는 기반을 마련하고, 국내‧외
-                        유수 자동차 기관과의 기술 협력 네트워크 강화를 통해 관련
-                        업체의 성장에 디딤돌이 될 수 있도록 노력해
-                        나가겠습니다.<br /><br />
-                        혁신적인 변화의 물결 속에서 미래 자동차산업 패러다임을
-                        선도할 새로운 혁신성장의 거점인 충남 천안아산
-                        강소연구개발특구에 여러분의 지속적인 관심과 성원
-                        부탁드립니다.<br /><br />
-                        감사합니다.
-                    </span>
-                    <div class="sign-wrapper">
-                        <img
-                            src="../image/pages/cagt-introduce/sign.png"
-                            alt="sign"
-                            class="sign"
-                        />
-                    </div>
-                </div>
+                <template shadowroot="open">
+                    <link
+                        rel="stylesheet"
+                        href="../css/introduce/greetings.css" />
+                    <img src="" alt="" class="top-img" />
+                    <div class="content-wrapper">
+                        <img src="" alt="" class="center-img" />
+                        <span class="large-text-wrapper title">
+                            미래 자동차 산업 패러다임을<br />
+                            선도하는 새로운 혁신성장의 거점<br />
+                            <span class="text-accent"
+                                >천안아산 강소연구개발특구</span
+                            >를 방문해주신 여러분을 환영합니다.
+                        </span>
+                        <span class="small-text-wrapper body-me">
+                            자동차 산업 생태계가 ICT 기술과의 융복합 및
+                            공유사회로의 진보에 따라 혁신적인 변화를 겪고 있는
+                            상황에서 자동차는 고유의 기능을 넘어 연결성, 자율성
+                            및 공유성 확대, 친환경화 및 전동화 확대, 타 기술과의
+                            융복합화를 통한 고기능‧고감성‧고편의 및 고안전 수송
+                            수단으로 진화 중입니다.<br /><br />
+                            이러한 자동차 산업 패러다임 변화에 신속히
+                            대처하고자, 충남 천안아산 강소연구개발특구는 국내
+                            유일의 자동차 전문 연구기관인 한국자동차연구원을
+                            기술핵심기관으로 ‘차세대 자동차 부품’에 특화된
+                            강소특구로 2020년 8월 새롭게 지정되었습니다.<br /><br />특화분야
+                            (차량용 디스플레이‧인포테인먼트, 차세대 배터리
+                            소재‧부품, 미래형 자동차 융복합 부품) 맞춤형으로
+                            차세대 자동차 부품 기술사업화 우수기술 발굴, 자동차
+                            부품 기업의 新성장 동력 확보를 위한 기술사업화 지원,
+                            기술사업화 오픈 플랫폼을 활용한 기업 육성 강화,
+                            산업성장 생태계 구축을 위한 혁신 인프라 제공을
+                            추진과제로 차세대 자동차 부품산업 혁신 클러스터를
+                            조성하여 글로벌 자동차 산업 클러스터로 발전하고자
+                            합니다.<br /><br />
+                            특구 내‧외 기업 경쟁력 확보 및 창업 활성화 등 자동차
+                            산업의 혁신성장 지원을 위해 산‧학‧연‧관의 협력으로
+                            창의적 역량을 결집할 수 있는 기반을 마련하고,
+                            국내‧외 유수 자동차 기관과의 기술 협력 네트워크
+                            강화를 통해 관련 업체의 성장에 디딤돌이 될 수 있도록
+                            노력해 나가겠습니다.<br /><br />
+                            혁신적인 변화의 물결 속에서 미래 자동차산업
+                            패러다임을 선도할 새로운 혁신성장의 거점인 충남
+                            천안아산 강소연구개발특구에 여러분의 지속적인 관심과
+                            성원 부탁드립니다.<br /><br />
+                            감사합니다.
+                        </span>
+                        <div class="sign-wrapper">
+                            <img
+                                src="../image/pages/cagt-introduce/sign.png"
+                                alt="sign"
+                                class="sign"
+                            />
+                        </div></div
+                ></template>
             </tab-content>
-            <tab-content> test 2 </tab-content>
             <tab-content>
-                <img src="" alt="" class="top-img" />
-                <div class="content-wrapper">
-                    <div class="location-container">
-                        <span class="location-title">R&D 거점지구</span>
-                        <div class="location-detail-wrapper">
-                            <div class="location-map"></div>
-                            <div class="location-detail">
-                                <div class="location-detail-content-wrapper">
-                                    <span class="location-detail-title body-me"
-                                        >캠퍼스</span
-                                    >
-                                    <span
-                                        class="location-detail-content body-me"
+                <template shadowroot="open">
+                    <link
+                        rel="stylesheet"
+                        href="../css/introduce/summary.css"
+                    />
+                    <img src="" alt="" class="top-img" />
+                    <div class="content-wrapper-full">
+                        <div class="item-wrapper">
+                            <span class="title-wrapper title-bd">
+                                천안아산강소특구 소개
+                            </span>
+                            <span class="explanation-wrapper body-me">
+                                충남 천안아산 강소연구개발특구는 차세대 자동차
+                                부품의 혁신 클러스트 특구로 아산탕정 천안불당
+                                개발지구와 천안풍세일반산업단지,
+                                한국자동차연구원으로 구성되어 있습니다.
+                            </span>
+                            <div class="visual-content">유튜브</div>
+                        </div>
+                        <div class="item-wrapper">
+                            <span class="title-wrapper title-bd">
+                                자동차 부품 혁신 클러스트 특구
+                            </span>
+                            <img src="" alt="" class="visual-content" />
+                            <div class="subitem-container">
+                                <div class="subitem-wrapper">
+                                    <span class="subitem-title body-bd"
                                         >R&D 거점지구</span
                                     >
-                                </div>
-                                <div class="location-detail-content-wrapper">
-                                    <span class="location-detail-title body-me"
-                                        >주소</span
-                                    >
-                                    <span
-                                        class="location-detail-content body-me"
-                                        >충남 천안시 동남구 풍세면 풍세로 303
-                                        한국자동차연구원</span
+                                    <span class="subitem-content body-me"
+                                        >국내유일의 자동차 전문 연구원
+                                        '한국자동차연구원'을 통해 각종
+                                        시험인증을 지원함</span
                                     >
                                 </div>
-                                <div class="location-detail-content-wrapper">
-                                    <span class="location-detail-title body-me"
-                                        >승용차</span
+                                <div class="subitem-wrapper">
+                                    <span class="subitem-title body-bd"
+                                        >R&D 창업 융합지구</span
                                     >
-                                    <span
-                                        class="
-                                            location-detail-content-small
-                                            body-me
-                                        "
-                                        >남풍세IC → 세종평택로(2.8km) →
-                                        태학산로(0.5km) → 용두4길(1.3km) →
-                                        한국자동차연구원</span
+                                    <span class="subitem-content body-me"
+                                        >생산현장 중심의 제조지원 R&D 창업 융합
+                                        지원</span
                                     >
                                 </div>
-                                <div class="location-detail-content-wrapper">
-                                    <span class="location-detail-title body-me"
-                                        >대중교통</span
+                                <div class="subitem-wrapper">
+                                    <span class="subitem-title body-bd"
+                                        >기술사업화 지구</span
                                     >
-                                    <div class="public-transport-wrapper">
-                                        <span
-                                            class="
-                                                public-transport-title
-                                                body-bd
-                                            "
-                                            >천안아산역</span
-                                        >
-                                        <span
-                                            class="
-                                                public-transport-content
-                                                body-me
-                                            "
-                                            >천안아산역 시내버스 정류장 /
-                                            직산대림아파트방면 시내버스
-                                            19번</span
-                                        >
-                                    </div>
-                                    <div class="public-transport-wrapper">
-                                        <span
-                                            class="
-                                                public-transport-title
-                                                body-bd
-                                            "
-                                            >탕정역</span
-                                        >
-                                        <span
-                                            class="
-                                                public-transport-content
-                                                body-me
-                                            "
-                                            >탕정역 건너 시내버스 정류장 /
-                                            아산시 평생학습관 방면 시내버스
-                                            702번</span
-                                        >
-                                    </div>
+                                    <span class="subitem-content body-me"
+                                        >기술 사업성 검증 및 연구지원<br />스타트업
+                                        창업보육 및 중소기업 인력 재교육</span
+                                    >
                                 </div>
                             </div>
                         </div>
+                        <div
+                            class="item-wrapper gap"
+                            style="background: var(--background-gray-01)"
+                        >
+                            <div class="img-content-wrapper">
+                                <img class="img-content-img" src="" alt="" />
+                                <div class="img-content-content-wrapper">
+                                    <span
+                                        class="
+                                            img-content-content-title
+                                            title-bd
+                                        "
+                                        >차량용 디스플레이 · 인포테인먼트</span
+                                    >
+                                    <span
+                                        class="
+                                            img-content-content-subtitle
+                                            body-bd
+                                        "
+                                        >정의</span
+                                    >
+                                    <span
+                                        class="
+                                            img-content-content-content
+                                            body-me
+                                        "
+                                        >자동차 주행정보와 내/외부 환경정보 및
+                                        편의성 제공을 위한 엔터네인먼트 통합
+                                        기술</span
+                                    >
+                                    <span
+                                        class="
+                                            img-content-content-subtitle
+                                            body-bd
+                                        "
+                                        >세부분야</span
+                                    >
+                                    <span
+                                        class="
+                                            img-content-content-content
+                                            body-me
+                                        "
+                                        >조작‧입력 디바이스 / 커넥티드 디바이스
+                                        / 표시‧출력 디바이스</span
+                                    >
+                                </div>
+                            </div>
+                            <div class="img-content-wrapper">
+                                <img class="img-content-img" src="" alt="" />
+                                <div class="img-content-content-wrapper">
+                                    <span
+                                        class="
+                                            img-content-content-title
+                                            title-bd
+                                        "
+                                        >차세대 배터리 소재 ‧ 부품</span
+                                    >
+                                    <span
+                                        class="
+                                            img-content-content-subtitle
+                                            body-bd
+                                        "
+                                        >정의</span
+                                    >
+                                    <span
+                                        class="
+                                            img-content-content-content
+                                            body-me
+                                        "
+                                        >차세대 배터리 소재‧셀‧모듈‧팩
+                                        제조공정기술, 에너지 제어기술 및
+                                        충전시스템 기술</span
+                                    >
+                                    <span
+                                        class="
+                                            img-content-content-subtitle
+                                            body-bd
+                                        "
+                                        >세부분야</span
+                                    >
+                                    <span
+                                        class="
+                                            img-content-content-content
+                                            body-me
+                                        "
+                                        >Material&Cell / Module&Pack /
+                                        전기에너지 제어기술</span
+                                    >
+                                </div>
+                            </div>
+                            <div class="img-content-wrapper">
+                                <img class="img-content-img" src="" alt="" />
+                                <div class="img-content-content-wrapper">
+                                    <span
+                                        class="
+                                            img-content-content-title
+                                            title-bd
+                                        "
+                                        >차량용 디스플레이 · 인포테인먼트</span
+                                    >
+                                    <span
+                                        class="
+                                            img-content-content-subtitle
+                                            body-bd
+                                        "
+                                        >정의</span
+                                    >
+                                    <span
+                                        class="
+                                            img-content-content-content
+                                            body-me
+                                        "
+                                        >미래자동차 산업 전환 및 신사업을 위한
+                                        편의/안정선 소재‧부품‧모듈 기술</span
+                                    >
+                                    <span
+                                        class="
+                                            img-content-content-subtitle
+                                            body-bd
+                                        "
+                                        >세부분야</span
+                                    >
+                                    <span
+                                        class="
+                                            img-content-content-content
+                                            body-me
+                                        "
+                                        >편의성 향상 제품 / 안전성 향상 제품 /
+                                        공조시스템 / 고기능성 소재</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-wrapper">
+                            <span class="title-wrapper title-bd">
+                                육성전략
+                            </span>
+                            <span class="explanation-wrapper body-me">
+                                법관은 헌법과 법률에 의하여 그 양심에 따라
+                                독립하여 심판한다. 헌법개정은 국회재적의원
+                                과반수 또는 대통령의 발의로 제안된다. 재의의
+                                요구가 있을 때에는 국회는 재의에 붙이고,
+                                재적의원과반수의 출석과 출석의원 3분의 2 이상의
+                                찬성으로 전과 같은 의결을 하면 그 법률안은
+                                법률로서 확정된다. 계엄을 선포한 때에는 대통령은
+                                지체없이 국회에 통고하여야 한다. 감사원은
+                                세입·세출의 결산을 매년 검사하여 대통령과
+                                차년도국회에 그 결과를 보고하여야 한다. 모든
+                                국민은 법 앞에 평등하다. 누구든지 성별·종교 또는
+                                사회적 신분에 의하여 정치적·경제적·사회적·문화적
+                                생활의 모든 영역에 있어서 차별을 받지 아니한다.
+                            </span>
+                            <div class="visual-content">유튜브</div>
+                        </div>
                     </div>
-                </div>
+                </template>
+            </tab-content>
+            <tab-content>
+                <template shadowroot="open">
+                    <link rel="stylesheet" href="../css/introduce/way.css" />
+                    <img src="" alt="" class="top-img" />
+                    <div class="content-wrapper">
+                        <location-container
+                            title="거점지구"
+                            address="충남 천안시 동남구 풍세면 풍세로 303 한국자동차연구원"
+                            campus="R&D 거점지구"
+                            car="남풍세IC → 세종평택로(2.8km) → 태학산로(0.5km) → 용두4길(1.3km) → 한국자동차연구원"
+                            public1-title="시외버스터미널"
+                            public1-content="신세계백화점 앞 시내버스 정류장 / 광덕, 풍세방향 시내버스 600번, 601번, 650번"
+                            public2-title="천안역동부광장"
+                            public2-content="천안역 앞 우측 시내버스 정류장 / 광덕, 풍세방면 시내버스 600번, 601번, 650번"
+                        >
+                        </location-container>
+                        <location-container
+                            title="R&D·창업 융합지구"
+                            subtitle="제 1캠퍼스"
+                            campus="R&D·창업 융합지구"
+                            address="충남 아산시 탕정면 선문로 254번길 12, 사무동 3층 서편"
+                            car="천안IC → 삼성대로 → 번영로 → 이순신대로 → R&D·창업 융합지구 제1캠퍼스"
+                            public1-title="천안아산역"
+                            public1-content="천안아산역 시내버스 정류장 / 직산대림아파트방면 시내버스 19번"
+                            public2-title="탕정역"
+                            public2-content="탕정역건너 시내버스 정류장 / 아산시평생학습관방면 시내버스 702번"
+                        >
+                        </location-container>
+                        <location-container
+                            title="R&D·창업 융합지구"
+                            subtitle="제 2캠퍼스"
+                            campus="R&D·창업 융합지구"
+                            address="충남 아산시 배방읍 광장로 210, 와이몰 1, 2층"
+                            car="천안IC → 삼성대로 → 번영로 → 고속철대로 → R&D·창업 융합지구 제2캠퍼스"
+                            public1-title="천안아산역"
+                            public1-content="천안아산역 도보 15분"
+                        >
+                        </location-container>
+                        <location-container
+                            title="기술사업화 지구"
+                            campus="기술사업화 지구"
+                            address="충남 천안시 동남구 풍세면 풍세산단로 215"
+                            car="남풍세IC → 세종평택로 → 광풍로 → 용무길 → 기술사업화 지구"
+                            public1-title="시외버스터미널"
+                            public1-content="신세계백화점 앞 시내버스 정류장 / 광덕, 풍세방향 시내버스 600번, 601번"
+                            public2-title="천안역동부광장"
+                            public2-content="천안역 앞 우측 시내버스 정류장 / 광덕, 풍세방향 시내벗"
+                        >
+                        </location-container></div
+                ></template>
             </tab-content>
         </tab-content-area>
     </body>

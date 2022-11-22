@@ -86,6 +86,9 @@ customElements.define(
             this.style.display = 'flex';
             this.style.flexDirection = 'column';
             this.style.padding = '32px 20px';
+            this.style.width = '340px';
+            this.style.margin = '0px';
+            this.style.boxSizing = 'border-box';
         }
     },
 );
@@ -95,17 +98,24 @@ customElements.define(
     class extends HTMLElement {
         units;
         date;
+
+        start_day;
+        end_day;
+
+        period;
         connectedCallback() {
             this.date = new Date();
             this.style.display = 'flex';
             this.style.flexWrap = 'wrap';
             this.style.width = '294px';
+            setTimeout(() => {
+                this.period = this.nextElementSibling;
+            });
 
             this.render();
         }
 
         prevMonth() {
-            this.innerHTML = '';
             this.date = new Date(
                 this.date.getFullYear(),
                 this.date.getMonth() - 1,
@@ -115,7 +125,6 @@ customElements.define(
         }
 
         nextMonth() {
-            this.innerHTML = '';
             this.date = new Date(
                 this.date.getFullYear(),
                 this.date.getMonth() + 1,
@@ -125,6 +134,7 @@ customElements.define(
         }
 
         render() {
+            this.innerHTML = '';
             const year = this.date.getFullYear();
             const month = this.date.getMonth();
             const startDay = new Date(year, month, 0);
@@ -143,38 +153,167 @@ customElements.define(
                 i <= prevDate;
                 i++
             ) {
+                const date = new Date(year, month - 1, i);
                 const unit = document.createElement('calendar-unit');
                 unit.setAttribute('state', 'disabled');
                 unit.setAttribute('type', 'none');
+                if (this.start_day) {
+                    if (this.end_day) {
+                        if (this.start_day < date && this.end_day > date) {
+                            unit.setAttribute('type', 'center');
+                        } else if (
+                            this.start_day.getTime() === date.getTime()
+                        ) {
+                            unit.setAttribute('type', 'left');
+                        } else if (this.end_day.getTime() === date.getTime()) {
+                            unit.setAttribute('type', 'right');
+                        }
+                    } else {
+                        if (this.start_day.getTime() === date.getTime()) {
+                            unit.setAttribute('type', 'one');
+                        } else {
+                            unit.setAttribute('type', 'none');
+                        }
+                    }
+                }
                 unit.innerHTML = i;
+                unit.onclick = () => {
+                    if (!this.start_day) {
+                        this.start_day = date;
+                        this.period?.st_date.setStartday(date);
+                    } else if (!this.end_day) {
+                        if (this.start_day.getTime() === date.getTime()) {
+                            this.start_day = undefined;
+                            this.period?.st_date.setStartday(undefined);
+                        } else if (date > this.start_day) {
+                            this.end_day = date;
+                            this.period?.ed_date.setStartday(date);
+                        }
+                    } else {
+                        if (this.end_day.getTime() === date.getTime()) {
+                            this.end_day = undefined;
+                            this.period?.ed_date.setStartday(undefined);
+                        }
+                    }
+                    this.render();
+                };
                 this.units.push(unit);
             }
 
             // 이번 달 렌더링
             for (let i = 1; i <= nextDate; i++) {
                 const unit = document.createElement('calendar-unit');
+                const date = new Date(year, month, i);
                 unit.setAttribute('type', 'none');
                 if ((prevDay + 1 + i) % 7 === 1) {
                     unit.setAttribute('state', 'accent');
                 } else {
                     unit.setAttribute('state', 'default');
                 }
+                if (this.start_day) {
+                    if (this.end_day) {
+                        if (this.start_day < date && this.end_day > date) {
+                            unit.setAttribute('type', 'center');
+                        } else if (
+                            this.start_day.getTime() === date.getTime()
+                        ) {
+                            unit.setAttribute('type', 'left');
+                        } else if (this.end_day.getTime() === date.getTime()) {
+                            unit.setAttribute('type', 'right');
+                        }
+                    } else {
+                        if (this.start_day.getTime() === date.getTime()) {
+                            unit.setAttribute('type', 'one');
+                        } else {
+                            unit.setAttribute('type', 'none');
+                        }
+                    }
+                }
                 unit.innerHTML = i;
+                unit.onclick = () => {
+                    if (!this.start_day) {
+                        this.start_day = date;
+                        this.period?.st_date.setStartday(date);
+                    } else if (!this.end_day) {
+                        if (this.start_day.getTime() === date.getTime()) {
+                            this.start_day = undefined;
+                            this.period?.st_date.setStartday(undefined);
+                        } else if (date > this.start_day) {
+                            this.end_day = date;
+                            this.period?.ed_date.setStartday(date);
+                        }
+                    } else {
+                        if (this.end_day.getTime() === date.getTime()) {
+                            this.end_day = undefined;
+                            this.period?.ed_date.setStartday(undefined);
+                        }
+                    }
+                    this.render();
+                };
                 this.units.push(unit);
             }
 
             // 다음 달 렌더링
             for (let i = 1; i < 7 - nextDay; i++) {
                 const unit = document.createElement('calendar-unit');
+                const date = new Date(year, month + 1, i);
                 unit.setAttribute('state', 'disabled');
                 unit.setAttribute('type', 'none');
                 unit.innerHTML = i;
+                if (this.start_day) {
+                    if (this.end_day) {
+                        if (this.start_day < date && this.end_day > date) {
+                            unit.setAttribute('type', 'center');
+                        } else if (
+                            this.start_day.getTime() === date.getTime()
+                        ) {
+                            unit.setAttribute('type', 'left');
+                        } else if (this.end_day.getTime() === date.getTime()) {
+                            unit.setAttribute('type', 'right');
+                        }
+                    } else {
+                        if (this.start_day.getTime() === date.getTime()) {
+                            unit.setAttribute('type', 'one');
+                        } else {
+                            unit.setAttribute('type', 'none');
+                        }
+                    }
+                }
+                unit.onclick = () => {
+                    if (!this.start_day) {
+                        this.start_day = date;
+                        this.period?.st_date.setStartday(date);
+                    } else if (!this.end_day) {
+                        if (this.start_day.getTime() === date.getTime()) {
+                            this.start_day = undefined;
+                            this.period?.st_date.setStartday(undefined);
+                        } else if (date > this.start_day) {
+                            this.end_day = date;
+                            this.period?.ed_date.setStartday(date);
+                        }
+                    } else {
+                        if (this.end_day.getTime() === date.getTime()) {
+                            this.end_day = undefined;
+                            this.period?.ed_date.setStartday(undefined);
+                        }
+                    }
+                    this.render();
+                };
                 this.units.push(unit);
             }
 
             this.units.forEach((u) => {
                 this.append(u);
             });
+        }
+        setStartday(date) {
+            this.start_day = date;
+            this.render();
+        }
+
+        setEndday(date) {
+            this.end_day = date;
+            this.render();
         }
     },
 );
@@ -258,6 +397,81 @@ customElements.define(
 
             this.container.append(leftArrow, center, rightArrow);
             this.append(this.container, this.unit_container);
+        }
+    },
+);
+
+customElements.define(
+    'calendar-period',
+    class extends HTMLElement {
+        st_container;
+        ed_container;
+
+        st_date;
+        ed_date;
+        constructor() {
+            super();
+
+            this.st_container = document.createElement('div');
+            this.st_container.style = `
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            `;
+            const 시작일 = document.createElement('span');
+            시작일.innerText = '시작일';
+            시작일.style.marginBottom = '8px';
+            시작일.style.textAlign = 'left';
+            시작일.style.width = '100%';
+            시작일.classList.add('body-02-me');
+            시작일.style.color = 'var(--text-secondary)';
+            this.st_date = document.createElement('textfield-date');
+            this.st_date.setAttribute('size', 'l');
+            this.st_date.style.width = '100%';
+            this.st_container.append(시작일, this.st_date);
+
+            this.ed_container = document.createElement('div');
+            this.ed_container.style = `
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-top: 16px;
+            `;
+            const 종료일 = document.createElement('span');
+            종료일.innerText = '시작일';
+            종료일.style.marginBottom = '8px';
+            종료일.style.textAlign = 'left';
+            종료일.style.width = '100%';
+            종료일.classList.add('body-02-me');
+            종료일.style.color = 'var(--text-secondary)';
+            this.ed_date = document.createElement('textfield-date');
+            this.ed_date.setAttribute('size', 'l');
+            this.ed_date.style.width = '100%';
+            this.ed_container.append(종료일, this.ed_date);
+        }
+        connectedCallback() {
+            this.style.marginTop = '16px';
+            this.style.boxSizing = 'border-box';
+
+            const units = this.previousElementSibling;
+
+            const stonchange = this.st_date.start_time.onchange;
+            this.st_date.onchange = (e) => {
+                stonchange(e);
+                units.setStartday(this.st_date.start);
+            };
+
+            const edonchange = this.ed_date.start_time.onchange;
+            this.ed_date.onchage = (e) => {
+                edonchange(e);
+                units.setEndday(this.ed_date.start);
+            };
+
+            this.append(this.st_container, this.ed_container);
         }
     },
 );

@@ -1,0 +1,33 @@
+.s{
+    width: 1024;
+    font-size: 16px;
+}
+.l{
+    width: 1440;
+    font-size: 18px;
+}
+.container{
+    display: block;
+    background-color: blue;
+    text-align: center;
+}
+.item{
+    background-color: green;
+    width: 100%;
+    height: 30px;
+    float: left;
+}
+.items{
+    float: left;
+    width: 20%;
+}
+
+.right{
+    text-align: right;
+}
+.center{
+    text-align: center;
+}
+.left{
+    text-align: left;
+}

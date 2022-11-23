@@ -165,6 +165,14 @@ customElements.define(
                     <div style="margin: 0 0.3em">${innerHTML}</div>
                     ${icon === 'right' ? arrow : ''}
                 `;
+                const link1 = document.createElement('link');
+                link1.setAttribute('href', '../../css/common.css');
+                link1.setAttribute('rel', 'stylesheet');
+
+                const link2 = document.createElement('link');
+                link2.setAttribute('href', '../../css/reset.css');
+                link2.setAttribute('rel', 'stylesheet');
+                this.shadowRoot.append(link1, link2);
             });
         }
     },

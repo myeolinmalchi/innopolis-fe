@@ -1,68 +1,23 @@
-/*---------인사말--------*/
-.large-text-wrapper {
-    text-align: left;
-    max-width: 1100px;
-    width: 100%;
-    padding: 0;
-    margin-top: 48px;
-    font-size: var(--title-02);
-}
-
-.small-text-wrapper {
-    text-align: left;
-    max-width: 1100px;
-    width: 100%;
-    padding: 0;
-    margin-top: 56px;
-    color: var(--text-secondary);
-    font-size: var(--body-03);
-}
-
-.sign-wrapper {
-    display: flex;
-    justify-content: right;
-    max-width: 1100px;
-    width: 100%;
-    margin-top: 62px;
-}
-.sign {
-    width: 194px;
-    height: 48px;
-}
-
-.text-accent {
-    color: #4262ff;
-}
-
-.center-img {
-    max-width: 1100px;
-    width: 100%;
-    height: 350px;
-    border-radius: 5px;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-/*---------인사말--------*/
-
-/*---------오시는길--------*/
-
 .location-container {
     display: flex;
     flex-direction: column;
     width: 100%;
     max-width: 1100px;
     padding: 120px 0;
-    margin-bottom: ;
-}
-.content-wrapper {
-    padding-top: 0px;
 }
 
 .location-title {
+    display: flex;
     font-size: var(--title-02);
     text-align: left;
     width: 100%;
+    align-items: center;
+}
+
+.location-subtitle {
+    color: var(--text-secondary);
+    font-size: var(--body-03);
+    margin-left: 16px;
 }
 
 .location-detail-wrapper {
@@ -75,27 +30,29 @@
 }
 
 .location-map {
-    height: 498px;
-    width: 550px;
-    border-radius: 4px;
+    width: 50%;
+    max-width: 550px;
+    border-radius: 0px 4px 4px 0px;
     box-sizing: border-box;
     background: var(--background-gray-03);
+    min-height: 100%;
 }
 
 .location-detail {
-    height: 498px;
-    width: 550px;
+    max-width: 550px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     padding: 32px;
     box-sizing: border-box;
     background: var(--background-gray-01);
+    gap: 32px;
+    border-radius: 4px;
 }
 
 .location-detail-content-wrapper {
     display: flex;
     flex-direction: column;
-    margin-bottom: 32px;
 }
 
 .location-detail-title {
@@ -137,22 +94,59 @@
     width: 372px;
 }
 
-/*---------오시는길--------*/
+.center-img {
+    max-width: 1100px;
+    width: 100%;
+    height: 350px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 
 @media (max-width: 512px) {
-    .large-text-wrapper {
-        font-size: var(--subtitle-03);
-    }
-    .sign {
-        width: 145px;
-        height: 36px;
+    .location-container {
+        padding: 64px 0;
     }
 
-    .small-text-wrapper {
-        font-size: var(--body-02);
-        margin-top: 48px;
+    .location-title {
+        font-size: var(--subtitle-03);
     }
-    .center-img {
-        height: 180px;
+    .location-subtitle {
+        font-size: var(--body-02);
+        margin-left: 8px;
+    }
+
+    .location-detail-wrapper {
+        flex-direction: column;
+    }
+
+    .location-map {
+        width: 100%;
+        height: 160px;
+        border-radius: 4px;
+    }
+
+    .location-detail {
+        width: 100%;
+        margin-top: 16px;
+        gap: 24px;
+    }
+
+    .location-detail-title {
+        font-size: var(--body-02);
+    }
+
+    .location-detail-content {
+        font-size: var(--body-03);
+    }
+    .public-transport-wrapper {
+        flex-direction: column;
+    }
+    .public-transport-title {
+        width: 100%;
+    }
+    .public-transport-content {
+        width: 100%;
     }
 }

@@ -1,21 +1,21 @@
-class header_default extends HTMLElement{
-    constructor(){ 
+class header_default extends HTMLElement {
+    constructor() {
         super();
     }
-    connectedCallback(){
-        this.attachShadow({mode:'open'});        
+    connectedCallback() {
+        this.attachShadow({ mode: 'open' });
         const container = document.createElement('header');
 
         const logo = document.createElement('div');
         const logoImg = document.createElement('img');
         const nav = document.createElement('div');
         const ul = document.createElement('ul');
-        
+
         const li1 = document.createElement('li');
         const a1 = document.createElement('a');
         a1.innerText = '강소특구소개';
         li1.appendChild(a1);
-        
+
         const li2 = document.createElement('li');
         const a2 = document.createElement('a');
         a2.innerText = '지원사업소개';
@@ -45,29 +45,27 @@ class header_default extends HTMLElement{
         const a7 = document.createElement('a');
         a7.innerText = '특구마당';
         li7.appendChild(a7);
-        
+
         const status = document.createElement('div');
-        
+
         const loginbtn = document.createElement('input');
-        loginbtn.setAttribute('type','button');
-        loginbtn.setAttribute('value','로그인');
-        
+        loginbtn.setAttribute('type', 'button');
+        loginbtn.setAttribute('value', '로그인');
+
         const logoutbtn = document.createElement('input');
-        logoutbtn.setAttribute('type','button');
-        logoutbtn.setAttribute('value','로그아웃');
-        
+        logoutbtn.setAttribute('type', 'button');
+        logoutbtn.setAttribute('value', '로그아웃');
+
         const mypagebtn = document.createElement('input');
-        mypagebtn.setAttribute('type','button');
-        mypagebtn.setAttribute('value','마이페이지');
-        
+        mypagebtn.setAttribute('type', 'button');
+        mypagebtn.setAttribute('value', '마이페이지');
+
         const menuIcon = document.createElement('img');
-        menuIcon.setAttribute('src','../image/menuIcon.png');
+        menuIcon.setAttribute('src', '../image/menuIcon.png');
 
         const theme = this.getAttribute('theme');
         const login = this.getAttribute('login');
         const size = this.getAttribute('size');
-
-        
 
         const style = document.createElement('style');
 
@@ -75,47 +73,45 @@ class header_default extends HTMLElement{
         let font_color = '#9CA3AF';
         let background_color = '#FFFFFF';
         let width = 1440;
-        logoImg.setAttribute('src',"../image/headerLogoDefault.png");
-        
-        container.setAttribute('class','deafult');
-        logo.setAttribute('class','logo');
-        nav.setAttribute('class','nav');
-        status.setAttribute('class','login');
+        logoImg.setAttribute('src', '../image/headerLogoDefault.png');
 
-        
-        if(theme === 'clear'){
+        container.setAttribute('class', 'deafult');
+        logo.setAttribute('class', 'logo');
+        nav.setAttribute('class', 'nav');
+        status.setAttribute('class', 'login');
+
+        if (theme === 'clear') {
             font_color = '#FFFFFF';
             status_font_color = '#FFFFFF';
             background_color = '';
-            logoImg.setAttribute('src','../image/headerLogoClear.png');
-            container.setAttribute('class','clear');
+            logoImg.setAttribute('src', '../image/headerLogoClear.png');
+            container.setAttribute('class', 'clear');
         }
         logo.appendChild(logoImg);
 
-            ul.appendChild(li1);
-            ul.appendChild(li2);
-            ul.appendChild(li3);
-            ul.appendChild(li4);
-            ul.appendChild(li5);
-            ul.appendChild(li6);
-            ul.appendChild(li7);
-            if(login === 'True'){
-                status.appendChild(mypagebtn);
-                status.appendChild(logoutbtn);
-            }else{
-                status.appendChild(loginbtn);
-            }
-    
-        if(size === 'M'){
-            width = 1024;
-            status.appendChild(menuIcon);
-            ul.setAttribute('class','hide');
-            loginbtn.setAttribute('class','hide');
-            logoutbtn.setAttribute('class','hide');
-            mypagebtn.setAttribute('class','hide');
+        ul.appendChild(li1);
+        ul.appendChild(li2);
+        ul.appendChild(li3);
+        ul.appendChild(li4);
+        ul.appendChild(li5);
+        ul.appendChild(li6);
+        ul.appendChild(li7);
+        if (login === 'True') {
+            status.appendChild(mypagebtn);
+            status.appendChild(logoutbtn);
+        } else {
+            status.appendChild(loginbtn);
         }
 
-        
+        if (size === 'M') {
+            width = 1024;
+            status.appendChild(menuIcon);
+            ul.setAttribute('class', 'hide');
+            loginbtn.setAttribute('class', 'hide');
+            logoutbtn.setAttribute('class', 'hide');
+            mypagebtn.setAttribute('class', 'hide');
+        }
+
         style.textContent = `
         ul{
             list-style: none;
@@ -179,9 +175,8 @@ class header_default extends HTMLElement{
             .login img{
                 margin-top: 45px;
             }
-        `
+        `;
 
-        
         this.shadowRoot.appendChild(container);
         this.shadowRoot.append(style);
         container.appendChild(logo);
@@ -191,4 +186,4 @@ class header_default extends HTMLElement{
     }
 }
 
-customElements.define('header-default',header_default);
+customElements.define('header-default', header_default);

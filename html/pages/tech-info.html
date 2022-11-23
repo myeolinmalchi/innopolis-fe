@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Insert title here.</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="../../css/reset.css" />
+        <link rel="stylesheet" href="../../css/common.css" />
+        <link rel="stylesheet" href="../../css/tab-area.css" />
+        <script
+            type="text/javascript"
+            src="../../js/components/tab.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="../../js/components/tab-area.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="../../js/components/text-field.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="../../js/components/pagination.js"
+        ></script>
+    </head>
+    <body>
+        <tab-area>
+            <tab-introduce-text>
+                천안아산강소특구<br />
+                입주 기업을 소개합니다.
+            </tab-introduce-text>
+            <tab-container>
+                <tab-default type="primary">기술검색</tab-default>
+                <tab-default type="primary">우수기술</tab-default>
+                <tab-default type="primary">기술영상</tab-default>
+                <tab-default type="primary">기술동향</tab-default>
+            </tab-container>
+        </tab-area>
+        <tab-content-area>
+            <tab-content>
+                <template shadowroot="open">
+                    <link
+                        rel="stylesheet"
+                        href="../../css/pages/tech-info/search-tech.css"
+                    />
+                    <img class="top-img" src="" alt="" />
+                    <div class="content-wrapper">
+                        <textfield-search
+                            size="l"
+                            placeholder="검색어를 입력하세요"
+                        ></textfield-search>
+                        <div class="post-container">
+                            <div class="post-wrapper">
+                                <img class="post-img" src="" alt="" />
+                                <div class="post-detail-wrapper">
+                                    <span class="post-detail-ti body-bd"
+                                        >도로구조물의 신축이음구조 및 이의
+                                        시공방법</span
+                                    >
+                                    <div
+                                        class="
+                                            post-detail-hashtag-wrapper
+                                            body-me
+                                        "
+                                    >
+                                        <span class="post-detail-hashtag"
+                                            >#해시태그</span
+                                        >
+                                        <span class="post-detail-hashtag"
+                                            >#해시태그</span
+                                        >
+                                        <span class="post-detail-hashtag"
+                                            >#해시태그</span
+                                        >
+                                        <span class="post-detail-hashtag"
+                                            >#해시태그</span
+                                        >
+                                        <span class="post-detail-hashtag"
+                                            >#해시태그</span
+                                        >
+                                        <span class="post-detail-hashtag"
+                                            >#해시태그</span
+                                        >
+                                        <span class="post-detail-hashtag"
+                                            >#해시태그</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <pagination-container>
+                            <pagination-arrow
+                                direction="left"
+                            ></pagination-arrow>
+                            <pagination-unit link="/1">1</pagination-unit>
+                            <pagination-unit state="focus">2</pagination-unit>
+                            <pagination-unit>3</pagination-unit>
+                            <pagination-unit>4</pagination-unit>
+                            <pagination-unit>5</pagination-unit>
+                            <pagination-arrow
+                                direction="right"
+                            ></pagination-arrow>
+                        </pagination-container>
+                    </div>
+                </template>
+            </tab-content>
+            <tab-content>
+                <template shadowroot="open">
+                    <link
+                        rel="stylesheet"
+                        href="../../css/pages/tech-info/great-tech.css"
+                    />
+                    <img class="top-img" src="" alt="" />
+                    <div class="content-wrapper">
+                        <textfield-search
+                            size="l"
+                            placeholder="검색어를 입력하세요"
+                        ></textfield-search>
+                        <div class="post-container">
+                            <div class="post-wrapper">
+                                <img class="post-img" src="" alt="" />
+                                <div class="post-detail-wrapper">
+                                    <span class="post-detail-subti body-me">
+                                        TLT1
+                                    </span>
+                                    <span class="post-detail-ti body-bd"
+                                        >국가는 건전한 소비행위를 계도하고
+                                        생산품의 품질향상을 촉구하기 위한
+                                        소비자보호운동을 법률이 정하는 바에
+                                        의하여 보장한다.</span
+                                    >
+                                    <div
+                                        class="
+                                            post-detail-hashtag-wrapper
+                                            body-me
+                                        "
+                                    >
+                                        <span class="post-detail-hashtag"
+                                            >#해시태그</span
+                                        >
+                                        <span class="post-detail-hashtag"
+                                            >#해시태그</span
+                                        >
+                                        <span class="post-detail-hashtag"
+                                            >#해시태그</span
+                                        >
+                                        <span class="post-detail-hashtag"
+                                            >#해시태그</span
+                                        >
+                                        <span class="post-detail-hashtag"
+                                            >#해시태그</span
+                                        >
+                                        <span class="post-detail-hashtag"
+                                            >#해시태그</span
+                                        >
+                                        <span class="post-detail-hashtag"
+                                            >#해시태그</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <pagination-container>
+                            <pagination-arrow
+                                direction="left"
+                            ></pagination-arrow>
+                            <pagination-unit link="/1">1</pagination-unit>
+                            <pagination-unit state="focus">2</pagination-unit>
+                            <pagination-unit>3</pagination-unit>
+                            <pagination-unit>4</pagination-unit>
+                            <pagination-unit>5</pagination-unit>
+                            <pagination-arrow
+                                direction="right"
+                            ></pagination-arrow>
+                        </pagination-container>
+                    </div> </template
+            ></tab-content>
+            <tab-content></tab-content>
+        </tab-content-area>
+    </body>
+</html>

@@ -74,11 +74,11 @@ customElements.define(
                 }
             `;
             const link1 = document.createElement('link');
-            link1.setAttribute('href', '../css/common.css');
+            link1.setAttribute('href', '../../css/common.css');
             link1.setAttribute('rel', 'stylesheet');
 
             const link2 = document.createElement('link');
-            link2.setAttribute('href', '../css/reset.css');
+            link2.setAttribute('href', '../../css/reset.css');
             link2.setAttribute('rel', 'stylesheet');
 
             shadow.append(link1, link2, stylesheet, this.input);
@@ -498,11 +498,11 @@ customElements.define(
                 }
             `;
             const link1 = document.createElement('link');
-            link1.setAttribute('href', '../css/common.css');
+            link1.setAttribute('href', '../../css/common.css');
             link1.setAttribute('rel', 'stylesheet');
 
             const link2 = document.createElement('link');
-            link2.setAttribute('href', '../css/reset.css');
+            link2.setAttribute('href', '../../css/reset.css');
             link2.setAttribute('rel', 'stylesheet');
 
             this.container.append(this.arrow, this.input);

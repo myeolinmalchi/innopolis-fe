@@ -126,7 +126,7 @@ class header_default extends HTMLElement{
             header{
                 background-color: ${background_color};
                 display: block;
-                width: ${width};
+                width: ${width}px;
                 height: 100px;
                 margin: 0 auto;
                 line-height: 100px;

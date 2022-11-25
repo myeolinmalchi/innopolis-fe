@@ -187,6 +187,7 @@ customElements.define(
             this.arrow.innerHTML = arrow;
             this.arrow.style.width = arrowSize;
             this.arrow.style.height = arrowSize;
+            this.container.style.justifyContent = 'space-between';
 
             this.container.append(this.text, this.arrow);
             this.append(this.container);

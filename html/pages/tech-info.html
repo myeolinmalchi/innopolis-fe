@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="../../css/reset.css" />
         <link rel="stylesheet" href="../../css/common.css" />
         <link rel="stylesheet" href="../../css/tab-area.css" />
+        <link rel="stylesheet" href="../../css/pages/tech-info/tech-info.css" />
         <script
             type="text/javascript"
             src="../../js/components/tab.js"
@@ -22,6 +23,10 @@
         <script
             type="text/javascript"
             src="../../js/components/pagination.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="../../js/components/button.js"
         ></script>
     </head>
     <body>
@@ -39,144 +44,203 @@
         </tab-area>
         <tab-content-area>
             <tab-content>
-                <template shadowroot="open">
-                    <link
-                        rel="stylesheet"
-                        href="../../css/pages/tech-info/search-tech.css"
-                    />
-                    <img class="top-img" src="" alt="" />
-                    <div class="content-wrapper">
-                        <textfield-search
-                            size="l"
-                            placeholder="검색어를 입력하세요"
-                        ></textfield-search>
-                        <div class="post-container">
-                            <div class="post-wrapper">
-                                <img class="post-img" src="" alt="" />
-                                <div class="post-detail-wrapper">
-                                    <span class="post-detail-ti body-bd"
-                                        >도로구조물의 신축이음구조 및 이의
-                                        시공방법</span
+                <img class="top-img" src="" alt="" />
+                <div class="content-wrapper">
+                    <textfield-search
+                        size="l"
+                        placeholder="검색어를 입력하세요"
+                    ></textfield-search>
+                    <div class="post-container">
+                        <div class="post-wrapper">
+                            <img class="post-img" src="" alt="" />
+                            <div class="post-detail-wrapper">
+                                <span class="post-detail-ti body-bd"
+                                    >도로구조물의 신축이음구조 및 이의
+                                    시공방법</span
+                                >
+                                <div
+                                    class="post-detail-hashtag-wrapper body-me"
+                                >
+                                    <span class="post-detail-hashtag"
+                                        >#해시태그</span
                                     >
-                                    <div
-                                        class="
-                                            post-detail-hashtag-wrapper
-                                            body-me
-                                        "
+                                    <span class="post-detail-hashtag"
+                                        >#해시태그</span
                                     >
-                                        <span class="post-detail-hashtag"
-                                            >#해시태그</span
-                                        >
-                                        <span class="post-detail-hashtag"
-                                            >#해시태그</span
-                                        >
-                                        <span class="post-detail-hashtag"
-                                            >#해시태그</span
-                                        >
-                                        <span class="post-detail-hashtag"
-                                            >#해시태그</span
-                                        >
-                                        <span class="post-detail-hashtag"
-                                            >#해시태그</span
-                                        >
-                                        <span class="post-detail-hashtag"
-                                            >#해시태그</span
-                                        >
-                                        <span class="post-detail-hashtag"
-                                            >#해시태그</span
-                                        >
-                                    </div>
+                                    <span class="post-detail-hashtag"
+                                        >#해시태그</span
+                                    >
+                                    <span class="post-detail-hashtag"
+                                        >#해시태그</span
+                                    >
+                                    <span class="post-detail-hashtag"
+                                        >#해시태그</span
+                                    >
+                                    <span class="post-detail-hashtag"
+                                        >#해시태그</span
+                                    >
+                                    <span class="post-detail-hashtag"
+                                        >#해시태그</span
+                                    >
                                 </div>
                             </div>
                         </div>
-                        <pagination-container>
-                            <pagination-arrow
-                                direction="left"
-                            ></pagination-arrow>
-                            <pagination-unit link="/1">1</pagination-unit>
-                            <pagination-unit state="focus">2</pagination-unit>
-                            <pagination-unit>3</pagination-unit>
-                            <pagination-unit>4</pagination-unit>
-                            <pagination-unit>5</pagination-unit>
-                            <pagination-arrow
-                                direction="right"
-                            ></pagination-arrow>
-                        </pagination-container>
                     </div>
-                </template>
+                    <pagination-container>
+                        <pagination-arrow direction="left"></pagination-arrow>
+                        <pagination-unit link="/1">1</pagination-unit>
+                        <pagination-unit state="focus">2</pagination-unit>
+                        <pagination-unit>3</pagination-unit>
+                        <pagination-unit>4</pagination-unit>
+                        <pagination-unit>5</pagination-unit>
+                        <pagination-arrow direction="right"></pagination-arrow>
+                    </pagination-container>
+                </div>
             </tab-content>
             <tab-content>
-                <template shadowroot="open">
-                    <link
-                        rel="stylesheet"
-                        href="../../css/pages/tech-info/great-tech.css"
-                    />
-                    <img class="top-img" src="" alt="" />
-                    <div class="content-wrapper">
-                        <textfield-search
-                            size="l"
-                            placeholder="검색어를 입력하세요"
-                        ></textfield-search>
-                        <div class="post-container">
-                            <div class="post-wrapper">
-                                <img class="post-img" src="" alt="" />
-                                <div class="post-detail-wrapper">
-                                    <span class="post-detail-subti body-me">
-                                        TLT1
-                                    </span>
-                                    <span class="post-detail-ti body-bd"
-                                        >국가는 건전한 소비행위를 계도하고
-                                        생산품의 품질향상을 촉구하기 위한
-                                        소비자보호운동을 법률이 정하는 바에
-                                        의하여 보장한다.</span
+                <img class="top-img" src="" alt="" />
+                <div class="content-wrapper">
+                    <textfield-search
+                        size="l"
+                        placeholder="검색어를 입력하세요"
+                    ></textfield-search>
+                    <div class="post-container">
+                        <div class="post-wrapper">
+                            <img class="post-img" src="" alt="" />
+                            <div class="post-detail-wrapper">
+                                <span class="post-detail-subti body-me">
+                                    TLT1
+                                </span>
+                                <span class="post-detail-ti body-bd"
+                                    >국가는 건전한 소비행위를 계도하고 생산품의
+                                    품질향상을 촉구하기 위한 소비자보호운동을
+                                    법률이 정하는 바에 의하여 보장한다.</span
+                                >
+                                <div
+                                    class="post-detail-hashtag-wrapper body-me"
+                                >
+                                    <span class="post-detail-hashtag"
+                                        >#해시태그</span
                                     >
-                                    <div
-                                        class="
-                                            post-detail-hashtag-wrapper
-                                            body-me
-                                        "
+                                    <span class="post-detail-hashtag"
+                                        >#해시태그</span
                                     >
-                                        <span class="post-detail-hashtag"
-                                            >#해시태그</span
-                                        >
-                                        <span class="post-detail-hashtag"
-                                            >#해시태그</span
-                                        >
-                                        <span class="post-detail-hashtag"
-                                            >#해시태그</span
-                                        >
-                                        <span class="post-detail-hashtag"
-                                            >#해시태그</span
-                                        >
-                                        <span class="post-detail-hashtag"
-                                            >#해시태그</span
-                                        >
-                                        <span class="post-detail-hashtag"
-                                            >#해시태그</span
-                                        >
-                                        <span class="post-detail-hashtag"
-                                            >#해시태그</span
-                                        >
-                                    </div>
+                                    <span class="post-detail-hashtag"
+                                        >#해시태그</span
+                                    >
+                                    <span class="post-detail-hashtag"
+                                        >#해시태그</span
+                                    >
+                                    <span class="post-detail-hashtag"
+                                        >#해시태그</span
+                                    >
+                                    <span class="post-detail-hashtag"
+                                        >#해시태그</span
+                                    >
+                                    <span class="post-detail-hashtag"
+                                        >#해시태그</span
+                                    >
                                 </div>
                             </div>
                         </div>
-                        <pagination-container>
-                            <pagination-arrow
-                                direction="left"
-                            ></pagination-arrow>
-                            <pagination-unit link="/1">1</pagination-unit>
-                            <pagination-unit state="focus">2</pagination-unit>
-                            <pagination-unit>3</pagination-unit>
-                            <pagination-unit>4</pagination-unit>
-                            <pagination-unit>5</pagination-unit>
-                            <pagination-arrow
-                                direction="right"
-                            ></pagination-arrow>
-                        </pagination-container>
-                    </div> </template
-            ></tab-content>
-            <tab-content></tab-content>
+                    </div>
+                    <pagination-container>
+                        <pagination-arrow direction="left"></pagination-arrow>
+                        <pagination-unit link="/1">1</pagination-unit>
+                        <pagination-unit state="focus">2</pagination-unit>
+                        <pagination-unit>3</pagination-unit>
+                        <pagination-unit>4</pagination-unit>
+                        <pagination-unit>5</pagination-unit>
+                        <pagination-arrow direction="right"></pagination-arrow>
+                    </pagination-container>
+                </div>
+            </tab-content>
+            <tab-content>
+                <img class="top-img" src="" alt="" />
+                <div class="content-wrapper">
+                    <div class="post-container">
+                        <div class="post-wrapper">
+                            <img class="post-img" src="" alt="" />
+                            <div class="post-detail-wrapper">
+                                <span class="post-detail-ti body-bd"
+                                    >도로구조물의 신축이음구조 및 이의
+                                    시공방법</span
+                                >
+                                <span class="post-detail-date body-me">
+                                    YY.MM.DD
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <pagination-container>
+                        <pagination-arrow direction="left"></pagination-arrow>
+                        <pagination-unit link="/1">1</pagination-unit>
+                        <pagination-unit state="focus">2</pagination-unit>
+                        <pagination-unit>3</pagination-unit>
+                        <pagination-unit>4</pagination-unit>
+                        <pagination-unit>5</pagination-unit>
+                        <pagination-arrow direction="right"></pagination-arrow>
+                    </pagination-container>
+                </div>
+            </tab-content>
+            <tab-content id="tech-trend">
+                <img class="top-img" src="" alt="" />
+                <div class="content-wrapper">
+                    <div class="post-container">
+                        <div class="post-wrapper">
+                            <img class="post-img" src="" alt="" />
+                            <div class="post-detail-wrapper">
+                                <span class="post-title title-bd"
+                                    >글로벌 시장동향 보고서</span
+                                >
+                                <span class="post-content body-me"
+                                    >연구개발특구진흥재단 사이트 내 유망
+                                    기술시장 정보제공 페이지로 이동합니다.</span
+                                >
+                                <div class="button-wrapper">
+                                    <button-default style_="outline"
+                                        >보러가기</button-default
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-wrapper">
+                            <img class="post-img" src="" alt="" />
+                            <div class="post-detail-wrapper">
+                                <span class="post-title title-bd"
+                                    >산업동향 분석</span
+                                >
+                                <span class="post-content body-me"
+                                    >국내외의 산업·기술과 관련된 실물경제의
+                                    동향과 정보를 확인하실 수 있습니다.</span
+                                >
+                                <div class="button-wrapper">
+                                    <button-default style_="outline"
+                                        >보러가기</button-default
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-wrapper">
+                            <img class="post-img" src="" alt="" />
+                            <div class="post-detail-wrapper">
+                                <span class="post-title title-bd"
+                                    >모빌리티 인사이트</span
+                                >
+                                <span class="post-content body-me"
+                                    >자동차 기술 및 산업 트렌드 이슈 분석을
+                                    이곳에서 만나보실 수 있습니다.</span
+                                >
+                                <div class="button-wrapper">
+                                    <button-default style_="outline"
+                                        >보러가기</button-default
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </tab-content>
         </tab-content-area>
     </body>
 </html>

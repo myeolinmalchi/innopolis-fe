@@ -2,12 +2,10 @@ customElements.define(
     'button-default',
     class extends HTMLElement {
         connectedCallback() {
-            this.attachShadow({ mode: 'open' });
             const style = this.getAttribute('style_') ?? 'primary';
             const state = this.getAttribute('state') ?? 'default';
             const size = this.getAttribute('size') ?? 'm';
             const icon = this.getAttribute('icon') ?? 'none';
-
             const [color_filled, color_hover, color_disabled, font_color] =
                 (function () {
                     switch (style) {
@@ -160,19 +158,11 @@ customElements.define(
 
             setTimeout(() => {
                 const innerHTML = this.innerHTML;
-                this.shadowRoot.innerHTML = `
+                this.innerHTML = `
                     ${icon === 'left' ? arrow : ''}
                     <div style="margin: 0 0.3em">${innerHTML}</div>
                     ${icon === 'right' ? arrow : ''}
                 `;
-                const link1 = document.createElement('link');
-                link1.setAttribute('href', '../../css/common.css');
-                link1.setAttribute('rel', 'stylesheet');
-
-                const link2 = document.createElement('link');
-                link2.setAttribute('href', '../../css/reset.css');
-                link2.setAttribute('rel', 'stylesheet');
-                this.shadowRoot.append(link1, link2);
             });
         }
     },
@@ -191,8 +181,6 @@ customElements.define(
         }
 
         connectedCallback() {
-            const shadow = this.attachShadow({ mode: 'open' });
-
             const style = this.getAttribute('style_') ?? 'primary';
             const state = this.getAttribute('state') ?? 'default';
             const size = this.getAttribute('size') ?? 'm';

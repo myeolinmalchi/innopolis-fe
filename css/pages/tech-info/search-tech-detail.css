@@ -23,7 +23,7 @@
 .summary-wrapper {
     width: 100%;
     max-width: 1100px;
-    margin-top: 49px;
+    margin-top: 48px;
     display: flex;
     flex-direction: column;
 }
@@ -66,6 +66,7 @@
     width: 14.5%;
     background: var(--background-gray-02);
     justify-content: center;
+    font-size: var(--body-03);
 }
 
 .table-value {
@@ -73,6 +74,7 @@
     justify-content: left;
     padding: 14px;
     color: var(--text-secondary);
+    font-size: var(--body-02);
 }
 
 td {
@@ -101,4 +103,61 @@ td {
     justify-content: right;
     margin-top: 64px;
     margin-bottom: 120px;
+}
+
+@media (max-width: 512px) {
+    .main-title {
+        font-size: var(--subtitle-03);
+        margin-top: 36px;
+    }
+
+    .main-img {
+        margin-top: 36px;
+        border-radius: 4px;
+        height: 180px;
+    }
+
+    .detail-wrapper {
+        margin-top: 32px;
+    }
+
+    .detail-title {
+        font-size: var(--body-04);
+    }
+
+    .detail-table-row {
+        flex-direction: column;
+    }
+
+    .table-name {
+        width: 100%;
+        justify-content: left;
+        padding: 12px 16px;
+        font-size: var(--body-02);
+    }
+
+    .table-value {
+        width: 100%;
+        padding: 12px 16px;
+    }
+
+    .summary-title {
+        font-size: var(--subtitle-02);
+    }
+
+    .summary-content {
+        font-size: var(--body-02);
+    }
+
+    .caution {
+        margin-top: 36px;
+        font-size: var(--body-02);
+    }
+    .button-wrapper {
+        margin-top: 48px;
+    }
+
+    td {
+        height: 46px;
+    }
 }

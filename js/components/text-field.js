@@ -44,6 +44,7 @@ customElements.define(
                     color: var(--text-primary);
                     border: 1px solid var(--stroke-gray-01);
                     border-radius: 2px;
+                    width: 100%;
                 }
 
                 .input::placeholer {
@@ -74,11 +75,11 @@ customElements.define(
                 }
             `;
             const link1 = document.createElement('link');
-            link1.setAttribute('href', '../css/common.css');
+            link1.setAttribute('href', '../../css/common.css');
             link1.setAttribute('rel', 'stylesheet');
 
             const link2 = document.createElement('link');
-            link2.setAttribute('href', '../css/reset.css');
+            link2.setAttribute('href', '../../css/reset.css');
             link2.setAttribute('rel', 'stylesheet');
 
             shadow.append(link1, link2, stylesheet, this.input);
@@ -498,11 +499,11 @@ customElements.define(
                 }
             `;
             const link1 = document.createElement('link');
-            link1.setAttribute('href', '../css/common.css');
+            link1.setAttribute('href', '../../css/common.css');
             link1.setAttribute('rel', 'stylesheet');
 
             const link2 = document.createElement('link');
-            link2.setAttribute('href', '../css/reset.css');
+            link2.setAttribute('href', '../../css/reset.css');
             link2.setAttribute('rel', 'stylesheet');
 
             this.container.append(this.arrow, this.input);
@@ -578,6 +579,7 @@ customElements.define(
                     color: var(--text-primary);
                     border: none;
                     resize: none;
+                    width: 100%;
                 }
 
                 .button {
@@ -623,11 +625,11 @@ customElements.define(
                 }
             `;
             const link1 = document.createElement('link');
-            link1.setAttribute('href', '../css/common.css');
+            link1.setAttribute('href', '../../css/common.css');
             link1.setAttribute('rel', 'stylesheet');
 
             const link2 = document.createElement('link');
-            link2.setAttribute('href', '../css/reset.css');
+            link2.setAttribute('href', '../../css/reset.css');
             link2.setAttribute('rel', 'stylesheet');
 
             this.count.innerText = `0/${max}`;

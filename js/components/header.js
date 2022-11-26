@@ -1,5 +1,5 @@
-class header_default extends HTMLElement{
-    constructor(){ 
+class header_default extends HTMLElement {
+    constructor() {
         super();
     }
     connectedCallback(){
@@ -667,8 +667,8 @@ class header_default extends HTMLElement{
         log_icon.onclick = function small_menu_btn(){
             document.getElementsByClassName("click").style.display = "none";
         }
-        
 
+        
         style.textContent = `
         ul{
             list-style: none;
@@ -901,82 +901,39 @@ hr{
 
 }
 
-@media (max-width: 639px) {
-    .header_container{
-        width: 360px;
-    }
-    .login_small{
-        margin-top: 24px;
-    }
-    .login_small div{
-        margin-bottom: 24px;
-    }
-    .login_small div span{
-        color: #4B5563;
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 22.4px;
-        letter-spacing: -1%;
-    }
-    .login_small input{
-        width: 160px;
-        height: 34px;
-        padding: 6px 12px 6px 12px;
-        border-radius: 4px;
-        background-color: #008DFF;
-        color: #FFFFFF;
-        border: #008DFF;
-    }
-    .small_line{
-        color: #D1D5D8;
-        margin-top: 24px;
-        margin-bottom: 24px;
-    }
-    
-    .small_list ul{
-        width: 100%;
-        float: left;
-    }
-    .small_list ul li{
-        color:#000000;
-        font-size: 20px;
-        font-weight: bold;
-        line-height: 130%;
-        vertical-align: top;
-    }
-    .small_list ul ul{
-        margin-top: 16px;
-        min-height: 162px;
-    }
-    .small_list ul ul li{
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 28px;
-        letter-spacing: -1%;
-        height: 28px;
-        float:left;
-        width: 100%;
-        margin-bottom: 12px;
-    }
-    
-    .small_line{
-        color: #D1D5D8;
-        margin-top: 24px;
-        float: left;
-        width: 100%;
-        margin-bottom: 24px;
-    }
-    hr{
-        width: 328px;
-        margin: 0 auto;
-    }
-    
-}
-        `;
+            input{
+                font-size: 18px;
+                line-height: 100px;
+                background: inherit ;
+                border:none;
+                box-shadow:none;
+                border-radius:0;
+                padding:0;
+                overflow:visible;
+                cursor:pointer;
+                margin: 0 8;
+            }
 
-    
+            input:hover{
+                text-decoration: underline;
+            }
 
+            .login input{
+                color: ${status_font_color};
+            }
+            .login img{
+                margin-top: 45px;
+            }
+        `
+
+        
+        this.shadowRoot.appendChild(container);
+        this.shadowRoot.append(style);
+        container.appendChild(logo);
+        container.appendChild(nav);
+        nav.appendChild(ul);
+        container.appendChild(status);
     }
 }
 
-customElements.define('header-default',header_default);
+customElements.define('header-default', header_default);

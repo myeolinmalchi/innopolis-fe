@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Insert title here.</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="../../css/reset.css" />
+        <link rel="stylesheet" href="../../css/common.css" />
+        <link
+            rel="stylesheet"
+            href="../../css/pages/tech-info/great-tech-inquiry.css"
+        />
+        <script
+            type="text/javascript"
+            src="../../js/components/button.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="../../js/components/text-field.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="../../js/components/dropdown.js"
+        ></script>
+    </head>
+    <body>
+        <div class="content-wrapper">
+            <span class="title title-bd">문의하기</span>
+            <div class="form-container">
+                <div class="item-wrapper">
+                    <span class="item-name body-me">이름</span>
+                    <textfield-default
+                        placeholder="이름을 입력해주세요."
+                    ></textfield-default>
+                </div>
+                <div class="item-wrapper">
+                    <span class="item-name body-me">기업명</span>
+                    <textfield-default
+                        placeholder="기업명을 입력해주세요."
+                    ></textfield-default>
+                </div>
+                <div class="item-wrapper">
+                    <span class="item-name body-me">소속/직위</span>
+                    <textfield-default
+                        placeholder="소속/직위를 입력해주세요."
+                    ></textfield-default>
+                </div>
+                <div class="item-wrapper">
+                    <span class="item-name body-me">이메일</span>
+                    <div class="email-wrapper">
+                        <textfield-default
+                            placeholder="이메일을 입력해주세요."
+                        ></textfield-default>
+                        <dropdown-container>
+                            <dropdown-header
+                                value="@naver.com"
+                                type="default"
+                            ></dropdown-header>
+                            <dropdown-content>
+                                <span>@gmail.com</span>
+                                <span>@gmail.com</span>
+                                <span>@gmail.com</span>
+                                <span>@gmail.com</span>
+                                <span>@gmail.com</span>
+                                <span>@gmail.com</span>
+                            </dropdown-content>
+                        </dropdown-container>
+                    </div>
+                </div>
+                <div class="item-wrapper">
+                    <span class="item-name body-me">연락처</span>
+                    <div class="phone-wrapper">
+                        <dropdown-container>
+                            <dropdown-header
+                                value="010"
+                                type="default"
+                            ></dropdown-header>
+                            <dropdown-content>
+                                <span>010</span>
+                                <span>010</span>
+                                <span>010</span>
+                                <span>010</span>
+                                <span>010</span>
+                                <span>010</span>
+                            </dropdown-content>
+                        </dropdown-container>
+                        <textfield-default
+                            placeholder="중간 번호"
+                        ></textfield-default>
+                        <textfield-default
+                            placeholder="끝 번호"
+                        ></textfield-default>
+                    </div>
+                </div>
+                <div class="item-wrapper">
+                    <span class="item-name body-me">전화번호</span>
+                    <div class="phone-wrapper">
+                        <dropdown-container>
+                            <dropdown-header
+                                value="010"
+                                type="default"
+                            ></dropdown-header>
+                            <dropdown-content>
+                                <span>010</span>
+                                <span>010</span>
+                                <span>010</span>
+                                <span>010</span>
+                                <span>010</span>
+                                <span>010</span>
+                            </dropdown-content>
+                        </dropdown-container>
+                        <textfield-default
+                            placeholder="중간 번호"
+                        ></textfield-default>
+                        <textfield-default
+                            placeholder="끝 번호"
+                        ></textfield-default>
+                    </div>
+                </div>
+                <div class="item-wrapper">
+                    <span class="item-name body-me">상담내용</span>
+                    <textfield-area
+                        placeholder="상담내용을 입력해주세요."
+                        type="count"
+                        max="500"
+                    ></textfield-area>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

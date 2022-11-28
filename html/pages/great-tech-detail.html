@@ -14,84 +14,73 @@
             type="text/javascript"
             src="../../js/components/button.js"
         ></script>
+        <script
+            type="text/javascript"
+            src="../../js/components/pages/trl.js"
+        ></script>
     </head>
     <body>
         <div class="content-wrapper">
-            <span class="main-title title-bd"> 기술 명 </span>
-
+            <span class="title-bd"> 기술 명 </span>
             <div class="top-content-wrapper">
-                <img class="top-content-img" src="" alt="" />
-                <div class="top-content-detail-container shadow-01">
-                    <div class="top-content-detail-wrapper">
-                        <div class="top-content-detail body-me">
-                            <span class="top-content-detail-name">기술명</span>
-                            <span class="top-content-detail-value">-</span>
+                <img src="" alt="" />
+                <div class="shadow-01">
+                    <div>
+                        <div class="body-me">
+                            <span>기술명</span>
+                            <span>-</span>
                         </div>
-                        <div class="top-content-detail body-me">
-                            <span class="top-content-detail-name"
-                                >특화분야</span
-                            >
-                            <span class="top-content-detail-value">-</span>
+                        <div class="body-me">
+                            <span>특화분야</span>
+                            <span>-</span>
                         </div>
-                        <div class="top-content-detail body-me">
-                            <span class="top-content-detail-name"
-                                >기술분야</span
-                            >
-                            <span class="top-content-detail-value">-</span>
+                        <div class="body-me">
+                            <span>기술분야</span>
+                            <span>-</span>
                         </div>
-                        <div class="top-content-detail body-me">
-                            <span class="top-content-detail-name"
-                                >보유기관</span
-                            >
-                            <span class="top-content-detail-value">-</span>
+                        <div class="body-me">
+                            <span>보유기관</span>
+                            <span>-</span>
                         </div>
-                        <div class="top-content-detail body-me">
-                            <span class="top-content-detail-name">연구자</span>
-                            <span class="top-content-detail-value">-</span>
+                        <div class="body-me">
+                            <span>연구자</span>
+                            <span>-</span>
                         </div>
-                        <div class="top-content-detail body-me">
-                            <span class="top-content-detail-name"
-                                >거래조건</span
-                            >
-                            <span class="top-content-detail-value">-</span>
+                        <div class="body-me">
+                            <span>거래조건</span>
+                            <span>-</span>
                         </div>
                     </div>
-                    <div class="top-content-detail-button-wrapper">
-                        <button-default class="inquiry-button"
-                            >문의하기</button-default
-                        >
-                        <button-default
-                            class="tech-intro-button"
-                            style_="secondary"
+                    <div>
+                        <button-default>문의하기</button-default>
+                        <button-default style_="secondary"
                             >기술소개서</button-default
                         >
                     </div>
                 </div>
             </div>
             <div class="subcontent-wrapper">
-                <span class="subcontent-title title-bd">기술활용분야</span>
-                <ul class="subcontent-list-container body-me">
-                    <li class="subcontent-list">
-                        자동차용 캐빈필터 및 에어크리너
-                    </li>
-                    <li class="subcontent-list">실내용 공기 청정기</li>
-                    <li class="subcontent-list">산업용 공기 청정기</li>
+                <span class="title-bd">기술활용분야</span>
+                <ul class="body-me">
+                    <li>자동차용 캐빈필터 및 에어크리너</li>
+                    <li>실내용 공기 청정기</li>
+                    <li>산업용 공기 청정기</li>
                 </ul>
             </div>
 
             <div class="subcontent-wrapper">
-                <span class="subcontent-title title-bd">시장동향</span>
-                <ul class="subcontent-list-container body-me">
-                    <li class="subcontent-list">
+                <span class="title-bd">시장동향</span>
+                <ul class="body-me">
+                    <li>
                         전 세계 자동차 필터 시장은 2020년 214억 달러에서 연평균
                         성장률 2.1%로 증가하여, 2025년에는 236억 달러에 이를
                         것으로 전망됨
                     </li>
-                    <li class="subcontent-list">
+                    <li>
                         한국의 미세먼지 농도는 OECD 국가 중 두 번째로 나쁜
                         수준임
                     </li>
-                    <li class="subcontent-list">
+                    <li>
                         세계적 친환경 정책 추세에 따라 고성능, 다기능 필터에
                         대한 수요가 증가되고 있음.
                     </li>
@@ -99,14 +88,23 @@
             </div>
 
             <div class="subcontent-wrapper">
-                <span class="subcontent-title title-bd"> 특허정보 </span>
-                <span class="subcontent-content body-me">
+                <span class="title-bd"> 특허정보 </span>
+                <span class="body-me">
                     차량용 캐빈 필터 유닛 (No: 10-2018-0015835)
                 </span>
             </div>
 
             <div class="subcontent-wrapper">
-                <span class="subcontent-title title-bd">기술완성도(TRL)</span>
+                <span class="title-bd">기술완성도(TRL)</span>
+                <div class="trl-wrapper">
+                    <trl-container achievement="3"></trl-container>
+                </div>
+            </div>
+
+            <div class="subcontent-wrapper">
+                <div class="button-wrapper">
+                    <button-default style_="outline">목록으로</button-default>
+                </div>
             </div>
         </div>
     </body>

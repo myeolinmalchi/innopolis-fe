@@ -184,6 +184,15 @@
     margin: 0 auto;
 }
 
+.content-wrapper-small {
+    width: 100%;
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 80px;
+    margin: 0 auto;
+}
+
 .content-wrapper-full {
     display: flex;
     flex-direction: column;
@@ -205,6 +214,9 @@
         height: 330px;
     }
     .content-wrapper {
+        padding: 0 16px;
+    }
+    .content-wrapper-small {
         padding: 0 16px;
     }
 }

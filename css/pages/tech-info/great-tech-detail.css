@@ -1,4 +1,4 @@
-.main-title {
+.content-wrapper > span {
     font-size: var(--title-03);
     width: 100%;
     max-width: 1100px;
@@ -17,13 +17,13 @@
     gap: 24px;
 }
 
-.top-content-img {
+.top-content-wrapper > img {
     width: 725px;
     height: 400px;
     border-radius: 8px;
 }
 
-.top-content-detail-container {
+.top-content-wrapper > div {
     width: 351px;
     display: flex;
     flex-direction: column;
@@ -32,7 +32,7 @@
     box-sizing: border-box;
 }
 
-.top-content-detail-wrapper {
+.top-content-wrapper > div > :first-child {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -40,7 +40,14 @@
     box-sizing: border-box;
 }
 
-.top-content-detail-button-wrapper {
+.top-content-wrapper > div > :first-child > div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 26px;
+}
+
+.top-content-wrapper > div > :last-child {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -48,21 +55,14 @@
     box-sizing: border-box;
 }
 
-.top-content-detail {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    height: 26px;
-}
-
-.top-content-detail-name {
+.top-content-wrapper > div > :first-child > div > :first-child {
     color: var(--text-third);
     font-size: var(--body-03);
     width: 80px;
     text-align: left;
 }
 
-.top-content-detail-value {
+.top-content-wrapper > div > :first-child > div > :last-child {
     color: var(--text-primary);
     font-size: var(--body-03);
     text-align: left;
@@ -78,14 +78,23 @@
     flex-direction: column;
 }
 
-.subcontent-title {
+.subcontent-wrapper > span:first-child {
     font-size: var(--subtitle-03);
     color: var(--text-primary);
     text-align: left;
     width: 66%;
 }
 
-.subcontent-list-container {
+.trl-wrapper {
+    width: 66%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.subcontent-wrapper > ul {
     width: 66%;
     margin-top: 16px;
     display: flex;
@@ -93,7 +102,7 @@
     gap: 6px;
 }
 
-.subcontent-list {
+.subcontent-wrapper > ul > li {
     font-size: var(--body-04);
     color: var(--text-primary);
     text-align: left;
@@ -104,9 +113,17 @@
     width: calc(100% - 36px);
 }
 
-.subcontent-content {
+.subcontent-wrapper > span:nth-child(n + 1) {
     font-size: var(--body-04);
     color: var(--text-primary);
     width: 100%;
     margin-top: 16px;
+}
+
+.button-wrapper {
+    width: 66%;
+    display: flex;
+    justify-content: right;
+    margin-top: 32px;
+    margin-bottom: 85px;
 }

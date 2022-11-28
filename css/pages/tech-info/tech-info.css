@@ -15,7 +15,7 @@ pagination-container {
     max-width: 1100px;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: center;
     margin-top: 48px;
     gap: 24px;
     box-sizing: border-box;
@@ -95,11 +95,11 @@ pagination-container {
 
     .post-img {
         height: 104px;
-        width: calc(50vw - 24px);
+        width: calc(50vw - 33px);
     }
 
     .post-detail-wrapper {
-        width: calc(50vw - 24px);
+        width: calc(50vw - 33px);
         padding: 8px;
     }
 

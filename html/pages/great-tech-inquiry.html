@@ -22,31 +22,35 @@
             type="text/javascript"
             src="../../js/components/dropdown.js"
         ></script>
+        <script
+            type="text/javascript"
+            src="../../js/components/checkbox.js"
+        ></script>
     </head>
     <body>
-        <div class="content-wrapper">
-            <span class="title title-bd">문의하기</span>
+        <div class="content-wrapper-small">
+            <span class="title-bd">문의하기</span>
             <div class="form-container">
-                <div class="item-wrapper">
-                    <span class="item-name body-me">이름</span>
+                <div>
+                    <span class="body-me"><span>* </span>이름</span>
                     <textfield-default
                         placeholder="이름을 입력해주세요."
                     ></textfield-default>
                 </div>
-                <div class="item-wrapper">
-                    <span class="item-name body-me">기업명</span>
+                <div>
+                    <span class="body-me"><span>* </span>기업명</span>
                     <textfield-default
                         placeholder="기업명을 입력해주세요."
                     ></textfield-default>
                 </div>
-                <div class="item-wrapper">
-                    <span class="item-name body-me">소속/직위</span>
+                <div>
+                    <span class="body-me"><span>* </span>소속/직위</span>
                     <textfield-default
                         placeholder="소속/직위를 입력해주세요."
                     ></textfield-default>
                 </div>
-                <div class="item-wrapper">
-                    <span class="item-name body-me">이메일</span>
+                <div>
+                    <span class="body-me"><span>* </span>이메일</span>
                     <div class="email-wrapper">
                         <textfield-default
                             placeholder="이메일을 입력해주세요."
@@ -67,8 +71,8 @@
                         </dropdown-container>
                     </div>
                 </div>
-                <div class="item-wrapper">
-                    <span class="item-name body-me">연락처</span>
+                <div>
+                    <span class="body-me"><span>* </span>연락처</span>
                     <div class="phone-wrapper">
                         <dropdown-container>
                             <dropdown-header
@@ -92,8 +96,8 @@
                         ></textfield-default>
                     </div>
                 </div>
-                <div class="item-wrapper">
-                    <span class="item-name body-me">전화번호</span>
+                <div>
+                    <span class="body-me">전화번호</span>
                     <div class="phone-wrapper">
                         <dropdown-container>
                             <dropdown-header
@@ -117,14 +121,25 @@
                         ></textfield-default>
                     </div>
                 </div>
-                <div class="item-wrapper">
-                    <span class="item-name body-me">상담내용</span>
+                <div>
+                    <span class="body-me"><span>* </span>상담내용</span>
                     <textfield-area
                         placeholder="상담내용을 입력해주세요."
                         type="count"
                         max="500"
                     ></textfield-area>
                 </div>
+
+                <div class="item-wrapper-row">
+                    <checkbox-default size="L"></checkbox-default>
+                    <span class="body-me"
+                        >개인정보 수집 및 이용에 동의합니다.</span
+                    >
+                </div>
+
+                <button-default size="xl" style_="secondary"
+                    >신청하기</button-default
+                >
             </div>
         </div>
     </body>

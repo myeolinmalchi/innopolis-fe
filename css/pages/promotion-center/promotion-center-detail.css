@@ -1,0 +1,123 @@
+body{
+    text-align: center;
+}
+.card-detail-container{
+    margin-top: 64px;
+    margin-bottom: 126px;
+    display: inline-block;
+    width: 1100px;
+    text-align: left;
+}
+.company-name{
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 700px;
+    width: 100%;
+    color: #111827;
+    
+}
+.company-img{
+    margin-top: 48px;
+    width: 725px;
+    height: 400px;
+    float: left;
+    background-color: #666666;
+
+}
+.company-info{
+    position: sticky;
+    top: 250px;
+    left: 919px;
+    width: 351px;
+    float: right;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px 0px #75757529;
+    display: block;
+}
+.company-info div{
+    padding: 32px;
+    display: inline-block;
+}
+.company-info .type{
+    width: 80px;
+    float: left;
+}
+.company-info .type li{
+    font-size: 16px;
+    line-height: 25.6px;
+    color: #9ca3af;
+    width: 80px;
+    height: 26px;
+    display: inline-block;
+}
+.company-info .value{
+    width: 176px;
+    float: left;
+}
+.company-info .value li{
+    height: 26px;
+    font-size: 16px;
+    width: 100%;
+    font-weight: 500;
+    line-height: 25.6px;
+    color: #111827;
+}
+.summary{
+    margin-top: 32px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28.8px;
+    width: 725px;
+    float: left;
+    min-height: 218px;   
+}
+.summary input{
+    position: relative;
+    left: 630px;
+    top: 70px;
+    background-color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 6px 12px 6px 12px;
+    border-radius: 4px;
+    color:#4B5563;
+    border-color: #D1D5DB;
+    box-shadow: none;
+    outline: 0;
+}
+
+@media (max-width: 639px) {
+    .card-detail-container{
+        width: 328px;
+    }
+    .company-name{
+        font-size: 20px;
+        line-height: 26px;
+        height: 26px;
+        font-weight: 700;
+    }
+    .company-img{
+        margin-top: 32px;
+        width: 100%;
+    }
+    .company-info{
+        width: 100%;
+        font-size: 16px;
+        top: 0px;
+        left: 0px;
+        position: static;
+        margin-top: 24px;
+    }
+    .summary{
+        width: 100%;
+        font-size: 16px;
+    }
+    .summary input{
+        top: 70px;
+        left: 240px;
+    }
+    
+
+}

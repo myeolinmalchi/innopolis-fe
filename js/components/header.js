@@ -17,7 +17,7 @@ class header_default extends HTMLElement {
         
 
         const header_logo_img = document.createElement('img');
-        header_logo_img.setAttribute('src','../image/headerLogoDefault.png');
+        header_logo_img.setAttribute('src','../../image/headerLogoDefault.png');
 
         const header_nav = document.createElement('div');
         header_nav.setAttribute('class','header_nav');
@@ -237,16 +237,16 @@ class header_default extends HTMLElement {
         log_icon.addEventListener('click', function () {
             if(click.style.display == "block"){
                 click.style.display= "none";
-                log_icon_img.src = "../image/menuOpen.png"
+                log_icon_img.src = "../../image/menuOpen.png"
             }else{
                 click.style.display= "block";
-                log_icon_img.src = "../image/menuClose.png"
+                log_icon_img.src = "../../image/menuClose.png"
 
             }
           
           });
         const log_icon_img = document.createElement('img');
-        log_icon_img.setAttribute('src','../image/menuOpen.png');
+        log_icon_img.setAttribute('src','../../image/menuOpen.png');
 
 
         const click = document.createElement('div');
@@ -663,11 +663,9 @@ class header_default extends HTMLElement {
         this.shadowRoot.appendChild(style);
         this.shadowRoot.appendChild(header);
 
-
         log_icon.onclick = function small_menu_btn(){
             document.getElementsByClassName("click").style.display = "none";
         }
-
         
         style.textContent = `
         ul{
@@ -861,7 +859,29 @@ hr{
 .none {
     display: none;
 }
+input{
+    font-size: 18px;
+    line-height: 100px;
+    background: inherit ;
+    border:none;
+    box-shadow:none;
+    border-radius:0;
+    padding:0;
+    overflow:visible;
+    cursor:pointer;
+    margin: 0 8;
+}
 
+input:hover{
+    text-decoration: underline;
+}
+
+.login input{
+    color: #FFFFFF;
+}
+.login img{
+    margin-top: 45px;
+}
 
 
 @media (max-width: 1023px) {
@@ -901,38 +921,72 @@ hr{
 
 }
 
-            input{
-                font-size: 18px;
-                line-height: 100px;
-                background: inherit ;
-                border:none;
-                box-shadow:none;
-                border-radius:0;
-                padding:0;
-                overflow:visible;
-                cursor:pointer;
-                margin: 0 8;
-            }
+@media (max-width: 640px) {
+    .header_container{
+        width: 360px;
+    }
+    .login_small{
+        margin-top: 24px;
+    }
+    .login_small div{
+        margin-bottom: 24px;
+    }
+    .login_small div span{
+        color: #4B5563;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 22.4px;
+        letter-spacing: -1%;
+    }
+    hr{
+        width: 360px;
+    }
+    .login_small input{
+        width: 160px;
+        height: 34px;
+        padding: 6px 12px 6px 12px;
+        border-radius: 4px;
+        background-color: #008DFF;
+        color: #FFFFFF;
+        border: #008DFF;
+    }
+    .small_line{
+        color: #D1D5D8;
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+    
+    .small_list ul{
+        width: 100%;
+        float: left;
+    }
+    .small_list ul li{
+        color:#000000;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 130%;
+        vertical-align: top;
+    }
+    .small_list ul ul{
+        margin-top: 16px;
+        min-height: 162px;
+    }
+    .small_list ul ul li{
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 28px;
+        letter-spacing: -1%;
+        height: 28px;
+        margin-bottom: 12px;
+    }
+}
 
-            input:hover{
-                text-decoration: underline;
-            }
-
-            .login input{
-                color: ${status_font_color};
-            }
-            .login img{
-                margin-top: 45px;
-            }
-        `
+           
+        `;
 
         
-        this.shadowRoot.appendChild(container);
+        this.shadowRoot.appendChild(header);
         this.shadowRoot.append(style);
-        container.appendChild(logo);
-        container.appendChild(nav);
-        nav.appendChild(ul);
-        container.appendChild(status);
     }
 }
 

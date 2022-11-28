@@ -5,6 +5,7 @@ class footer_default extends HTMLElement{
     }
     connectedCallback(){
         this.attachShadow({mode: 'open'});
+        this.style.display = "block";
         const footer_container = document.createElement('footer');
 
         const footer_content_wrapper = document.createElement('div');
@@ -14,7 +15,7 @@ class footer_default extends HTMLElement{
         content_first.setAttribute('class','content first')
         const content_first_img = document.createElement('img');
         content_first_img.setAttribute('class','left');
-        content_first_img.setAttribute('src','../image/logo.png');
+        content_first_img.setAttribute('src','../../image/logo.png');
         const content_first_ul = document.createElement('ul');
         content_first_ul.setAttribute('class','list')
         const content_first_li_1 = document.createElement('li');
@@ -52,9 +53,9 @@ class footer_default extends HTMLElement{
         const content_fivth = document.createElement('div');
         content_fivth.setAttribute('class','content fivth right');
         const content_fivth_img_1 = document.createElement('img');
-        content_fivth_img_1.setAttribute('src','../image/facebook.png');
+        content_fivth_img_1.setAttribute('src','../../image/facebook.png');
         const content_fivth_img_2 = document.createElement('img');
-        content_fivth_img_2.setAttribute('src','../image/instagram.png');
+        content_fivth_img_2.setAttribute('src','../../image/instagram.png');
 
         footer_container.appendChild(footer_content_wrapper);
         footer_content_wrapper.appendChild(content_first);

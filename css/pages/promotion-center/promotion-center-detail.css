@@ -1,6 +1,10 @@
 body{
     text-align: center;
 }
+a{
+    font-style: normal;
+    color: #111827;
+}
 .card-detail-container{
     margin-top: 64px;
     margin-bottom: 126px;
@@ -25,40 +29,40 @@ body{
 
 }
 .company-info{
-    position: sticky;
-    top: 250px;
-    left: 919px;
-    width: 351px;
+    margin-top: 48px;
+    width: 287px;
     float: right;
     background-color: #FFFFFF;
     border-radius: 8px;
     box-shadow: 0px 4px 8px 0px #75757529;
     display: block;
+    padding: 32px;
 }
 .company-info div{
-    padding: 32px;
+    margin-top: 16px;
     display: inline-block;
 }
-.company-info .type{
-    width: 80px;
-    float: left;
+.company-info div:nth-child(1){
+    margin-top: 0px;
+    display: inline-block;
 }
-.company-info .type li{
+
+.type{
+    display: inline-block;
     font-size: 16px;
     line-height: 25.6px;
     color: #9ca3af;
     width: 80px;
     height: 26px;
-    display: inline-block;
-}
-.company-info .value{
-    width: 176px;
     float: left;
+    
 }
-.company-info .value li{
+
+.value{
+    display: inline-block;
     height: 26px;
     font-size: 16px;
-    width: 100%;
+    width: 201px;
     font-weight: 500;
     line-height: 25.6px;
     color: #111827;
@@ -103,12 +107,20 @@ body{
         width: 100%;
     }
     .company-info{
+        width: 296px;
+        padding: 16px;
+    }
+    .company-info div{
         width: 100%;
-        font-size: 16px;
-        top: 0px;
-        left: 0px;
-        position: static;
-        margin-top: 24px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    .type{
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    .value{
+        width: 100%;
     }
     .summary{
         width: 100%;

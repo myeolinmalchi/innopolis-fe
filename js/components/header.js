@@ -754,6 +754,7 @@ header{
     float: right;
     line-height: 100px;
     vertical-align: middle;
+    display: block;
 }
 .header_log input{
     border: 0;
@@ -771,11 +772,10 @@ header{
     text-decoration: underline;
 }
 
-
 .mleft{
-    float: left;
     margin-left: 8px;
 }
+
 .logout{
 
 }
@@ -824,7 +824,13 @@ hr{
     color: #FFFFFF;
     border: #008DFF;
     float: left;
+    margin: 0;
 }
+
+.login_small input:nth-child(3){
+    margin-left : 8px;
+}
+
 .small_line{
     color: #D1D5D8;
     margin-top: 24px;
@@ -877,7 +883,6 @@ input:hover{
 }
 
 .login input{
-    color: #FFFFFF;
 }
 .login img{
     margin-top: 45px;
@@ -901,7 +906,7 @@ input:hover{
         display: block;
     }
     .click{
-        display: block;
+        display: none;
     }
     .small_line{
         color: #D1D5D8;

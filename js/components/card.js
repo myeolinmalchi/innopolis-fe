@@ -35,21 +35,11 @@ class card_content extends HTMLElement{
         const companyName = document.createElement('span');
         companyName.setAttribute('class','name');
         companyName.innerText = companyName_value;
-
         const style = document.createElement('style');
         style.textContent = `
-        .card-container{
-            width: 1100px;
-            display: block;
-            margin-left: 170px;
-            float: left;
-            max-height: 950px;
-            overflow: hidden;
-        }
-        
         .card{
             float: left;
-            width: 257px;
+            width: 100%;
             height: 300px;
             margin-right: 16px;
         }
@@ -87,13 +77,7 @@ class card_content extends HTMLElement{
         }
         
         @media(max-width: 639px){
-            .card-container{
-                width: 328px;
-                max-height: 1250px;
-                margin: 0;
-            }
             .card{
-                width: 156px;
                 height: 192px;
                 float: left;
                 margin: 0;

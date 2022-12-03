@@ -1,0 +1,205 @@
+.content-main-img{
+display: block;
+background-color: #ddd;
+width: 100%;
+}
+.container{
+    display: block;
+    max-width: 1100px;
+    width: auto;
+    margin: 0 auto;
+    padding-top: 107px;
+    padding-left: 170px;
+    padding-bottom: 106px;
+    text-align: left;
+}
+.content-title{
+    color: var(--text-white);
+    font-size: var(--title-01);
+}
+.content-body{
+    color:var(--text-white);
+    font-size: var(--sub-title-01);
+    margin-top: 24px;
+}
+.content-button{
+    margin-top: 40px;
+    font-size: var(--body-04);
+}
+.content-button input{
+    background-color: var(--background-blue-01);
+    color: var(--text-white);
+    padding: 7px 14px;
+    text-align: center;
+    border: 0px;
+}
+
+.content-space{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+.content-space-container{
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    display: inline-block;
+    padding:120px 0 120px 0;
+    text-align: left;
+}
+.content-space-text{
+    margin-bottom: 32px;
+    width: 100%;
+}
+.space{
+    display: block;
+    margin-bottom: 12px;
+    font-size: var(--sub-title-02);
+    font-weight: 700;
+    line-height: 23.4px;
+}
+.space-title{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: var(--title-02);
+    line-height: 36.4px;
+}
+.space-summary{
+    display: block;
+    font-size: var(--body-03);
+    line-height: 25.6px;
+}
+.space-img{
+    width: 100%;
+    background-color: #ddd;
+    height: 320px;
+    margin-bottom: 40px;
+}
+.space-item{
+    width: 31.8%;
+    float: left;
+    padding: 16px 24px;
+    box-sizing: border-box;
+    display: block;
+    background-color: var(--background-gray-01);
+    margin-left: 24px;
+
+}
+.space-item-first-child{
+    margin-left: 0px;
+}
+.space-item-title{
+    display: block;
+    font-size: var(--body-04);
+    margin-bottom: 12px;
+}
+.space-item-summary{
+    display: block;
+    line-height: 22.4px;
+    color: var(--text-third);
+    font-size: var(--body-02);
+}
+.benefit{
+    background-color: var(--background-gray-01);
+}
+
+.benefit-item{
+    width: 23.3%;
+    float: left;
+    box-sizing: border-box;
+    margin:16px 24px 16px 0px;
+    background-color: var(--background-white-01);
+}
+.benefit-last{
+    margin-right: 0px;
+}
+.benefit-img{
+    width: 100%;
+    height: 180px;
+    background-color: #ddd;
+    margin-bottom: 0;
+}
+.benefit-item-summary{
+    display: block;
+    line-height: 22.4px;
+    box-sizing: border-box;
+    padding: 16px;
+    color: var(--text-secondary);
+}
+.location-item{
+    width: 50%;
+    box-sizing: border-box;
+    padding: 32px;
+    float: left;
+    background-color: var(--background-gray-01);
+}
+.type{
+    margin-bottom: 4px;
+    color: var(--text-third);
+    font-size: var(--body-03);
+}
+.value{
+    margin-bottom: 32px;
+    columns: var(--text-secondary);
+    font-size: var(--body-03);
+}
+.lentBtn{
+    background-color: var(--color-gray-filled);
+    color: var(--text-white);
+    font-size: var(--body-04);
+}
+.lentBtn:hover{
+    background-color: var(--color-gray-hover);
+    color: var(--text-white);
+}
+.map{
+    width: 50%;
+    height: 484px;
+    background-color: #ddd;
+    text-align: center;
+}
+.line{
+    line-height: 25.6px;
+}
+@media (max-width: 512px) {
+    .container{
+        padding-top: 88px;
+        padding-left: 16px;
+        padding-bottom: 88px;
+    }
+    .content-space-container{
+        padding: 64px 16px;
+        font-size: var(--body-02);
+    }
+    .space-img{
+        margin-bottom: 8px;
+    }
+    .space-item{
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 8px;
+    }
+    .space-item-title{
+        margin-bottom: 12px;
+    }
+    .benefit-item{
+        width: 100%;
+    }
+    .benefit-img{
+        margin-bottom: 0px;
+    }
+    .benefit-item-summary{
+        padding: 16px;
+        height: 90px;
+    }
+    .location-item{
+        width: 100%;
+    }
+    .map{
+        display: none;
+    }
+    .lentBtn{
+        font-size: var(--body-02);
+    }
+}

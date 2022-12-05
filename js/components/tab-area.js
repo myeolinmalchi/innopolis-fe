@@ -88,8 +88,18 @@ customElements.define(
             setTimeout(() => {
                 this.contents = [...this.children];
                 this.tab_area = this.previousElementSibling;
+                this.tab_area.tab_container =
+                    this.tab_area.getElementsByTagName('tab-container')[0];
                 this.switchTab(0);
-            }, 100);
+                const observer = new MutationObserver(() => {
+                    this.contents = [...this.children];
+                    this.switchTab(0);
+                });
+
+                observer.observe(this, {
+                    childList: true,
+                });
+            });
         }
 
         static get observedAttributes() {
@@ -99,22 +109,22 @@ customElements.define(
         attributeChangedCallback(attrName, _, newVal) {
             switch (attrName) {
                 case 'tab-number':
-                    this.switchTab(newVal);
+                    this.switchTab(Number(newVal));
                     break;
             }
         }
 
         switchTab(tabNum) {
-            this.contents.forEach((c, idx) => {
+            this.contents?.forEach((c, idx) => {
                 if (idx === Number(tabNum)) {
                     c.style.display = 'block';
-                    this.tab_area.tab_container.tabs[idx].setAttribute(
+                    this.tab_area?.tab_container?.tabs[idx].setAttribute(
                         'state',
                         'active',
                     );
                 } else {
                     c.style.display = 'none';
-                    this.tab_area.tab_container.tabs[idx].setAttribute(
+                    this.tab_area.tab_container?.tabs[idx].setAttribute(
                         'state',
                         'default',
                     );

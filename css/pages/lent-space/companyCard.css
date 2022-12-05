@@ -1,0 +1,85 @@
+body{
+    font-family: 'Pretendatd';
+}
+.cardContainer{
+    max-width: 1100px;
+    display: block;
+    margin: 0 auto;
+}
+.companyCard{
+    width: 30.8%;
+    padding: 24px;
+    box-sizing: border-box;
+    margin-right: 24px;
+    display: inline-block;
+    height: 282px;
+}
+
+.companyInfo{
+    width: 100%;
+    float: left;
+}
+
+.companyImg{
+    width: 60px;
+    height: 60px;
+    background-color: #ddd;
+    float: left;
+    margin-right: 16px;
+}
+.companyText{
+    height: 60px;
+}
+.companyName{
+    color: var(--title-01);
+    line-height: 31.2px;
+    font-weight: 700;
+    float: left;
+}
+.divide{
+    margin: 0px 5px;   
+}
+.companyType{
+    float: left;
+    color: var(--text-third);
+    font-size:var(--body-03);
+    line-height: 25.6px;
+}
+
+.companySummary{
+    float: left;
+    margin-top: 24px;
+    margin-bottom: 30px;
+    line-height: 22.4px;
+    color: var(--test-second);
+    font-size: var(--body-02);
+}
+
+.companyHompage input{
+    background-color: var(--background-white-01);
+    border: solid 1px var(--stroke-gray-01);
+    padding: 6px 12px;
+    font-size: var(--body-03);
+    line-height: 25.6px;
+}
+
+
+pagination-container{
+    margin-top: 72px;
+    margin-bottom: 120px;
+}
+
+@media (max-width: 512px) {
+    .cardContainer{
+        width: 100%;
+    }
+    .companyCard{
+        width: 100%;
+        padding: 32px;
+        margin: 0px;
+        height: auto;
+    }
+    .companyName{
+        width: 80%;
+    }
+}

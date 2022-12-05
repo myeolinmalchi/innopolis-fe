@@ -1,181 +1,158 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>Insert title here.</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="../../css/reset.css" />
-        <link rel="stylesheet" href="../../css/common.css" />
-        <link rel="stylesheet" href="../../css/tab-area.css" />
-        <link rel="stylesheet" href="../../css/pages/promotion-center/card.css" />
-        <script type="text/javascript" src="/js/components/header.js"></script>
-        <script type="text/javascript" src="/js/components/footer.js"></script>
-        <script type="text/javascript" src="/js/components/tab.js"></script>
-        <script type="text/javascript" src="/js/components/tab-area.js"></script>
-        <script type="text/javascript" src="/js/components/pagination.js"></script>
-        <script type="text/javascript" src="/js/components/card.js"></script>
-    </head>
-    <body>
-        <header-default></header-default>
 
-        <tab-area>
-            <tab-introduce-text>
-                천안아산강소특구<br />
-                입주 기업을 소개합니다.
-            </tab-introduce-text>
-            <tab-container>
-                <tab-default type="primary">기업홍보</tab-default>
-                <tab-default type="primary">홍보자료</tab-default>
-                <tab-default type="primary">보도자료</tab-default>
-                <tab-default type="primary">행사사진</tab-default>
-            </tab-container>
-        </tab-area>
-        <tab-content-area>
-            <tab-content>
-                <img class="top-img" src="" alt="" />
-                <div class="content-wrapper">
-                    <div class="post-container">
-                        <div class="post-wrapper">
-                            <img class="post-img" src="" alt="" />
-                            <tab-area class="sub-tab">
-                                <tab-container>
-                                    <tab-default type="primary">전체</tab-default>
-                                    <tab-default type="primary">연구소기업</tab-default>
-                                    <tab-default type="primary">첨단기술 기업</tab-default>
-                                    <tab-default type="primary">입주기업</tab-default>
-                                </tab-container>
-                            </tab-area>
-                            <card-container>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                            </card-container>
-                        </div>
+<head>
+    <meta charset="UTF-8" />
+    <title>Insert title here.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/tab-area.css" />
+    <link rel="stylesheet" href="../../css/pages/promotion-center/card.css" />
+    <link rel="stylesheet" href="../../css/pages/promotion-center/promotionItem.css" />
+    <link rel="stylesheet" href="../../css/pages/promotion-center/report-card.css" />
+    <script type="text/javascript" src="/js/components/header.js"></script>
+    <script type="text/javascript" src="/js/components/footer.js"></script>
+    <script type="text/javascript" src="/js/components/tab.js"></script>
+    <script type="text/javascript" src="/js/components/tab-area.js"></script>
+    <script type="text/javascript" src="/js/components/pagination.js"></script>
+    <script type="text/javascript" src="/js/components/card.js"></script>
+</head>
+
+<body>
+    <header-default></header-default>
+
+    <tab-area>
+        <tab-introduce-text>
+            천안아산강소특구<br />
+            입주 기업을 소개합니다.
+        </tab-introduce-text>
+        <tab-container>
+            <tab-default type="primary">기업홍보</tab-default>
+            <tab-default type="primary">홍보자료</tab-default>
+            <tab-default type="primary">보도자료</tab-default>
+            <tab-default type="primary">행사사진</tab-default>
+        </tab-container>
+    </tab-area>
+    <tab-content-area>
+        <tab-content id="content1">
+            <img class="top-img" src="" alt="" />
+            <div class="content-wrapper">
+                <div class="post-container">
+                    <div class="post-wrapper  margin-top0">
+                        <img class="post-img" src="" alt="" />
+                        <tab-area class="sub-tab">
+                            <tab-container>
+                                <tab-default type="primary">전체</tab-default>
+                                <tab-default type="primary">연구소기업</tab-default>
+                                <tab-default type="primary">첨단기술 기업</tab-default>
+                                <tab-default type="primary">입주기업</tab-default>
+                            </tab-container>
+                        </tab-area>
+                        <card-container>
+                            <card-content></card-content>
+                            <card-content></card-content>
+                            <card-content></card-content>
+                            <card-content></card-content>
+                            <card-content></card-content>
+                            <card-content></card-content>
+                            <card-content></card-content>
+                            <card-content></card-content>
+                            <card-content></card-content>
+                            <card-content></card-content>
+                            <card-content></card-content>
+                            <card-content></card-content>
+                        </card-container>
                     </div>
-                    
                 </div>
-            </tab-content>
+                <pagination-container>
+                    <pagination-arrow direction="left"></pagination-arrow>
+                    <pagination-unit link="/1">1</pagination-unit>
+                    <pagination-unit state="focus">2</pagination-unit>
+                    <pagination-unit>3</pagination-unit>
+                    <pagination-unit>4</pagination-unit>
+                    <pagination-unit>5</pagination-unit>
+                    <pagination-arrow direction="right"></pagination-arrow>
+                </pagination-container>
+            </div>
+        </tab-content>
 
-            <tab-content>
-                <img class="top-img" src="" alt="" />
-                <div class="content-wrapper">
-                    <div class="post-container">
-                        <div class="post-wrapper">
-                            <img class="post-img" src="" alt="" />
-                            <tab-area class="sub-tab">
-                                <tab-container>
-                                    <tab-default type="primary">전체</tab-default>
-                                    <tab-default type="primary">연구소기업</tab-default>
-                                    <tab-default type="primary">첨단기술 기업</tab-default>
-                                    <tab-default type="primary">입주기업</tab-default>
-                                </tab-container>
-                            </tab-area>
-                            <card-container>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                            </card-container>
-                        </div>
+        <tab-content id="content2">
+            <img class="top-img" src="" alt="" />
+            <div class="content-wrapper">
+                <div class="promotion_wrapper">
+                    <promotion-item></promotion-item>
+                    <promotion-item></promotion-item>
+                    <promotion-item></promotion-item>
+                    <promotion-item></promotion-item>
+                </div>
+                <pagination-container>
+                    <pagination-arrow direction="left"></pagination-arrow>
+                    <pagination-unit link="/1">1</pagination-unit>
+                    <pagination-unit state="focus">2</pagination-unit>
+                    <pagination-unit>3</pagination-unit>
+                    <pagination-unit>4</pagination-unit>
+                    <pagination-unit>5</pagination-unit>
+                    <pagination-arrow direction="right"></pagination-arrow>
+                </pagination-container>
+            </div>
+        </tab-content>
+
+        <tab-content id="content3">
+            <img class="top-img" src="" alt="" />
+            <div class="content-wrapper">
+                <div class="promotion_wrapper">
+                    <report-item></report-item>
+                    <report-item></report-item>
+                    <report-item></report-item>
+                    <report-item></report-item>
+                </div>
+                <pagination-container>
+                    <pagination-arrow direction="left"></pagination-arrow>
+                    <pagination-unit link="/1">1</pagination-unit>
+                    <pagination-unit state="focus">2</pagination-unit>
+                    <pagination-unit>3</pagination-unit>
+                    <pagination-unit>4</pagination-unit>
+                    <pagination-unit>5</pagination-unit>
+                    <pagination-arrow direction="right"></pagination-arrow>
+                </pagination-container>
+            </div>
+        </tab-content>
+
+        <tab-content id="content4">
+            <img class="top-img" src="" alt="" />
+            <div class="content-wrapper">
+                <div class="post-container">
+                    <div class="post-wrapper margin-top64">
+                        <img class="post-img" src="" alt="" />
+                        <card-container>
+                            <card-content></card-content>
+                            <card-content></card-content>
+                            <card-content></card-content>
+                            <card-content></card-content>
+                            <card-content></card-content>
+                            <card-content></card-content>
+                            <card-content></card-content>
+                            <card-content></card-content>
+                            <card-content></card-content>
+                            <card-content></card-content>
+                            <card-content></card-content>
+                            <card-content></card-content>
+                        </card-container>
                     </div>
-                    
                 </div>
-            </tab-content>
+                <pagination-container>
+                    <pagination-arrow direction="left"></pagination-arrow>
+                    <pagination-unit link="/1">1</pagination-unit>
+                    <pagination-unit state="focus">2</pagination-unit>
+                    <pagination-unit>3</pagination-unit>
+                    <pagination-unit>4</pagination-unit>
+                    <pagination-unit>5</pagination-unit>
+                    <pagination-arrow direction="right"></pagination-arrow>
+                </pagination-container>
+            </div>
+        </tab-content>
+    </tab-content-area>
+    <footer-default></footer-default>
 
-            <tab-content>
-                <img class="top-img" src="" alt="" />
-                <div class="content-wrapper">
-                    <div class="post-container">
-                        <div class="post-wrapper">
-                            <img class="post-img" src="" alt="" />
-                            <tab-area class="sub-tab">
-                                <tab-container>
-                                    <tab-default type="primary">전체</tab-default>
-                                    <tab-default type="primary">연구소기업</tab-default>
-                                    <tab-default type="primary">첨단기술 기업</tab-default>
-                                    <tab-default type="primary">입주기업</tab-default>
-                                </tab-container>
-                            </tab-area>
-                            <card-container>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                            </card-container>
-                        </div>
-                    </div>
-                    
-                </div>
-            </tab-content>
-
-            <tab-content>
-                <img class="top-img" src="" alt="" />
-                <div class="content-wrapper">
-                    <div class="post-container">
-                        <div class="post-wrapper">
-                            <img class="post-img" src="" alt="" />
-                            <tab-area class="sub-tab">
-                                <tab-container>
-                                    <tab-default type="primary">전체</tab-default>
-                                    <tab-default type="primary">연구소기업</tab-default>
-                                    <tab-default type="primary">첨단기술 기업</tab-default>
-                                    <tab-default type="primary">입주기업</tab-default>
-                                </tab-container>
-                            </tab-area>
-                            <card-container>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                                <card-content></card-content>
-                            </card-container>
-                        </div>
-                    </div>
-                    
-                </div>
-            </tab-content>
-        </tab-content-area>
-        <pagination-container>
-            <pagination-arrow direction="left"></pagination-arrow>
-            <pagination-unit link="/1">1</pagination-unit>
-            <pagination-unit state="focus">2</pagination-unit>
-            <pagination-unit>3</pagination-unit>
-            <pagination-unit>4</pagination-unit>
-            <pagination-unit>5</pagination-unit>
-            <pagination-arrow direction="right"></pagination-arrow>
-        </pagination-container>
-        <footer-default></footer-default>
-
-    </body>
+</body>

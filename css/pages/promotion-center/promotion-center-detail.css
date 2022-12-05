@@ -80,19 +80,17 @@ a{
     position: relative;
     left: 630px;
     top: 70px;
-    background-color: #FFFFFF;
     text-align: center;
     font-size: 16px;
     line-height: 16px;
     padding: 6px 12px 6px 12px;
     border-radius: 4px;
-    color:#4B5563;
-    border-color: #D1D5DB;
-    box-shadow: none;
-    outline: 0;
+    color:var(--text-secondary);
+    border:1px solid var(--stroke-gray-01);
+    background-color: var(--background-white-01);
 }
 
-@media (max-width: 639px) {
+@media (max-width: 512px) {
     .card-detail-container{
         width: 328px;
     }

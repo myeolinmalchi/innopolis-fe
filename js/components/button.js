@@ -181,6 +181,7 @@ customElements.define(
         }
 
         connectedCallback() {
+            const shadow = this.attachShadow({ mode: 'open' });
             const style = this.getAttribute('style_') ?? 'primary';
             const state = this.getAttribute('state') ?? 'default';
             const size = this.getAttribute('size') ?? 'm';

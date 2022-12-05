@@ -4,6 +4,17 @@ customElements.define(
         content_area;
         tab_container;
 
+        constructor() {
+            super();
+            window.onload = () => {
+                const urlParams = new URLSearchParams(window.location.search);
+                const tabNum = urlParams.get('tab');
+                if (tabNum) {
+                    this.setAttribute('tab-number', tabNum);
+                }
+            };
+        }
+
         connectedCallback() {
             this.classList.add('tab-area');
             setTimeout(() => {
@@ -22,7 +33,14 @@ customElements.define(
                 case 'tab-number':
                     const tab = Number(newVal);
                     this.content_area?.setAttribute('tab-number', tab);
+                    const state = { sitename: history.state };
+                    history.pushState(
+                        state,
+                        '',
+                        window.location.pathname + '?tab=' + tab,
+                    );
                     this['tab-number'] = tab;
+
                     break;
                 default:
                     break;

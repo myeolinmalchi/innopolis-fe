@@ -5,6 +5,12 @@ card-container{
     max-height: 950px;
     overflow: hidden;
 }
+.margin-top64{
+    margin-top: 64px;
+}
+.margin-top0{
+    margin-top: 0px;
+}
 .sub-tab{
     padding: 48px 0;
     font-size: var(--title-02);
@@ -19,7 +25,7 @@ card-content{
     font-family: 'Pretendard';
     display: block;
     float: left;
-    width: 23.9%;
+    width: calc(25% - 16px);
     margin-left: 16px;
 }
 
@@ -29,7 +35,28 @@ card-content:nth-child(4n+1){
 card-content:nth-child(1){
     margin-left: 0;
 }
-@media(max-width: 639px){
+report-item{
+    font-family: 'Pretendard';
+    display: block;
+    float: left;
+    width: calc(25% - 16px);
+    margin-right: 16px;
+}
+promotion-item{
+    font-family: 'Pretendard';
+    display: block;
+    float: left;
+    width: calc(25% - 16px);
+    margin-right: 16px;
+
+}
+report-item:nth-child(4n){
+    margin-right: 0px;
+}
+promotion-item:nth-child(4n){
+    margin-right: 0px;
+}
+@media(max-width: 512px){
     card-container{
         min-width: 328px;
         max-height: 1250px;
@@ -51,10 +78,28 @@ card-content:nth-child(1){
     card-content{
         display: block;
         float: left;
-        width: 45%;
+        width: 47.6%;
+        margin:0;
+    }
+    promotion-item{
+        display: block;
+        float: left;
+        width: 47.6%;
+        margin:0;
+    }
+    report-item{
+        display: block;
+        float: left;
+        width: 47.6%;
         margin:0;
     }
     card-content:nth-child(even){
+        margin-left: 16px;
+    }
+    promotion-item:nth-child(even){
+        margin-left: 16px;
+    }
+    report-item:nth-child(even){
         margin-left: 16px;
     }
 }

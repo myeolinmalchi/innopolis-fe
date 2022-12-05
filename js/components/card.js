@@ -7,7 +7,6 @@ class card_container extends HTMLElement{
     }
 }
 
-
 class card_content extends HTMLElement{
     constructor(){
         super();
@@ -55,28 +54,32 @@ class card_content extends HTMLElement{
             height: 120px;
             padding: 16px;
             float: left;
+            text-overflow:ellipsis;
             overflow: hidden;
         }
         .category{
-            size: 14px;
-            line-height: 14px;
+            font-size: var(--body-02);
+            line-height: 22.4px;
             font-weight: 500;
-            color: #9ca3af;
+            color: var(--text-third);
             margin-bottom: 8px;
             float: left;
             width: 100%;
+            height:22px;
         }
         .name{
             float: left;
             width: 100%;
             font-weight: 700;
-            size: 18px;
-            line-height: 18px;
-            height: 44px;
+            font-size: var(--body-04);
+            color : var(--text-primary);
+            line-height: 28.8px;
+            height: 58px;
             overflow: hidden;
+            text-overflow:ellipsis;
         }
         
-        @media(max-width: 639px){
+        @media(max-width: 512px){
             .card{
                 height: 192px;
                 float: left;
@@ -87,6 +90,14 @@ class card_content extends HTMLElement{
             }
             .text-content{
                 padding: 8px;
+            }
+            .category{
+                font-size: var(--body-01);
+                line-height:19.2px;
+            }
+            .name{
+                font-size: var(--body-02);
+                line-height: 22.4px;
             }
         }
         `
@@ -101,5 +112,299 @@ class card_content extends HTMLElement{
     }
 }
 
+class promotion_content extends HTMLElement{
+    constructor(){
+        super();
+    }
+    connectedCallback(){
+        const img_src = this.getAttribute('img_src') ?? '#';
+        const name_value = this.getAttribute('name') ?? '법률이 정하는 주요방위산업체에 종사하는 근로자의 단체행동권...';
+        const date = this.getAttribute('date') ?? 'YY.MM.DD';
+
+        this.attachShadow({mode: 'open'});
+        
+        const promotion_item = document.createElement('div');
+        promotion_item.setAttribute('class','promotion_item');
+
+        const promotionImg = document.createElement('div');
+        promotionImg.setAttribute('class','promotionImg round-04');
+        
+        const Img = document.createElement('img');
+        Img.setAttribute('src',img_src);
+        
+        const promotionTextContent = document.createElement('div');
+        promotionTextContent.setAttribute('class','promotionTextContent');
+
+        const promotionName = document.createElement('div');
+        promotionName.setAttribute('class','promotionName');
+        promotionName.innerText = name_value;
+
+        const promotionDate = document.createElement('div');
+        promotionDate.setAttribute('class','promotionDate');
+        promotionDate.innerText = date;
+
+        const style = document.createElement('style');
+        style.textContent = `
+        .promotion_item{
+            display: block;
+            width: 100%;
+            height: 300px;
+            float: left;
+            margin-right: 24px;
+        }
+        
+        
+        .promotionImg{
+            width: 100%;
+            height: 180px;
+            background-color: #ddd;
+        }
+        
+        .promotionTextContent{
+            height: 120px;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+        .summary{
+            width: 100%;
+            line-height: 22.4px;
+            font-size: var(--body-02);
+            color: var(--text-third);
+        }
+        .promotionName{
+            font-size: var(--body-04);
+            font-weight: 700;
+            line-height: 28.8px;
+            height: 58px;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            margin-bottom: 8px;
+        }
+        .maker{
+            width: 100%;
+            margin-top: 8px;
+            font-size: var(--body-02);
+            color: var(--text-third);
+        }
+        .news{
+            float: left;
+            text-align: left;
+        }
+        .promotionDate{
+            float: right;
+            text-align: right;
+            color: var(--text-third);
+            line-height: 22.4px;
+            font-size : var(--body-02);
+            
+        }
+        
+        @media (max-width: 512px) {
+            .promotion_wrapper{
+                margin-top: 32px;
+                margin-bottom: 32px;
+            }
+            .promotion_item{
+                width: 100%;
+                height: 213px;
+                margin-bottom: 8px;
+            }
+            
+
+            .promotionImg{
+                height: 104px;
+            }
+            .promotionTextContent{
+                height: 109px;
+                padding: 8px;
+            }
+            .promotionName{
+                height: 66px;
+                font-size: var(--body-02);
+                line-height: 22.4px;
+            }
+            .promotionDate{
+                font-size: var(--body-01);
+                line-height: 19.2px;
+            }
+            
+            
+        }
+        `
+        this.shadowRoot.appendChild(style);
+        this.shadowRoot.appendChild(promotion_item);
+
+
+        promotion_item.appendChild(promotionImg);
+        promotion_item.appendChild(promotionTextContent);
+        
+        promotionImg.appendChild(Img);
+        
+        promotionTextContent.appendChild(promotionName);
+        promotionTextContent.appendChild(promotionDate);
+
+
+    }
+}
+
+class report_content extends HTMLElement{
+    constructor(){
+        super();
+    }
+    connectedCallback(){
+        const img_src = this.getAttribute('img_src') ?? '#';
+        const name_value = this.getAttribute('name') ?? '법률이 정하는 주요방위산업체에 종사하는 근로자의 단체행동권...';
+        const summary_value = this.getAttribute('summary') ?? '법률이 정하는 주요방위산업체에 종사하는 근로자의 단체행동권...';
+        const date = this.getAttribute('date') ?? 'YY.MM.DD';
+        const maker_value = this.getAttribute('maker') ?? '현찬일보';
+
+        this.attachShadow({mode: 'open'});
+        
+        const report_item = document.createElement('div');
+        report_item.setAttribute('class','report_item');
+
+        const reportImg = document.createElement('div');
+        reportImg.setAttribute('class','reportImg round-04');
+        
+        const Img = document.createElement('img');
+        Img.setAttribute('src',img_src);
+        
+        const reportTextContent = document.createElement('div');
+        reportTextContent.setAttribute('class','reportTextContent');
+
+        const reportName = document.createElement('div');
+        reportName.setAttribute('class','reportName');
+        reportName.innerText = name_value;
+
+        const summary = document.createElement('div');
+        summary.setAttribute('class','summary');
+        summary.innerText = summary_value;
+
+        const maker = document.createElement('div');
+        maker.setAttribute('class','maker');
+
+        const reportDate = document.createElement('div');
+        reportDate.setAttribute('class','reportDate');
+        reportDate.innerText = date;
+
+        const news = document.createElement('div');
+        news.setAttribute('class','news');
+        news.innerText = maker_value;
+
+        const style = document.createElement('style');
+        style.textContent = `
+        .report_wrapper{
+            max-width: 1100px;
+            margin-top: 64px;
+            margin-bottom: 64px;
+        }
+        .report_item{
+            display: block;
+            width: 100%;
+            height: 352px;
+            float: left;
+            margin-right: 24px;
+        }
+        
+        
+        .reportImg{
+            width: 100%;
+            height: 180px;
+            background-color: #ddd;
+        }
+        
+        .reportTextContent{
+            height: 172px;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+        .summary{
+            width: 100%;
+            line-height: 22.4px;
+            height: 44px;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            font-size: var(--body-02);
+            color: var(--text-third);
+        }
+        .reportName{
+            font-size: var(--body-04);
+            font-weight: 700;
+            line-height: 28.8px;
+            height: 58px;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            margin-bottom: 8px;
+        }
+        .maker{
+            width: 100%;
+            margin-top: 8px;
+            font-size: var(--body-02);
+            color: var(--text-third);
+        }
+        .news{
+            float: left;
+            text-align: left;
+        }
+        .reportDate{
+            float: right;
+            text-align: right;
+            
+        }
+        
+        @media (max-width: 512px) {
+            .report_wrapper{
+                margin-top: 32px;
+                margin-bottom: 32px;
+            }
+            .report_item{
+                width: 100%;
+                height: 257px;
+                margin-bottom: 8px;
+                margin-right: 0px;
+            }
+            .reportImg{
+                height: 104px;
+            }
+            .reportTextContent{
+                height: 109px;
+                padding: 8px;
+            }
+            .reportName{
+                height: 44px;
+                font-size: var(--body-02);
+                line-height: 22.4px;
+            }
+            .summary{
+                height: 44px;
+                line-height: 22.4px;
+            }
+            .reportDate{
+                font-size: var(--body-01);
+            }    
+        }
+        `
+        this.shadowRoot.appendChild(style);
+        this.shadowRoot.appendChild(report_item);
+
+
+        report_item.appendChild(reportImg);
+        report_item.appendChild(reportTextContent);
+
+        reportImg.appendChild(Img);
+        
+        reportTextContent.appendChild(reportName);
+        reportTextContent.appendChild(summary);
+        reportTextContent.appendChild(maker);
+        
+        maker.appendChild(reportDate);
+        maker.appendChild(news);
+
+
+    }
+}
+
 customElements.define('card-container', card_container);
 customElements.define('card-content', card_content);
+customElements.define('promotion-item', promotion_content);
+customElements.define('report-item', report_content);

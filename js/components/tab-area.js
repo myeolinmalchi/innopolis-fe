@@ -77,27 +77,7 @@ customElements.define(
     },
 );
 
-customElements.define(
-    'tab-content',
-    class extends HTMLElement {
-        constructor() {
-            super();
-        }
-
-        connectedCallback() {
-            setTimeout(() => {
-                if (this.shadowRoot === null) return;
-                const common = document.createElement('link');
-                common.setAttribute('rel', 'stylesheet');
-                common.setAttribute('href', '../../css/common.css');
-                const reset = document.createElement('link');
-                reset.setAttribute('rel', 'stylesheet');
-                reset.setAttribute('href', '../../css/reset.css');
-                this.shadowRoot.append(reset, common);
-            });
-        }
-    },
-);
+customElements.define('tab-content', class extends HTMLElement {});
 
 customElements.define(
     'tab-content-area',
@@ -109,7 +89,7 @@ customElements.define(
                 this.contents = [...this.children];
                 this.tab_area = this.previousElementSibling;
                 this.switchTab(0);
-            });
+            }, 100);
         }
 
         static get observedAttributes() {

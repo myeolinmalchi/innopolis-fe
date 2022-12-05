@@ -5,6 +5,9 @@ card-container{
     max-height: 950px;
     overflow: hidden;
 }
+.padding0{
+    padding: 0px;
+}
 .margin-top64{
     margin-top: 64px;
 }
@@ -12,7 +15,7 @@ card-container{
     margin-top: 0px;
 }
 .sub-tab{
-    padding: 48px 0;
+    padding: 0px 0px 48px 0px ;
     font-size: var(--title-02);
     line-height: 31.2px;
 }

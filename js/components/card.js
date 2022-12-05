@@ -60,6 +60,7 @@ class card_content extends HTMLElement{
         .category{
             font-size: var(--body-02);
             line-height: 22.4px;
+            letter-spacing: -0.01em;
             font-weight: 500;
             color: var(--text-third);
             margin-bottom: 8px;
@@ -75,6 +76,7 @@ class card_content extends HTMLElement{
             color : var(--text-primary);
             line-height: 28.8px;
             height: 58px;
+            letter-spacing: -0.01em;
             overflow: hidden;
             text-overflow:ellipsis;
         }
@@ -94,10 +96,12 @@ class card_content extends HTMLElement{
             .category{
                 font-size: var(--body-01);
                 line-height:19.2px;
+                letter-spacing: -0.01em;
             }
             .name{
                 font-size: var(--body-02);
                 line-height: 22.4px;
+                letter-spacing: -0.01em;
             }
         }
         `
@@ -168,6 +172,7 @@ class promotion_content extends HTMLElement{
         .summary{
             width: 100%;
             line-height: 22.4px;
+            letter-spacing: -0.01em;
             font-size: var(--body-02);
             color: var(--text-third);
         }
@@ -176,6 +181,7 @@ class promotion_content extends HTMLElement{
             font-weight: 700;
             line-height: 28.8px;
             height: 58px;
+            letter-spacing: -0.01em;
             overflow: hidden;
             text-overflow:ellipsis;
             margin-bottom: 8px;
@@ -195,6 +201,7 @@ class promotion_content extends HTMLElement{
             text-align: right;
             color: var(--text-third);
             line-height: 22.4px;
+            letter-spacing: -0.01em;
             font-size : var(--body-02);
             
         }
@@ -222,10 +229,12 @@ class promotion_content extends HTMLElement{
                 height: 66px;
                 font-size: var(--body-02);
                 line-height: 22.4px;
+                letter-spacing: -0.01em;
             }
             .promotionDate{
                 font-size: var(--body-01);
                 line-height: 19.2px;
+                letter-spacing: -0.01em;
             }
             
             
@@ -321,6 +330,7 @@ class report_content extends HTMLElement{
         .summary{
             width: 100%;
             line-height: 22.4px;
+            letter-spacing: -0.01em;
             height: 44px;
             overflow: hidden;
             text-overflow:ellipsis;
@@ -331,6 +341,7 @@ class report_content extends HTMLElement{
             font-size: var(--body-04);
             font-weight: 700;
             line-height: 28.8px;
+            letter-spacing: -0.01em;
             height: 58px;
             overflow: hidden;
             text-overflow:ellipsis;
@@ -374,10 +385,12 @@ class report_content extends HTMLElement{
                 height: 44px;
                 font-size: var(--body-02);
                 line-height: 22.4px;
+                letter-spacing: -0.01em;
             }
             .summary{
                 height: 44px;
                 line-height: 22.4px;
+                letter-spacing: -0.01em;
             }
             .reportDate{
                 font-size: var(--body-01);

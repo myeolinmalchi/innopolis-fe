@@ -17,6 +17,10 @@ nav {
     align-items: center;
 }
 
+a {
+    text-decoration: none;
+}
+
 .container > img:first-child {
     content: url(/image/headerLogoDefault.png);
     width: 140px;
@@ -29,7 +33,8 @@ nav {
     align-items: center;
 }
 
-.container > div:nth-child(3) > span {
+.container > div:nth-child(3) > a {
+    text-decoration: none;
     font-size: var(--subtitle-02);
     color: var(--text-third);
     cursor: pointer;
@@ -119,13 +124,17 @@ nav {
         display: flex;
         flex-direction: column;
         gap: 12px;
+        color: var(--text-secondary);
+    }
+
+    .menu-container > div > div > a {
+        color: var(--text-secondary);
         font-size: var(--body-02);
         font-family: 'Pretendard';
         font-style: 'normal';
         line-height: 160%;
         letter-spacing: -0.01em;
         font-weight: 500;
-        color: var(--text-secondary);
     }
 
     .menu-container > div > span {
@@ -151,8 +160,8 @@ nav {
     .container > div:nth-child(2) > label {
         background: url(/image/menuOpen.png) no-repeat 0 0px / contain;
         background-position: center;
-        width: 24px;
-        height: 24px;
+        width: 16px;
+        height: 16px;
         display: block;
         margin: 8px;
         cursor: pointer;

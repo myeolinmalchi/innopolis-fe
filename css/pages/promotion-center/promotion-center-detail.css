@@ -90,7 +90,7 @@ a{
     background-color: var(--background-white-01);
 }
 
-@media (max-width: 512px) {
+@media (max-width: 640px) {
     .card-detail-container{
         width: 328px;
     }

@@ -9,7 +9,8 @@
     align-items: center;
 }
 
-#content1 .post-container > div {
+#content1 .post-container > div,
+#content3 .post-container > div {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -20,32 +21,39 @@
     padding: 24px 0;
 }
 
-#content1 .post-container > div > span:first-child {
+#content1 .post-container > div > span:first-child,
+#content3 .post-container > div > span:first-child {
     font-size: var(--subtitle-03);
     color: var(--color-gray-hover);
     width: 100%;
+    cursor: pointer;
 }
 
-#content1 .post-container > div > span:last-child {
+#content1 .post-container > div > span:last-child,
+#content3 .post-container > div > span:last-child {
     font-size: var(--body-03);
     color: var(--text-third);
     width: 100%;
+    cursor: pointer;
 }
 
 pagination-container {
     margin-bottom: 120px;
 }
 
-@media (max-width: 512px) {
-    #content1 .post-container {
+@media (max-width: 640px) {
+    #content1 .post-container,
+    #content3 .post-container {
         margin: 32px 0;
     }
 
-    #content1 .post-container > div > span:first-child {
+    #content1 .post-container > div > span:first-child,
+    #content3 .post-container > div > span:first-child {
         font-size: var(--body-03);
     }
 
-    #content1 .post-container > div > span:last-child {
+    #content1 .post-container > div > span:last-child,
+    #content3 .post-container > div > span:last-child {
         font-size: var(--body-02);
     }
 }
@@ -96,7 +104,7 @@ pagination-container {
     color: var(--text-third);
 }
 
-@media (max-width: 512px) {
+@media (max-width: 640px) {
     #content2 .post-container {
         gap: 8px;
         margin: 32px 0;

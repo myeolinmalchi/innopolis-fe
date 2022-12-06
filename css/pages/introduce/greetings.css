@@ -44,7 +44,7 @@
     margin-top: 48px;
 }
 
-@media (max-width: 512px) {
+@media (max-width: 640px) {
     .large-text-wrapper {
         font-size: var(--subtitle-03);
     }

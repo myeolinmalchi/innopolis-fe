@@ -57,7 +57,7 @@
     
 }
 
-@media (max-width: 512px) {
+@media (max-width: 640px) {
     .report_wrapper{
         margin-top: 32px;
         margin-bottom: 32px;

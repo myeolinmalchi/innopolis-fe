@@ -79,7 +79,7 @@ pagination-container {
     text-align: right;
 }
 
-@media (max-width: 512px) {
+@media (max-width: 640px) {
     textfield-search {
         margin-top: 32px;
     }
@@ -170,7 +170,7 @@ pagination-container {
     justify-content: right;
 }
 
-@media (max-width: 512px) {
+@media (max-width: 640px) {
     #tech-trend .post-container {
         flex-direction: column;
         justify-content: center;

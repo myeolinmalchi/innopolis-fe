@@ -4,6 +4,17 @@ customElements.define(
         content_area;
         tab_container;
 
+        constructor() {
+            super();
+            window.onload = () => {
+                const urlParams = new URLSearchParams(window.location.search);
+                const tabNum = urlParams.get('tab');
+                if (tabNum) {
+                    this.setAttribute('tab-number', tabNum);
+                }
+            };
+        }
+
         connectedCallback() {
             this.classList.add('tab-area');
             setTimeout(() => {
@@ -22,7 +33,14 @@ customElements.define(
                 case 'tab-number':
                     const tab = Number(newVal);
                     this.content_area?.setAttribute('tab-number', tab);
+                    const state = { sitename: history.state };
+                    history.pushState(
+                        state,
+                        '',
+                        window.location.pathname + '?tab=' + tab,
+                    );
                     this['tab-number'] = tab;
+
                     break;
                 default:
                     break;
@@ -59,27 +77,7 @@ customElements.define(
     },
 );
 
-customElements.define(
-    'tab-content',
-    class extends HTMLElement {
-        constructor() {
-            super();
-        }
-
-        connectedCallback() {
-            setTimeout(() => {
-                if (this.shadowRoot === null) return;
-                const common = document.createElement('link');
-                common.setAttribute('rel', 'stylesheet');
-                common.setAttribute('href', '../../css/common.css');
-                const reset = document.createElement('link');
-                reset.setAttribute('rel', 'stylesheet');
-                reset.setAttribute('href', '../../css/reset.css');
-                this.shadowRoot.append(reset, common);
-            });
-        }
-    },
-);
+customElements.define('tab-content', class extends HTMLElement {});
 
 customElements.define(
     'tab-content-area',
@@ -90,7 +88,17 @@ customElements.define(
             setTimeout(() => {
                 this.contents = [...this.children];
                 this.tab_area = this.previousElementSibling;
+                this.tab_area.tab_container =
+                    this.tab_area.getElementsByTagName('tab-container')[0];
                 this.switchTab(0);
+                const observer = new MutationObserver(() => {
+                    this.contents = [...this.children];
+                    this.switchTab(0);
+                });
+
+                observer.observe(this, {
+                    childList: true,
+                });
             });
         }
 
@@ -101,22 +109,22 @@ customElements.define(
         attributeChangedCallback(attrName, _, newVal) {
             switch (attrName) {
                 case 'tab-number':
-                    this.switchTab(newVal);
+                    this.switchTab(Number(newVal));
                     break;
             }
         }
 
         switchTab(tabNum) {
-            this.contents.forEach((c, idx) => {
+            this.contents?.forEach((c, idx) => {
                 if (idx === Number(tabNum)) {
                     c.style.display = 'block';
-                    this.tab_area.tab_container.tabs[idx].setAttribute(
+                    this.tab_area?.tab_container?.tabs[idx].setAttribute(
                         'state',
                         'active',
                     );
                 } else {
                     c.style.display = 'none';
-                    this.tab_area.tab_container.tabs[idx].setAttribute(
+                    this.tab_area.tab_container?.tabs[idx].setAttribute(
                         'state',
                         'default',
                     );

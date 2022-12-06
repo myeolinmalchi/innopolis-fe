@@ -1,9 +1,10 @@
 nav {
     width: 100%;
     border-bottom: 1px solid var(--stroke-gray-01);
+    box-sizing: border-box;
 }
 
-.container {
+nav > .container {
     width: 100%;
     height: 100px;
     max-width: 1440px;
@@ -16,30 +17,179 @@ nav {
     align-items: center;
 }
 
+a {
+    text-decoration: none;
+}
+
 .container > img:first-child {
     content: url(/image/headerLogoDefault.png);
     width: 140px;
     height: 42px;
 }
 
-.container > div:nth-child(2) {
+.container > div:nth-child(3) {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.container > div:nth-child(2) > span {
+.container > div:nth-child(3) > a {
+    text-decoration: none;
     font-size: var(--subtitle-02);
     color: var(--text-third);
     cursor: pointer;
-    width: 100px;
     text-align: center;
+    padding: 16px;
 }
 
-.container > div:nth-child(3) {
+.container > div:nth-child(4) {
     display: flex;
     justify-content: right;
     align-items: center;
     width: 160px;
     gap: 16px;
+}
+
+.container > div:nth-child(2) > input {
+    display: none;
+}
+
+#hamburger-container {
+    display: none;
+}
+
+.login-container {
+    display: none;
+}
+
+.menu-container {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    nav {
+    }
+
+    .container {
+        flex-wrap: wrap;
+    }
+
+    #hamburger-container {
+        display: none;
+        box-sizing: border-box;
+        background: var(--background-white-01);
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 101px);
+        padding: 40px 80px;
+        flex-direction: column;
+    }
+
+    .login-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 16px 8px;
+        border-bottom: 1px solid var(--stroke-gray-01);
+        padding-bottom: 24px;
+    }
+
+    .login-container > span {
+        font-size: var(--body-03);
+        color: var(--text-secondary);
+        width: 100%;
+    }
+
+    .login-container > button-default {
+        width: calc(50% - 4px);
+    }
+
+    .menu-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px 0px;
+        width: 100%;
+        margin-top: 24px;
+    }
+
+    .menu-container > div {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 50%;
+    }
+
+    .menu-container > div > div {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        color: var(--text-secondary);
+    }
+
+    .menu-container > div > div > a {
+        color: var(--text-secondary);
+        font-size: var(--body-02);
+        font-family: 'Pretendard';
+        font-style: 'normal';
+        line-height: 160%;
+        letter-spacing: -0.01em;
+        font-weight: 500;
+    }
+
+    .menu-container > div > span {
+        font-size: var(--subtitle-03);
+        color: var(--text-primary);
+        width: 100%;
+        text-align: left;
+        font-family: 'Pretendard';
+        font-style: 'normal';
+        font-weight: 700;
+        line-height: 130%;
+        letter-spacing: -0.01em;
+    }
+
+    .container > div:nth-child(4) {
+        display: none;
+    }
+
+    .container > div:nth-child(3) {
+        display: none;
+    }
+
+    .container > div:nth-child(2) > label {
+        background: url(/image/menuOpen.png) no-repeat 0 0px / contain;
+        background-position: center;
+        width: 16px;
+        height: 16px;
+        display: block;
+        margin: 8px;
+        cursor: pointer;
+    }
+
+    .container > div:nth-child(2) > input[type='checkbox']:checked + label {
+        background: url(/image/menuClose.png) no-repeat 0 0px / contain;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 16px;
+        height: 64px;
+    }
+
+    .container > img:first-child {
+        width: 106px;
+        height: 32px;
+    }
+    .login-container > span {
+        font-size: var(--body-02);
+    }
+    .menu-container > div {
+        width: 100%;
+    }
+
+    #hamburger-container {
+        padding: 24px 16px;
+    }
 }

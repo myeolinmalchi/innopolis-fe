@@ -6,20 +6,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="/css/reset.css" />
         <link rel="stylesheet" href="/css/common.css" />
+        <link rel="stylesheet" href="/css/top-nav.css" />
         <link
             rel="stylesheet"
             href="/css/pages/tech-info/great-tech-detail.css"
         />
-        <script
-            type="text/javascript"
-            src="/js/components/button.js"
-        ></script>
+        <script type="text/javascript" src="/js/components/button.js"></script>
         <script
             type="text/javascript"
             src="/js/components/pages/trl.js"
         ></script>
+        <script type="text/javascript" src="/js/components/top-nav.js"></script>
+        <script type="text/javascript" src="/js/components/button.js"></script>
     </head>
     <body>
+        <top-nav></top-nav>
         <div class="content-wrapper">
             <span class="title-bd"> 기술 명 </span>
             <div class="top-content-wrapper">
@@ -52,7 +53,10 @@
                         </div>
                     </div>
                     <div>
-                        <button-default>문의하기</button-default>
+                        <button-default
+                            onclick="location.href='/html/pages/great-tech-inquiry.html'"
+                            >문의하기</button-default
+                        >
                         <button-default style_="secondary"
                             >기술소개서</button-default
                         >
@@ -103,7 +107,11 @@
 
             <div class="subcontent-wrapper">
                 <div class="button-wrapper">
-                    <button-default style_="outline">목록으로</button-default>
+                    <button-default
+                        style_="outline"
+                        onclick="location.href='/html/pages/tech-info.html'"
+                        >목록으로</button-default
+                    >
                 </div>
             </div>
         </div>

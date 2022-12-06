@@ -1,6 +1,17 @@
+function getAllSiblings(elem, filter) {
+    let sibs = [];
+    elem = elem.parentNode.firstChild;
+    while ((elem = elem.nextSibling)) {
+        if (elem.nodeType === 3) continue; // text node
+        if (!filter || filter(elem)) sibs.push(elem);
+    }
+    return sibs;
+}
+
 customElements.define(
     'top-nav',
     class extends HTMLElement {
+        sibs;
         connectedCallback() {
             const login = this.getAttribute('login') ?? 'false';
             this.innerHTML = `
@@ -140,14 +151,30 @@ customElements.define(
                 }
             };
 
-            hamburgerButton.onchange = (e) => {
-                const checked = e.target.checked;
-                if (checked) {
-                    hamburgerContainer.style.display = 'flex';
-                } else {
-                    hamburgerContainer.style.display = 'none';
-                }
-            };
+            setTimeout(() => {
+                const observer = new MutationObserver(() => {
+                    this.sibs = getAllSiblings(this, undefined);
+                });
+                observer.observe(this.parentNode, {
+                    childList: true,
+                });
+                hamburgerButton.onchange = (e) => {
+                    const checked = e.target.checked;
+                    if (checked) {
+                        hamburgerContainer.style.display = 'flex';
+                        this.sibs.forEach((e) => {
+                            if (e === this) return;
+                            e.style.visibility = 'hidden';
+                        });
+                    } else {
+                        hamburgerContainer.style.display = 'none';
+                        this.sibs.forEach((e) => {
+                            if (e === this) return;
+                            e.style.visibility = 'visible';
+                        });
+                    }
+                };
+            });
         }
 
         static get observedAttributes() {

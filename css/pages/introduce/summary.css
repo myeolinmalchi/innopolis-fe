@@ -113,7 +113,7 @@
     gap: 32px;
 }
 
-@media (max-width: 512px) {
+@media (max-width: 640px) {
     .item-wrapper {
         padding: 64px 16px;
     }

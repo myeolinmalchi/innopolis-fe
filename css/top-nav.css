@@ -70,7 +70,7 @@ a {
     nav {
     }
 
-    .container {
+    nav > .container {
         flex-wrap: wrap;
     }
 
@@ -80,7 +80,6 @@ a {
         background: var(--background-white-01);
         position: absolute;
         width: 100%;
-        height: calc(100vh - 101px);
         padding: 40px 80px;
         flex-direction: column;
     }
@@ -173,7 +172,7 @@ a {
 }
 
 @media (max-width: 640px) {
-    .container {
+    nav > .container {
         padding: 16px;
         height: 64px;
     }

@@ -27,7 +27,7 @@
     font-size: var(--title-03);
 }
 
-@media (max-width: 512px) {
+@media (max-width: 640px) {
     .tab-area {
         padding: 48px 0 32px 16px;
     }

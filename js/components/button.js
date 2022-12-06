@@ -270,7 +270,7 @@ customElements.define(
                 const arrow = getArrow?.(color);
                 this.button.innerHTML = `
                     ${icon === 'left' ? arrow : ''}
-                    <div style="margin: 0 0.3em;">${this.content}</div>
+                    <div style="margin: 0;">${this.content}</div>
                     ${icon === 'right' ? arrow : ''}
                 `;
             };
@@ -437,6 +437,7 @@ customElements.define(
                     width: ${length}px;
                     height: ${length}px;
                     border-radius: 2px;
+                    margin: 0;
                     ${
                         state === 'default'
                             ? `

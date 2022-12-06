@@ -162,7 +162,7 @@ width: 100%;
 .line{
     line-height: 25.6px;
 }
-@media (max-width: 512px) {
+@media (max-width: 640px) {
     .container{
         padding-top: 88px;
         padding-left: 16px;

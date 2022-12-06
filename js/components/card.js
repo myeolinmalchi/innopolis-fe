@@ -21,6 +21,9 @@ class card_content extends HTMLElement{
         const card = document.createElement('div');
         card.setAttribute('class','card');
 
+        const imgwrapper = document.createElement('div');
+        imgwrapper.setAttribute('class','round-04');
+
         const card_img = document.createElement('img');
         card_img.setAttribute('src',img_src);
         
@@ -31,7 +34,7 @@ class card_content extends HTMLElement{
         category.setAttribute('class','category');
         category.innerText = category_value;
 
-        const companyName = document.createElement('span');
+        const companyName = document.createElement('div');
         companyName.setAttribute('class','name');
         companyName.innerText = companyName_value;
         const style = document.createElement('style');
@@ -41,6 +44,7 @@ class card_content extends HTMLElement{
             width: 100%;
             height: 300px;
             margin-right: 16px;
+            margin-bottom: 24px;
         }
         .card img{
             float: left;
@@ -54,8 +58,13 @@ class card_content extends HTMLElement{
             height: 120px;
             padding: 16px;
             float: left;
-            text-overflow:ellipsis;
+            text-overflow: ellipsis;
+            word-wrap: break-word;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical; 
             overflow: hidden;
+            box-sizing: border-box;
         }
         .category{
             font-size: var(--body-02);
@@ -69,6 +78,7 @@ class card_content extends HTMLElement{
             height:22px;
         }
         .name{
+            display:block;
             float: left;
             width: 100%;
             font-weight: 700;
@@ -79,6 +89,10 @@ class card_content extends HTMLElement{
             letter-spacing: -0.01em;
             overflow: hidden;
             text-overflow:ellipsis;
+            word-wrap: break-word;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical; 
         }
         
         @media(max-width: 512px){
@@ -86,6 +100,7 @@ class card_content extends HTMLElement{
                 height: 192px;
                 float: left;
                 margin: 0;
+                margin-bottom:16px;
             }
             .card img{
                 height: 104px;
@@ -101,6 +116,7 @@ class card_content extends HTMLElement{
             .name{
                 font-size: var(--body-02);
                 line-height: 22.4px;
+                height: 44px;
                 letter-spacing: -0.01em;
             }
         }
@@ -108,7 +124,10 @@ class card_content extends HTMLElement{
         this.shadowRoot.appendChild(style);
         this.shadowRoot.appendChild(card);
 
-        card.appendChild(card_img);
+
+        card.appendChild(imgwrapper);
+        imgwrapper.appendChild(card_img);
+        
         card.appendChild(text_content);
         text_content.appendChild(category);
         text_content.appendChild(companyName);
@@ -155,6 +174,7 @@ class promotion_content extends HTMLElement{
             height: 300px;
             float: left;
             margin-right: 24px;
+            margin-bottom: 24px;
         }
         
         
@@ -185,6 +205,10 @@ class promotion_content extends HTMLElement{
             overflow: hidden;
             text-overflow:ellipsis;
             margin-bottom: 8px;
+            word-wrap: break-word;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical; 
         }
         .maker{
             width: 100%;
@@ -230,6 +254,7 @@ class promotion_content extends HTMLElement{
                 font-size: var(--body-02);
                 line-height: 22.4px;
                 letter-spacing: -0.01em;
+                -webkit-line-clamp: 3;
             }
             .promotionDate{
                 font-size: var(--body-01);
@@ -302,17 +327,13 @@ class report_content extends HTMLElement{
 
         const style = document.createElement('style');
         style.textContent = `
-        .report_wrapper{
-            max-width: 1100px;
-            margin-top: 64px;
-            margin-bottom: 64px;
-        }
         .report_item{
             display: block;
             width: 100%;
             height: 352px;
             float: left;
             margin-right: 24px;
+            margin-bottom: 24px;
         }
         
         
@@ -334,6 +355,10 @@ class report_content extends HTMLElement{
             height: 44px;
             overflow: hidden;
             text-overflow:ellipsis;
+            word-wrap: break-word;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical; 
             font-size: var(--body-02);
             color: var(--text-third);
         }
@@ -345,6 +370,10 @@ class report_content extends HTMLElement{
             height: 58px;
             overflow: hidden;
             text-overflow:ellipsis;
+            word-wrap: break-word;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical; 
             margin-bottom: 8px;
         }
         .maker{
@@ -364,14 +393,10 @@ class report_content extends HTMLElement{
         }
         
         @media (max-width: 512px) {
-            .report_wrapper{
-                margin-top: 32px;
-                margin-bottom: 32px;
-            }
             .report_item{
                 width: 100%;
                 height: 257px;
-                margin-bottom: 8px;
+                margin-bottom: 16px;
                 margin-right: 0px;
             }
             .reportImg{

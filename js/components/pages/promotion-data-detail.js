@@ -29,7 +29,7 @@ class content_detail extends HTMLElement{
         const span = document.createElement('span');
         span.innerText = date_value;
 
-        const mainImage = document.createElement('mainImage');
+        const mainImage = document.createElement('div');
         mainImage.setAttribute('class','mainImage');
 
         const img = document.createElement('img');
@@ -54,9 +54,11 @@ class content_detail extends HTMLElement{
         .container{
             max-width: 1100px;
             margin: 0 auto;
-            font-style: 'Pretendard';
+            font-family: 'Pretendard';
             margin-top: 64px;
             margin-bottom: 120px;
+            line-height: 160%;
+            letter-spacing: -0.01em;
         }
         
         .info{
@@ -75,28 +77,24 @@ class content_detail extends HTMLElement{
             width: 100%;
             color: var(--text-third);
             font-size: var(--body-caption);
-            line-height: 19.2px;
         }
         h1{
             font-size: var(--title-03);
             color: var(--text-primary);
             font-weight: 700;
             margin-bottom: 24px;
-            line-height: 41.6px;
+            line-height: 130%;
         }
         .date{
             font-size: var(--body-04);
             color: var(--text-third);
-            line-height: 28.8px;
         }
         .content{
             margin-bottom: 64px;
             font-size: var(--body-03);
-            line-height: 25.6px; 
         }
         input{
             float: right;
-            line-height: 25.6px;
             background-color: var(--background-white-01);
             border: var(--stroke-gray-01) 1px solid;
             color: var(--text-secondary);
@@ -113,20 +111,18 @@ class content_detail extends HTMLElement{
                 height: 120px;
             }
             h1{
+                margin-bottom: 12px;
                 font-size: var(--subtitle-03);
-                line-height: 26px;
             }
             .info{
                 margin-bottom: 48px;
             }
             .date{
                 font-size: var(--body-04);
-                line-height: 28.8px;
             }
             .content{
                 margin-bottom: 48px;
                 font-size: var(--body-02);
-                line-height: 22.4px;
             }
             input{
                 margin-top:48px;

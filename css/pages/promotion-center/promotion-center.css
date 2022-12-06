@@ -11,9 +11,13 @@ card-container{
 .margin-top64{
     margin-top: 64px;
 }
+.content-margin{
+    margin-top:64px;
+}
 .margin-top0{
     margin-top: 0px;
 }
+
 .sub-tab{
     padding: 0px 0px 48px 0px ;
     font-size: var(--title-02);
@@ -104,5 +108,8 @@ promotion-item:nth-child(4n){
     }
     report-item:nth-child(even){
         margin-left: 16px;
+    }
+    .content-margin{
+        margin-top:32px;
     }
 }

@@ -4,6 +4,8 @@
     font-style: 'Pretendard';
     margin-top: 64px;
     margin-bottom: 120px;
+    line-height: 160%;
+    letter-spacing: -0.01em;
 }
 
 .info{
@@ -29,7 +31,7 @@ h1{
     color: var(--text-primary);
     font-weight: 700;
     margin-bottom: 24px;
-    line-height: 41.6px;
+    line-height: 130%;
 }
 .date{
     font-size: var(--body-04);

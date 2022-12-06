@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="/css/common.css" />
         <link rel="stylesheet" href="/css/tab-area.css" />
         <link rel="stylesheet" href="/css/top-nav.css" />
-        <link rel="stylesheet" href="/css/pages/promotion-center/card.css" />
+        <link rel="stylesheet" href="/css/pages/promotion-center/promotion-center.css" />
         <link
             rel="stylesheet"
             href="/css/pages/promotion-center/promotionItem.css"
@@ -47,10 +47,11 @@
     <script type="text/javascript" src="/js/components/tab-area.js"></script>
     <script type="text/javascript" src="/js/components/pagination.js"></script>
     <script type="text/javascript" src="/js/components/card.js"></script>
+    <script type="text/javascript" src="/js/components/top-nav.js"></script>
 </head>
 
 <body>
-
+    <top-nav></top-nav>
     <tab-area>
         <tab-introduce-text>
             천안아산강소특구<br />
@@ -67,10 +68,10 @@
         <tab-content id="content1">
             <img class="top-img" src="" alt="" />
             <div class="content-wrapper">
-                <div class="post-wrapper  margin-top0">
+                <div class="post-wrapper">
                     <img class="post-img" src="" alt="" />
                     <tab-area class="sub-tab">
-                        <tab-container>
+                        <tab-container style="margin-top: 0px;">
                             <tab-default type="secondary">전체</tab-default>
                             <tab-default type="secondary">연구소기업</tab-default>
                             <tab-default type="secondary">첨단기술 기업</tab-default>
@@ -81,7 +82,7 @@
                         <tab-content id="content1-1">
                             <div class="content-wrapper padding0">
                                 <card-container>
-                                    <card-content></card-content>
+                                    <card-content name="회사이름길이테스트입니다.회사이름길이테스트입니다.회사이름길이테스트입니다.회사이름길이테스트입니다.회사이름길이테스트입니다."></card-content>
                                     <card-content></card-content>
                                     <card-content></card-content>
                                     <card-content></card-content>
@@ -258,7 +259,7 @@
         <tab-content id="content4">
             <img class="top-img" src="" alt="" />
             <div class="content-wrapper">
-                <card-container>
+                <card-container class="content-margin">
                     <card-content></card-content>
                     <card-content></card-content>
                     <card-content></card-content>

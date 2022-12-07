@@ -117,6 +117,7 @@ class companycard_content extends HTMLElement{
             width: 70%;
             color: var(--title-01);
             line-height: 31.2px;
+            letter-spacing: -0.01em;
             font-weight: 700;
             float: left;
         }
@@ -128,6 +129,7 @@ class companycard_content extends HTMLElement{
             color: var(--text-third);
             font-size:var(--body-03);
             line-height: 25.6px;
+            letter-spacing: -0.01em;
         }
         
         .companySummary{
@@ -136,6 +138,7 @@ class companycard_content extends HTMLElement{
             margin-bottom: 30px;
             line-height: 22.4px;
             color: var(--test-second);
+            letter-spacing: -0.01em;
             font-size: var(--body-02);
         }
         
@@ -145,6 +148,7 @@ class companycard_content extends HTMLElement{
             padding: 6px 12px;
             font-size: var(--body-03);
             line-height: 25.6px;
+            letter-spacing: -0.01em;
         }
         
         

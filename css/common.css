@@ -191,6 +191,7 @@
     flex-direction: column;
     padding: 0 80px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .content-wrapper-full {

@@ -3,7 +3,7 @@ customElements.define(
     class extends HTMLElement {
         content_area;
         tab_container;
-
+        introduction_area;
         constructor() {
             super();
             window.onload = () => {
@@ -21,6 +21,9 @@ customElements.define(
                 this.content_area = this.nextElementSibling;
                 this.tab_container =
                     this.getElementsByTagName('tab-container')[0];
+                this.introduction_area = this.getElementsByTagName(
+                    'tab-introduction-container',
+                )[0];
             });
         }
 
@@ -68,10 +71,33 @@ customElements.define(
 );
 
 customElements.define(
-    'tab-introduce-text',
+    'tab-introduction-container',
+    class extends HTMLElement {
+        contents;
+        tab_area;
+        connectedCallback() {
+            this.classList.add('inner-content', 'introduce');
+            setTimeout(() => {
+                this.contents = [...this.children];
+                this.tab_area = this.parentNode;
+                const observer = new MutationObserver(() => {
+                    this.contents = [...this.children];
+                    this.tab_area.content_area.switchTab(0);
+                });
+
+                observer.observe(this, {
+                    childList: true,
+                });
+            });
+        }
+    },
+);
+
+customElements.define(
+    'tab-introduction-content',
     class extends HTMLElement {
         connectedCallback() {
-            this.classList.add('title', 'inner-content', 'introduce');
+            this.classList.add('title');
             this.style.color = 'var(--text-primary)';
         }
     },
@@ -118,16 +144,22 @@ customElements.define(
             this.contents?.forEach((c, idx) => {
                 if (idx === Number(tabNum)) {
                     c.style.display = 'block';
-                    this.tab_area?.tab_container?.tabs[idx].setAttribute(
+                    this.tab_area.tab_container.tabs[idx].setAttribute(
                         'state',
                         'active',
                     );
+                    this.tab_area.introduction_area.contents[
+                        idx
+                    ].style.display = 'block';
                 } else {
                     c.style.display = 'none';
-                    this.tab_area.tab_container?.tabs[idx].setAttribute(
+                    this.tab_area.tab_container.tabs[idx].setAttribute(
                         'state',
                         'default',
                     );
+                    this.tab_area.introduction_area.contents[
+                        idx
+                    ].style.display = 'none';
                 }
             });
         }

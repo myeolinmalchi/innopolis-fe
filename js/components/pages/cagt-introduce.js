@@ -44,6 +44,7 @@ customElements.define(
             ];
 
             location_detail.innerHTML = `
+            <div>
                 <div class="location-detail-content-wrapper">
                     <span class="location-detail-title body-me"
                         >캠퍼스</span
@@ -115,9 +116,16 @@ customElements.define(
                             : ''
                     }
                 </div>
+            </div>
             `;
             location_detail_wrapper.append(location_map, location_detail);
             this.append(location_title, location_detail_wrapper);
+            setTimeout(() => {
+                const map = new kakao.maps.Map(location_map, {
+                    center: new kakao.maps.LatLng(33.450701, 126.570667),
+                    level: 3,
+                });
+            }, 100);
         }
     },
 );

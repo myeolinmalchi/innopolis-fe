@@ -26,10 +26,20 @@
     <body>
         <top-nav></top-nav>
         <tab-area>
-            <tab-introduce-text>
-                천안아산강소특구<br />
-                입주 기업을 소개합니다.
-            </tab-introduce-text>
+            <tab-introduction-container>
+                <tab-introduction-content>
+                    천안아산강소특구<br />
+                    캠퍼스장의 인사말입니다.
+                </tab-introduction-content>
+                <tab-introduction-content>
+                    천안아산강소특구<br />
+                    사업개요를 소개합니다.
+                </tab-introduction-content>
+                <tab-introduction-content>
+                    천안아산강소특구의<br />
+                    오시는길 안내입니다.
+                </tab-introduction-content>
+            </tab-introduction-container>
             <tab-container>
                 <tab-default type="primary">인사말</tab-default>
                 <tab-default type="primary">천안아산강소특구 개요</tab-default>
@@ -37,7 +47,7 @@
             </tab-container>
         </tab-area>
         <tab-content-area>
-            <tab-content>
+            <tab-content id="content1">
                 <img src="" alt="" class="top-img" />
                 <div class="content-wrapper">
                     <img src="" alt="" class="center-img" />
@@ -89,7 +99,7 @@
                     </div>
                 </div>
             </tab-content>
-            <tab-content>
+            <tab-content id="content2">
                 <img src="" alt="" class="top-img" />
                 <div class="content-wrapper-full">
                     <div class="item-wrapper">
@@ -108,7 +118,7 @@
                         <span class="title-wrapper title-bd">
                             자동차 부품 혁신 클러스트 특구
                         </span>
-                        <img src="" alt="" class="visual-content" />
+                        <img src="" alt="" class="visual-content" id="image1" />
                         <div class="subitem-container">
                             <div class="subitem-wrapper">
                                 <span class="subitem-title body-bd"
@@ -145,7 +155,12 @@
                         style="background: var(--background-gray-01)"
                     >
                         <div class="img-content-wrapper">
-                            <img class="img-content-img" src="" alt="" />
+                            <img
+                                class="img-content-img"
+                                id="image2"
+                                src=""
+                                alt=""
+                            />
                             <div class="img-content-content-wrapper">
                                 <span class="img-content-content-title title-bd"
                                     >차량용 디스플레이 · 인포테인먼트</span
@@ -172,7 +187,12 @@
                             </div>
                         </div>
                         <div class="img-content-wrapper">
-                            <img class="img-content-img" src="" alt="" />
+                            <img
+                                class="img-content-img"
+                                id="image3"
+                                src=""
+                                alt=""
+                            />
                             <div class="img-content-content-wrapper">
                                 <span class="img-content-content-title title-bd"
                                     >차세대 배터리 소재 ‧ 부품</span
@@ -198,7 +218,12 @@
                             </div>
                         </div>
                         <div class="img-content-wrapper">
-                            <img class="img-content-img" src="" alt="" />
+                            <img
+                                class="img-content-img"
+                                id="image4"
+                                src=""
+                                alt=""
+                            />
                             <div class="img-content-content-wrapper">
                                 <span class="img-content-content-title title-bd"
                                     >차량용 디스플레이 · 인포테인먼트</span
@@ -240,11 +265,15 @@
                             신분에 의하여 정치적·경제적·사회적·문화적 생활의
                             모든 영역에 있어서 차별을 받지 아니한다.
                         </span>
-                        <div class="visual-content">유튜브</div>
+                        <div class="last-content">
+                            <div>
+                                <img src="" alt="" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </tab-content>
-            <tab-content>
+            <tab-content id="content3">
                 <img src="" alt="" class="top-img" />
                 <div class="content-wrapper">
                     <location-container

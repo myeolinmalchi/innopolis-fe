@@ -1,84 +1,122 @@
 @charset "utf-8";
 
-*{
-    list-style: none;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing:  border-box;
-    box-sizing: border-box;
-    margin: 0;
-}
-
 body{
     width: 100%;
 }
 
 footer {
-    height: 342px;
+    min-height: 342px;
     width: 100%;
     background-color:#1A2433;
     display: block;
     color: #9CA3AF;
-    padding: 60 170 119 170;
+    padding-top: 60px;
     margin: 0 auto;
+    font-family: 'Pretendard';
 }
-.L{
-    width: 1440px;
-}
-.M{
-    width:1024px;
+.container{
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
 }
 
-.center{
-    height: 100%;
-    background-color:#1A2433;
+.content{
+    display: inline-block;
+    float: left;
+}
+
+.left{
+    display: inline-block;
+    float: left;
+}
+.leftcontent{
     display: block;
-    color: #9CA3AF;
-    margin: 0 auto;
-}
-.size{
-    width : 100%;
+    width: 90%;
     float: left;
 }
-.logo{
-    weight:105px;
-    height:32px;
-    float: left;
-    
+.rightcontent{
+    display: block;
+    width: 10%;
+    float: right;
+    margin-top: 28px;
+}
+.right{
+    display: inline-block;
+    float: right;
 }
 
 .list{
-    weight: 512px;
+    weight: 50%;
+    margin-top: 3px;
     margin-left: 24px;
     float: right;
 }
 
 .list li{
+    display: block;
     float: left;
     font-size: 16px;
     margin-left: 12px;
     margin-right: 12px;
 }
 
-.middle{
-   margin-top: 28px;
+.second{
+    margin-top: 23px;
+    width: 100%;
 }
-.left{
-    float: left;
-    width: auto;
-}
-
-.right{
-    float: right;
-}
-.social{
-    margin-left: 22px;
-}
-.bottom{
+.third{
+    margin-top: 28px;
+ }
+ .third p{
+    line-height: 22px;
+    line-height: 160%;
+ }
+.fourth{
     margin-top: 20px;
 }
-.line{
-    margin-top: 23px;
+.fivth{
+
 }
-.top{
-    margin-top: 60px;
+.fivth:nth-child(2){
+    margin-left: 16px;
+}
+/* 반응형 */
+@media (max-width: 1100px) {
+    .container{
+        max-width: 864px;
+    }
+}
+
+@media (max-width: 864px) {
+    .container{
+        max-width: 350px;
+    }
+    footer{
+        padding-top: 32px;
+        font-size: 12px;
+        line-height: 19px;
+        line-height: 160%;
+    }
+    .list{
+        margin: 0px;
+        margin-top: 12px;
+    }
+    .list li{
+        font-size: 12px;
+        line-height: 19px;
+        line-height: 160%;
+        margin-left: 16px;
+        margin-right: 0px;
+    }
+    .list li:nth-child(1){
+        margin-left: 0px;
+    }
+    .rightcontent{
+        display: block;
+        float: left;
+        width: 100%;
+    }
+    .rightcontent .right{
+        float: left;
+    }
 }

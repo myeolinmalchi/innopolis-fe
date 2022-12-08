@@ -190,3 +190,31 @@ pagination-container {
         font-size: var(--body-02);
     }
 }
+
+tab-content:first-child > img {
+    content: url(/image/pages/tech-info/1-0.png);
+}
+tab-content:nth-child(2) > img {
+    content: url(/image/pages/tech-info/2-0.png);
+}
+tab-content:nth-child(3) > img {
+    content: url(/image/pages/tech-info/3-0.png);
+}
+tab-content:nth-child(4) > img {
+    content: url(/image/pages/tech-info/4-0.png);
+}
+
+@media (max-width: 640px) {
+    tab-content:first-child > img {
+        content: url(/image/pages/tech-info/1-0-m.png);
+    }
+    tab-content:nth-child(2) > img {
+        content: url(/image/pages/tech-info/2-0-m.png);
+    }
+    tab-content:nth-child(3) > img {
+        content: url(/image/pages/tech-info/3-0-m.png);
+    }
+    tab-content:nth-child(4) > img {
+        content: url(/image/pages/tech-info/4-0-m.png);
+    }
+}

@@ -17,14 +17,22 @@
     gap: 24px;
 }
 
-.top-content-wrapper > img {
-    width: 725px;
+.top-content-wrapper > div:first-child {
+    width: calc(66% - 12px);
     height: 400px;
     border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    background: gray;
 }
 
-.top-content-wrapper > div {
-    width: 351px;
+.top-content-wrapper > div:first-child > img {
+    max-width: 100%;
+    height: auto;
+}
+
+.top-content-wrapper > div:nth-child(2) {
+    width: calc(33% - 12px);
     display: flex;
     flex-direction: column;
     padding: 32px;
@@ -32,7 +40,7 @@
     box-sizing: border-box;
 }
 
-.top-content-wrapper > div > :first-child {
+.top-content-wrapper > div:nth-child(2) > :first-child {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -40,14 +48,14 @@
     box-sizing: border-box;
 }
 
-.top-content-wrapper > div > :first-child > div {
+.top-content-wrapper > div:nth-child(2) > :first-child > div {
     width: 100%;
     display: flex;
     flex-direction: row;
     height: 26px;
 }
 
-.top-content-wrapper > div > :last-child {
+.top-content-wrapper > div:nth-child(2) > :last-child {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -55,18 +63,26 @@
     box-sizing: border-box;
 }
 
-.top-content-wrapper > div > :first-child > div > :first-child {
+.top-content-wrapper > div:nth-child(2) > :first-child > div > :first-child {
     color: var(--text-third);
     font-size: var(--body-03);
-    width: 80px;
+    width: 30%;
     text-align: left;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.top-content-wrapper > div > :first-child > div > :last-child {
+.top-content-wrapper > div:nth-child(2) > :first-child > div > :last-child {
     color: var(--text-primary);
     font-size: var(--body-03);
     text-align: left;
     margin-left: 15px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .subcontent-wrapper {

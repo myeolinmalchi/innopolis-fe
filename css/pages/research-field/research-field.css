@@ -129,3 +129,25 @@ pagination-container {
         font-size: var(--body-01);
     }
 }
+
+#content1 > .top-img {
+    content: url(/image/pages/research-field/1-0.png);
+}
+#content2 > .top-img {
+    content: url(/image/pages/research-field/2-0.png);
+}
+#content3 > .top-img {
+    content: url(/image/pages/research-field/3-0.png);
+}
+
+@media (max-width: 640px) {
+    #content1 > .top-img {
+        content: url(/image/pages/research-field/1-0-m.png);
+    }
+    #content2 > .top-img {
+        content: url(/image/pages/research-field/2-0-m.png);
+    }
+    #content3 > .top-img {
+        content: url(/image/pages/research-field/3-0-m.png);
+    }
+}

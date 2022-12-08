@@ -35,7 +35,7 @@ class TRL extends HTMLElement {
             }
 
             .line {
-                width: 63px;
+                width: calc(9% + 8px);
                 margin: 0;
             }
 
@@ -45,6 +45,8 @@ class TRL extends HTMLElement {
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
+                padding: 0 20px;
+                box-sizing: border-box;
             }
 
             .text-container {
@@ -53,7 +55,7 @@ class TRL extends HTMLElement {
                 flex-direction: row;
                 justify-content: center;
                 align-items: top;
-                gap: 25px;
+                gap: calc(9% - 36px);
                 margin-top: 12px;
             }
 
@@ -73,7 +75,7 @@ class TRL extends HTMLElement {
         `;
         const link1 = document.createElement('link');
         link1.setAttribute('rel', 'stylesheet');
-        link1.setAttribute('href', '../../css/common.css');
+        link1.setAttribute('href', '/css/common.css');
         this.shadowRoot.append(link1, stylesheet);
 
         this.container = document.createElement('div');
@@ -138,4 +140,5 @@ class TRL extends HTMLElement {
     }
 }
 
+customElements.define('trl-container', TRL);
 customElements.define('trl-container', TRL);

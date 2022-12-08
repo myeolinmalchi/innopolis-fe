@@ -1,0 +1,174 @@
+.main-title {
+    /* Title/Title03 */
+    margin-top: 0px;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: var(--title-03);
+    line-height: 130%;
+    /* or 42px */
+
+    letter-spacing: -0.01em;
+
+    /* Txt/Primary */
+
+    color: var(--text-primary);
+}
+
+.content-sub-title {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: var(--subtitle-03);
+    line-height: 130%;
+    /* identical to box height, or 26px */
+
+    letter-spacing: -0.01em;
+
+    /* Txt/Third */
+
+    color: var(--text-third);
+    margin-bottom: 12px;
+}
+
+.content-sub-text {
+    /* Body/Body05-ME */
+
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 500;
+    font-size: var(--body-05);
+    line-height: 160%;
+    /* or 32px */
+
+    letter-spacing: -0.01em;
+
+    /* Txt/Primary */
+
+    color: var(--text-primary);
+}
+
+.content-padding {
+    width: 100%;
+    padding: 80px 0px;
+    float: left;
+}
+
+.content-padding .main-title {
+    margin-bottom: 48px;
+}
+
+.benefit-item {
+    margin-bottom: 32px;
+}
+
+.process {
+    padding: 32px 72px;
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.process .table {
+    float: left;
+    width: calc(50% - 128px);
+}
+
+.process .table div {
+    width: 100%;
+    background-color: var(--background-white-01);
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: var(--subtitle-02);
+    line-height: 130%;
+    text-align: center;
+    border-radius: 4px;
+    /* or 23px */
+
+    text-align: center;
+    letter-spacing: -0.01em;
+
+    /* Color Gray/Filled */
+
+    color: var(--color-gray-filled);
+    padding: 16px 0px;
+
+}
+
+.process .table .first-item {
+    color: var(--text-white);
+    background-color: var(--background-blue-01);
+}
+
+.process .middle-item {
+    padding: 0px 48px;
+    float: left;
+}
+
+.process .table img {
+    display: block;
+    margin: 12px auto;
+}
+
+.add {
+    text-align: center;
+    /* Title/Page-Title02 */
+
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 130%;
+    /* identical to box height, or 52px */
+
+    text-align: center;
+    letter-spacing: -0.01em;
+
+    /* Txt/Primary */
+
+    color: var(--text-primary);
+
+}
+
+.box {
+    width: 160px;
+    height: 160px;
+    background-color: var(--background-gray-02);
+    text-align: center;
+}
+.box-text{
+    /* Title/Sub-Title03 */
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 700;
+font-size: var(--sub-title03);
+line-height: 130%;
+/* identical to box height, or 26px */
+
+letter-spacing: -0.01em;
+
+/* Txt/Primary */
+
+color: var(--text-primary);
+}
+
+@media (max-width: 640px) {
+    .content-padding{
+        padding: 48px 0px;
+    }
+    .main-title{
+        font-size: var(--subtitle-03);
+    }
+    .content-sub-title{
+        font-size: var(--body-04);
+    }
+    .content-sub-text{
+        font-size: var(--body-03);
+    }
+    .process{
+        padding: 0px;
+    }
+    
+}

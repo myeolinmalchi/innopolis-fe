@@ -40,7 +40,7 @@ width: 100%;
 
 .content-space{
     display: inline-block;
-    width: 100%;
+    max-width: 1100px;
     text-align: left;
     line-height: 160%;
     margin: 120px 0px;

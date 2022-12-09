@@ -1,3 +1,20 @@
+.main-title {
+    /* Title/Title03 */
+    margin-top: 0px;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: var(--title-03);
+    line-height: 130%;
+    /* or 42px */
+
+    letter-spacing: -0.01em;
+
+    /* Txt/Primary */
+
+    color: var(--text-primary);
+}
+
 card-container{
     max-width: 1100px;
     display: block;
@@ -111,5 +128,8 @@ promotion-item:nth-child(4n){
     }
     .content-margin{
         margin-top:32px;
+    }
+    .main-title {
+        font-size: var(--subtitle-03);
     }
 }

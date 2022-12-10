@@ -137,38 +137,99 @@
     background-color: var(--background-gray-02);
     text-align: center;
 }
-.box-text{
+
+.box-text {
     /* Title/Sub-Title03 */
 
-font-family: 'Pretendard';
-font-style: normal;
-font-weight: 700;
-font-size: var(--sub-title03);
-line-height: 130%;
-/* identical to box height, or 26px */
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: var(--sub-title03);
+    line-height: 130%;
+    /* identical to box height, or 26px */
 
-letter-spacing: -0.01em;
+    letter-spacing: -0.01em;
 
-/* Txt/Primary */
+    /* Txt/Primary */
 
-color: var(--text-primary);
+    color: var(--text-primary);
 }
 
+.lab-process-container {
+    width: 100%;
+    padding: 54px 0px;
+}
+
+.lab-process-item {
+    width: calc(16.66% - 30.6px);
+    float: left;
+    margin-right: 36.72px;
+}
+
+.process-num {
+    background-color: var(--background-blue-01);
+    color: var(--text-white);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 40px;
+    margin-bottom: 11px;
+
+    /* Title/Title01 */
+
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: var(--title-01);
+    /* or 31px */
+
+    text-align: center;
+    letter-spacing: -0.01em;
+}
+
+.process-item-text {
+    height: 46px;
+    padding: 11px 16px 14px;
+    background-color: var(--background-white-01);
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: var(--subtitle-02);
+    line-height: 130%;
+    text-align: center;
+    border-radius: 4px;
+    /* or 23px */
+
+    text-align: center;
+    letter-spacing: -0.01em;
+
+    /* Color Gray/Filled */
+
+    color: var(--color-gray-filled);
+}
+
+
 @media (max-width: 640px) {
-    .content-padding{
+    .content-padding {
         padding: 48px 0px;
     }
-    .main-title{
+
+    .main-title {
         font-size: var(--subtitle-03);
     }
-    .content-sub-title{
+
+    .content-sub-title {
         font-size: var(--body-04);
     }
-    .content-sub-text{
+
+    .content-sub-text {
         font-size: var(--body-03);
     }
-    .process{
+
+    .process {
         padding: 0px;
     }
-    
+
 }

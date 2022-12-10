@@ -40,13 +40,13 @@
     text-align: left;
 }
 
-.detail-title {
+.detail-wrapper > span {
     font-size: var(--subtitle-03);
     width: 100%;
     text-align: left;
 }
 
-.detail-table {
+table {
     width: 100%;
     box-sizing: border-box;
     border-left: 1px solid var(--stroke-gray-01);
@@ -54,29 +54,13 @@
     margin-top: 16px;
 }
 
-.detail-table-row {
+tr {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     box-sizing: border-box;
 }
-
-.table-name {
-    width: 14.5%;
-    background: var(--background-gray-02);
-    justify-content: center;
-    font-size: var(--body-03);
-}
-
-.table-value {
-    width: 35.5%;
-    justify-content: left;
-    padding: 14px;
-    color: var(--text-secondary);
-    font-size: var(--body-02);
-}
-
 td {
     box-sizing: border-box;
     display: flex;
@@ -85,6 +69,21 @@ td {
     border-left: none;
     border-top: none;
     height: 50px;
+}
+
+td:nth-child(odd) {
+    width: 14.5%;
+    background: var(--background-gray-02);
+    justify-content: center;
+    font-size: var(--body-03);
+}
+
+td:nth-child(even) {
+    width: 35.5%;
+    justify-content: left;
+    padding: 14px;
+    color: var(--text-secondary);
+    font-size: var(--body-02);
 }
 
 .caution {
@@ -125,18 +124,18 @@ td {
         font-size: var(--body-04);
     }
 
-    .detail-table-row {
+    tr {
         flex-direction: column;
     }
 
-    .table-name {
+    td:nth-child(odd) {
         width: 100%;
         justify-content: left;
         padding: 12px 16px;
         font-size: var(--body-02);
     }
 
-    .table-value {
+    td:nth-child(even) {
         width: 100%;
         padding: 12px 16px;
     }

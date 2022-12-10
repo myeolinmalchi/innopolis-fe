@@ -126,10 +126,11 @@ pagination-container {
     justify-content: space-between;
     margin-top: 64px;
     margin-bottom: 144px;
+    gap: 0px;
 }
 
 #tech-trend .post-wrapper {
-    width: min(350px, calc(32vw - 53px));
+    width: calc(33% - 10px);
     display: flex;
     flex-direction: column;
 }

@@ -1,7 +1,9 @@
 customElements.define(
     'location-container',
     class extends HTMLElement {
+        location_map;
         connectedCallback() {
+            console.log('test');
             const title = this.getAttribute('title');
             const subtitle = this.getAttribute('subtitle');
             const location_title = document.createElement('span');
@@ -18,8 +20,8 @@ customElements.define(
 
             const location_detail = document.createElement('div');
             location_detail.classList.add('location-detail');
-            const location_map = document.createElement('div');
-            location_map.classList.add('location-map');
+            this.location_map = document.createElement('div');
+            this.location_map.classList.add('location-map');
 
             this.classList.add('location-container');
 
@@ -44,6 +46,7 @@ customElements.define(
             ];
 
             location_detail.innerHTML = `
+            <div>
                 <div class="location-detail-content-wrapper">
                     <span class="location-detail-title body-me"
                         >캠퍼스</span
@@ -115,9 +118,37 @@ customElements.define(
                             : ''
                     }
                 </div>
+            </div>
             `;
-            location_detail_wrapper.append(location_map, location_detail);
+            location_detail_wrapper.append(this.location_map, location_detail);
             this.append(location_title, location_detail_wrapper);
+            setTimeout(() => {
+                const content_area = this.parentNode.parentNode.parentNode;
+                const observer = new MutationObserver((mutations) => {
+                    mutations.forEach((m) => {
+                        if (
+                            m.type === 'attributes' &&
+                            m.attributeName === 'tab-number'
+                        ) {
+                            const map = new kakao.maps.Map(this.location_map, {
+                                center: new kakao.maps.LatLng(
+                                    33.450701,
+                                    126.570667,
+                                ),
+                                level: 3,
+                            });
+                        }
+                    });
+                });
+
+                observer.observe(content_area, {
+                    attributes: true,
+                });
+                const map = new kakao.maps.Map(this.location_map, {
+                    center: new kakao.maps.LatLng(33.450701, 126.570667),
+                    level: 3,
+                });
+            });
         }
     },
 );

@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>Insert title here.</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="/css/reset.css" />
-        <link rel="stylesheet" href="/css/common.css" />
-        <link rel="stylesheet" href="/css/tab-area.css" />
-        <link rel="stylesheet" href="/css/top-nav.css" />
-        <link rel="stylesheet" href="/css/pages/promotion-center/promotion-center.css" />
-        <link
-            rel="stylesheet"
-            href="/css/pages/promotion-center/promotionItem.css"
-        />
-        <link
-            rel="stylesheet"
-            href="/css/pages/promotion-center/report-card.css"
-        />
-        <script type="text/javascript" src="/js/components/footer.js"></script>
-        <script type="text/javascript" src="/js/components/tab.js"></script>
-        <script
-            type="text/javascript"
-            src="/js/components/tab-area.js"
-        ></script>
-        <script
-            type="text/javascript"
-            src="/js/components/pagination.js"
-        ></script>
-        <script type="text/javascript" src="/js/components/card.js"></script>
-        <script type="text/javascript" src="/js/components/top-nav.js"></script>
-        <script type="text/javascript" src="/js/components/button.js"></script>
-    </head>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Insert title here.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/tab-area.css" />
+    <link rel="stylesheet" href="/css/top-nav.css" />
+    <link rel="stylesheet" href="/css/pages/promotion-center/promotion-center.css" />
+    <link rel="stylesheet" href="/css/pages/promotion-center/promotionItem.css" />
+    <link rel="stylesheet" href="/css/pages/promotion-center/report-card.css" />
+    <script type="text/javascript" src="/js/components/footer.js"></script>
+    <script type="text/javascript" src="/js/components/tab.js"></script>
+    <script type="text/javascript" src="/js/components/tab-area.js"></script>
+    <script type="text/javascript" src="/js/components/pagination.js"></script>
+    <script type="text/javascript" src="/js/components/card.js"></script>
+    <script type="text/javascript" src="/js/components/top-nav.js"></script>
+    <script type="text/javascript" src="/js/components/button.js"></script>
+</head>
+
 <body>
     <top-nav></top-nav>
     <tab-area>
-        <tab-introduce-text>
-            천안아산강소특구<br />
-            입주 기업을 소개합니다.
-        </tab-introduce-text>
+        <tab-introduction-container>
+            <tab-introduce-text class="main-title">
+                천안아산강소특구<br />
+                입주 기업을 소개합니다.
+            </tab-introduce-text>
+            <tab-introduce-text class="main-title">
+                천안아산강소특구<br />
+                입주 기업을 소개합니다.
+            </tab-introduce-text>
+            <tab-introduce-text class="main-title">
+                천안아산강소특구<br />
+                입주 기업을 소개합니다.
+            </tab-introduce-text>
+            <tab-introduce-text class="main-title">
+                천안아산강소특구<br />
+                입주 기업을 소개합니다.
+            </tab-introduce-text>
+        </tab-introduction-container>
         <tab-container>
             <tab-default type="primary">기업홍보</tab-default>
             <tab-default type="primary">홍보자료</tab-default>
@@ -63,7 +67,8 @@
                         <tab-content id="content1-1">
                             <div class="content-wrapper padding0">
                                 <card-container>
-                                    <card-content name="회사이름길이테스트입니다.회사이름길이테스트입니다.회사이름길이테스트입니다.회사이름길이테스트입니다.회사이름길이테스트입니다."></card-content>
+                                    <card-content
+                                        name="회사이름길이테스트입니다.회사이름길이테스트입니다.회사이름길이테스트입니다.회사이름길이테스트입니다.회사이름길이테스트입니다."></card-content>
                                     <card-content></card-content>
                                     <card-content></card-content>
                                     <card-content></card-content>
@@ -224,17 +229,17 @@
                     <report-item></report-item>
                     <report-item></report-item>
                 </div>
-            
-            <pagination-container>
-                <pagination-arrow direction="left"></pagination-arrow>
-                <pagination-unit link="/1">1</pagination-unit>
-                <pagination-unit state="focus">2</pagination-unit>
-                <pagination-unit>3</pagination-unit>
-                <pagination-unit>4</pagination-unit>
-                <pagination-unit>5</pagination-unit>
-                <pagination-arrow direction="right"></pagination-arrow>
-            </pagination-container>
-        </div>
+
+                <pagination-container>
+                    <pagination-arrow direction="left"></pagination-arrow>
+                    <pagination-unit link="/1">1</pagination-unit>
+                    <pagination-unit state="focus">2</pagination-unit>
+                    <pagination-unit>3</pagination-unit>
+                    <pagination-unit>4</pagination-unit>
+                    <pagination-unit>5</pagination-unit>
+                    <pagination-arrow direction="right"></pagination-arrow>
+                </pagination-container>
+            </div>
         </tab-content>
 
         <tab-content id="content4">

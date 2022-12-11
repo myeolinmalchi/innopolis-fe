@@ -5,6 +5,7 @@
     align-items: center;
     padding: 64px 80px 48px 80px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .inner-content {
@@ -29,10 +30,24 @@
 
 @media (max-width: 640px) {
     .tab-area {
-        padding: 48px 0 32px 16px;
+        padding: 48px 0px 32px 0;
+    }
+
+    tab-introduction-content {
+        padding-left: 16px;
     }
     .tab-container {
-        flex-wrap: wrap;
+        flex: 0 0 auto;
+        padding: 0 16px;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+        white-space: nowrap;
+    }
+
+    .tab-container::-webkit-scrollbar {
+        display: none;
     }
     .tab {
         font-size: var(--subtitle-03);

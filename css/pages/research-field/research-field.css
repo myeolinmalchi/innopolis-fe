@@ -5,8 +5,9 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
+    cursor: pointer;
 }
 
 #content1 .post-container > div,
@@ -67,16 +68,16 @@ pagination-container {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: calc(25% - 18px);
 }
 
 #content2 .post-container > div > img {
-    width: min(257px, calc(25vw - 20px));
     height: 180px;
     border-radius: 4px;
+    max-width: 100%;
 }
 
 #content2 .post-container > div > div {
-    width: min(257px, calc(25vw - 20px));
     display: flex;
     flex-direction: column;
     justify-content: top;
@@ -84,6 +85,7 @@ pagination-container {
     padding: 16px;
     gap: 8px;
     box-sizing: border-box;
+    width: 100%;
 }
 
 #content2 .post-container > div > div > span {
@@ -109,14 +111,15 @@ pagination-container {
         gap: 8px;
         margin: 32px 0;
     }
+    #content2 .post-container > div {
+        width: calc(50% - 4px);
+    }
 
     #content2 .post-container > div > img {
-        width: calc(50vw - 29px);
         height: 104px;
     }
 
     #content2 .post-container > div > div {
-        width: calc(50vw - 29px);
         padding: 8px;
         gap: 8px;
         height: 88px;

@@ -18,6 +18,26 @@
     align-items: center;
 }
 
+.notice-primary {
+    background: var(--background-blue-01);
+    border-radius: 4px;
+    font-size: var(--body-03);
+    padding: 2px 8px;
+    color: var(--text-white);
+    margin-right: 12px;
+    box-sizing: border-box;
+}
+
+.notice-secondary {
+    background: var(--background-gray-01);
+    border-radius: 4px;
+    font-size: var(--body-03);
+    padding: 2px 8px;
+    color: var(--text-third);
+    margin-right: 12px;
+    box-sizing: border-box;
+}
+
 .detail-container > span:nth-child(2) {
     margin-top: 24px;
     color: var(--text-third);

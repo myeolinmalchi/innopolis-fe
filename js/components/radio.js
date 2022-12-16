@@ -1,4 +1,4 @@
-customElements.define(
+chcustomElements.define(
     'radio-default',
     class extends HTMLElement{
         constructor(){ 

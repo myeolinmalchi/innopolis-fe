@@ -137,43 +137,39 @@ customElements.define(
                 </div>
             `;
 
-            const hamburgerButton = document.getElementById('hamburger');
-            const hamburgerContainer = document.getElementById(
-                'hamburger-container',
+            const hamburgerButton = this.querySelector('#hamburger');
+            const hamburgerContainer = this.querySelector(
+                '#hamburger-container',
             );
             const label = hamburgerButton.nextElementSibling;
-            label.onclick = (e) => {
-                const button = e.target.previousElementSibling;
-                if (button.checked === true) {
-                    button.setAttribute('checked', false);
-                } else {
-                    button.setAttribute('checked', true);
-                }
-            };
 
             setTimeout(() => {
+                this.sibs = getAllSiblings(this, undefined);
                 const observer = new MutationObserver(() => {
                     this.sibs = getAllSiblings(this, undefined);
                 });
                 observer.observe(this.parentNode, {
                     childList: true,
                 });
-                hamburgerButton.onchange = (e) => {
+                hamburgerButton.addEventListener('change', (e) => {
                     const checked = e.target.checked;
                     if (checked) {
                         hamburgerContainer.style.display = 'flex';
                         this.sibs.forEach((e) => {
                             if (e === this) return;
-                            e.style.visibility = 'hidden';
+                            e.style.display = 'none';
                         });
                     } else {
                         hamburgerContainer.style.display = 'none';
                         this.sibs.forEach((e) => {
                             if (e === this) return;
-                            e.style.visibility = 'visible';
+                            e.style.display = 'flex';
                         });
                     }
-                };
+                });
+                label.addEventListener('click', (e) => {
+                    e.target.setAttribute('checked', !e.target.checked);
+                });
             });
         }
 

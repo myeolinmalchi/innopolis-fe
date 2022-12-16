@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="/css/top-nav.css" />
         <link
             rel="stylesheet"
-            href="/css/pages/research-field/research-field.css"
+            href="/css/pages/customer-support/customer-support.css"
         />
         <script type="text/javascript" src="/js/components/tab.js"></script>
         <script
@@ -30,11 +30,15 @@
             <tab-introduction-container>
                 <tab-introduction-content>
                     천안아산강소특구의<br />
-                    특화연구분야를 소개합니다.
+                    공지사항입니다.
                 </tab-introduction-content>
                 <tab-introduction-content>
                     천안아산강소특구의<br />
-                    특구보유장비를 소개합니다.
+                    사업공고입니다.
+                </tab-introduction-content>
+                <tab-introduction-content>
+                    천안아산강소특구의<br />
+                    특구기술자료를 소개합니다.
                 </tab-introduction-content>
                 <tab-introduction-content>
                     천안아산강소특구의<br />
@@ -42,9 +46,10 @@
                 </tab-introduction-content>
             </tab-introduction-container>
             <tab-container>
-                <tab-default type="primary">특화연구분야</tab-default>
-                <tab-default type="primary">특구보유장비</tab-default>
-                <tab-default type="primary">특구기술자료</tab-default>
+                <tab-default type="primary">공지사항</tab-default>
+                <tab-default type="primary">사업공고</tab-default>
+                <tab-default type="primary">특구일정</tab-default>
+                <tab-default type="primary">회의실 예약</tab-default>
             </tab-container>
         </tab-area>
         <tab-content-area>
@@ -53,15 +58,17 @@
                 <div class="content-wrapper">
                     <div class="post-container">
                         <div
-                            onclick="location.href='/html/pages/research-field-detail.html'"
+                            onclick="location.href='/html/pages/notice-detail.html'"
                         >
-                            <span class="title-bd"
+                            <span class="title-bd">
+                                <span class="notice-primary body-bd">공지</span
                                 >2022 충남지역 주요사업 공동박람회 개최</span
                             >
                             <span class="body-me">2022.01.26</span>
                         </div>
                         <div>
                             <span class="title-bd"
+                                ><span class="notice-primary body-bd">공지</span
                                 >2022 충남지역 주요사업 공동박람회 개최</span
                             >
                             <span class="body-me">2022.01.26</span>
@@ -100,22 +107,49 @@
                 <img class="top-img" src="" alt="" />
                 <div class="content-wrapper">
                     <div class="post-container">
-                        <div>
-                            <img src="" alt="" />
-                            <div>
-                                <span class="body-me">장비명</span>
-                                <span class="title-bd">모델명</span>
-                            </div>
+                        <div
+                            onclick="location.href='/html/pages/research-field-detail.html'"
+                        >
+                            <span class="title-bd">
+                                <span class="notice-primary body-bd"
+                                    >접수 중</span
+                                >
+                                2022 충남지역 주요사업 공동박람회 개최</span
+                            >
+                            <span class="body-me">2022.01.26</span>
                         </div>
                         <div>
-                            <img src="" alt="" />
-                            <div>
-                                <span class="body-me">장비명</span>
-                                <span class="title-bd"
-                                    >어어어어어어어어어ㅓㅓㅓㅓㅓ어어어어어어어어어어엄청
-                                    긴 모델명ㅇㅇㅇㅇㅇㅇㅇㅇ</span
+                            <span class="title-bd">
+                                <span class="notice-primary body-bd"
+                                    >접수 중</span
                                 >
-                            </div>
+                                2022 충남지역 주요사업 공동박람회 개최</span
+                            >
+                            <span class="body-me">2022.01.26</span>
+                        </div>
+                        <div>
+                            <span class="title-bd">
+                                <span class="notice-secondary body-bd"
+                                    >접수 마감</span
+                                >2022 충남지역 주요사업 공동박람회 개최</span
+                            >
+                            <span class="body-me">2022.01.26</span>
+                        </div>
+                        <div>
+                            <span class="title-bd">
+                                <span class="notice-secondary body-bd"
+                                    >접수 마감</span
+                                >2022 충남지역 주요사업 공동박람회 개최</span
+                            >
+                            <span class="body-me">2022.01.26</span>
+                        </div>
+                        <div>
+                            <span class="title-bd">
+                                <span class="notice-secondary body-bd"
+                                    >접수 마감</span
+                                >2022 충남지역 주요사업 공동박람회 개최</span
+                            >
+                            <span class="body-me">2022.01.26</span>
                         </div>
                     </div>
                     <pagination-container>
@@ -176,6 +210,7 @@
                         <pagination-arrow direction="right"></pagination-arrow>
                     </pagination-container></div
             ></tab-content>
+            <tab-content></tab-content>
         </tab-content-area>
     </body>
 </html>

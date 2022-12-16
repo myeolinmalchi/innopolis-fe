@@ -22,25 +22,27 @@
 
 .location-detail-wrapper {
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    display: table;
     margin-top: 32px;
 }
 
 .location-map {
+    display: table-cell;
     width: 50%;
-    max-width: 550px;
-    border-radius: 0px 4px 4px 0px;
+    border-radius: 4px 0px 0px 4px;
     box-sizing: border-box;
-    background: var(--background-gray-03);
-    min-height: 100%;
+    position: relative;
 }
 
 .location-detail {
-    max-width: 550px;
+    display: table-cell;
     width: 50%;
+    border-radius: 0px 4px 4px 0px;
+    box-sizing: border-box;
+}
+
+.location-detail > div {
+    width: auto;
     display: flex;
     flex-direction: column;
     padding: 32px;
@@ -85,6 +87,7 @@
 .public-transport-title {
     color: var(--text-primary);
     width: 110px;
+    width: 25%;
     text-align: left;
 }
 
@@ -92,6 +95,11 @@
     color: var(--text-secondary);
     text-align: left;
     width: 372px;
+    width: 75%;
+}
+
+tab-content:nth-child(3) > img {
+    content: url(/image/pages/introduce/3-0.png);
 }
 
 @media (max-width: 640px) {
@@ -109,6 +117,7 @@
 
     .location-detail-wrapper {
         flex-direction: column;
+        display: flex;
     }
 
     .location-map {
@@ -120,6 +129,7 @@
     .location-detail {
         width: 100%;
         margin-top: 16px;
+        border-radius: 4px;
         gap: 24px;
     }
 
@@ -138,5 +148,8 @@
     }
     .public-transport-content {
         width: 100%;
+    }
+    tab-content:nth-child(2) > img {
+        content: url(/image/pages/introduce/3-0-m.png);
     }
 }

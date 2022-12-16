@@ -15,7 +15,7 @@ pagination-container {
     max-width: 1100px;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: start;
     margin-top: 48px;
     gap: 24px;
     box-sizing: border-box;
@@ -25,16 +25,17 @@ pagination-container {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    cursor: pointer;
+    width: calc(25% - 18px);
 }
 
 .post-img {
     height: 180px;
     border-radius: 4px;
-    width: min(257px, calc(25vw - 20px));
+    max-width: 100%;
 }
 
 .post-detail-wrapper {
-    width: min(257px, calc(25vw - 20px));
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -93,13 +94,15 @@ pagination-container {
         gap: 16px;
     }
 
+    .post-wrapper {
+        width: calc(50% - 8px);
+    }
+
     .post-img {
         height: 104px;
-        width: calc(50vw - 33px);
     }
 
     .post-detail-wrapper {
-        width: calc(50vw - 33px);
         padding: 8px;
     }
 
@@ -126,10 +129,11 @@ pagination-container {
     justify-content: space-between;
     margin-top: 64px;
     margin-bottom: 144px;
+    gap: 0px;
 }
 
 #tech-trend .post-wrapper {
-    width: min(350px, calc(32vw - 53px));
+    width: calc(33% - 10px);
     display: flex;
     flex-direction: column;
 }
@@ -188,5 +192,33 @@ pagination-container {
 
     #tech-trend .post-content {
         font-size: var(--body-02);
+    }
+}
+
+tab-content:first-child > img {
+    content: url(/image/pages/tech-info/1-0.png);
+}
+tab-content:nth-child(2) > img {
+    content: url(/image/pages/tech-info/2-0.png);
+}
+tab-content:nth-child(3) > img {
+    content: url(/image/pages/tech-info/3-0.png);
+}
+tab-content:nth-child(4) > img {
+    content: url(/image/pages/tech-info/4-0.png);
+}
+
+@media (max-width: 640px) {
+    tab-content:first-child > img {
+        content: url(/image/pages/tech-info/1-0-m.png);
+    }
+    tab-content:nth-child(2) > img {
+        content: url(/image/pages/tech-info/2-0-m.png);
+    }
+    tab-content:nth-child(3) > img {
+        content: url(/image/pages/tech-info/3-0-m.png);
+    }
+    tab-content:nth-child(4) > img {
+        content: url(/image/pages/tech-info/4-0-m.png);
     }
 }

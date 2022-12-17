@@ -2,6 +2,20 @@ customElements.define(
     'button-default',
     class extends HTMLElement {
         connectedCallback() {
+            setTimeout(() => {
+                this.render();
+            });
+        }
+
+        static get observedAttributes() {
+            return ['style_', 'state', 'size', 'icon'];
+        }
+
+        attributeChangedCallback() {
+            this.render();
+        }
+
+        render() {
             const style = this.getAttribute('style_') ?? 'primary';
             const state = this.getAttribute('state') ?? 'default';
             const size = this.getAttribute('size') ?? 'm';
@@ -155,15 +169,12 @@ customElements.define(
                         : ''
                 }
             `;
-
-            setTimeout(() => {
-                const innerHTML = this.innerHTML;
-                this.innerHTML = `
+            const innerHTML = this.innerHTML;
+            this.innerHTML = `
                     ${icon === 'left' ? arrow : ''}
                     <div style="margin: 0 0.3em">${innerHTML}</div>
                     ${icon === 'right' ? arrow : ''}
                 `;
-            });
         }
     },
 );
@@ -172,16 +183,7 @@ customElements.define(
     'button-text',
     class extends HTMLElement {
         content;
-        button;
-
-        constructor() {
-            super();
-            this.button = document.createElement('button');
-            this.button.classList += 'btn ';
-        }
-
         connectedCallback() {
-            const shadow = this.attachShadow({ mode: 'open' });
             const style = this.getAttribute('style_') ?? 'primary';
             const state = this.getAttribute('state') ?? 'default';
             const size = this.getAttribute('size') ?? 'm';
@@ -268,22 +270,26 @@ customElements.define(
 
             const setInnerHTML = (color) => {
                 const arrow = getArrow?.(color);
-                this.button.innerHTML = `
+                this.style.color = color;
+                const onclick_ = this.onclick;
+                this.innerHTML = `
                     ${icon === 'left' ? arrow : ''}
                     <div style="margin: 0;">${this.content}</div>
                     ${icon === 'right' ? arrow : ''}
                 `;
+                this.onclick = onclick_;
             };
 
             this.onmouseover = () => {
                 if (state === 'default') {
-                    setInnerHTML(color_hover);
+                    //setInnerHTML(color_hover);
+                    this.style.color = color_hover;
                 }
             };
 
             this.onmouseout = () => {
                 if (state === 'deault') {
-                    setInnerHTML(color_filled);
+                    this.style.color = color_filled;
                 }
             };
 
@@ -292,45 +298,20 @@ customElements.define(
                 setInnerHTML(color_filled);
             });
 
-            const stylesheet = document.createElement('style');
-            stylesheet.innerText = `
-                .btn {
-                    cursor: pointer;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 0px;
-                    gap: ${gap}px;
-                    color: ${
-                        state === 'default' ? color_filled : color_disabled
-                    };
-                    ${underline === 'true' ? 'text-decoration: underline;' : ''}
-                    ${size === 'modal' ? 'height: 46px;' : ''}
-                    width: 100%;
-                    background: none;
-                }
-
-                ${
-                    state === 'default'
-                        ? `
-                        .btn:hover {
-                            color: ${color_hover}
-                        }
-                    `
-                        : ''
-                }
+            this.style = `
+                cursor: pointer;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 0px;
+                gap: ${gap}px;
+                color: ${state === 'default' ? color_filled : color_disabled};
+                ${underline === 'true' ? 'text-decoration: underline;' : ''}
+                ${size === 'modal' ? 'height: 46px;' : ''}
+                width: ${this.style.width};
+                background: none;
             `;
-
-            const link1 = document.createElement('link');
-            link1.setAttribute('href', '/css/common.css');
-            link1.setAttribute('rel', 'stylesheet');
-
-            const link2 = document.createElement('link');
-            link2.setAttribute('href', '/css/reset.css');
-            link2.setAttribute('rel', 'stylesheet');
-
-            shadow.append(link1, link2, stylesheet, this.button);
         }
     },
 );

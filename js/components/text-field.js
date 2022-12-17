@@ -13,6 +13,7 @@ customElements.define(
             const state = this.getAttribute('state') ?? 'default';
             const size = this.getAttribute('size') ?? 'l';
             const placeholder = this.getAttribute('placeholder') ?? '';
+            const type = this.getAttribute('type') ?? 'text';
 
             const [padding, font_class, height] = (function () {
                 switch (size) {
@@ -29,6 +30,9 @@ customElements.define(
             this.input.setAttribute('placeholder', placeholder);
             if (state === 'disabled') {
                 this.input.disabled = true;
+            }
+            if (type === 'password') {
+                this.input.type = 'password';
             }
 
             const stylesheet = document.createElement('style');
@@ -75,11 +79,11 @@ customElements.define(
                 }
             `;
             const link1 = document.createElement('link');
-            link1.setAttribute('href', '../../css/common.css');
+            link1.setAttribute('href', '/css/common.css');
             link1.setAttribute('rel', 'stylesheet');
 
             const link2 = document.createElement('link');
-            link2.setAttribute('href', '../../css/reset.css');
+            link2.setAttribute('href', '/css/reset.css');
             link2.setAttribute('rel', 'stylesheet');
 
             shadow.append(link1, link2, stylesheet, this.input);
@@ -189,11 +193,11 @@ customElements.define(
                 }
             `;
             const link1 = document.createElement('link');
-            link1.setAttribute('href', '../css/common.css');
+            link1.setAttribute('href', '/css/common.css');
             link1.setAttribute('rel', 'stylesheet');
 
             const link2 = document.createElement('link');
-            link2.setAttribute('href', '../css/reset.css');
+            link2.setAttribute('href', '/css/reset.css');
             link2.setAttribute('rel', 'stylesheet');
 
             this.count.innerText = `0/${max}`;
@@ -368,11 +372,11 @@ customElements.define(
                 }
             `;
             const link1 = document.createElement('link');
-            link1.setAttribute('href', '../css/common.css');
+            link1.setAttribute('href', '/css/common.css');
             link1.setAttribute('rel', 'stylesheet');
 
             const link2 = document.createElement('link');
-            link2.setAttribute('href', '../css/reset.css');
+            link2.setAttribute('href', '/css/reset.css');
             link2.setAttribute('rel', 'stylesheet');
 
             this.increase.onclick = () => {
@@ -499,11 +503,11 @@ customElements.define(
                 }
             `;
             const link1 = document.createElement('link');
-            link1.setAttribute('href', '../../css/common.css');
+            link1.setAttribute('href', '/css/common.css');
             link1.setAttribute('rel', 'stylesheet');
 
             const link2 = document.createElement('link');
-            link2.setAttribute('href', '../../css/reset.css');
+            link2.setAttribute('href', '/css/reset.css');
             link2.setAttribute('rel', 'stylesheet');
 
             this.container.append(this.arrow, this.input);
@@ -625,11 +629,11 @@ customElements.define(
                 }
             `;
             const link1 = document.createElement('link');
-            link1.setAttribute('href', '../../css/common.css');
+            link1.setAttribute('href', '/css/common.css');
             link1.setAttribute('rel', 'stylesheet');
 
             const link2 = document.createElement('link');
-            link2.setAttribute('href', '../../css/reset.css');
+            link2.setAttribute('href', '/css/reset.css');
             link2.setAttribute('rel', 'stylesheet');
 
             this.count.innerText = `0/${max}`;

@@ -11,6 +11,15 @@
     color: var(--text-primary);
 }
 
+.content-wrapper > span:nth-child(2) {
+    width: 100%;
+    max-width: 540px;
+    font-size: var(--body-04);
+    text-align: left;
+    color: var(--text-third);
+    margin-top: 24px;
+}
+
 .form-container {
     width: 100%;
     display: flex;
@@ -28,12 +37,13 @@
     gap: 8px;
 }
 
-.form-container > div:nth-child(8) {
+.form-container > div:nth-child(11) {
     width: 100%;
     display: flex;
     flex-direction: row;
     padding: 12px;
     gap: 12px;
+    align-items: center;
 }
 
 .form-container > div > span:first-child {
@@ -54,6 +64,9 @@
     text-align: left;
 }
 
+.item-wrapper-row > checkbox-default {
+}
+
 .form-container > div > span:first-child > span {
     color: var(--text-red);
 }
@@ -65,6 +78,29 @@
 
 textfield-default {
     width: 100%;
+}
+
+.checkbox-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.checkbox-wrapper > div {
+    width: calc(16.6% - 6.6px);
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+}
+
+.checkbox-wrapper > div > span {
+    font-size: var(--body-03);
+    color: var(--text-secondary);
 }
 
 .email-wrapper > textfield-default {
@@ -90,12 +126,15 @@ textfield-default {
     width: calc(33% - 5px);
 }
 
+textfield-area {
+    height: 104px;
+}
+
 .phone-wrapper {
     width: 100%;
     display: flex;
     flex-direction: row;
     gap: 8px;
-
     justify-content: space-between;
 }
 
@@ -106,7 +145,16 @@ textfield-default {
     .content-wrapper {
         margin-bottom: 120px;
     }
+    .checkbox-wrapper > div {
+        width: calc(33% - 5.3px);
+    }
     .content-wrapper > span:first-child {
         font-size: var(--title-01);
+        margin-top: 48px;
+    }
+
+    .content-wrapper > span:nth-child(2) {
+        font-size: var(--body-04);
+        margin-top: 12px;
     }
 }

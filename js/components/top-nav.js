@@ -17,7 +17,7 @@ customElements.define(
             this.innerHTML = `
                 <nav>
                     <div class="container">
-                        <img src="" alt="" />
+                        <img src="" alt="" onclick="location.href='/'"/>
                         <div>
                             <input type="checkbox" id="hamburger" />
                             <label for="hamburger"> </label>
@@ -27,8 +27,8 @@ customElements.define(
                             <a href="">지원사업소개</a>
                             <a href="/html/pages/tech-info.html">기술정보</a>
                             <a href="/html/pages/research-field.html">연구마당</a>
-                            <a href="">메타타운</a>
-                            <a href="">고객지원</a>
+                            <a href="/html/pages/metatown.html">메타타운</a>
+                            <a href="/html/pages/customer-support.html">고객지원</a>
                             <a href="/html/pages/promotion-center.html">홍보센터</a>
                             <a href="/html/pages/lent-space.html">입주마당</a>
                         </div>
@@ -44,7 +44,7 @@ customElements.define(
                                 >
                                 `
                                     : `
-                                <button-text underline="true" style_="secondary"
+                                <button-text style_="secondary" onclick="location.href='/html/pages/user/login/login.html'" underline="true"
                                     >로그인</button-text
                                 >
                                 `
@@ -65,7 +65,7 @@ customElements.define(
                                     >로그인을 하면 더 많은<br />
                                     서비스를 이용할 수 있습니다.
                                 </span>
-                                <button-default style_="default">로그인</button-default>
+                                <button-default onclick="location.href='/html/pages/user/login/login.html'" style_="default">로그인</button-default>
                                 <button-default style_="outline">회원가입</button-default>
                                 `
                         }
@@ -105,15 +105,15 @@ customElements.define(
                         <div>
                             <span>메타타운</span>
                             <div>
-                                <a href="">메타타운</a>
+                                <a href="/html/pages/metatown.html">메타타운</a>
                             </div>
                         </div>
                         <div>
                             <span>고객지원</span>
                             <div>
-                                <a href="">공지사항</a>
-                                <a href="">사업공고</a>
-                                <a href="">특구일정</a>
+                                <a href="/html/pages/customer-support.html?tab=0">공지사항</a>
+                                <a href="/html/pages/customer-support.html?tab=1">사업공고</a>
+                                <a href="/html/pages/customer-support.html?tab=2">특구일정</a>
                             </div>
                         </div>
                         <div>

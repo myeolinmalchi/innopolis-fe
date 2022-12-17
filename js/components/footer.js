@@ -1,61 +1,62 @@
-
-class footer_default extends HTMLElement{
-    constructor(){
+class footer_default extends HTMLElement {
+    constructor() {
         super();
     }
-    connectedCallback(){
-        this.attachShadow({mode: 'open'});
-        this.style.display = "block";
+    connectedCallback() {
+        this.attachShadow({ mode: 'open' });
+        this.style.display = 'block';
         const footer_container = document.createElement('footer');
 
         const footer_content_wrapper = document.createElement('div');
-        footer_content_wrapper.setAttribute('class','container');
-        
+        footer_content_wrapper.setAttribute('class', 'container');
+
         const content_first = document.createElement('div');
-        content_first.setAttribute('class','content first')
+        content_first.setAttribute('class', 'content first');
         const content_first_img = document.createElement('img');
-        content_first_img.setAttribute('class','left');
-        content_first_img.setAttribute('src','../../image/logo.png');
+        content_first_img.setAttribute('class', 'left');
+        content_first_img.setAttribute('src', '/image/logo.png');
         const content_first_ul = document.createElement('ul');
-        content_first_ul.setAttribute('class','list')
+        content_first_ul.setAttribute('class', 'list');
         const content_first_li_1 = document.createElement('li');
-        content_first_li_1.innerText="개인정보처리방침"
+        content_first_li_1.innerText = '개인정보처리방침';
         const content_first_li_2 = document.createElement('li');
-        content_first_li_2.innerText="이메일무단수집거부"
+        content_first_li_2.innerText = '이메일무단수집거부';
         const content_first_li_3 = document.createElement('li');
-        content_first_li_3.innerText="이용약관"
+        content_first_li_3.innerText = '이용약관';
         const content_first_li_4 = document.createElement('li');
-        content_first_li_4.innerText="오시는길"
+        content_first_li_4.innerText = '오시는길';
 
         const content_second = document.createElement('div');
-        content_second.setAttribute('class','content second left');
+        content_second.setAttribute('class', 'content second left');
         const content_second_hr = document.createElement('hr');
 
         const left_content = document.createElement('div');
-        left_content.setAttribute('class','leftcontent');
+        left_content.setAttribute('class', 'leftcontent');
         const content_third = document.createElement('div');
-        content_third.setAttribute('class','content third left');
+        content_third.setAttribute('class', 'content third left');
         const content_third_left_content = document.createElement('div');
-        content_third_left_content.setAttribute('class','left');
+        content_third_left_content.setAttribute('class', 'left');
         const content_third_p_1 = document.createElement('p');
-        content_third_p_1.innerText = "(31214) 충청남도 천안시 동남구 풍세면 풍세로 303 한국자동차연구원 강소특구캠퍼스";
+        content_third_p_1.innerText =
+            '(31214) 충청남도 천안시 동남구 풍세면 풍세로 303 한국자동차연구원 강소특구캠퍼스';
         const content_third_p_2 = document.createElement('p');
-        content_third_p_2.innerText = "상호명 : 한국자동차 연구원 대표 전화번호 : 041-424-7017 사업자번호 : 312-82-04676 대표자명 : 나승식";
+        content_third_p_2.innerText =
+            '상호명 : 한국자동차 연구원 대표 전화번호 : 041-424-7017 사업자번호 : 312-82-04676 대표자명 : 나승식';
 
         const content_fourth_content = document.createElement('div');
-        content_fourth_content.setAttribute('class','content fourth left');
+        content_fourth_content.setAttribute('class', 'content fourth left');
         const content_fourth_p = document.createElement('p');
-        content_fourth_p.innerText = "Copyright(c) 2021 천안아산강소특구. All right reser";
-
+        content_fourth_p.innerText =
+            'Copyright(c) 2021 천안아산강소특구. All right reser';
 
         const content_fivth_right_content = document.createElement('div');
-        content_fivth_right_content.setAttribute('class','rightcontent');
+        content_fivth_right_content.setAttribute('class', 'rightcontent');
         const content_fivth = document.createElement('div');
-        content_fivth.setAttribute('class','content fivth right');
+        content_fivth.setAttribute('class', 'content fivth right');
         const content_fivth_img_1 = document.createElement('img');
-        content_fivth_img_1.setAttribute('src','../../image/facebook.png');
+        content_fivth_img_1.setAttribute('src', '/image/facebook.png');
         const content_fivth_img_2 = document.createElement('img');
-        content_fivth_img_2.setAttribute('src','../../image/instagram.png');
+        content_fivth_img_2.setAttribute('src', '/image/instagram.png');
 
         footer_container.appendChild(footer_content_wrapper);
         footer_content_wrapper.appendChild(content_first);
@@ -84,7 +85,6 @@ class footer_default extends HTMLElement{
         content_fivth.appendChild(content_fivth_img_1);
         content_fivth.appendChild(content_fivth_img_2);
 
-        
         const style = document.createElement('style');
         style.textContent = `
         p{
@@ -213,11 +213,10 @@ class footer_default extends HTMLElement{
                 float: left;
             }
         }
-        `
+        `;
         this.shadowRoot.appendChild(footer_container);
         this.shadowRoot.append(style);
     }
-
 }
 
-customElements.define('footer-default',footer_default);
+customElements.define('footer-default', footer_default);

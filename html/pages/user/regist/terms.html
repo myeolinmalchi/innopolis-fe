@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Insert title here.</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="/js/components/top-nav.js"></script>
+        <script src="/js/components/button.js"></script>
+        <script src="/js/components/text-field.js"></script>
+        <script src="/js/components/footer.js"></script>
+        <script src="/js/components/checkbox.js"></script>
+
+        <link rel="stylesheet" href="/css/reset.css" />
+        <link rel="stylesheet" href="/css/common.css" />
+        <link rel="stylesheet" href="/css/top-nav.css" />
+        <link rel="stylesheet" href="/css/pages/user/regist/terms.css" />
+    </head>
+    <body>
+        <top-nav></top-nav>
+        <div class="content-wrapper">
+            <div>
+                <span class="title">회원가입</span>
+                <div>
+                    <div>
+                        <span class="title">
+                            <span>[필수]</span>
+                            홈페이지 이용약관
+                        </span>
+                        <button-default
+                            size="s"
+                            style_="outline"
+                            id="checkall-button"
+                            ><svg
+                                width="8"
+                                height="6"
+                                viewBox="0 0 8 6"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M2.87892 4.10058L6.1861 0.66035C6.28886 0.55345 6.41966 0.5 6.57848 0.5C6.73729 0.5 6.86809 0.55345 6.97085 0.66035C7.07362 0.76725 7.125 0.903304 7.125 1.06851C7.125 1.23372 7.07362 1.36978 6.97085 1.47668L3.2713 5.32507C3.15919 5.44169 3.0284 5.5 2.87892 5.5C2.72945 5.5 2.59865 5.44169 2.48655 5.32507L1.02915 3.80904C0.926382 3.70214 0.875 3.56608 0.875 3.40087C0.875 3.23567 0.926382 3.09961 1.02915 2.99271C1.13191 2.88581 1.26271 2.83236 1.42152 2.83236C1.58034 2.83236 1.71114 2.88581 1.8139 2.99271L2.87892 4.10058Z"
+                                    fill="#008DFF"
+                                />
+                            </svg>
+                            모두 동의하기</button-default
+                        >
+                    </div>
+                    <div>
+                        <span class="body-bd">회원가입 약관</span>
+                        <div class="body-me">
+                            제1장 총칙<br />
+                            제 1 조 (목적)<br />
+                            이 이용약관은 천안아산강소특구 홈페이지에서 제공하는
+                            인터넷 서비스(이하 "서비스")의 이용에 관한 제반
+                            사항과 기타 필요한 사항을 구체적으로 규정함을
+                            목적으로 합니다.<br />
+                            제 2 조 (용어의 정의)
+                        </div>
+                        <div>
+                            <input type="checkbox" class="term" />
+                            <span class="body-me"
+                                >회원가입 약관의 내용에 동의합니다.</span
+                            >
+                        </div>
+                    </div>
+                    <div>
+                        <span class="title">개인정보 처리방침 안내</span>
+                        <div class="body-me">
+                            천안아산강소특구사이트(이하 '시스템')는
+                            천안아산강소특구가 운영하고 있으며, 개인정보보호법에
+                            따라 이용자의 개인정보 보호 및 권익을 보호하고
+                            개인정보와 관련한 이용자의 고충을 원활하게 처리할 수
+                            있도록 다음과 같이 개인정보 처리지침을 수립,
+                            공개합니다. 제1조(개인정보의 처리목적)
+                        </div>
+                        <div>
+                            <input type="checkbox" class="term" />
+                            <span class="body-me"
+                                >개인정보 처리방침 안내의 내용에
+                                동의합니다.</span
+                            >
+                        </div>
+                    </div>
+                    <button-default size="l" state="disabled" id="next-button"
+                        >다음으로</button-default
+                    >
+                </div>
+            </div>
+        </div>
+        <script>
+            const checkboxes = [...document.querySelectorAll('input.term')];
+            const nextButton = document.querySelector('#next-button');
+            const checkAllButton = document.querySelector('#checkall-button');
+            checkAllButton.addEventListener('click', () => {
+                checkboxes.forEach((checkbox) => {
+                    checkbox.click();
+                });
+            });
+            checkboxes.forEach((checkbox) => {
+                checkbox.addEventListener('change', () => {
+                    let checkedAll = true;
+                    checkboxes.forEach((checkbox) => {
+                        if (!checkbox.checked) {
+                            checkedAll = false;
+                        }
+                    });
+                    if (checkedAll) {
+                        nextButton.setAttribute('state', 'default');
+                    } else {
+                        nextButton.setAttribute('state', 'disabled');
+                    }
+                });
+            });
+            nextButton.addEventListener('click', () => {
+                if (nextButton.getAttribute('state') !== 'disabled') {
+                    location.href = '/html/pages/user/regist/regist.html';
+                }
+            });
+        </script>
+        <footer-default></footer-default>
+    </body>
+</html>

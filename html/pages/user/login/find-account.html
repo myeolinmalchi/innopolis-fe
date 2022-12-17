@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Insert title here.</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="/js/components/top-nav.js"></script>
+        <script src="/js/components/button.js"></script>
+        <script src="/js/components/text-field.js"></script>
+        <script src="/js/components/footer.js"></script>
+
+        <link rel="stylesheet" href="/css/reset.css" />
+        <link rel="stylesheet" href="/css/common.css" />
+        <link rel="stylesheet" href="/css/top-nav.css" />
+        <link rel="stylesheet" href="/css/pages/user/login/find-account.css" />
+    </head>
+    <body>
+        <top-nav></top-nav>
+        <div class="content-wrapper">
+            <div>
+                <span class="title">정보찾기</span>
+                <div>
+                    <span class="body-me">E-mail 주소</span>
+                    <textfield-default
+                        placeholder="E-mail 주소를 입력해주세요."
+                    ></textfield-default>
+                    <span class="body-me">휴대폰 번호</span>
+                    <textfield-default
+                        placeholder="휴대폰 번호를 입력해주세요."
+                    ></textfield-default>
+                    <button-default size="xl">찾기</button-default>
+                    <span class="body-me">
+                        회원가입 시 등록하신 이메일의 주소와 휴대폰 번호를
+                        입력해 주세요.<br />
+                        해당 이메일로 아이디와 비밀번호 정보를 보내드립니다.
+                    </span>
+                </div>
+            </div>
+        </div>
+        <footer-default></footer-default>
+    </body>
+</html>

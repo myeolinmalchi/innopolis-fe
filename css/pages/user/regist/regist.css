@@ -28,14 +28,6 @@
     gap: 8px;
 }
 
-.form-container > div:nth-child(8) {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    padding: 12px;
-    gap: 12px;
-}
-
 .form-container > div > span:first-child {
     width: 100%;
     text-align: left;
@@ -99,6 +91,34 @@ textfield-default {
     justify-content: space-between;
 }
 
+.radio-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: left;
+    padding: 12px 8px;
+}
+
+.radio-wrapper input[type='radio'] {
+    width: 13px;
+    height: 13px;
+    margin: 0;
+    padding: 0;
+}
+
+.radio-wrapper label {
+    font-size: var(--body-01);
+    color: var(--text-secondary);
+    vertical-align: middle;
+}
+
+.radio-wrapper > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 @media (max-width: 640px) {
     .form-container {
         gap: 25px;
@@ -106,6 +126,7 @@ textfield-default {
     .content-wrapper {
         margin-bottom: 120px;
     }
+
     .content-wrapper > span:first-child {
         font-size: var(--title-01);
     }

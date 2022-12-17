@@ -1,0 +1,149 @@
+.content-wrapper > div {
+    width: 100%;
+    max-width: 1100px;
+    padding: 120px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+span {
+    text-align: left;
+}
+
+.top-img {
+    background: url(/image/pages/metatown/1-0.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-img > div {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 80px;
+}
+
+.top-img > div > span:first-child {
+    color: var(--text-white);
+    font-size: var(--title-01);
+}
+
+.top-img > div > span:nth-child(2) {
+    margin-top: 24px;
+    color: var(--text-white);
+    font-size: var(--subtitle-01);
+}
+
+.top-img > div > button-default {
+    margin-top: 40px;
+    width: fit-content;
+}
+
+.content-wrapper > div > * {
+    width: 100%;
+}
+
+.content-wrapper > div > span:first-child {
+    font-size: var(--subtitle-02);
+    color: var(--text-secondary);
+}
+
+.content-wrapper > div > span:nth-child(2) {
+    font-size: var(--title-02);
+    color: var(--text-priamry);
+    margin-top: 12px;
+}
+
+.content-wrapper > div > img {
+    max-width: 1100px;
+    height: auto;
+    border-radius: 5px;
+    padding: 0;
+    margin: 24px 0;
+    content: url(/image/pages/metatown/1-1.png);
+    object-fit: cover;
+}
+
+.content-wrapper > div > div:nth-child(4) {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.content-wrapper > div > div:nth-child(4) > div {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 24px;
+    gap: 12px;
+    min-height: 139px;
+    background: var(--background-gray-01);
+    width: calc(25% - 18px);
+}
+
+.content-wrapper > div > div:nth-child(4) > div > span:first-child {
+    width: 100%;
+    font-size: var(--body-04);
+    color: var(--text-secondary);
+}
+
+.content-wrapper > div > div:nth-child(4) > div > span:last-child {
+    width: 100%;
+    font-size: var(--body-02);
+    color: var(--text-third);
+}
+
+@media (max-width: 640px) {
+    .content-wrapper > div {
+        padding: 64px 0;
+        box-sizing: border-box;
+    }
+    .top-img {
+        background: url(/image/pages/metatown/1-0-m.png) no-repeat;
+        background-size: cover;
+    }
+
+    .top-img > div {
+        padding: 0 16px;
+    }
+
+    .top-img > div > span:first-child {
+        font-size: var(--subtitle-03);
+    }
+
+    .top-img > div > span:nth-child(2) {
+        font-size: var(--body-02);
+    }
+
+    .content-wrapper > div > img {
+        content: url(/image/pages/metatown/1-1-m.png);
+    }
+    .content-wrapper > div > div:nth-child(4) {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .content-wrapper > div > div:nth-child(4) > div {
+        width: 100%;
+        box-sizing: border-box;
+        height: fit-content;
+        min-height: 0px;
+    }
+
+    .content-wrapper > div > div:nth-child(4) > div > span:first-child {
+        font-size: var(--body-03);
+    }
+    .content-wrapper > div > div:nth-child(4) > div > span:last-child {
+        font-size: var(--body-01);
+    }
+
+    .content-wrapper > div > span:first-child {
+        font-size: var(--subtitle-01);
+    }
+    .content-wrapper > div > span:nth-child(2) {
+        font-size: var(--subtitle-03);
+    }
+}

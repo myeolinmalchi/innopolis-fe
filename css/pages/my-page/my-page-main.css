@@ -1,0 +1,66 @@
+table{
+    width: 1100px;
+    margin-top: 64px;
+    margin-bottom: 76px;
+}
+tr{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+}
+tr > td{
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+tr > td:nth-child(2){
+    text-align: left;
+}
+tr > td:nth-child(5){
+    text-decoration: underline;
+}
+tr:first-child{
+    background-color: var(--background-gray-02);
+    text-align: center;
+}
+tr:first-child > td:nth-child(2){
+    text-align: center;
+}
+tr:first-child > td:nth-child(5){
+    text-decoration: none;
+}
+
+/* 상태에 따른 색깔 조정*/
+.approve{
+    color: var(--text-blue);
+}
+.reject{
+    color: var(--text-red);
+}
+.cancel{
+    color: var(--text-third);
+}
+.wait{
+    color: var(--text-secondary);
+}
+pagination-container{
+    margin-bottom: 120px;
+}
+
+@media (max-width: 640px) {
+    table{
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+    .slide{
+        width: 100%;
+        overflow: scroll;
+    }
+    .content-wrapper{
+        width: 100%;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+    .post-wrapper{
+        width: 100%;
+    }
+}

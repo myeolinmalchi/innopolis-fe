@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Insert title here.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/tab-area.css" />
+    <link rel="stylesheet" href="/css/top-nav.css" />
+    <link rel="stylesheet" href="/css/pages/my-page/bussiness-application.css" />
+    <script type="text/javascript" src="/js/components/footer.js"></script>
+    <script type="text/javascript" src="/js/components/tab.js"></script>
+    <script type="text/javascript" src="/js/components/tab-area.js"></script>
+    <script type="text/javascript" src="/js/components/calendar.js"></script>
+    <script type="text/javascript" src="/js/components/top-nav.js"></script>
+    <script type="text/javascript" src="/js/components/button.js"></script>
+    <script type="text/javascript" src="/js/components/text-field.js"></script>
+    <script type="text/javascript" src="/js/components/dropdown.js"></script>
+</head>
+
+<body>
+    <top-nav></top-nav>
+    <div class="content-wrapper">
+        <div class="form-header">
+            <div class="title-01">회의실 예약</div>
+            <div class="state body-03">대기중</div>
+        </div>
+        <div class="summary-container">
+            <div class="body-04">[아산 배방] 제2캠퍼스(1층) 중회의실</div>
+        </div>
+        <div class="form">
+            <div class="form-item">
+                <div class="body-02">
+                    <span>*</span> 날짜
+                </div>
+                <div>
+                    <textfield-default></textfield-default>
+                </div>
+            </div>
+            <div class="form-item">
+                <div class="body-02">
+                    <span>*</span> 시간
+                </div>
+                <div>
+                    <label class="body-03"><input type="checkbox" name="time" value="09:00"> 09:00</label>
+                    <label class="body-03"><input type="checkbox" name="time" value="09:00"> 10:00</label>
+                    <label class="body-03"><input type="checkbox" name="time" value="09:00"> 11:00</label>
+                    <label class="body-03"><input type="checkbox" name="time" value="09:00"> 12:00</label>
+                    <label class="body-03"><input type="checkbox" name="time" value="09:00"> 13:00</label>
+                    <label class="body-03"><input type="checkbox" name="time" value="09:00"> 14:00</label>
+                    <label class="body-03"><input type="checkbox" name="time" value="09:00"> 15:00</label>
+                    <label class="body-03"><input type="checkbox" name="time" value="09:00"> 16:00</label>
+                    <label class="body-03"><input type="checkbox" name="time" value="09:00"> 17:00</label>
+                </div>
+            </div>
+
+            <div class="form-item">
+                <div class="body-02">
+                    <span>*</span> 기업명
+                </div>
+                <div>
+                    <textfield-default></textfield-default>
+                </div>
+            </div>
+
+            <div class="form-item">
+                <div class="body-02">
+                    <span>*</span> 소속/직위
+                </div>
+                <div>
+                    <textfield-default></textfield-default>
+                </div>
+            </div>
+
+            <div class="form-item">
+                <div class="body-02">
+                    <span>*</span> 이메일
+                </div>
+                <div class="email-form">
+                    <textfield-default></textfield-default>
+                    <dropdown-container>
+                        <dropdown-header value="@naver.com" size="l" state="default"></dropdown-header>
+                        <dropdown-content value="011"></dropdown-content>
+                    </dropdown-container>
+                </div>
+            </div>
+
+            <div class="form-item">
+                <div class="body-02">
+                    <span>*</span> 연락처
+                </div>
+                <div class="phone-form">
+                    <dropdown-container>
+                        <dropdown-header value="010" size="l" state="default"></dropdown-header>
+                        <dropdown-content>011</dropdown-content>
+                    </dropdown-container>
+                    <textfield-default></textfield-default>
+                    <textfield-default></textfield-default>
+                </div>
+            </div>
+
+            <div class="form-item">
+                <div class="body-02">
+                    전화번호
+                </div>
+                <div class="phone-form">
+                    <dropdown-container>
+                        <dropdown-header value="010" size="l" state="default"></dropdown-header>
+                        <dropdown-content>011</dropdown-content>
+                    </dropdown-container>
+                    <textfield-default></textfield-default>
+                    <textfield-default></textfield-default>
+                </div>
+            </div>
+
+            <div class="form-item">
+                <div class="body-02">
+                    <span>*</span> 사용인원
+                </div>
+                <div class="count-form">
+                    <dropdown-container>
+                        <dropdown-header value="2명" size="l" state="default"></dropdown-header>
+                        <dropdown-content>1명</dropdown-content>
+                        <dropdown-content>2명</dropdown-content>
+                        <dropdown-content>3명</dropdown-content>
+                        <dropdown-content>4명</dropdown-content>
+                        <dropdown-content>5명</dropdown-content>
+                    </dropdown-container>
+                </div>
+            </div>
+
+            <div class="form-item">
+                <div class="body-02">
+                    <span>*</span> 이용목적
+                </div>
+                <textfield-default style="min-height: 104px;"></textfield-default>
+            </div>
+        </div>
+
+
+    </div>
+    <footer-default></footer-default>
+</body>

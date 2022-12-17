@@ -1,0 +1,90 @@
+.form{
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.state{
+    background-color: var(--background-gray-02);
+    padding: 2px 8px;
+    color: var(--text-third);
+}
+.form-item{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+    align-content: stretch;
+}
+.form-header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+.summary-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 24px;
+}
+
+.body-04{
+    color: var(--text-third);
+}
+.content-wrapper{
+    margin-top: 64px;
+    margin-bottom: 120px;
+    max-width: 539px;
+}
+.form-item .body-02{
+    margin-bottom: 8px;
+}
+.email-form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.email-form textfield-default{
+    flex-grow: 1;
+    margin-right: 8px;
+}
+.email-form  dropdown-container{
+    flex-grow: 1;
+}
+.phone-form{
+    display: flex;
+    flex-direction: row;
+}
+.phone-form textfield-default{
+    flex-grow: 1;
+    margin-right: 8px;
+}
+.phone-form textfield-default:last-child{
+    margin-right: 0px;
+}
+.phone-form dropdown-container{
+    margin-right: 8px;
+}
+.count-form{
+    display: flex;
+    flex-direction: row;
+}
+.count-form dropdown-container{
+    flex-grow: 1;
+}
+
+.button-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.button-container button-default:last-child{
+    margin-right: 0px;
+}
+button-default{
+    margin-right: 8px;
+}
+
+span{
+    color: var(--text-red);
+}

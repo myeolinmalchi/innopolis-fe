@@ -1,0 +1,88 @@
+.content-wrapper > div {
+    width: 100%;
+    max-width: 540px;
+    margin-top: 64px;
+    margin-bottom: 280px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper > div > span:first-child {
+    font-size: var(--title-03);
+    color: var(--text-primary);
+    margin-bottom: 50px;
+}
+
+.content-wrapper > div > div > div:first-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 22.5px;
+    border-bottom: 1px solid var(--stroke-gray-01);
+    align-items: center;
+}
+
+.content-wrapper > div > div > div:first-child > span {
+    color: var(--text-primary);
+    font-size: var(--body-04);
+}
+.content-wrapper > div > div > div:first-child > span > span {
+    color: var(--text-blue);
+}
+
+.content-wrapper > div > div > div:nth-child(n + 2) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+    padding: 18px 0;
+}
+
+.content-wrapper > div > div > div:nth-child(n + 2) > span {
+    width: 100%;
+    text-align: left;
+    font-size: var(--body-03);
+}
+
+.content-wrapper > div > div > div:nth-child(n + 2) > div:nth-child(2) {
+    width: 100%;
+    border: 1px solid var(--stroke-gray-01);
+    border-radius: 4px;
+    padding: 14px 16px;
+    box-sizing: border-box;
+    font-size: var(--body-02);
+    color: var(--text-secondary);
+    text-align: left;
+    overflow-y: scroll;
+    height: 138px;
+}
+
+.content-wrapper > div > div > div:nth-child(n + 2) > div:nth-child(3) {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+    gap: 8px;
+}
+
+.content-wrapper > div > div > div:nth-child(n + 2) > div:nth-child(3) > span {
+    font-size: var(--body-02);
+    color: var(--text-secondary);
+}
+
+.content-wrapper > div > div > button-default {
+    width: 100%;
+    margin-top: 18px;
+}
+
+@media (max-width: 640px) {
+    .content-wrapper > div > span:first-child {
+        font-size: var(--title-01);
+    }
+
+    .content-wrapper > div > div > div:first-child > span {
+        font-size: var(--body-03);
+    }
+}

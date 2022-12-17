@@ -1,0 +1,53 @@
+.content-wrapper > div {
+    width: 100%;
+    max-width: 540px;
+    margin-top: 64px;
+    margin-bottom: 280px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper > div > span:first-child {
+    width: 100%;
+    font-size: var(--title-03);
+    color: var(--text-primary);
+    text-align: left;
+    margin-bottom: 48px;
+}
+
+.content-wrapper > div > div:nth-child(2) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper > div > div:nth-child(2) > span:nth-child(odd) {
+    width: 100%;
+    font-size: var(--body-02);
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+textfield-default {
+    width: 100%;
+    margin-bottom: 28px;
+}
+
+button-default {
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+.content-wrapper > div > div:nth-child(2) > span:last-child {
+    text-align: left;
+    width: 100%;
+    font-size: var(--body-03);
+    color: var(--text-third);
+}
+
+@media (max-width: 640px) {
+    .content-wrapper > div > span:first-child {
+        font-size: var(--title-01);
+    }
+}

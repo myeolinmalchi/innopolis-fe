@@ -102,19 +102,19 @@ promotion-item:nth-child(4n){
     card-content{
         display: block;
         float: left;
-        width: 47.6%;
+        width: calc(50% - 8px);
         margin:0;
     }
     promotion-item{
         display: block;
         float: left;
-        width: 47.6%;
+        width: calc(50% - 8px);
         margin:0;
     }
     report-item{
         display: block;
         float: left;
-        width: 47.6%;
+        width: calc(50% - 8px);
         margin:0;
     }
     card-content:nth-child(even){

@@ -6,6 +6,14 @@
     color: var(--text-third);
     background-color: var(--background-gray-01);
 }
+.approve_state {
+    color: var(--text-third);
+    background-color: var(--background-blue-01);
+}
+.reject_state {
+    color: var(--text-third);
+    background-color: var(--text-red);
+}
 
 .content-wrapper>div:first-child {
     display: block;
@@ -300,5 +308,18 @@ textfield-default {
 
     .content-wrapper {
         margin-bottom: 120px;
+    }
+    .title-bd{
+        width: 100%;
+        margin-top: 12px;
+    }
+    .wait_state{
+        float: left;
+    }
+    .approve_state{
+        float: left;
+    }
+    .reject_state{
+        float: left;
     }
 }

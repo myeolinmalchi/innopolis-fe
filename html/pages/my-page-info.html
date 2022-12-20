@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/reset.css" />
     <link rel="stylesheet" href="/css/top-nav.css" />
     <link rel="stylesheet" href="/css/common.css" />
-    <link rel="stylesheet" href="/css/pages/my-page/bussiness-application.css" />
+    <link rel="stylesheet" href="/css/pages/user/regist/regist.css" />
     <script type="text/javascript" src="/js/components/button.js"></script>
     <script type="text/javascript" src="/js/components/text-field.js"></script>
     <script type="text/javascript" src="/js/components/dropdown.js"></script>
@@ -17,83 +17,25 @@
 </head>
 
 <body>
-    <script>
-        let files;
-        const uploadFiles = () => {
-            let input = document.createElement('input');
-            input.type = 'file';
-            input.multiple = true;
-            input.accept = '.jpg,.png,.pdf,.doc,.docx,.xls,.hwp';
-            input.onchange = (_) => {
-                files = Array.from(input.files);
-                render();
-            };
-            input.click();
-        };
-
-        const deleteFile = (index) => {
-            files = files.filter((_, i) => i !== index);
-            render();
-        };
-
-        const render = () => {
-            const container = document.querySelector(
-                'div.attachment-container',
-            );
-            if (files.length === 0) {
-                container.innerHTML = `
-                        <div class="attachment-guide" onclick="uploadFiles()">
-                            <span class="body-me"> 파일을 업로드해주세요 </span>
-                            <span class="body-me"
-                                >(Jpg, Png, PDF, Word, Excel, Hwp) 파일만 업로드
-                                해주세요</span
-                            >
-                            <button-text style_="primary" underline="true"
-                                >컴퓨터에서 파일 선택하기</button-text
-                            >
-                        </div>
-                    `;
-                return;
-            } else {
-                container.innerHTML = ``;
-            }
-            files.forEach((file, index) => {
-                const att = document.createElement('div');
-                att.classList.add('attachment-wrapper');
-                const size = file.size / 1000000;
-                att.innerHTML = `
-                            <div></div>
-                            <div>
-                                <span>${file.name}</span>
-                                <span>${size.toFixed(2)}mb</span>
-                            </div>
-                            <div onclick="deleteFile(${index})"></div>
-                        `;
-                container.append(att);
-            });
-        };
-    </script>
     <top-nav></top-nav>
     <div class="content-wrapper">
-        <div>
-            <div class="title-bd">회원정보</div>
-        </div>
-
+        <span class="title-bd">회원정보</span>
         <div class="form-container">
             <div>
                 <span class="body-me"><span>* </span>아이디</span>
-                <textfield-default placeholder="{$userid}"></textfield-default>
+                <textfield-default placeholder="아이디를 입력해주세요."></textfield-default>
             </div>
             <div>
                 <span class="body-me"><span>* </span>비밀번호</span>
-                <div class="password-container">
-                    <textfield-default placeholder="기업명을 입력해주세요."></textfield-default>
-                    <button-default size="xl" style_="default">변경하기</button-default>
+                <div style="display: flex;">
+                    <textfield-default placeholder="비밀번호를 입력해주세요." type="password"
+                        style="width: calc(100% - 109px); margin-right: 8px;"></textfield-default>
+                    <button-default size="xl" style_="primary" style="width: 101px; font-size: var(--body-05);">변경하기</button-default>
                 </div>
             </div>
             <div>
-                <span class="body-me"><span>* </span>이름</span>
-                <textfield-default placeholder="이름을 입력해주세요."></textfield-default>
+                <span class="body-me"><span>* </span>비밀번호 확인</span>
+                <textfield-default placeholder="비밀번호를 한 번 더 입력해주세요." type="password"></textfield-default>
             </div>
             <div>
                 <span class="body-me"><span>* </span>연락처</span>
@@ -152,31 +94,68 @@
                     <textfield-default placeholder="끝 번호"></textfield-default>
                 </div>
             </div>
+
             <div>
-                <span class="body-me">사용자</span>
-                <div class="usertype-container">
-                    <label><input type="radio" checked name="usertype" id="user">개인사용자</label>
-                    <label><input type="radio" name="usertype" id="company">기업사용자</label>
+                <span class="body-me"><span>* </span>사용자</span>
+                <div class="radio-wrapper">
+                    <div>
+                        <input id="personal" value="personal" type="radio" name="user-type" checked />
+                        <label for="personal">개인사용자</label>
+                    </div>
+                    <div>
+                        <input id="enterprise" value="enterprise" type="radio" name="user-type" />
+                        <label for="enterprise">기업사용자</label>
+                    </div>
                 </div>
             </div>
-            <div>
+
+            <div class="enterprise">
                 <span class="body-me"><span>* </span>기업(기관)명</span>
-                <textfield-default placeholder="기업(기관)명을 입력해주세요."></textfield-default>
+                <textfield-default placeholder="기업 또는 기관명을 입력해주세요."></textfield-default>
             </div>
-            <div>
+            <div class="enterprise">
                 <span class="body-me"><span>* </span>소속</span>
-                <textfield-default placeholder="소속를 입력해주세요."></textfield-default>
+                <textfield-default placeholder="소속을 입력해주세요."></textfield-default>
             </div>
-            <div>
-                <span class="body-me"><span>* </span>직위</span>
-                <textfield-default placeholder="직위를 입력해주세요."></textfield-default>
+            <div class="enterprise">
+                <span class="body-me"><span>* </span>직위(직책)</span>
+                <textfield-default placeholder="직위 또는 직책을 입력해주세요."></textfield-default>
             </div>
-
-
-            <button-default size="xl" style_="default" state="disabled">수정하기</button-default>
-            <div class="delete">탈퇴하기</div>
-
+            <button-default size="xl" style_="secondary">수정하기</button-default>
         </div>
+
+        <script>
+            const radios = [
+                ...document.querySelectorAll('input[type="radio"]'),
+            ];
+            const enterprise = [
+                ...document.querySelectorAll('div.enterprise'),
+            ];
+            const setVisible = () => {
+                enterprise.forEach((e) => {
+                    e.style.display = 'flex';
+                });
+            };
+
+            const setHidden = () => {
+                enterprise.forEach((e) => {
+                    e.style.display = 'none';
+                });
+            };
+            radios.forEach((radio) => {
+                radio.addEventListener('change', () => {
+                    if (radio.checked) {
+                        const value = radio.getAttribute('value');
+                        if (value === 'personal') {
+                            setHidden();
+                        } else if (value === 'enterprise') {
+                            setVisible();
+                        }
+                    }
+                });
+            });
+            setHidden();
+        </script>
     </div>
 </body>
 

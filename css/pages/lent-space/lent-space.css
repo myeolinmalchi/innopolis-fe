@@ -2,6 +2,7 @@
 display: block;
 background-color: #ddd;
 width: 100%;
+height: 400px;
 }
 .lent-container{
     display: block;
@@ -212,5 +213,8 @@ width: 100%;
     }
     .lentBtn{
         font-size: var(--body-02);
+    }
+    .content-main-img{
+        height: 330px;
     }
 }

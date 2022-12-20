@@ -1,63 +1,63 @@
 
-class companycard_content extends HTMLElement{
-    constructor(){
+class companycard_content extends HTMLElement {
+    constructor() {
         super();
     }
-    connectedCallback(){
+    connectedCallback() {
         const imgSrc = this.getAttribute('imgSrc') ?? '#';
         const name = this.getAttribute('name') ?? '회사이름';
         const division = this.getAttribute('division') ?? '제 1캠퍼스';
         const type = this.getAttribute('type') ?? '개방형';
         const summary = this.getAttribute('summary') ?? '회사소개의 내용이 들어와야합니다.';
 
-        this.attachShadow({mode: 'open'});
+        this.attachShadow({ mode: 'open' });
 
         const companyCard = document.createElement('div');
-        companyCard.setAttribute('class','companyCard');
+        companyCard.setAttribute('class', 'companyCard');
 
         const companyInfo = document.createElement('div');
-        companyInfo.setAttribute('class','companyInfo');
+        companyInfo.setAttribute('class', 'companyInfo');
 
         const companyImg = document.createElement('div');
-        companyImg.setAttribute('class','companyImg');
+        companyImg.setAttribute('class', 'companyImg');
 
         const img = document.createElement('img');
-        img.setAttribute('src',imgSrc);
+        img.setAttribute('src', imgSrc);
 
         const companyText = document.createElement('companyText');
-        companyText.setAttribute('class','companyText');
+        companyText.setAttribute('class', 'companyText');
 
-        const companyName =  document.createElement('companyName');
-        companyName.setAttribute('class','companyName');
-        
+        const companyName = document.createElement('companyName');
+        companyName.setAttribute('class', 'companyName');
+
         const namespan = document.createElement('span');
         namespan.innerText = name;
 
         const companyType = document.createElement('companyType');
-        companyType.setAttribute('class','companyType');
+        companyType.setAttribute('class', 'companyType');
 
         const divisionspan = document.createElement('span');
         divisionspan.innerText = division;
 
         const divide = document.createElement('span');
-        divide.setAttribute('class','divide');
+        divide.setAttribute('class', 'divide');
         divide.innerText = "|";
 
         const open = document.createElement('open');
-        open.setAttribute('class','open');
+        open.setAttribute('class', 'open');
         open.innerText = type;
 
         const comapnySummary = document.createElement('div');
-        comapnySummary.setAttribute('class','companySummary');
+        comapnySummary.setAttribute('class', 'companySummary');
         comapnySummary.innerText = summary;
 
         const companyHomepage = document.createElement('div');
-        companyHomepage.setAttribute('class','companyHompage');
+        companyHomepage.setAttribute('class', 'companyHompage');
 
         const homepagebtn = document.createElement('input');
-        homepagebtn.setAttribute('type','button');
-        homepagebtn.setAttribute('value','홈페이지');
-        homepagebtn.setAttribute('class','round-04');
+        homepagebtn.setAttribute('type', 'button');
+        homepagebtn.setAttribute('value', '홈페이지');
+        homepagebtn.setAttribute('class', 'round-04');
 
         companyCard.appendChild(companyInfo);
         companyCard.appendChild(comapnySummary);
@@ -78,7 +78,7 @@ class companycard_content extends HTMLElement{
 
         companyHomepage.appendChild(homepagebtn);
 
-        
+
         const style = document.createElement('style');
         style.textContent = `
         body{
@@ -90,12 +90,7 @@ class companycard_content extends HTMLElement{
             margin: 0 auto;
         }
         .companyCard{
-            width: 30.8%;
-            padding: 24px;
-            box-sizing: border-box;
-            margin-right: 24px;
-            display: inline-block;
-            height: 282px;
+            width: 100%;
         }
         
         .companyInfo{
@@ -115,11 +110,12 @@ class companycard_content extends HTMLElement{
         }
         .companyName{
             width: 70%;
-            color: var(--title-01);
+            font-size: var(--title-01);
             line-height: 31.2px;
             letter-spacing: -0.01em;
             font-weight: 700;
             float: left;
+            color: var(--text-primary);
         }
         .divide{
             margin: 0px 5px;   
@@ -137,9 +133,12 @@ class companycard_content extends HTMLElement{
             margin-top: 24px;
             margin-bottom: 30px;
             line-height: 22.4px;
+            width: 100%;
+            height: 88px;
             color: var(--test-second);
             letter-spacing: -0.01em;
             font-size: var(--body-02);
+            overflow: hidden;
         }
         
         .companyHompage input{
@@ -157,22 +156,26 @@ class companycard_content extends HTMLElement{
             margin-bottom: 120px;
         }
         
-        @media (max-width: 512px) {
+        @media (max-width: 640px) {
             .cardContainer{
                 width: 100%;
             }
-            .companyCard{
-                width: 100%;
-                padding: 32px;
-                margin: 0px;
-                height: auto;
-            }
+            
             .companySummary{
                 width: 100%;
+                height: 57px;
+                margin-top : 16px;
+                margin-bottom : 16px;
+                font-size: var(--body-01);
             }
             .companyName{
                 width: 80%;
+                font-size: var(--subtitle-02);
             }
+            .companyType{
+                font-size: var(--body-02);
+            }
+
         }
         
         `
@@ -183,4 +186,4 @@ class companycard_content extends HTMLElement{
     }
 }
 
-customElements.define('company-card',companycard_content);
+customElements.define('company-card', companycard_content);

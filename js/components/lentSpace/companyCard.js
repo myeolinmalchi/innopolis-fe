@@ -169,7 +169,6 @@ class companycard_content extends HTMLElement {
                 font-size: var(--body-01);
             }
             .companyName{
-                width: 80%;
                 font-size: var(--subtitle-02);
             }
             .companyType{

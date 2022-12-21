@@ -53,6 +53,49 @@ customElements.define(
 );
 
 customElements.define(
+    'subcontent-tab-area',
+    class extends HTMLElement {
+        content_area;
+        tab_container;
+        introduction_area;
+        constructor() {
+            super();
+        }
+
+        connectedCallback() {
+            this.classList.add('tab-area');
+            setTimeout(() => {
+                this.content_area = this.nextElementSibling;
+                this.tab_container =
+                    this.getElementsByTagName('tab-container')[0];
+                this.introduction_area = this.getElementsByTagName(
+                    'tab-introduction-container',
+                )[0];
+            });
+        }
+
+        static get observedAttributes() {
+            return ['tab-number'];
+        }
+
+        attributeChangedCallback(attrName, _, newVal) {
+            switch (attrName) {
+                case 'tab-number':
+                    const tab = Number(newVal);
+                    this.content_area?.setAttribute('tab-number', tab);
+                    const state = { sitename: history.state };
+                    history.pushState(state, '');
+                    this['tab-number'] = tab;
+
+                    break;
+                default:
+                    break;
+            }
+        }
+    },
+);
+
+customElements.define(
     'tab-container',
     class extends HTMLElement {
         tabs;

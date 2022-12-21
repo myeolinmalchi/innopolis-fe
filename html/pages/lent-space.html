@@ -1,540 +1,766 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Insert title here.</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="/css/reset.css" />
+        <link rel="stylesheet" href="/css/top-nav.css" />
+        <link rel="stylesheet" href="/css/common.css" />
+        <link rel="stylesheet" href="/css/tab-area.css" />
+        <link rel="stylesheet" href="/css/pages/lent-space/lent-space.css" />
+        <link rel="stylesheet" href="/css/pages/lent-space/companyCard.css" />
+        <script type="text/javascript" src="/js/components/footer.js"></script>
+        <script type="text/javascript" src="/js/components/tab.js"></script>
+        <script
+            type="text/javascript"
+            src="/js/components/tab-area.js"
+        ></script>
+        <script type="text/javascript" src="/js/components/card.js"></script>
+        <script
+            type="text/javascript"
+            src="/js/components/pagination.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="/js/components/lentSpace/companyCard.js"
+        ></script>
+        <script type="text/javascript" src="/js/components/top-nav.js"></script>
+        <script type="text/javascript" src="/js/components/button.js"></script>
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <title>Insert title here.</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/css/reset.css" />
-    <link rel="stylesheet" href="/css/top-nav.css" />
-    <link rel="stylesheet" href="/css/common.css" />
-    <link rel="stylesheet" href="/css/tab-area.css" />
-    <link rel="stylesheet" href="/css/pages/lent-space/lent-space.css" />
-    <link rel="stylesheet" href="/css/pages/lent-space/companyCard.css" />
-    <script type="text/javascript" src="/js/components/footer.js"></script>
-    <script type="text/javascript" src="/js/components/tab.js"></script>
-    <script type="text/javascript" src="/js/components/tab-area.js"></script>
-    <script type="text/javascript" src="/js/components/card.js"></script>
-    <script type="text/javascript" src="/js/components/pagination.js"></script>
-    <script type="text/javascript" src="/js/components/lentSpace/companyCard.js"></script>
-    <script type="text/javascript" src="/js/components/top-nav.js"></script>
-    <script type="text/javascript" src="/js/components/button.js"></script>
-</head>
-
-<body>
-    <top-nav></top-nav>
-    <tab-area>
-        <tab-introduction-container>
-            <tab-introduction-content>
-                천안아산강소특구의<br />
-                제 1캠퍼스를 소개합니다.
-            </tab-introduction-content>
-            <tab-introduction-content>
-                천안아산강소특구의<br />
-                제 2캠퍼스를 소개합니다.
-            </tab-introduction-content>
-            <tab-introduction-content>
-                천안아산강소특구의<br />
-                입주공간 신청 안내입니다.
-            </tab-introduction-content>
-            <tab-introduction-content>
-                천안아산강소특구의<br />
-                입주 기업을 소개합니다.
-            </tab-introduction-content>
-        </tab-introduction-container>
-        <tab-container>
-            <tab-default type="primary">제 1캠퍼스</tab-default>
-            <tab-default type="primary">제 2캠퍼스</tab-default>
-            <tab-default type="primary">입주공간 신청</tab-default>
-            <tab-default type="primary">입주기업</tab-default>
-        </tab-container>
-    </tab-area>
-    <tab-content-area>
-        <tab-content id="content1">
-            <div class="content-main-img"
-                style="background-image: url(../../image/pages/lentspace/lentspacemain1.png);">
+    <body>
+        <top-nav focus="7"></top-nav>
+        <tab-area>
+            <tab-introduction-container>
+                <tab-introduction-content>
+                    천안아산강소특구의<br />
+                    제 1캠퍼스를 소개합니다.
+                </tab-introduction-content>
+                <tab-introduction-content>
+                    천안아산강소특구의<br />
+                    제 2캠퍼스를 소개합니다.
+                </tab-introduction-content>
+                <tab-introduction-content>
+                    천안아산강소특구의<br />
+                    입주공간 신청 안내입니다.
+                </tab-introduction-content>
+                <tab-introduction-content>
+                    천안아산강소특구의<br />
+                    입주 기업을 소개합니다.
+                </tab-introduction-content>
+            </tab-introduction-container>
+            <tab-container>
+                <tab-default type="primary">제 1캠퍼스</tab-default>
+                <tab-default type="primary">제 2캠퍼스</tab-default>
+                <tab-default type="primary">입주공간 신청</tab-default>
+                <tab-default type="primary">입주기업</tab-default>
+            </tab-container>
+        </tab-area>
+        <tab-content-area>
+            <tab-content id="content1">
+                <div
+                    class="content-main-img"
+                    style="
+                        background-image: url(../../image/pages/lentspace/lentspacemain1.png);
+                    "
+                >
+                    <div class="content-wrapper">
+                        <div class="lent-container">
+                            <div class="content-title">
+                                <span
+                                    >미래 자동차 산업 패러다임을 선도하는<br />새로운
+                                    혁신성장의 거점</span
+                                >
+                            </div>
+                            <div class="content-body">
+                                <span
+                                    >미래 자동차 창출의 중심지, 충남천안
+                                    아산강소특구</span
+                                >
+                            </div>
+                            <div
+                                class="content-button"
+                                style="justify-content: left"
+                            >
+                                <input
+                                    type="button"
+                                    value="입주 문의하기"
+                                    class="body-04 round-04"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="content-wrapper">
-                    <div class="lent-container">
-                        <div class="content-title">
-                            <span>미래 자동차 산업 패러다임을 선도하는<br />새로운
-                                혁신성장의 거점</span>
+                    <div class="content-space">
+                        <div class="content-space-container">
+                            <div class="content-space-text">
+                                <span class="space">SPACE 01</span>
+                                <span class="space-title"
+                                    >성장을 위한 다양한 공간</span
+                                >
+                                <span class="space-summary"
+                                    >초기 창업가들이 최고의 입지에 오피스를
+                                    마련한 수 있도록 공간을 설계했습니다.</span
+                                >
+                            </div>
+                            <div class="space-img round-04">
+                                <img
+                                    src="../../image/pages/lentspace/lentspace1.png"
+                                />
+                            </div>
+                            <div
+                                class="
+                                    space-item space-item-first-child
+                                    round-04
+                                "
+                            >
+                                <span class="space-item-title"
+                                    >초기 창업가를 위한 사무 공간</span
+                                >
+                                <span class="space-item-summary"
+                                    >초기 창업가들이 함께 시너지를 내고, 비용
+                                    부담을 줄일 수 있도록 전 지점 중
+                                    프라이빗데스크를 가장 많이
+                                    구성했습니다.</span
+                                >
+                            </div>
+                            <div class="space-item round-04">
+                                <span class="space-item-title"
+                                    >초기 창업가를 위한 사무 공간</span
+                                >
+                                <span class="space-item-summary"
+                                    >초기 창업가들이 함께 시너지를 내고, 비용
+                                    부담을 줄일 수 있도록 전 지점 중
+                                    프라이빗데스크를 가장 많이
+                                    구성했습니다.</span
+                                >
+                            </div>
+                            <div class="space-item round-04">
+                                <span class="space-item-title"
+                                    >초기 창업가를 위한 사무 공간</span
+                                >
+                                <span class="space-item-summary"
+                                    >초기 창업가들이 함께 시너지를 내고, 비용
+                                    부담을 줄일 수 있도록 전 지점 중
+                                    프라이빗데스크를 가장 많이
+                                    구성했습니다.</span
+                                >
+                            </div>
                         </div>
-                        <div class="content-body">
-                            <span>미래 자동차 창출의 중심지, 충남천안
-                                아산강소특구</span>
-                        </div>
-                        <div class="content-button" style="justify-content: left;">
-                            <input type="button" value="입주 문의하기" class="body-04 round-04" />
+                    </div>
+                    <div class="content-space">
+                        <div class="content-space-container">
+                            <div class="content-space-text">
+                                <span class="space">SPACE 02</span>
+                                <span class="space-title"
+                                    >성장을 위한 다양한 공간</span
+                                >
+                                <span class="space-summary"
+                                    >초기 창업가들이 최고의 입지에 오피스를
+                                    마련한 수 있도록 공간을 설계했습니다.</span
+                                >
+                            </div>
+                            <div class="space-img round-04">
+                                <img
+                                    src="../../image/pages/lentspace/lentspace2.png"
+                                />
+                            </div>
+                            <div
+                                class="
+                                    space-item space-item-first-child
+                                    round-04
+                                "
+                            >
+                                <span class="space-item-title"
+                                    >초기 창업가를 위한 사무 공간</span
+                                >
+                                <span class="space-item-summary"
+                                    >초기 창업가들이 함께 시너지를 내고, 비용
+                                    부담을 줄일 수 있도록 전 지점 중
+                                    프라이빗데스크를 가장 많이
+                                    구성했습니다.</span
+                                >
+                            </div>
+                            <div class="space-item round-04">
+                                <span class="space-item-title"
+                                    >초기 창업가를 위한 사무 공간</span
+                                >
+                                <span class="space-item-summary"
+                                    >초기 창업가들이 함께 시너지를 내고, 비용
+                                    부담을 줄일 수 있도록 전 지점 중
+                                    프라이빗데스크를 가장 많이
+                                    구성했습니다.</span
+                                >
+                            </div>
+                            <div class="space-item round-04">
+                                <span class="space-item-title"
+                                    >초기 창업가를 위한 사무 공간</span
+                                >
+                                <span class="space-item-summary"
+                                    >초기 창업가들이 함께 시너지를 내고, 비용
+                                    부담을 줄일 수 있도록 전 지점 중
+                                    프라이빗데스크를 가장 많이
+                                    구성했습니다.</span
+                                >
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="content-wrapper">
-                <div class="content-space">
-                    <div class="content-space-container">
-                        <div class="content-space-text">
-                            <span class="space">SPACE 01</span>
-                            <span class="space-title">성장을 위한 다양한 공간</span>
-                            <span class="space-summary">초기 창업가들이 최고의 입지에 오피스를
-                                마련한 수 있도록 공간을 설계했습니다.</span>
-                        </div>
-                        <div class="space-img round-04">
-                            <img src="../../image/pages/lentspace/lentspace1.png" />
-                        </div>
-                        <div class="space-item space-item-first-child round-04">
-                            <span class="space-item-title">초기 창업가를 위한 사무 공간</span>
-                            <span class="space-item-summary">초기 창업가들이 함께 시너지를 내고, 비용
-                                부담을 줄일 수 있도록 전 지점 중
-                                프라이빗데스크를 가장 많이
-                                구성했습니다.</span>
-                        </div>
-                        <div class="space-item  round-04">
-                            <span class="space-item-title">초기 창업가를 위한 사무 공간</span>
-                            <span class="space-item-summary">초기 창업가들이 함께 시너지를 내고, 비용
-                                부담을 줄일 수 있도록 전 지점 중
-                                프라이빗데스크를 가장 많이
-                                구성했습니다.</span>
-                        </div>
-                        <div class="space-item  round-04">
-                            <span class="space-item-title">초기 창업가를 위한 사무 공간</span>
-                            <span class="space-item-summary">초기 창업가들이 함께 시너지를 내고, 비용
-                                부담을 줄일 수 있도록 전 지점 중
-                                프라이빗데스크를 가장 많이
-                                구성했습니다.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="content-space">
-                    <div class="content-space-container">
-                        <div class="content-space-text">
-                            <span class="space">SPACE 02</span>
-                            <span class="space-title">성장을 위한 다양한 공간</span>
-                            <span class="space-summary">초기 창업가들이 최고의 입지에 오피스를
-                                마련한 수 있도록 공간을 설계했습니다.</span>
-                        </div>
-                        <div class="space-img round-04">
-                            <img src="../../image/pages/lentspace/lentspace2.png" />
-                        </div>
-                        <div class="space-item space-item-first-child round-04">
-                            <span class="space-item-title">초기 창업가를 위한 사무 공간</span>
-                            <span class="space-item-summary">초기 창업가들이 함께 시너지를 내고, 비용
-                                부담을 줄일 수 있도록 전 지점 중
-                                프라이빗데스크를 가장 많이
-                                구성했습니다.</span>
-                        </div>
-                        <div class="space-item round-04">
-                            <span class="space-item-title">초기 창업가를 위한 사무 공간</span>
-                            <span class="space-item-summary">초기 창업가들이 함께 시너지를 내고, 비용
-                                부담을 줄일 수 있도록 전 지점 중
-                                프라이빗데스크를 가장 많이
-                                구성했습니다.</span>
-                        </div>
-                        <div class="space-item round-04">
-                            <span class="space-item-title">초기 창업가를 위한 사무 공간</span>
-                            <span class="space-item-summary">초기 창업가들이 함께 시너지를 내고, 비용
-                                부담을 줄일 수 있도록 전 지점 중
-                                프라이빗데스크를 가장 많이
-                                구성했습니다.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="content-wrapper" style="background-color: var(--background-gray-01);">
-                <div class="content-space benefit">
-                    <div class="content-space-container">
-                        <div class="content-space-text">
-                            <span class="space">Benefits</span>
-                            <span class="space-title">추가 입주 혜택</span>
-                        </div>
-
-                        <div class="benefit-item round-04">
-                            <div class="benefit-img">
-                                <img src="../../image/pages/lentspace/lentspace3.png" />
-                            </div>
-                            <span class="benefit-item-summary">한국자동차연구원 시험분석 의뢰시 수수료 10%
-                                감면</span>
-                        </div>
-                        <div class="benefit-item round-04">
-                            <div class="benefit-img">
-                                <img src="../../image/pages/lentspace/lentspace4.png" />
-                            </div>
-                            <span class="benefit-item-summary">회의실, 휴게공간, 사무기기, 인터넷 등
-                                무상제공 지원</span>
-                        </div>
-                        <div class="benefit-item round-04">
-                            <div class="benefit-img">
-                                <img src="../../image/pages/lentspace/lentspace5.png" />
-                            </div>
-                            <span class="benefit-item-summary">책상, 의자, 서랍장 등 사무집기류 무상제공
-                                지원</span>
-                        </div>
-                        <div class="benefit-item benefit-last round-04">
-                            <div class="benefit-img">
-                                <img src="../../image/pages/lentspace/lentspace6.png" />
-                            </div>
-                            <span class="benefit-item-summary">창업보육기업의 성장을 위한 맞춤형 사업화
-                                지원</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="content-wrapper">
-                <div class="content-space">
-                    <div class="content-space-container">
-                        <div class="content-space-text">
-                            <span class="space">Location</span>
-                            <span class="space-title">제1 캠퍼스 위치</span>
-                            <span class="space-summary">R&D 창업 융합지구 (아산탕정-천안불당
-                                개발지구)</span>
-                        </div>
-
-                        <div class="location-item">
-                            <div class="information">
-                                <div class="type">
-                                    <span>주소</span>
-                                </div>
-                                <div class="value">
-                                    <span>충남 아산시 탕정면 선문로 254번길
-                                        12, 사무동 3층 서편</span>
-                                </div>
-                            </div>
-                            <div class="information">
-                                <div class="type">
-                                    <span>입주공간</span>
-                                </div>
-                                <div class="value">
-                                    <span>365m (개방형 168m, 독립형 197),
-                                        개방형 24석 독립형 6실</span>
-                                </div>
+                <div
+                    class="content-wrapper"
+                    style="background-color: var(--background-gray-01)"
+                >
+                    <div class="content-space benefit">
+                        <div class="content-space-container">
+                            <div class="content-space-text">
+                                <span class="space">Benefits</span>
+                                <span class="space-title">추가 입주 혜택</span>
                             </div>
 
-                            <div class="information">
-                                <div class="type">
-                                    <span>승용차</span>
+                            <div class="benefit-item round-04">
+                                <div class="benefit-img">
+                                    <img
+                                        src="../../image/pages/lentspace/lentspace3.png"
+                                    />
                                 </div>
-                                <div class="value">
-                                    <table>
-                                        <tr class="line">
-                                            <td class="num">1.</td>
-                                            <td class="text">
-                                                &#32;예비창업자 또는 7년
-                                                미만 중소기업(신청일 기준)
-                                            </td>
-                                        </tr>
-                                        <tr class="line">
-                                            <td class="num">2.</td>
-                                            <td class="text">
-                                                &#32;특화분야(차입주자격량용
-                                                디스플레이·인포테인먼트,
-                                                차세대 배터리 소재‧부품,
-                                                미래형 자동차 융복합 부품)
-                                                기업 우대
-                                            </td>
-                                        </tr>
-                                        <tr class="line">
-                                            <td class="num">3.</td>
-                                            <td class="text">
-                                                &#32;예비창업자는 입주 후
-                                                6개월 이내 법인 또는
-                                                개인사업자 전환 필수
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </div>
+                                <span class="benefit-item-summary"
+                                    >한국자동차연구원 시험분석 의뢰시 수수료 10%
+                                    감면</span
+                                >
                             </div>
-                            <input type="button" value="입주 문의하기 >" class="body-04 round-04 lentBtn" />
-                        </div>
-                        <div class="location-item map">
-                            <div>Map</div>
+                            <div class="benefit-item round-04">
+                                <div class="benefit-img">
+                                    <img
+                                        src="../../image/pages/lentspace/lentspace4.png"
+                                    />
+                                </div>
+                                <span class="benefit-item-summary"
+                                    >회의실, 휴게공간, 사무기기, 인터넷 등
+                                    무상제공 지원</span
+                                >
+                            </div>
+                            <div class="benefit-item round-04">
+                                <div class="benefit-img">
+                                    <img
+                                        src="../../image/pages/lentspace/lentspace5.png"
+                                    />
+                                </div>
+                                <span class="benefit-item-summary"
+                                    >책상, 의자, 서랍장 등 사무집기류 무상제공
+                                    지원</span
+                                >
+                            </div>
+                            <div class="benefit-item benefit-last round-04">
+                                <div class="benefit-img">
+                                    <img
+                                        src="../../image/pages/lentspace/lentspace6.png"
+                                    />
+                                </div>
+                                <span class="benefit-item-summary"
+                                    >창업보육기업의 성장을 위한 맞춤형 사업화
+                                    지원</span
+                                >
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </tab-content>
-        <tab-content id="content2">
-            <div class="content-main-img"
-                style="background-image: url(../../image/pages/lentspace/lentspacemain1.png);">
                 <div class="content-wrapper">
-                    <div class="lent-container">
-                        <div class="content-title">
-                            <span>미래 자동차 산업 패러다임을 선도하는<br />새로운
-                                혁신성장의 거점</span>
-                        </div>
-                        <div class="content-body">
-                            <span>미래 자동차 창출의 중심지, 충남천안
-                                아산강소특구</span>
-                        </div>
-                        <div class="content-button" style="justify-content: left;">
-                            <input type="button" value="입주 문의하기" class="body-04 round-04" />
+                    <div class="content-space">
+                        <div class="content-space-container">
+                            <div class="content-space-text">
+                                <span class="space">Location</span>
+                                <span class="space-title">제1 캠퍼스 위치</span>
+                                <span class="space-summary"
+                                    >R&D 창업 융합지구 (아산탕정-천안불당
+                                    개발지구)</span
+                                >
+                            </div>
+
+                            <div class="location-item">
+                                <div class="information">
+                                    <div class="type">
+                                        <span>주소</span>
+                                    </div>
+                                    <div class="value">
+                                        <span
+                                            >충남 아산시 탕정면 선문로 254번길
+                                            12, 사무동 3층 서편</span
+                                        >
+                                    </div>
+                                </div>
+                                <div class="information">
+                                    <div class="type">
+                                        <span>입주공간</span>
+                                    </div>
+                                    <div class="value">
+                                        <span
+                                            >365m (개방형 168m, 독립형 197),
+                                            개방형 24석 독립형 6실</span
+                                        >
+                                    </div>
+                                </div>
+
+                                <div class="information">
+                                    <div class="type">
+                                        <span>승용차</span>
+                                    </div>
+                                    <div class="value">
+                                        <table>
+                                            <tr class="line">
+                                                <td class="num">1.</td>
+                                                <td class="text">
+                                                    &#32;예비창업자 또는 7년
+                                                    미만 중소기업(신청일 기준)
+                                                </td>
+                                            </tr>
+                                            <tr class="line">
+                                                <td class="num">2.</td>
+                                                <td class="text">
+                                                    &#32;특화분야(차입주자격량용
+                                                    디스플레이·인포테인먼트,
+                                                    차세대 배터리 소재‧부품,
+                                                    미래형 자동차 융복합 부품)
+                                                    기업 우대
+                                                </td>
+                                            </tr>
+                                            <tr class="line">
+                                                <td class="num">3.</td>
+                                                <td class="text">
+                                                    &#32;예비창업자는 입주 후
+                                                    6개월 이내 법인 또는
+                                                    개인사업자 전환 필수
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <input
+                                    type="button"
+                                    value="입주 문의하기 >"
+                                    class="body-04 round-04 lentBtn"
+                                />
+                            </div>
+                            <div class="location-item map">
+                                <div>Map</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="content-wrapper">
-                <div class="content-space">
-                    <div class="content-space-container">
-                        <div class="content-space-text">
-                            <span class="space">SPACE 01</span>
-                            <span class="space-title">성장을 위한 다양한 공간</span>
-                            <span class="space-summary">초기 창업가들이 최고의 입지에 오피스를
-                                마련한 수 있도록 공간을 설계했습니다.</span>
-                        </div>
-                        <div class="space-img round-04">
-                            <img src="../../image/pages/lentspace/lentspace1.png" />
-                        </div>
-                        <div class="space-item space-item-first-child round-04">
-                            <span class="space-item-title">초기 창업가를 위한 사무 공간</span>
-                            <span class="space-item-summary">초기 창업가들이 함께 시너지를 내고, 비용
-                                부담을 줄일 수 있도록 전 지점 중
-                                프라이빗데스크를 가장 많이
-                                구성했습니다.</span>
-                        </div>
-                        <div class="space-item  round-04">
-                            <span class="space-item-title">초기 창업가를 위한 사무 공간</span>
-                            <span class="space-item-summary">초기 창업가들이 함께 시너지를 내고, 비용
-                                부담을 줄일 수 있도록 전 지점 중
-                                프라이빗데스크를 가장 많이
-                                구성했습니다.</span>
-                        </div>
-                        <div class="space-item  round-04">
-                            <span class="space-item-title">초기 창업가를 위한 사무 공간</span>
-                            <span class="space-item-summary">초기 창업가들이 함께 시너지를 내고, 비용
-                                부담을 줄일 수 있도록 전 지점 중
-                                프라이빗데스크를 가장 많이
-                                구성했습니다.</span>
+            </tab-content>
+            <tab-content id="content2">
+                <div
+                    class="content-main-img"
+                    style="
+                        background-image: url(../../image/pages/lentspace/lentspacemain1.png);
+                    "
+                >
+                    <div class="content-wrapper">
+                        <div class="lent-container">
+                            <div class="content-title">
+                                <span
+                                    >미래 자동차 산업 패러다임을 선도하는<br />새로운
+                                    혁신성장의 거점</span
+                                >
+                            </div>
+                            <div class="content-body">
+                                <span
+                                    >미래 자동차 창출의 중심지, 충남천안
+                                    아산강소특구</span
+                                >
+                            </div>
+                            <div
+                                class="content-button"
+                                style="justify-content: left"
+                            >
+                                <input
+                                    type="button"
+                                    value="입주 문의하기"
+                                    class="body-04 round-04"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="content-space">
-                    <div class="content-space-container">
-                        <div class="content-space-text">
-                            <span class="space">SPACE 02</span>
-                            <span class="space-title">성장을 위한 다양한 공간</span>
-                            <span class="space-summary">초기 창업가들이 최고의 입지에 오피스를
-                                마련한 수 있도록 공간을 설계했습니다.</span>
+                <div class="content-wrapper">
+                    <div class="content-space">
+                        <div class="content-space-container">
+                            <div class="content-space-text">
+                                <span class="space">SPACE 01</span>
+                                <span class="space-title"
+                                    >성장을 위한 다양한 공간</span
+                                >
+                                <span class="space-summary"
+                                    >초기 창업가들이 최고의 입지에 오피스를
+                                    마련한 수 있도록 공간을 설계했습니다.</span
+                                >
+                            </div>
+                            <div class="space-img round-04">
+                                <img
+                                    src="../../image/pages/lentspace/lentspace1.png"
+                                />
+                            </div>
+                            <div
+                                class="
+                                    space-item space-item-first-child
+                                    round-04
+                                "
+                            >
+                                <span class="space-item-title"
+                                    >초기 창업가를 위한 사무 공간</span
+                                >
+                                <span class="space-item-summary"
+                                    >초기 창업가들이 함께 시너지를 내고, 비용
+                                    부담을 줄일 수 있도록 전 지점 중
+                                    프라이빗데스크를 가장 많이
+                                    구성했습니다.</span
+                                >
+                            </div>
+                            <div class="space-item round-04">
+                                <span class="space-item-title"
+                                    >초기 창업가를 위한 사무 공간</span
+                                >
+                                <span class="space-item-summary"
+                                    >초기 창업가들이 함께 시너지를 내고, 비용
+                                    부담을 줄일 수 있도록 전 지점 중
+                                    프라이빗데스크를 가장 많이
+                                    구성했습니다.</span
+                                >
+                            </div>
+                            <div class="space-item round-04">
+                                <span class="space-item-title"
+                                    >초기 창업가를 위한 사무 공간</span
+                                >
+                                <span class="space-item-summary"
+                                    >초기 창업가들이 함께 시너지를 내고, 비용
+                                    부담을 줄일 수 있도록 전 지점 중
+                                    프라이빗데스크를 가장 많이
+                                    구성했습니다.</span
+                                >
+                            </div>
                         </div>
-                        <div class="space-img round-04">
-                            <img src="../../image/pages/lentspace/lentspace2.png" />
-                        </div>
-                        <div class="space-item space-item-first-child round-04">
-                            <span class="space-item-title">초기 창업가를 위한 사무 공간</span>
-                            <span class="space-item-summary">초기 창업가들이 함께 시너지를 내고, 비용
-                                부담을 줄일 수 있도록 전 지점 중
-                                프라이빗데스크를 가장 많이
-                                구성했습니다.</span>
-                        </div>
-                        <div class="space-item round-04">
-                            <span class="space-item-title">초기 창업가를 위한 사무 공간</span>
-                            <span class="space-item-summary">초기 창업가들이 함께 시너지를 내고, 비용
-                                부담을 줄일 수 있도록 전 지점 중
-                                프라이빗데스크를 가장 많이
-                                구성했습니다.</span>
-                        </div>
-                        <div class="space-item round-04">
-                            <span class="space-item-title">초기 창업가를 위한 사무 공간</span>
-                            <span class="space-item-summary">초기 창업가들이 함께 시너지를 내고, 비용
-                                부담을 줄일 수 있도록 전 지점 중
-                                프라이빗데스크를 가장 많이
-                                구성했습니다.</span>
+                    </div>
+                    <div class="content-space">
+                        <div class="content-space-container">
+                            <div class="content-space-text">
+                                <span class="space">SPACE 02</span>
+                                <span class="space-title"
+                                    >성장을 위한 다양한 공간</span
+                                >
+                                <span class="space-summary"
+                                    >초기 창업가들이 최고의 입지에 오피스를
+                                    마련한 수 있도록 공간을 설계했습니다.</span
+                                >
+                            </div>
+                            <div class="space-img round-04">
+                                <img
+                                    src="../../image/pages/lentspace/lentspace2.png"
+                                />
+                            </div>
+                            <div
+                                class="
+                                    space-item space-item-first-child
+                                    round-04
+                                "
+                            >
+                                <span class="space-item-title"
+                                    >초기 창업가를 위한 사무 공간</span
+                                >
+                                <span class="space-item-summary"
+                                    >초기 창업가들이 함께 시너지를 내고, 비용
+                                    부담을 줄일 수 있도록 전 지점 중
+                                    프라이빗데스크를 가장 많이
+                                    구성했습니다.</span
+                                >
+                            </div>
+                            <div class="space-item round-04">
+                                <span class="space-item-title"
+                                    >초기 창업가를 위한 사무 공간</span
+                                >
+                                <span class="space-item-summary"
+                                    >초기 창업가들이 함께 시너지를 내고, 비용
+                                    부담을 줄일 수 있도록 전 지점 중
+                                    프라이빗데스크를 가장 많이
+                                    구성했습니다.</span
+                                >
+                            </div>
+                            <div class="space-item round-04">
+                                <span class="space-item-title"
+                                    >초기 창업가를 위한 사무 공간</span
+                                >
+                                <span class="space-item-summary"
+                                    >초기 창업가들이 함께 시너지를 내고, 비용
+                                    부담을 줄일 수 있도록 전 지점 중
+                                    프라이빗데스크를 가장 많이
+                                    구성했습니다.</span
+                                >
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="content-wrapper" style="background-color: var(--background-gray-01);">
-                <div class="content-space benefit">
-                    <div class="content-space-container">
-                        <div class="content-space-text">
-                            <span class="space">Benefits</span>
-                            <span class="space-title">추가 입주 혜택</span>
-                        </div>
+                <div
+                    class="content-wrapper"
+                    style="background-color: var(--background-gray-01)"
+                >
+                    <div class="content-space benefit">
+                        <div class="content-space-container">
+                            <div class="content-space-text">
+                                <span class="space">Benefits</span>
+                                <span class="space-title">추가 입주 혜택</span>
+                            </div>
 
-                        <div class="benefit-item round-04">
-                            <div class="benefit-img">
-                                <img src="../../image/pages/lentspace/lentspace3.png" />
+                            <div class="benefit-item round-04">
+                                <div class="benefit-img">
+                                    <img
+                                        src="../../image/pages/lentspace/lentspace3.png"
+                                    />
+                                </div>
+                                <span class="benefit-item-summary"
+                                    >한국자동차연구원 시험분석 의뢰시 수수료 10%
+                                    감면</span
+                                >
                             </div>
-                            <span class="benefit-item-summary">한국자동차연구원 시험분석 의뢰시 수수료 10%
-                                감면</span>
-                        </div>
-                        <div class="benefit-item round-04">
-                            <div class="benefit-img">
-                                <img src="../../image/pages/lentspace/lentspace4.png" />
+                            <div class="benefit-item round-04">
+                                <div class="benefit-img">
+                                    <img
+                                        src="../../image/pages/lentspace/lentspace4.png"
+                                    />
+                                </div>
+                                <span class="benefit-item-summary"
+                                    >회의실, 휴게공간, 사무기기, 인터넷 등
+                                    무상제공 지원</span
+                                >
                             </div>
-                            <span class="benefit-item-summary">회의실, 휴게공간, 사무기기, 인터넷 등
-                                무상제공 지원</span>
-                        </div>
-                        <div class="benefit-item round-04">
-                            <div class="benefit-img">
-                                <img src="../../image/pages/lentspace/lentspace5.png" />
+                            <div class="benefit-item round-04">
+                                <div class="benefit-img">
+                                    <img
+                                        src="../../image/pages/lentspace/lentspace5.png"
+                                    />
+                                </div>
+                                <span class="benefit-item-summary"
+                                    >책상, 의자, 서랍장 등 사무집기류 무상제공
+                                    지원</span
+                                >
                             </div>
-                            <span class="benefit-item-summary">책상, 의자, 서랍장 등 사무집기류 무상제공
-                                지원</span>
-                        </div>
-                        <div class="benefit-item benefit-last round-04">
-                            <div class="benefit-img">
-                                <img src="../../image/pages/lentspace/lentspace6.png" />
+                            <div class="benefit-item benefit-last round-04">
+                                <div class="benefit-img">
+                                    <img
+                                        src="../../image/pages/lentspace/lentspace6.png"
+                                    />
+                                </div>
+                                <span class="benefit-item-summary"
+                                    >창업보육기업의 성장을 위한 맞춤형 사업화
+                                    지원</span
+                                >
                             </div>
-                            <span class="benefit-item-summary">창업보육기업의 성장을 위한 맞춤형 사업화
-                                지원</span>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="content-wrapper">
-                <div class="content-space">
-                    <div class="content-space-container">
-                        <div class="content-space-text">
-                            <span class="space">Location</span>
-                            <span class="space-title">제2 캠퍼스 위치</span>
-                            <span class="space-summary">R&D 창업 융합지구 (아산탕정-천안불당
-                                개발지구)</span>
-                        </div>
-
-                        <div class="location-item">
-                            <div class="information">
-                                <div class="type">
-                                    <span>주소</span>
-                                </div>
-                                <div class="value">
-                                    <span>충남 아산시 탕정면 선문로 254번길
-                                        12, 사무동 3층 서편</span>
-                                </div>
-                            </div>
-                            <div class="information">
-                                <div class="type">
-                                    <span>입주공간</span>
-                                </div>
-                                <div class="value">
-                                    <span>365m (개방형 168m, 독립형 197),
-                                        개방형 24석 독립형 6실</span>
-                                </div>
+                <div class="content-wrapper">
+                    <div class="content-space">
+                        <div class="content-space-container">
+                            <div class="content-space-text">
+                                <span class="space">Location</span>
+                                <span class="space-title">제2 캠퍼스 위치</span>
+                                <span class="space-summary"
+                                    >R&D 창업 융합지구 (아산탕정-천안불당
+                                    개발지구)</span
+                                >
                             </div>
 
-                            <div class="information">
-                                <div class="type">
-                                    <span>승용차</span>
+                            <div class="location-item">
+                                <div class="information">
+                                    <div class="type">
+                                        <span>주소</span>
+                                    </div>
+                                    <div class="value">
+                                        <span
+                                            >충남 아산시 탕정면 선문로 254번길
+                                            12, 사무동 3층 서편</span
+                                        >
+                                    </div>
                                 </div>
-                                <div class="value">
-                                    <table>
-                                        <tr class="line">
-                                            <td class="num">1.</td>
-                                            <td class="text">
-                                                &#32;예비창업자 또는 7년
-                                                미만 중소기업(신청일 기준)
-                                            </td>
-                                        </tr>
-                                        <tr class="line">
-                                            <td class="num">2.</td>
-                                            <td class="text">
-                                                &#32;특화분야(차입주자격량용
-                                                디스플레이·인포테인먼트,
-                                                차세대 배터리 소재‧부품,
-                                                미래형 자동차 융복합 부품)
-                                                기업 우대
-                                            </td>
-                                        </tr>
-                                        <tr class="line">
-                                            <td class="num">3.</td>
-                                            <td class="text">
-                                                &#32;예비창업자는 입주 후
-                                                6개월 이내 법인 또는
-                                                개인사업자 전환 필수
-                                            </td>
-                                        </tr>
-                                    </table>
+                                <div class="information">
+                                    <div class="type">
+                                        <span>입주공간</span>
+                                    </div>
+                                    <div class="value">
+                                        <span
+                                            >365m (개방형 168m, 독립형 197),
+                                            개방형 24석 독립형 6실</span
+                                        >
+                                    </div>
                                 </div>
+
+                                <div class="information">
+                                    <div class="type">
+                                        <span>승용차</span>
+                                    </div>
+                                    <div class="value">
+                                        <table>
+                                            <tr class="line">
+                                                <td class="num">1.</td>
+                                                <td class="text">
+                                                    &#32;예비창업자 또는 7년
+                                                    미만 중소기업(신청일 기준)
+                                                </td>
+                                            </tr>
+                                            <tr class="line">
+                                                <td class="num">2.</td>
+                                                <td class="text">
+                                                    &#32;특화분야(차입주자격량용
+                                                    디스플레이·인포테인먼트,
+                                                    차세대 배터리 소재‧부품,
+                                                    미래형 자동차 융복합 부품)
+                                                    기업 우대
+                                                </td>
+                                            </tr>
+                                            <tr class="line">
+                                                <td class="num">3.</td>
+                                                <td class="text">
+                                                    &#32;예비창업자는 입주 후
+                                                    6개월 이내 법인 또는
+                                                    개인사업자 전환 필수
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <input
+                                    type="button"
+                                    value="입주 문의하기 >"
+                                    class="body-04 round-04 lentBtn"
+                                />
                             </div>
-                            <input type="button" value="입주 문의하기 >" class="body-04 round-04 lentBtn" />
-                        </div>
-                        <div class="location-item map">
-                            <div>Map</div>
+                            <div class="location-item map">
+                                <div>Map</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </tab-content>
-        <tab-content id="content3"> hi </tab-content>
-        <tab-content id="content4">
-            <img src="../../image/pages/lentspace/lentspacemain2.png" class="content-main-img">
-            <div class="post-lent-container">
-                <tab-area>
-                    <tab-container>
-                        <tab-default type="secondary">전체</tab-default>
-                        <tab-default type="secondary">제 1캠퍼스</tab-default>
-                        <tab-default type="secondary">제 2캠퍼스</tab-default>
-                    </tab-container>
-                </tab-area>
+            </tab-content>
+            <tab-content id="content3"> hi </tab-content>
+            <tab-content id="content4">
+                <img
+                    src="../../image/pages/lentspace/lentspacemain2.png"
+                    class="content-main-img"
+                />
+                <div class="post-lent-container">
+                    <subcontent-tab-area>
+                        <tab-introduction-container>
+                            <tab-introduction-conetnt></tab-introduction-conetnt>
+                            <tab-introduction-conetnt></tab-introduction-conetnt>
+                            <tab-introduction-conetnt></tab-introduction-conetnt>
+                        </tab-introduction-container>
+                        <tab-container>
+                            <tab-default type="secondary">전체</tab-default>
+                            <tab-default type="secondary"
+                                >제 1캠퍼스</tab-default
+                            >
+                            <tab-default type="secondary"
+                                >제 2캠퍼스</tab-default
+                            >
+                        </tab-container>
+                    </subcontent-tab-area>
 
-                <tab-content-area>
-                    <tab-content id="content1">
-                        <div class="content-wrapper">
-                            <div class="post-container">
-                                <div class="cardContainer">
-                                    <company-card></company-card>
-                                    <company-card></company-card>
-                                    <company-card></company-card>
+                    <tab-content-area>
+                        <tab-content id="content1">
+                            <div class="content-wrapper">
+                                <div class="post-container">
+                                    <div class="cardContainer">
+                                        <company-card></company-card>
+                                        <company-card></company-card>
+                                        <company-card></company-card>
+                                    </div>
+                                    <pagination-container>
+                                        <pagination-arrow
+                                            direction="left"
+                                        ></pagination-arrow>
+                                        <pagination-unit link="/1"
+                                            >1</pagination-unit
+                                        >
+                                        <pagination-unit state="focus"
+                                            >2</pagination-unit
+                                        >
+                                        <pagination-unit>3</pagination-unit>
+                                        <pagination-unit>4</pagination-unit>
+                                        <pagination-unit>5</pagination-unit>
+                                        <pagination-arrow
+                                            direction="right"
+                                        ></pagination-arrow>
+                                    </pagination-container>
                                 </div>
-                                <pagination-container>
-                                    <pagination-arrow direction="left"></pagination-arrow>
-                                    <pagination-unit link="/1">1</pagination-unit>
-                                    <pagination-unit state="focus">2</pagination-unit>
-                                    <pagination-unit>3</pagination-unit>
-                                    <pagination-unit>4</pagination-unit>
-                                    <pagination-unit>5</pagination-unit>
-                                    <pagination-arrow direction="right"></pagination-arrow>
-                                </pagination-container>
                             </div>
-                        </div>
-                    </tab-content>
+                        </tab-content>
 
-                    <tab-content id="content2">
-                        <div class="content-wrapper">
-                            <div class="post-container">
-                                <div class="cardContainer">
-                                    <company-card></company-card>
-                                    <company-card></company-card>
-                                    <company-card></company-card>
+                        <tab-content id="content2">
+                            <div class="content-wrapper">
+                                <div class="post-container">
+                                    <div class="cardContainer">
+                                        <company-card></company-card>
+                                        <company-card></company-card>
+                                        <company-card></company-card>
+                                    </div>
+                                    <pagination-container>
+                                        <pagination-arrow
+                                            direction="left"
+                                        ></pagination-arrow>
+                                        <pagination-unit link="/1"
+                                            >1</pagination-unit
+                                        >
+                                        <pagination-unit state="focus"
+                                            >2</pagination-unit
+                                        >
+                                        <pagination-unit>3</pagination-unit>
+                                        <pagination-unit>4</pagination-unit>
+                                        <pagination-unit>5</pagination-unit>
+                                        <pagination-arrow
+                                            direction="right"
+                                        ></pagination-arrow>
+                                    </pagination-container>
                                 </div>
-                                <pagination-container>
-                                    <pagination-arrow direction="left"></pagination-arrow>
-                                    <pagination-unit link="/1">1</pagination-unit>
-                                    <pagination-unit state="focus">2</pagination-unit>
-                                    <pagination-unit>3</pagination-unit>
-                                    <pagination-unit>4</pagination-unit>
-                                    <pagination-unit>5</pagination-unit>
-                                    <pagination-arrow direction="right"></pagination-arrow>
-                                </pagination-container>
                             </div>
-                        </div>
-                    </tab-content>
+                        </tab-content>
 
-                    <tab-content id="content3">
-                        <div class="content-wrapper">
-                            <div class="post-container">
-                                <div class="cardContainer">
-                                    <company-card name="주식회사 로웨인" summary="㈜KDT의 BAS기반 디지털 트윈 개발 플랫폼 “WAiSER”와 자동차 Domain Knowledge를 활용한 교육용 SW 플랫폼 개발차"></company-card>
-                                    <company-card></company-card>
-                                    <company-card></company-card>
+                        <tab-content id="content3">
+                            <div class="content-wrapper">
+                                <div class="post-container">
+                                    <div class="cardContainer">
+                                        <company-card
+                                            name="주식회사 로웨인"
+                                            summary="㈜KDT의 BAS기반 디지털 트윈 개발 플랫폼 “WAiSER”와 자동차 Domain Knowledge를 활용한 교육용 SW 플랫폼 개발차"
+                                        ></company-card>
+                                        <company-card></company-card>
+                                        <company-card></company-card>
+                                    </div>
+                                    <pagination-container>
+                                        <pagination-arrow
+                                            direction="left"
+                                        ></pagination-arrow>
+                                        <pagination-unit link="/1"
+                                            >1</pagination-unit
+                                        >
+                                        <pagination-unit state="focus"
+                                            >2</pagination-unit
+                                        >
+                                        <pagination-unit>3</pagination-unit>
+                                        <pagination-unit>4</pagination-unit>
+                                        <pagination-unit>5</pagination-unit>
+                                        <pagination-arrow
+                                            direction="right"
+                                        ></pagination-arrow>
+                                    </pagination-container>
                                 </div>
-                                <pagination-container>
-                                    <pagination-arrow direction="left"></pagination-arrow>
-                                    <pagination-unit link="/1">1</pagination-unit>
-                                    <pagination-unit state="focus">2</pagination-unit>
-                                    <pagination-unit>3</pagination-unit>
-                                    <pagination-unit>4</pagination-unit>
-                                    <pagination-unit>5</pagination-unit>
-                                    <pagination-arrow direction="right"></pagination-arrow>
-                                </pagination-container>
                             </div>
-                        </div>
-                    </tab-content>
-                </tab-content-area>
-            </div>
-        </tab-content>
-    </tab-content-area>
+                        </tab-content>
+                    </tab-content-area>
+                </div>
+            </tab-content>
+        </tab-content-area>
 
-    <tab-content-area> </tab-content-area>
+        <tab-content-area> </tab-content-area>
 
-    <footer-default></footer-default>
-</body>
-
+        <footer-default></footer-default>
+    </body>
 </html>

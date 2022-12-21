@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Insert title here.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/top-nav.css" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/pages/user/regist/regist.css" />
+    <script type="text/javascript" src="/js/components/button.js"></script>
+    <script type="text/javascript" src="/js/components/text-field.js"></script>
+    <script type="text/javascript" src="/js/components/dropdown.js"></script>
+    <script type="text/javascript" src="/js/components/checkbox.js"></script>
+    <script type="text/javascript" src="/js/components/top-nav.js"></script>
+</head>
+
+<body>
+    <top-nav></top-nav>
+    <div class="content-wrapper">
+        <span class="title-bd">회원정보</span>
+        <div class="form-container">
+            <div>
+                <span class="body-me"><span>* </span>아이디</span>
+                <textfield-default placeholder="아이디를 입력해주세요."></textfield-default>
+            </div>
+            <div>
+                <span class="body-me"><span>* </span>비밀번호</span>
+                <div style="display: flex;">
+                    <textfield-default placeholder="비밀번호를 입력해주세요." type="password"
+                        style="width: calc(100% - 109px); margin-right: 8px;"></textfield-default>
+                    <button-default size="xl" style_="primary" style="width: 101px; font-size: var(--body-05);">변경하기</button-default>
+                </div>
+            </div>
+            <div>
+                <span class="body-me"><span>* </span>비밀번호 확인</span>
+                <textfield-default placeholder="비밀번호를 한 번 더 입력해주세요." type="password"></textfield-default>
+            </div>
+            <div>
+                <span class="body-me"><span>* </span>연락처</span>
+                <div class="phone-wrapper">
+                    <dropdown-container>
+                        <dropdown-header value="010" type="default"></dropdown-header>
+                        <dropdown-content>
+                            <span>010</span>
+                            <span>010</span>
+                            <span>010</span>
+                            <span>010</span>
+                            <span>010</span>
+                            <span>010</span>
+                        </dropdown-content>
+                    </dropdown-container>
+                    <textfield-default placeholder="중간 번호"></textfield-default>
+                    <textfield-default placeholder="끝 번호"></textfield-default>
+                </div>
+            </div>
+            <div>
+                <span class="body-me"><span>* </span>닉네임</span>
+                <textfield-default placeholder="닉네임을 입력해주세요."></textfield-default>
+            </div>
+            <div>
+                <span class="body-me"><span>* </span>이메일</span>
+                <div class="email-wrapper">
+                    <textfield-default placeholder="이메일을 입력해주세요."></textfield-default>
+                    <dropdown-container>
+                        <dropdown-header value="@naver.com" type="default"></dropdown-header>
+                        <dropdown-content>
+                            <span>@gmail.com</span>
+                            <span>@gmail.com</span>
+                            <span>@gmail.com</span>
+                            <span>@gmail.com</span>
+                            <span>@gmail.com</span>
+                            <span>@gmail.com</span>
+                        </dropdown-content>
+                    </dropdown-container>
+                </div>
+            </div>
+            <div>
+                <span class="body-me">전화번호</span>
+                <div class="phone-wrapper">
+                    <dropdown-container>
+                        <dropdown-header value="010" type="default"></dropdown-header>
+                        <dropdown-content>
+                            <span>010</span>
+                            <span>010</span>
+                            <span>010</span>
+                            <span>010</span>
+                            <span>010</span>
+                            <span>010</span>
+                        </dropdown-content>
+                    </dropdown-container>
+                    <textfield-default placeholder="중간 번호"></textfield-default>
+                    <textfield-default placeholder="끝 번호"></textfield-default>
+                </div>
+            </div>
+
+            <div>
+                <span class="body-me"><span>* </span>사용자</span>
+                <div class="radio-wrapper">
+                    <div>
+                        <input id="personal" value="personal" type="radio" name="user-type" checked />
+                        <label for="personal">개인사용자</label>
+                    </div>
+                    <div>
+                        <input id="enterprise" value="enterprise" type="radio" name="user-type" />
+                        <label for="enterprise">기업사용자</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="enterprise">
+                <span class="body-me"><span>* </span>기업(기관)명</span>
+                <textfield-default placeholder="기업 또는 기관명을 입력해주세요."></textfield-default>
+            </div>
+            <div class="enterprise">
+                <span class="body-me"><span>* </span>소속</span>
+                <textfield-default placeholder="소속을 입력해주세요."></textfield-default>
+            </div>
+            <div class="enterprise">
+                <span class="body-me"><span>* </span>직위(직책)</span>
+                <textfield-default placeholder="직위 또는 직책을 입력해주세요."></textfield-default>
+            </div>
+            <button-default size="xl" style_="secondary">수정하기</button-default>
+        </div>
+
+        <script>
+            const radios = [
+                ...document.querySelectorAll('input[type="radio"]'),
+            ];
+            const enterprise = [
+                ...document.querySelectorAll('div.enterprise'),
+            ];
+            const setVisible = () => {
+                enterprise.forEach((e) => {
+                    e.style.display = 'flex';
+                });
+            };
+
+            const setHidden = () => {
+                enterprise.forEach((e) => {
+                    e.style.display = 'none';
+                });
+            };
+            radios.forEach((radio) => {
+                radio.addEventListener('change', () => {
+                    if (radio.checked) {
+                        const value = radio.getAttribute('value');
+                        if (value === 'personal') {
+                            setHidden();
+                        } else if (value === 'enterprise') {
+                            setVisible();
+                        }
+                    }
+                });
+            });
+            setHidden();
+        </script>
+    </div>
+</body>
+
+</html>

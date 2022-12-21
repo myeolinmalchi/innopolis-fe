@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Insert title here.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/tab-area.css" />
+    <link rel="stylesheet" href="/css/top-nav.css" />
+    <link rel="stylesheet" href="/css/pages/my-page/my-page-main.css" />
+    <script type="text/javascript" src="/js/components/footer.js"></script>
+    <script type="text/javascript" src="/js/components/tab.js"></script>
+    <script type="text/javascript" src="/js/components/tab-area.js"></script>
+    <script type="text/javascript" src="/js/components/pagination.js"></script>
+    <script type="text/javascript" src="/js/components/top-nav.js"></script>
+    <script type="text/javascript" src="/js/components/button.js"></script>
+</head>
+
+<body>
+    <top-nav></top-nav>
+    <tab-area>
+        <tab-introduction-container>
+            <tab-introduce-text class="main-title">
+                {$name}의<br />
+                사업 신청 내역입니다.
+            </tab-introduce-text>
+            <tab-introduce-text class="main-title">
+                {$name}의<br />
+                회의실 예약 내역입니다.
+            </tab-introduce-text>
+            <tab-introduce-text class="main-title">
+                {$name}의<br />
+                입주 신청 내역입니다.
+            </tab-introduce-text>
+            <tab-introduce-text class="main-title">
+                {$name}의<br />
+                회원 정보 입니다.
+            </tab-introduce-text>
+        </tab-introduction-container>
+        <tab-container>
+            <tab-default type="primary">사업신청</tab-default>
+            <tab-default type="primary">회의실 예약내역</tab-default>
+            <tab-default type="primary">입주신청</tab-default>
+            <tab-default type="primary">회원정보</tab-default>
+        </tab-container>
+    </tab-area>
+    <tab-content-area>
+        <tab-content id="content1">
+            <img class="top-img" src="" alt="" />
+            <div class="content-wrapper">
+                <div class="post-wrapper">
+                    <img class="post-img" src="" alt="" />
+                    <div class="slide">
+                        <table class="body-04">
+                            <tr>
+                                <td>번호</td>
+                                <td>과제명</td>
+                                <td>신청날짜</td>
+                                <td>상태</td>
+                                <td>삭제</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>차량통제수치데이터</td>
+                                <td>2022-10-27</td>
+                                <td class="wait">대기 중</td>
+                                <td>취소</td>
+                            </tr>
+
+                            <tr>
+                                <td>9</td>
+                                <td>차량통제수치데이터</td>
+                                <td>2022-10-27</td>
+                                <td class="approve">승인완료</td>
+                                <td>취소</td>
+                            </tr>
+
+                            <tr>
+                                <td>8</td>
+                                <td>차량통제수치데이터</td>
+                                <td>2022-10-27</td>
+                                <td class="reject">반려</td>
+                                <td>취소</td>
+                            </tr>
+
+                            <tr>
+                                <td>7</td>
+                                <td>차량통제수치데이터</td>
+                                <td>2022-10-27</td>
+                                <td class="cancel">취소완료</td>
+                                <td>취소</td>
+                            </tr>
+
+                            <tr>
+                                <td>6</td>
+                                <td>차량통제수치데이터</td>
+                                <td>2022-10-27</td>
+                                <td class="wait">대기 중</td>
+                                <td>취소</td>
+                            </tr>
+
+                            <tr>
+                                <td>5</td>
+                                <td>차량통제수치데이터</td>
+                                <td>2022-10-27</td>
+                                <td class="wait">대기 중</td>
+                                <td>취소</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>차량통제수치데이터</td>
+                                <td>2022-10-27</td>
+                                <td class="wait">대기 중</td>
+                                <td>취소</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>차량통제수치데이터</td>
+                                <td>2022-10-27</td>
+                                <td class="wait">대기 중</td>
+                                <td>취소</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>차량통제수치데이터</td>
+                                <td>2022-10-27</td>
+                                <td class="wait">대기 중</td>
+                                <td>취소</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>차량통제수치데이터</td>
+                                <td>2022-10-27</td>
+                                <td class="wait">대기 중</td>
+                                <td>취소</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                    <pagination-container>
+                        <pagination-arrow direction="left"></pagination-arrow>
+                        <pagination-unit link="/1">1</pagination-unit>
+                        <pagination-unit state="focus">2</pagination-unit>
+                        <pagination-unit>3</pagination-unit>
+                        <pagination-unit>4</pagination-unit>
+                        <pagination-unit>5</pagination-unit>
+                        <pagination-arrow direction="right"></pagination-arrow>
+                    </pagination-container>
+
+                </div>
+            </div>
+        </tab-content>
+
+        <tab-content id="content2">
+            <img class="top-img" src="" alt="" />
+            <div class="content-wrapper">
+                <div class="post-wrapper">
+                    <img class="post-img" src="" alt="" />
+                    <div class="slide">
+                        <table class="body-04">
+                            <tr>
+                                <td>번호</td>
+                                <td>회의실</td>
+                                <td>신청날짜</td>
+                                <td>상태</td>
+                                <td>삭제</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>[아산 탕정] 제1캠퍼스(3층) 소회의실</td>
+                                <td>2022-10-27</td>
+                                <td class="wait">대기 중</td>
+                                <td>취소</td>
+                            </tr>
+
+                            <tr>
+                                <td>9</td>
+                                <td>차량통제수치데이터</td>
+                                <td>2022-10-27</td>
+                                <td class="approve">승인완료</td>
+                                <td>취소</td>
+                            </tr>
+
+                            <tr>
+                                <td>8</td>
+                                <td>차량통제수치데이터</td>
+                                <td>2022-10-27</td>
+                                <td class="reject">반려</td>
+                                <td>취소</td>
+                            </tr>
+
+                            <tr>
+                                <td>7</td>
+                                <td>차량통제수치데이터</td>
+                                <td>2022-10-27</td>
+                                <td class="cancel">취소완료</td>
+                                <td>취소</td>
+                            </tr>
+
+                            <tr>
+                                <td>6</td>
+                                <td>차량통제수치데이터</td>
+                                <td>2022-10-27</td>
+                                <td class="wait">대기 중</td>
+                                <td>취소</td>
+                            </tr>
+
+                            <tr>
+                                <td>5</td>
+                                <td>차량통제수치데이터</td>
+                                <td>2022-10-27</td>
+                                <td class="wait">대기 중</td>
+                                <td>취소</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>차량통제수치데이터</td>
+                                <td>2022-10-27</td>
+                                <td class="wait">대기 중</td>
+                                <td>취소</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>차량통제수치데이터</td>
+                                <td>2022-10-27</td>
+                                <td class="wait">대기 중</td>
+                                <td>취소</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>차량통제수치데이터</td>
+                                <td>2022-10-27</td>
+                                <td class="wait">대기 중</td>
+                                <td>취소</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>차량통제수치데이터</td>
+                                <td>2022-10-27</td>
+                                <td class="wait">대기 중</td>
+                                <td>취소</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                    <pagination-container>
+                        <pagination-arrow direction="left"></pagination-arrow>
+                        <pagination-unit link="/1">1</pagination-unit>
+                        <pagination-unit state="focus">2</pagination-unit>
+                        <pagination-unit>3</pagination-unit>
+                        <pagination-unit>4</pagination-unit>
+                        <pagination-unit>5</pagination-unit>
+                        <pagination-arrow direction="right"></pagination-arrow>
+                    </pagination-container>
+
+                </div>
+            </div>
+        </tab-content>
+
+        <tab-content id="content3">
+            <img class="top-img" src="" alt="" />
+            <div class="content-wrapper">
+                <div class="post-wrapper">
+                    <img class="post-img" src="" alt="" />
+                    <div class="slide">
+                        <table class="body-04">
+                            <tr>
+                                <td>번호</td>
+                                <td>기업명</td>
+                                <td>신청날짜</td>
+                                <td>상태</td>
+                                <td>삭제</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>HC컴퍼니</td>
+                                <td>2022-10-27</td>
+                                <td class="wait">대기 중</td>
+                                <td>취소</td>
+                            </tr>
+
+                            <tr>
+                                <td>9</td>
+                                <td>HC컴퍼니</td>
+                                <td>2022-10-27</td>
+                                <td class="approve">승인완료</td>
+                                <td>취소</td>
+                            </tr>
+
+                            <tr>
+                                <td>8</td>
+                                <td>HC컴퍼니</td>
+                                <td>2022-10-27</td>
+                                <td class="reject">반려</td>
+                                <td>취소</td>
+                            </tr>
+
+                            <tr>
+                                <td>7</td>
+                                <td>HC컴퍼니</td>
+                                <td>2022-10-27</td>
+                                <td class="cancel">취소완료</td>
+                                <td>취소</td>
+                            </tr>
+
+                            <tr>
+                                <td>6</td>
+                                <td>HC컴퍼니</td>
+                                <td>2022-10-27</td>
+                                <td class="wait">대기 중</td>
+                                <td>취소</td>
+                            </tr>
+
+                            <tr>
+                                <td>5</td>
+                                <td>HC컴퍼니</td>
+                                <td>2022-10-27</td>
+                                <td class="wait">대기 중</td>
+                                <td>취소</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>HC컴퍼니</td>
+                                <td>2022-10-27</td>
+                                <td class="wait">대기 중</td>
+                                <td>취소</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>HC컴퍼니</td>
+                                <td>2022-10-27</td>
+                                <td class="wait">대기 중</td>
+                                <td>취소</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>HC컴퍼니</td>
+                                <td>2022-10-27</td>
+                                <td class="wait">대기 중</td>
+                                <td>취소</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>HC컴퍼니</td>
+                                <td>2022-10-27</td>
+                                <td class="wait">대기 중</td>
+                                <td>취소</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                    <pagination-container>
+                        <pagination-arrow direction="left"></pagination-arrow>
+                        <pagination-unit link="/1">1</pagination-unit>
+                        <pagination-unit state="focus">2</pagination-unit>
+                        <pagination-unit>3</pagination-unit>
+                        <pagination-unit>4</pagination-unit>
+                        <pagination-unit>5</pagination-unit>
+                        <pagination-arrow direction="right"></pagination-arrow>
+                    </pagination-container>
+
+                </div>
+            </div>
+        </tab-content>
+
+        <tab-content id="content4">
+            
+        </tab-content>
+    </tab-content-area>
+    <footer-default></footer-default>
+
+</body>

@@ -15,11 +15,13 @@ class card_content extends HTMLElement{
         const img_src = this.getAttribute('img_src') ?? '#';
         const category_value = this.getAttribute('category') ?? '카테고리';
         const companyName_value = this.getAttribute('name') ?? '회사이름을 입력하시오';
+        const link = this.getAttribute('link') ?? 'promotion-center-detail.html';
         this.attachShadow({mode: 'open'});
 
         
         const card = document.createElement('div');
         card.setAttribute('class','card');
+        card.setAttribute('onClick','location.href='+link);
 
         const imgwrapper = document.createElement('div');
         imgwrapper.setAttribute('class','round-04');

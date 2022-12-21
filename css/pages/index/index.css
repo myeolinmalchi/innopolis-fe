@@ -116,6 +116,11 @@
 .first-content{
     padding: 64px 0px;
 }
+.main-img-slide{
+    width: 112px;
+    margin-bottom: 80px;
+    margin-top: 244px;
+}
 
 .promotion-slide{
     width: 112px;
@@ -128,6 +133,13 @@
     float: left;
     margin: 0px 2px;
     background-color: var(--color-gray-filled);
+}
+.promotion-slide-item:hover{
+    height: 2px;
+    width: 24px;
+    float: left;
+    margin: 0px 2px;
+    background-color: var(--color-gray-hover);
 }
 
 .second-content{
@@ -174,7 +186,7 @@ promotion-item{
     width: 351px;
     float: left;
 }
-.third-content-item ul li{
+.third-content-item ul li button{
     width: 100%;
     text-align: left;
     box-sizing: border-box;
@@ -182,9 +194,18 @@ promotion-item{
     margin-bottom: 16px;
 }
 
-.third-content-item ul li{
+.third-content-item ul li button{
     color: var(--text-third);
     background-color: var(--background-gray-02);
+}
+.third-content-item ul li button:hover{
+    color: var(--text-white);
+    background-color: var(--color-gray-filled);
+}
+
+.third-content-item ul li button:active{
+    color: var(--text-white);
+    background-color: var(--color-gray-filled);
 }
 
 .third-content-item ul .list-black{
@@ -355,6 +376,9 @@ promotion-item{
   }
   .main-title{
     font-size: var(--subtitle-03);
+    margin-top: 111px;
+    margin-bottom: 24px;
+
   }
   .main-sub{
     font-size: var(--body-02);
@@ -370,5 +394,23 @@ promotion-item{
   }
   .fourth-content{
     padding: 64px 0px;
+  }
+  .main-img{
+   height: 320px; 
+  }
+  .first-content .content-title{
+    margin-bottom: 32px;
+  }
+  .first-content .promotion-card{
+    display: block;
+  }
+  .first-content .promotion-card:first-child{
+    display: block;
+  }
+  .main-img-slide{
+    display: none;
+  }
+  .promotion-slide{
+    margin-top: 32px;
   }
 }

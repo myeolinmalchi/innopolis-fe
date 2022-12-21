@@ -13,6 +13,38 @@ customElements.define(
 customElements.define(
     'pagination-unit',
     class extends HTMLElement {
+        static get observedAttributes() {
+            return ['state'];
+        }
+
+        attributeChangedCallback(attrName, oldVal, newVal) {
+            switch (newVal) {
+                case 'default':
+                    this.style.color = 'var(--text-secondary)';
+                    this.style.background = 'var(--color-white-01)';
+                    this.onmouseover = () => {
+                        this.style.background = 'var(--background-gray-02)';
+                    };
+                    this.onmouseout = () => {
+                        this.style.background = 'var(--color-white-01)';
+                    };
+                    break;
+                case 'disabled':
+                    this.style.color = 'var(--text-disabled)';
+                    this.style.background = 'var(--color-white-01)';
+                    break;
+                case 'focus':
+                    this.style.color = 'var(--text-white)';
+                    this.style.background = 'var(--background-blue-01)';
+                    this.onmouseover = () => {
+                        this.style.background = 'var(--background-blue-01)';
+                    };
+                    this.onmouseout = () => {
+                        this.style.background = 'var(--background-blue-01)';
+                    };
+                    break;
+            }
+        }
         connectedCallback() {
             const state = this.getAttribute('state') ?? 'default';
             const link = this.getAttribute('link') ?? '#';

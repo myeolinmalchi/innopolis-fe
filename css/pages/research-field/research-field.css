@@ -75,6 +75,8 @@ pagination-container {
     height: 180px;
     border-radius: 4px;
     max-width: 100%;
+    width: 100%;
+    border: 1px solid var(--stroke-gray-01);
 }
 
 #content2 .post-container > div > div {

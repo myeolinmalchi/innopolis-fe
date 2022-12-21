@@ -13,47 +13,98 @@
         <script type="text/javascript" src="/js/components/button.js"></script>
         <link rel="stylesheet" href="/css/top-nav.css" />
         <script type="text/javascript" src="/js/components/top-nav.js"></script>
-        <script type="text/javascript" src="/js/components/button.js"></script>
     </head>
     <body>
         <top-nav></top-nav>
         <div class="content-wrapper">
-            <span class="main-title title-bd"
-                >협동로봇을 이용한 이동트럭 서비스 시스템 및 그 서비스
-                방법</span
-            >
+            <span class="main-title title-bd">-</span>
             <img class="main-img" src="" alt="" />
             <div class="detail-wrapper">
                 <span class="detail-title title-bd">장비설명</span>
                 <table class="detail-table">
                     <tr class="detail-table-row">
                         <td class="table-name body-bd">출원번호</td>
-                        <td class="table-value body-me">10-2018-0098250</td>
+                        <td class="table-value body-me"></td>
                         <td class="table-name body-bd">출원일</td>
-                        <td class="table-value body-me">2018-08-22</td>
+                        <td class="table-value body-me"></td>
                     </tr>
                     <tr class="detail-table-row">
                         <td class="table-name body-bd">등록번호</td>
-                        <td class="table-value body-me">10-2113493</td>
+                        <td class="table-value body-me"></td>
                         <td class="table-name body-bd">등록일</td>
-                        <td class="table-value body-me">2020-05-15</td>
+                        <td class="table-value body-me"></td>
+                    </tr>
+                    <tr class="detail-table-row">
+                        <td class="table-name body-bd">출원인</td>
+                        <td class="table-value body-me"></td>
+                        <td class="table-name body-bd">발명자/고안자</td>
+                        <td class="table-value body-me"></td>
+                    </tr>
+                    <tr class="detail-table-row">
+                        <td class="table-name body-bd">존속기간(예상)만료일</td>
+                        <td class="table-value body-me"></td>
+                        <td class="table-name body-bd">현재관리자</td>
+                        <td class="table-value body-me"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="summary-wrapper">
+                <span class="summary-title title-bd">요약</span>
+                <span class="summary-content body-me"> </span>
+            </div>
+
+            <span class="caution body-me"></span>
+
+            <div class="button-wrapper">
+                <button-default
+                    style_="outline"
+                    onclick="location.href='/html/pages/tech-info.html'"
+                    >목록으로</button-default
+                >
+            </div>
+        </div>
+        <script>
+            let post;
+            const contentWrapper = document.querySelector(
+                'div.content-wrapper',
+            );
+            const render = () => {
+                contentWrapper.innerHTML = `
+            <span class="main-title title-bd"
+                >${post.title}</span
+            >
+            <div class="detail-wrapper">
+                <span class="detail-title title-bd">장비설명</span>
+                <table class="detail-table">
+                    <tr class="detail-table-row">
+                        <td class="table-name body-bd">출원번호</td>
+                        <td class="table-value body-me">${post.detail.출원번호}</td>
+                        <td class="table-name body-bd">출원일</td>
+                        <td class="table-value body-me">${post.detail.출원일}</td>
+                    </tr>
+                    <tr class="detail-table-row">
+                        <td class="table-name body-bd">등록번호</td>
+                        <td class="table-value body-me">${post.detail.등록번호}</td>
+                        <td class="table-name body-bd">등록일</td>
+                        <td class="table-value body-me">${post.detail.등록일}</td>
                     </tr>
                     <tr class="detail-table-row">
                         <td class="table-name body-bd">출원인</td>
                         <td class="table-value body-me">
-                            (재)대구기계부품연구원
+                        ${post.detail.출원인}
                         </td>
                         <td class="table-name body-bd">발명자/고안자</td>
                         <td class="table-value body-me">
-                            김병수, 박기진, 김경태
+                            ${post.detail.발명자}
                         </td>
                     </tr>
                     <tr class="detail-table-row">
                         <td class="table-name body-bd">존속기간(예상)만료일</td>
-                        <td class="table-value body-me">2038-08-22</td>
-                        <td class="table-name body-bd">현재관리자</td>
+                        <td class="table-value body-me">${post.detail.존속기간만료}</td>
+                        <td class="table-name body-bd">현재권리자</td>
                         <td class="table-value body-me">
-                            (재)대구기계부품연구원
+                        ${post.detail.현재권리자}
                         </td>
                     </tr>
                 </table>
@@ -62,13 +113,13 @@
             <div class="summary-wrapper">
                 <span class="summary-title title-bd">요약</span>
                 <span class="summary-content body-me">
-                    협동로봇을 이용한 이동트럭 서비스 방법은 협동로봇이
-                    이동트럭의 내부에 마련된 작업공간 내에서 고객이 위치했는지를
-                    자동 검출하는 단계와, 관리자가 착용한 스마트 글라스의 투명
-                    디스플레이에 표시되는 증강 가이드의 조작상태 따라 상기
-                    협동로봇의 동작을 제어하는 단계와, 상기 협동로봇이 상기
-                    고객에게 제공할 서비스를 상기 관리자와 공동 작업하는 단계를
-                    포함하는 것을 특징으로 한다.
+                ${post.summary}
+                </span>
+            </div>
+                        <div class="summary-wrapper">
+                <span class="summary-title title-bd">대표청구항</span>
+                <span class="summary-content body-me">
+                ${post.claim}
                 </span>
             </div>
 
@@ -84,6 +135,18 @@
                     >목록으로</button-default
                 >
             </div>
-        </div>
+                `;
+            };
+            window.onload = async () => {
+                const urlParams = new URLSearchParams(window.location.search);
+                const index = urlParams.get('idx');
+                const res = await fetch(
+                    '/resources/pages/tech-info/search-tech.json',
+                );
+                const posts = await res.json();
+                post = posts[index];
+                render();
+            };
+        </script>
     </body>
 </html>

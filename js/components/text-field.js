@@ -8,6 +8,10 @@ customElements.define(
             this.input.setAttribute('type', 'text');
             this.input.setAttribute('class', 'input');
         }
+
+        getValue() {
+            return this.input.value;
+        }
         connectedCallback() {
             const shadow = this.attachShadow({ mode: 'open' });
             const state = this.getAttribute('state') ?? 'default';
@@ -410,6 +414,10 @@ customElements.define(
         input;
         arrow;
 
+        getValue() {
+            return this.input.value;
+        }
+
         constructor() {
             super();
             this.container = document.createElement('div');
@@ -426,8 +434,9 @@ customElements.define(
             this.arrow.style.display = 'flex';
             this.arrow.style.alignItems = 'center';
             this.arrow.style.justifyContent = 'center';
-            this.arrow.innerHTML = `<svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M7.25 14L1.25 8L7.25 2" stroke="#384251" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+            this.arrow.innerHTML = `<svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="7.30615" cy="7.30614" r="4.90909" transform="rotate(45 7.30615 7.30614)" stroke="#9CA3AF" stroke-width="1.63636" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="11.1632" y1="11.5488" x2="15.0201" y2="15.4057" stroke="#9CA3AF" stroke-width="1.63636" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>`;
         }
         connectedCallback() {
@@ -473,6 +482,7 @@ customElements.define(
                     box-sizing: border-box;
                     color: var(--text-primary);
                     border: none;
+                    width: 100%;
                 }
 
                 .input::placeholer {

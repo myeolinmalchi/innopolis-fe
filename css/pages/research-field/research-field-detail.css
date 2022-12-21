@@ -70,8 +70,9 @@
 }
 
 .file-container > div > div:first-child {
-    background: url(/image/menuClose.png) no-repeat 0 0px / contain;
+    background: url(/image/file.png) no-repeat 0 0px / contain;
     background-position: center;
+    background-origin: content-box;
     width: 32px;
     height: 32px;
 }

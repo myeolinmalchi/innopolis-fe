@@ -14,6 +14,7 @@ customElements.define(
         sibs;
         connectedCallback() {
             const login = this.getAttribute('login') ?? 'false';
+            const focus = Number(this.getAttribute('focus')) ?? 0;
             this.innerHTML = `
                 <nav>
                     <div class="container">
@@ -23,14 +24,30 @@ customElements.define(
                             <label for="hamburger"> </label>
                         </div>
                         <div class="title-02">
-                            <a href="/html/pages/introduce.html">강소특구소개</a>
-                            <a href="">지원사업소개</a>
-                            <a href="/html/pages/tech-info.html">기술정보</a>
-                            <a href="/html/pages/research-field.html">연구마당</a>
-                            <a href="/html/pages/metatown.html">메타타운</a>
-                            <a href="/html/pages/customer-support.html">고객지원</a>
-                            <a href="/html/pages/promotion-center.html">홍보센터</a>
-                            <a href="/html/pages/lent-space.html">입주마당</a>
+                            <a class="${
+                                focus === 0 ? 'focus' : ''
+                            }" href="/html/pages/introduce.html">강소특구소개</a>
+                            <a class="${
+                                focus === 1 ? 'focus' : ''
+                            }" href="/html/pages/support-bussiness-introduce.html">지원사업소개</a>
+                            <a class="${
+                                focus === 2 ? 'focus' : ''
+                            }" href="/html/pages/tech-info.html">기술정보</a>
+                            <a class="${
+                                focus === 3 ? 'focus' : ''
+                            }" href="/html/pages/research-field.html">연구마당</a>
+                            <a class="${
+                                focus === 4 ? 'focus' : ''
+                            }" href="/html/pages/metatown.html">메타타운</a>
+                            <a class="${
+                                focus === 5 ? 'focus' : ''
+                            }" href="/html/pages/customer-support.html">고객지원</a>
+                            <a class="${
+                                focus === 6 ? 'focus' : ''
+                            }" href="/html/pages/promotion-center.html">홍보센터</a>
+                            <a class="${
+                                focus === 7 ? 'focus' : ''
+                            }" href="/html/pages/lent-space.html">입주마당</a>
                         </div>
                         <div>
                             ${

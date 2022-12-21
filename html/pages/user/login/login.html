@@ -22,14 +22,18 @@
                 <div>
                     <span class="body-me">아이디</span>
                     <textfield-default
+                        id="mb-id"
                         placeholder="아이디를 입력해주세요."
                     ></textfield-default>
                     <span class="body-me">비밀번호</span>
                     <textfield-default
+                        id="mb-pw"
                         placeholder="비밀번호를 입력해주세요."
                         type="password"
                     ></textfield-default>
-                    <button-default size="xl">로그인</button-default>
+                    <button-default id="login-button" size="xl"
+                        >로그인</button-default
+                    >
                     <div>
                         <span
                             class="body-me"
@@ -60,5 +64,6 @@
             </div>
         </div>
         <footer-default></footer-default>
+        <script src="/js/pages/user/login.js"></script>
     </body>
 </html>

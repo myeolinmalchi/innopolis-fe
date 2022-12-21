@@ -19,9 +19,9 @@
         <script type="text/javascript" src="/js/components/top-nav.js"></script>
     </head>
     <body>
-        <top-nav></top-nav>
+        <top-nav focus="2"></top-nav>
         <div class="content-wrapper">
-            <span class="title-bd"> 기술 명 </span>
+            <span class="title-bd"> - </span>
             <div class="top-content-wrapper">
                 <div>
                     <img src="" alt="" />
@@ -56,6 +56,7 @@
                     <div>
                         <button-default
                             onclick="location.href='/html/pages/great-tech-inquiry.html'"
+                            state="disabled"
                             >문의하기</button-default
                         >
                         <button-default style_="secondary"
@@ -67,43 +68,27 @@
             <div class="subcontent-wrapper">
                 <span class="title-bd">기술활용분야</span>
                 <ul class="body-me">
-                    <li>자동차용 캐빈필터 및 에어크리너</li>
-                    <li>실내용 공기 청정기</li>
-                    <li>산업용 공기 청정기</li>
+                    <li>-</li>
                 </ul>
             </div>
 
             <div class="subcontent-wrapper">
                 <span class="title-bd">시장동향</span>
                 <ul class="body-me">
-                    <li>
-                        전 세계 자동차 필터 시장은 2020년 214억 달러에서 연평균
-                        성장률 2.1%로 증가하여, 2025년에는 236억 달러에 이를
-                        것으로 전망됨
-                    </li>
-                    <li>
-                        한국의 미세먼지 농도는 OECD 국가 중 두 번째로 나쁜
-                        수준임
-                    </li>
-                    <li>
-                        세계적 친환경 정책 추세에 따라 고성능, 다기능 필터에
-                        대한 수요가 증가되고 있음.
-                    </li>
+                    <li>-</li>
                 </ul>
             </div>
 
             <div class="subcontent-wrapper">
                 <span class="title-bd"> 특허정보 </span>
-                <span class="body-me">
-                    차량용 캐빈 필터 유닛 (No: 10-2018-0015835)
-                </span>
+                <span class="body-me"> - </span>
             </div>
 
             <div class="subcontent-wrapper">
                 <span class="title-bd">기술완성도(TRL)</span>
                 <div class="trl-wrapper">
                     <trl-container
-                        achievement="3"
+                        achievement="0"
                         style="width: 100%"
                     ></trl-container>
                 </div>
@@ -119,5 +104,146 @@
                 </div>
             </div>
         </div>
+        <script>
+            let post;
+            const contentWrapper = document.querySelector(
+                'div.content-wrapper',
+            );
+            const get = (str) => (str === '' ? '-' : str);
+
+            const render = () => {
+                contentWrapper.innerHTML = `
+            <span class="title-bd"> ${post.title}</span>
+            <div class="top-content-wrapper">
+                <div>
+                    <img src="https://innopolis-katech.re.kr/${
+                        post.img
+                    }" alt="" />
+                </div>
+                <div class="shadow-01">
+                    <div>
+                        <div class="body-me">
+                            <span>기술명</span>
+                            <span>${get(post.detail.기술명)}</span>
+                        </div>
+                        <div class="body-me">
+                            <span>특화분야</span>
+                            <span>${get(post.detail.특화분야)}</span>
+                        </div>
+                        <div class="body-me">
+                            <span>기술분야</span>
+                            <span>${get(post.detail.기술분야)}</span>
+                        </div>
+                        <div class="body-me">
+                            <span>보유기관</span>
+                            <span>${get(post.detail.보유기관및연구자)}</span>
+                        </div>
+                        <div class="body-me">
+                            <span>연구자</span>
+                            <span>-</span>
+                        </div>
+                        <div class="body-me">
+                            <span>거래조건</span>
+                            <span>${get(post.detail.거래조건)}</span>
+                        </div>
+                    </div>
+                    <div>
+                        <button-default
+                            onclick="location.href='/html/pages/great-tech-inquiry.html'"
+                            state="disabled"
+                            >문의하기</button-default
+                        >
+                        <button-default style_="secondary"
+                            onclick="window.open('https://innopolis-katech.re.kr/${
+                                post.기술소개서
+                            }')"
+                            >기술소개서</button-default
+                        >
+                    </div>
+                </div>
+            </div>
+            <div class="subcontent-wrapper">
+                <span class="title-bd">기술활용분야</span>
+                <ul class="body-me">
+                    ${post.기술활용분야.reduce((acc, data) => {
+                        if (data === '' || data === undefined) {
+                            return acc;
+                        }
+                        return (
+                            acc +
+                            `
+                            <li>${
+                                data.charAt(0) === '○' ||
+                                data.charAt(0) === 'ㅇ'
+                                    ? data.slice(2)
+                                    : data
+                            }</li>
+                        `
+                        );
+                    }, '')}
+                </ul>
+            </div>
+
+            <div class="subcontent-wrapper">
+                <span class="title-bd">시장동향</span>
+                <ul class="body-me">
+                    ${post.시장동향.reduce((acc, data) => {
+                        if (data === '') {
+                            return acc;
+                        }
+                        return (
+                            acc +
+                            `
+                            <li>${
+                                data.charAt(0) === '○' ||
+                                data.charAt(0) === 'ㅇ'
+                                    ? data.slice(2)
+                                    : data
+                            }</li>
+                        `
+                        );
+                    }, '')}
+                </ul>
+            </div>
+
+            <div class="subcontent-wrapper">
+                <span class="title-bd"> 특허정보 </span>
+                <span class="body-me">
+                    ${post.특허정보}
+                </span>
+            </div>
+
+            <div class="subcontent-wrapper">
+                <span class="title-bd">기술완성도(TRL)</span>
+                <div class="trl-wrapper">
+                    <trl-container
+                        achievement="${post.type.split(' ')[1] ?? 0}"
+                        style="width: 100%"
+                    ></trl-container>
+                </div>
+            </div>
+
+            <div class="subcontent-wrapper">
+                <div class="button-wrapper">
+                    <button-default
+                        style_="outline"
+                        onclick="location.href='/html/pages/tech-info.html?tab=1'"
+                        >목록으로</button-default
+                    >
+                </div>
+            </div>
+                `;
+            };
+            window.onload = async () => {
+                const urlParams = new URLSearchParams(window.location.search);
+                const index = urlParams.get('idx');
+                const res = await fetch(
+                    '/resources/pages/tech-info/great-tech.json',
+                );
+                const posts = await res.json();
+                post = posts[index];
+                render();
+            };
+        </script>
     </body>
 </html>

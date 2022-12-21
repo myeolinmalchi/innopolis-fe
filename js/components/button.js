@@ -169,10 +169,11 @@ customElements.define(
                         : ''
                 }
             `;
-            const innerHTML = this.innerHTML;
+
+            const innerText = this.innerText;
             this.innerHTML = `
                     ${icon === 'left' ? arrow : ''}
-                    <div style="margin: 0 0.3em">${innerHTML}</div>
+                    <div style="margin: 0 0.3em">${innerText}</div>
                     ${icon === 'right' ? arrow : ''}
                 `;
         }

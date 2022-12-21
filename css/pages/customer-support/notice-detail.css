@@ -90,10 +90,12 @@
 }
 
 .file-container > div > div:first-child {
-    background: url(/image/menuClose.png) no-repeat 0 0px / contain;
+    background: url(/image/file.png) no-repeat 0 0px / contain;
+    background-origin: content-box;
     background-position: center;
     width: 32px;
     height: 32px;
+    box-sizing: border-box;
 }
 
 .file-container > div > div:nth-child(2) {

@@ -15,13 +15,13 @@ class card_content extends HTMLElement{
         const img_src = this.getAttribute('img_src') ?? '#';
         const category_value = this.getAttribute('category') ?? '카테고리';
         const companyName_value = this.getAttribute('name') ?? '회사이름을 입력하시오';
-        const link = this.getAttribute('link') ?? 'promotion-center-detail.html';
+        const link = this.getAttribute('link') ?? "location.href='/html/pages/promotion-center-detail.html'";
         this.attachShadow({mode: 'open'});
 
         
         const card = document.createElement('div');
         card.setAttribute('class','card');
-        card.setAttribute('onClick','location.href='+link);
+        card.setAttribute('onClick',link);
 
         const imgwrapper = document.createElement('div');
         imgwrapper.setAttribute('class','round-04');
@@ -122,7 +122,7 @@ class card_content extends HTMLElement{
                 letter-spacing: -0.01em;
             }
         }
-        `
+        ` 
         this.shadowRoot.appendChild(style);
         this.shadowRoot.appendChild(card);
 
@@ -145,12 +145,14 @@ class promotion_content extends HTMLElement{
         const img_src = this.getAttribute('img_src') ?? '#';
         const name_value = this.getAttribute('name') ?? '법률이 정하는 주요방위산업체에 종사하는 근로자의 단체행동권...';
         const date = this.getAttribute('date') ?? 'YY.MM.DD';
+        const link = this.getAttribute('link') ?? "location.href='/html/pages/promotion-data-detail.html'";
 
         this.attachShadow({mode: 'open'});
         
         const promotion_item = document.createElement('div');
         promotion_item.setAttribute('class','promotion_item');
-
+        promotion_item.setAttribute('onClick',link);
+        
         const promotionImg = document.createElement('div');
         promotionImg.setAttribute('class','promotionImg round-04');
         
@@ -293,11 +295,12 @@ class report_content extends HTMLElement{
         const summary_value = this.getAttribute('summary') ?? '법률이 정하는 주요방위산업체에 종사하는 근로자의 단체행동권...';
         const date = this.getAttribute('date') ?? 'YY.MM.DD';
         const maker_value = this.getAttribute('maker') ?? '현찬일보';
-
+        const link = this.getAttribute('link') ?? "location.href='/html/pages/promotion-center-detail.html'";
         this.attachShadow({mode: 'open'});
         
         const report_item = document.createElement('div');
         report_item.setAttribute('class','report_item');
+        report_item.setAttribute('onClick',link);
 
         const reportImg = document.createElement('div');
         reportImg.setAttribute('class','reportImg round-04');

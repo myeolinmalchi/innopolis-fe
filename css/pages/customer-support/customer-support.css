@@ -28,6 +28,7 @@
     padding: 2px 8px;
     color: var(--text-white);
     margin-right: 8px;
+    white-space: nowrap;
 }
 
 .notice-secondary {
@@ -37,6 +38,7 @@
     padding: 2px 8px;
     color: var(--text-third);
     margin-right: 8px;
+    white-space: nowrap;
 }
 
 #content1 .post-container > div > span:first-child,
@@ -48,6 +50,10 @@
     display: flex;
     align-items: center;
     box-sizing: border-box;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 #content1 .post-container > div > span:last-child,

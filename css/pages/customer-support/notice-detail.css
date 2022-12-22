@@ -26,6 +26,7 @@
     color: var(--text-white);
     margin-right: 12px;
     box-sizing: border-box;
+    white-space: nowrap;
 }
 
 .notice-secondary {
@@ -36,6 +37,7 @@
     color: var(--text-third);
     margin-right: 12px;
     box-sizing: border-box;
+    white-space: nowrap;
 }
 
 .detail-container > span:nth-child(2) {
@@ -44,6 +46,7 @@
     font-size: var(--body-04);
     width: 100%;
     text-align: left;
+    white-space: wrap;
 }
 
 .detail-container > span:nth-child(3) {

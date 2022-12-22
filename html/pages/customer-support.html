@@ -56,49 +56,10 @@
             <tab-content id="content1">
                 <img class="top-img" src="" alt="" />
                 <div class="content-wrapper">
-                    <div class="post-container">
-                        <div
-                            onclick="location.href='/html/pages/notice-detail.html'"
-                        >
-                            <span class="title-bd">
-                                <span class="notice-primary body-bd">공지</span
-                                >2022 충남지역 주요사업 공동박람회 개최</span
-                            >
-                            <span class="body-me">2022.01.26</span>
-                        </div>
-                        <div>
-                            <span class="title-bd"
-                                ><span class="notice-primary body-bd">공지</span
-                                >2022 충남지역 주요사업 공동박람회 개최</span
-                            >
-                            <span class="body-me">2022.01.26</span>
-                        </div>
-                        <div>
-                            <span class="title-bd"
-                                >2022 충남지역 주요사업 공동박람회 개최</span
-                            >
-                            <span class="body-me">2022.01.26</span>
-                        </div>
-                        <div>
-                            <span class="title-bd"
-                                >2022 충남지역 주요사업 공동박람회 개최</span
-                            >
-                            <span class="body-me">2022.01.26</span>
-                        </div>
-                        <div>
-                            <span class="title-bd"
-                                >2022 충남지역 주요사업 공동박람회 개최</span
-                            >
-                            <span class="body-me">2022.01.26</span>
-                        </div>
-                    </div>
+                    <div class="post-container"></div>
                     <pagination-container>
                         <pagination-arrow direction="left"></pagination-arrow>
-                        <pagination-unit link="/1">1</pagination-unit>
-                        <pagination-unit state="focus">2</pagination-unit>
-                        <pagination-unit>3</pagination-unit>
-                        <pagination-unit>4</pagination-unit>
-                        <pagination-unit>5</pagination-unit>
+                        <pagination-unit state="focus">1</pagination-unit>
                         <pagination-arrow direction="right"></pagination-arrow>
                     </pagination-container>
                 </div>
@@ -154,11 +115,7 @@
                     </div>
                     <pagination-container>
                         <pagination-arrow direction="left"></pagination-arrow>
-                        <pagination-unit link="/1">1</pagination-unit>
-                        <pagination-unit state="focus">2</pagination-unit>
-                        <pagination-unit>3</pagination-unit>
-                        <pagination-unit>4</pagination-unit>
-                        <pagination-unit>5</pagination-unit>
+                        <pagination-unit state="focus">1</pagination-unit>
                         <pagination-arrow direction="right"></pagination-arrow>
                     </pagination-container>
                 </div>
@@ -285,5 +242,76 @@
                 </div>
             </tab-content>
         </tab-content-area>
+        <script>
+            let posts1;
+            const postContainer1 = document.querySelector(
+                '#content1 div.post-container',
+            );
+
+            const render1 = () => {
+                postContainer1.innerHTML = posts1.reduce((acc, post, index) => {
+                    return (
+                        acc +
+                        `
+                        <div
+                            onclick="location.href='/html/pages/notice-detail.html?idx=${index}'"
+                        >
+                            <span class="title-bd">
+                                ${
+                                    post.공지
+                                        ? '<span class="notice-primary body-bd">공지</span>'
+                                        : ''
+                                }
+                                ${post.title}
+                            </span
+                            >
+                            <span class="body-me">${post.date}</span>
+                        </div>
+                    `
+                    );
+                }, '');
+            };
+
+            (async function () {
+                const res = await fetch(
+                    '/resources/pages/customer-support/notice.json',
+                );
+                posts1 = await res.json();
+                render1();
+            })();
+            let posts2;
+            const postContainer2 = document.querySelector(
+                '#content2 div.post-container',
+            );
+
+            const render2 = () => {
+                postContainer2.innerHTML = posts2.reduce((acc, post, index) => {
+                    return (
+                        acc +
+                        `
+                        <div
+                            onclick="location.href='/html/pages/business-announcement.html?idx=${index}'"
+                        >
+                            <span class="title-bd">
+                                <span class="notice-secondary body-bd"
+                                    >접수 마감</span>
+                                ${post.title}
+                            </span
+                            >
+                            <span class="body-me">${post.date}</span>
+                        </div>
+                    `
+                    );
+                }, '');
+            };
+
+            (async function () {
+                const res = await fetch(
+                    '/resources/pages/customer-support/business-announcement.json',
+                );
+                posts2 = await res.json();
+                render2();
+            })();
+        </script>
     </body>
 </html>

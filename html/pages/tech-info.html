@@ -349,5 +349,64 @@
             posts2 = await res.json();
             setPage2(1);
         })();
+
+        let posts3;
+        const postContainer3 = document.querySelector(
+            `#content3 div.post-container`,
+        );
+        const paginationContainer3 = document.querySelector(
+            `#content3 pagination-container`,
+        );
+        const setPage3 = (page) => {
+            paginationContainer3.innerHTML =
+                new Array(Math.ceil(posts3.length / 12))
+                    .fill(0)
+                    .reduce((acc, _, idx) => {
+                        return (
+                            acc +
+                            `<pagination-unit link="javascript:setPage3(${
+                                idx + 1
+                            })" state="${
+                                idx + 1 === page ? 'focus' : 'default'
+                            }">${idx + 1}</pagination-unit>`
+                        );
+                    }, `<pagination-arrow direction="left"></pagination-arrow>`) +
+                `<pagination-arrow direction="right"></pagination-arrow>`;
+
+            postContainer3.innerHTML = posts3.reduce((acc, post, idx) => {
+                if (idx < 12 * (page - 1) || idx >= 12 * page) {
+                    return acc;
+                }
+                return (
+                    acc +
+                    `
+                    <div class="post-wrapper" onclick="location.href='${
+                        post.link
+                    }'">
+                            <img
+                                class="post-img"
+                                src="${post.img}"
+                                alt=""
+                            />
+                            <div class="post-detail-wrapper">
+                                <span class="post-detail-ti body-bd"
+                                      >${post.title}</span
+                                >
+                                <span class="post-detail-date body-me">
+                                    ${post.date.split(' ')[0]}
+                                </span>
+                            </div>
+                        </div>
+                `
+                );
+            }, '');
+        };
+        (async function () {
+            const res = await fetch(
+                '/resources/pages/tech-info/tech-video.json',
+            );
+            posts3 = await res.json();
+            setPage3(1);
+        })();
     </script>
 </html>

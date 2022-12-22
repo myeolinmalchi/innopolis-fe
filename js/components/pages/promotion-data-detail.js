@@ -1,54 +1,57 @@
-class content_detail extends HTMLElement{
-    constructor(){
+class content_detail extends HTMLElement {
+    constructor() {
         super();
     }
-    connectedCallback(){
-        const title = this.getAttribute('title') ?? "제목이 들어와야합니다.";
-        const img_src = this.getAttribute('img_src') ?? "#";
-        const date_value = this.getAttribute('date_value') ?? "YY.MM.DD";
-        const caption_value = this.getAttribute('caption') ?? "캡션입니다.";
-        const content_value = this.getAttribute('content_value') ?? "콘텐츠의 내용";
-        const link = this.getAttribute('link') ?? "location.href='/html/pages/promotion-center.html'";
-        this.attachShadow({mode: 'open'});
+    connectedCallback() {
+        const title = this.getAttribute('title') ?? '제목이 들어와야합니다.';
+        const img_src = this.getAttribute('img_src') ?? '#';
+        const date_value = this.getAttribute('date_value') ?? 'YY.MM.DD';
+        const caption_value = this.getAttribute('caption') ?? '캡션입니다.';
+        const content_value =
+            this.getAttribute('content_value') ?? '콘텐츠의 내용';
+        const link =
+            this.getAttribute('link') ??
+            "location.href='/html/pages/promotion-center.html'";
+        this.attachShadow({ mode: 'open' });
 
         const content_wrapper = document.createElement('div');
-        content_wrapper.setAttribute('class','content-wrapper');
+        content_wrapper.setAttribute('class', 'content-wrapper');
 
         const container = document.createElement('div');
-        container.setAttribute('class','container');
+        container.setAttribute('class', 'container');
 
         const info = document.createElement('div');
-        info.setAttribute('class','info');
+        info.setAttribute('class', 'info');
 
         const h1 = document.createElement('h1');
         h1.innerText = title;
 
         const date = document.createElement('div');
-        date.setAttribute('class','date');
+        date.setAttribute('class', 'date');
 
         const span = document.createElement('span');
         span.innerText = date_value;
 
         const mainImage = document.createElement('div');
-        mainImage.setAttribute('class','mainImage');
+        mainImage.setAttribute('class', 'mainImage');
 
         const img = document.createElement('img');
-        img.setAttribute('src',img_src);
+        img.setAttribute('src', img_src);
 
         const caption = document.createElement('div');
-        caption.setAttribute('class','caption');
+        caption.setAttribute('class', 'caption');
         caption.innerText = caption_value;
 
         const content = document.createElement('content');
-        content.setAttribute('class','content');
-        content.innerText = content_value;
+        content.setAttribute('class', 'content');
+        content.innerHTML = content_value;
 
         const btn_wrapper = document.createElement('div');
         const btn = document.createElement('input');
-        btn.setAttribute('type','button');
-        btn.setAttribute('value','목록으로');
-        btn.setAttribute('class','round-04');
-        btn.setAttribute('onClick',link);
+        btn.setAttribute('type', 'button');
+        btn.setAttribute('value', '목록으로');
+        btn.setAttribute('class', 'round-04');
+        btn.setAttribute('onClick', link);
         const style = document.createElement('style');
         style.textContent = `
         .container{
@@ -103,7 +106,7 @@ class content_detail extends HTMLElement{
             margin-top: 64px;
             margin-bottom:120px;
         }
-        @media (max-width: 512px) {
+        @media (max-width: 640px) {
             .container{
                 margin-top: 36px;
             }
@@ -128,14 +131,14 @@ class content_detail extends HTMLElement{
                 margin-top:48px;
             }
         }
-        `
+        `;
         this.shadowRoot.appendChild(style);
         this.shadowRoot.appendChild(content_wrapper);
 
         content_wrapper.appendChild(container);
-        
+
         container.appendChild(info);
-        if(img_src != "#"){
+        if (img_src != '#') {
             container.appendChild(mainImage);
             mainImage.appendChild(img);
             mainImage.appendChild(caption);
@@ -149,10 +152,7 @@ class content_detail extends HTMLElement{
         date.appendChild(span);
 
         btn_wrapper.appendChild(btn);
-
-
-        
     }
 }
 
-customElements.define('content-detail',content_detail);
+customElements.define('content-detail', content_detail);

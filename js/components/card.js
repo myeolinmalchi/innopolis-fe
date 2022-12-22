@@ -1,43 +1,44 @@
-class card_container extends HTMLElement{
-    constructor(){
+class card_container extends HTMLElement {
+    constructor() {
         super();
     }
-    connectedCallback(){
-        
-    }
+    connectedCallback() {}
 }
 
-class card_content extends HTMLElement{
-    constructor(){
+class card_content extends HTMLElement {
+    constructor() {
         super();
     }
-    connectedCallback(){
-        const img_src = this.getAttribute('img_src') ?? '#';
+    connectedCallback() {
+        const img_src =
+            this.getAttribute('img_src') ?? '/image/empty-thumbnail.png';
         const category_value = this.getAttribute('category') ?? '카테고리';
-        const companyName_value = this.getAttribute('name') ?? '회사이름을 입력하시오';
-        const link = this.getAttribute('link') ?? "location.href='/html/pages/promotion-center-detail.html'";
-        this.attachShadow({mode: 'open'});
+        const companyName_value =
+            this.getAttribute('name') ?? '회사이름을 입력하시오';
+        const link =
+            this.getAttribute('link') ??
+            "location.href='/html/pages/promotion-center-detail.html'";
+        this.attachShadow({ mode: 'open' });
 
-        
         const card = document.createElement('div');
-        card.setAttribute('class','card');
-        card.setAttribute('onClick',link);
+        card.setAttribute('class', 'card');
+        card.setAttribute('onClick', link);
 
         const imgwrapper = document.createElement('div');
-        imgwrapper.setAttribute('class','round-04');
+        imgwrapper.setAttribute('class', 'round-04');
 
         const card_img = document.createElement('img');
-        card_img.setAttribute('src',img_src);
-        
+        card_img.setAttribute('src', img_src);
+
         const text_content = document.createElement('div');
-        text_content.setAttribute('class','text-content');
+        text_content.setAttribute('class', 'text-content');
 
         const category = document.createElement('span');
-        category.setAttribute('class','category');
+        category.setAttribute('class', 'category');
         category.innerText = category_value;
 
         const companyName = document.createElement('div');
-        companyName.setAttribute('class','name');
+        companyName.setAttribute('class', 'name');
         companyName.innerText = companyName_value;
         const style = document.createElement('style');
         style.textContent = `
@@ -122,52 +123,54 @@ class card_content extends HTMLElement{
                 letter-spacing: -0.01em;
             }
         }
-        ` 
+        `;
         this.shadowRoot.appendChild(style);
         this.shadowRoot.appendChild(card);
 
-
         card.appendChild(imgwrapper);
         imgwrapper.appendChild(card_img);
-        
+
         card.appendChild(text_content);
         text_content.appendChild(category);
         text_content.appendChild(companyName);
-
     }
 }
 
-class promotion_content extends HTMLElement{
-    constructor(){
+class promotion_content extends HTMLElement {
+    constructor() {
         super();
     }
-    connectedCallback(){
+    connectedCallback() {
         const img_src = this.getAttribute('img_src') ?? '#';
-        const name_value = this.getAttribute('name') ?? '법률이 정하는 주요방위산업체에 종사하는 근로자의 단체행동권...';
+        const name_value =
+            this.getAttribute('name') ??
+            '법률이 정하는 주요방위산업체에 종사하는 근로자의 단체행동권...';
         const date = this.getAttribute('date') ?? 'YY.MM.DD';
-        const link = this.getAttribute('link') ?? "location.href='/html/pages/promotion-data-detail.html'";
+        const link =
+            this.getAttribute('link') ??
+            "location.href='/html/pages/promotion-data-detail.html'";
 
-        this.attachShadow({mode: 'open'});
-        
+        this.attachShadow({ mode: 'open' });
+
         const promotion_item = document.createElement('div');
-        promotion_item.setAttribute('class','promotion_item');
-        promotion_item.setAttribute('onClick',link);
-        
+        promotion_item.setAttribute('class', 'promotion_item');
+        promotion_item.setAttribute('onClick', link);
+
         const promotionImg = document.createElement('div');
-        promotionImg.setAttribute('class','promotionImg round-04');
-        
+        promotionImg.setAttribute('class', 'promotionImg round-04');
+
         const Img = document.createElement('img');
-        Img.setAttribute('src',img_src);
-        
+        Img.setAttribute('src', img_src);
+
         const promotionTextContent = document.createElement('div');
-        promotionTextContent.setAttribute('class','promotionTextContent');
+        promotionTextContent.setAttribute('class', 'promotionTextContent');
 
         const promotionName = document.createElement('div');
-        promotionName.setAttribute('class','promotionName');
+        promotionName.setAttribute('class', 'promotionName');
         promotionName.innerText = name_value;
 
         const promotionDate = document.createElement('div');
-        promotionDate.setAttribute('class','promotionDate');
+        promotionDate.setAttribute('class', 'promotionDate');
         promotionDate.innerText = date;
 
         const style = document.createElement('style');
@@ -185,7 +188,11 @@ class promotion_content extends HTMLElement{
         .promotionImg{
             width: 100%;
             height: 180px;
-            background-color: #ddd;
+        }
+
+        img {
+            object-fit: contain;
+            max-width: 100%;
         }
         
         .promotionTextContent{
@@ -268,66 +275,68 @@ class promotion_content extends HTMLElement{
             
             
         }
-        `
+        `;
         this.shadowRoot.appendChild(style);
         this.shadowRoot.appendChild(promotion_item);
 
-
         promotion_item.appendChild(promotionImg);
         promotion_item.appendChild(promotionTextContent);
-        
+
         promotionImg.appendChild(Img);
-        
+
         promotionTextContent.appendChild(promotionName);
         promotionTextContent.appendChild(promotionDate);
-
-
     }
 }
 
-class report_content extends HTMLElement{
-    constructor(){
+class report_content extends HTMLElement {
+    constructor() {
         super();
     }
-    connectedCallback(){
-        const img_src = this.getAttribute('img_src') ?? '#';
-        const name_value = this.getAttribute('name') ?? '법률이 정하는 주요방위산업체에 종사하는 근로자의 단체행동권...';
-        const summary_value = this.getAttribute('summary') ?? '법률이 정하는 주요방위산업체에 종사하는 근로자의 단체행동권...';
+    connectedCallback() {
+        const img_src =
+            this.getAttribute('img_src') ?? '/image/empty-thumbnail.png';
+        const name_value =
+            this.getAttribute('name') ??
+            '법률이 정하는 주요방위산업체에 종사하는 근로자의 단체행동권...';
+        const summary_value =
+            this.getAttribute('summary') ??
+            '법률이 정하는 주요방위산업체에 종사하는 근로자의 단체행동권...';
         const date = this.getAttribute('date') ?? 'YY.MM.DD';
         const maker_value = this.getAttribute('maker') ?? '현찬일보';
-        const link = this.getAttribute('link') ?? "location.href='/html/pages/promotion-center-detail.html'";
-        this.attachShadow({mode: 'open'});
-        
+        const link = this.getAttribute('link') ?? '';
+        this.attachShadow({ mode: 'open' });
+
         const report_item = document.createElement('div');
-        report_item.setAttribute('class','report_item');
-        report_item.setAttribute('onClick',link);
+        report_item.setAttribute('class', 'report_item');
+        report_item.setAttribute('onClick', `location.href='${link}'`);
 
         const reportImg = document.createElement('div');
-        reportImg.setAttribute('class','reportImg round-04');
-        
+        reportImg.setAttribute('class', 'reportImg round-04');
+
         const Img = document.createElement('img');
-        Img.setAttribute('src',img_src);
-        
+        Img.setAttribute('src', img_src);
+
         const reportTextContent = document.createElement('div');
-        reportTextContent.setAttribute('class','reportTextContent');
+        reportTextContent.setAttribute('class', 'reportTextContent');
 
         const reportName = document.createElement('div');
-        reportName.setAttribute('class','reportName');
+        reportName.setAttribute('class', 'reportName');
         reportName.innerText = name_value;
 
         const summary = document.createElement('div');
-        summary.setAttribute('class','summary');
+        summary.setAttribute('class', 'summary');
         summary.innerText = summary_value;
 
         const maker = document.createElement('div');
-        maker.setAttribute('class','maker');
+        maker.setAttribute('class', 'maker');
 
         const reportDate = document.createElement('div');
-        reportDate.setAttribute('class','reportDate');
+        reportDate.setAttribute('class', 'reportDate');
         reportDate.innerText = date;
 
         const news = document.createElement('div');
-        news.setAttribute('class','news');
+        news.setAttribute('class', 'news');
         news.innerText = maker_value;
 
         const style = document.createElement('style');
@@ -345,7 +354,6 @@ class report_content extends HTMLElement{
         .reportImg{
             width: 100%;
             height: 180px;
-            background-color: #ddd;
         }
         
         .reportTextContent{
@@ -426,24 +434,21 @@ class report_content extends HTMLElement{
                 font-size: var(--body-01);
             }    
         }
-        `
+        `;
         this.shadowRoot.appendChild(style);
         this.shadowRoot.appendChild(report_item);
-
 
         report_item.appendChild(reportImg);
         report_item.appendChild(reportTextContent);
 
         reportImg.appendChild(Img);
-        
+
         reportTextContent.appendChild(reportName);
         reportTextContent.appendChild(summary);
         reportTextContent.appendChild(maker);
-        
+
         maker.appendChild(reportDate);
         maker.appendChild(news);
-
-
     }
 }
 

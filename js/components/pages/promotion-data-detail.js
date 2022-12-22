@@ -8,7 +8,7 @@ class content_detail extends HTMLElement{
         const date_value = this.getAttribute('date_value') ?? "YY.MM.DD";
         const caption_value = this.getAttribute('caption') ?? "캡션입니다.";
         const content_value = this.getAttribute('content_value') ?? "콘텐츠의 내용";
-
+        const link = this.getAttribute('link') ?? "location.href='/html/pages/promotion-center.html'";
         this.attachShadow({mode: 'open'});
 
         const content_wrapper = document.createElement('div');
@@ -48,7 +48,7 @@ class content_detail extends HTMLElement{
         btn.setAttribute('type','button');
         btn.setAttribute('value','목록으로');
         btn.setAttribute('class','round-04');
-
+        btn.setAttribute('onClick',link);
         const style = document.createElement('style');
         style.textContent = `
         .container{

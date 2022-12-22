@@ -105,11 +105,20 @@ class footer_default extends HTMLElement {
             min-height: 342px;
             width: 100%;
             background-color:#1A2433;
-            display: block;
-            color: #9CA3AF;
-            padding-top: 60px;
-            margin: 0 auto;
+            display: inline-block;
             font-family: 'Pretendard';
+            font-style: normal;
+            font-weight: 500;
+            font-size: var(--body-02-me);
+            line-height: 160%;
+            /* or 19px */
+
+            text-align: left;
+            letter-spacing: -0.01em;
+
+            /* Txt/Third */
+
+            color: var(--text-third);
         }
         .container{
             max-width: 1100px;
@@ -121,7 +130,10 @@ class footer_default extends HTMLElement {
             display: inline-block;
             float: left;
         }
-        
+        .first{
+            margin-top: 60px;
+            width: 100%;
+        }
         .left{
             display: inline-block;
             float: left;
@@ -143,7 +155,6 @@ class footer_default extends HTMLElement {
         }
         
         .list{
-            weight: 50%;
             margin-top: 3px;
             margin-left: 24px;
             float: right;
@@ -176,22 +187,16 @@ class footer_default extends HTMLElement {
         .mleft{
             margin-left: 16px;
         }
-        /* 반응형 */
-        @media (max-width: 1100px) {
-            .container{
-                max-width: 864px;
-            }
-        }
         
-        @media (max-width: 864px) {
+        @media (max-width: 640px) {
             .container{
-                max-width: 350px;
+                max-width: 328px;
             }
             footer{
-                padding-top: 32px;
-                font-size: 12px;
-                line-height: 19px;
-                line-height: 160%;
+                font-size: var(--body-01);
+            }
+            .first{
+                margin-top: 32px;
             }
             .list{
                 margin: 0px;
@@ -215,6 +220,9 @@ class footer_default extends HTMLElement {
             }
             .rightcontent .right{
                 float: left;
+            }
+            .fivth{
+                margin-bottom: 48px;
             }
         }
         `;

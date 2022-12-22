@@ -28,7 +28,8 @@ class footer_default extends HTMLElement {
         content_first_li_3.setAttribute('onClick',"location.href='/html/pages/etc.html?tab=2'");
         const content_first_li_4 = document.createElement('li');
         content_first_li_4.innerText = '오시는길';
-
+        content_first_li_4.setAttribute('onClick',"location.href='/html/pages/introduce.html?tab=2'");
+        
         const content_second = document.createElement('div');
         content_second.setAttribute('class', 'content second left');
         const content_second_hr = document.createElement('hr');

@@ -14,7 +14,7 @@ customElements.define(
         sibs;
         connectedCallback() {
             const login = this.getAttribute('login') ?? 'false';
-            const focus = Number(this.getAttribute('focus')) ?? 0;
+            const focus = Number(this.getAttribute('focus') ?? '-1');
             this.innerHTML = `
                 <nav>
                     <div class="container">

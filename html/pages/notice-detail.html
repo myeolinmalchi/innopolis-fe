@@ -103,5 +103,64 @@
                 >
             </div>
         </div>
+        <script>
+            let post;
+            const contentWrapper = document.querySelector(
+                'div.detail-container',
+            );
+            const render = () => {
+                contentWrapper.innerHTML = `
+            <span class="title-bd">
+            ${
+                post.공지
+                    ? '<span class="notice-primary body-bd">공지</span>'
+                    : ''
+            }
+                ${post.title}
+            </span>
+            <span class="body-me">${post.date}</span>
+            <span class="body-me"
+                >${post.content}</span
+            >
+            <div class="file-container">
+                ${post.files.reduce((acc, file) => {
+                    return (
+                        acc +
+                        `
+                        <div>
+                            <div></div>
+                            <div>
+                                <span class="body-bd"
+                                    >${file.name}</span
+                                >
+                                <span class="body-me">${file.size}</span>
+                            </div>
+                            <button-text style_="secondary" onclick="location.href='${file.link}'">다운로드</button-text>
+                        </div>
+                    `
+                    );
+                }, '')}
+            </div>
+            <div class="button-container">
+                <button-default
+                    style_="outline"
+                    onclick="location.href='/html/pages/customer-support.html'"
+                    >목록으로</button-default
+                >
+            </div>
+                    
+                `;
+            };
+            window.onload = async () => {
+                const urlParams = new URLSearchParams(window.location.search);
+                const index = urlParams.get('idx');
+                const res = await fetch(
+                    '/resources/pages/customer-support/notice.json',
+                );
+                const posts = await res.json();
+                post = posts[index];
+                render();
+            };
+        </script>
     </body>
 </html>

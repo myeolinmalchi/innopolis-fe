@@ -20,10 +20,10 @@
 .top-content-wrapper > div:first-child {
     width: calc(66% - 12px);
     height: 400px;
-    border-radius: 8px;
+    border-radius: 4px;
     display: flex;
     justify-content: center;
-    background: gray;
+    border: 1px solid var(--stroke-gray-01);
 }
 
 .top-content-wrapper > div:first-child > img {
@@ -39,6 +39,7 @@
     padding: 32px;
     gap: 32px;
     box-sizing: border-box;
+    border-radius: 4px;
 }
 
 .top-content-wrapper > div:nth-child(2) > :first-child {
@@ -53,7 +54,6 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    height: 26px;
 }
 
 .top-content-wrapper > div:nth-child(2) > :last-child {
@@ -70,9 +70,6 @@
     width: 30%;
     text-align: left;
     display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .top-content-wrapper > div:nth-child(2) > :first-child > div > :last-child {
@@ -80,10 +77,9 @@
     font-size: var(--body-03);
     text-align: left;
     margin-left: 15px;
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
 }
 
 .subcontent-wrapper {

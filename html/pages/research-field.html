@@ -56,42 +56,15 @@
                             onclick="location.href='/html/pages/research-field-detail.html'"
                         >
                             <span class="title-bd"
-                                >2022 충남지역 주요사업 공동박람회 개최</span
+                                >(연구분야) 전기자동차용 에너지저장시스템(ESS)
+                                부품 소재 개발</span
                             >
-                            <span class="body-me">2022.01.26</span>
-                        </div>
-                        <div>
-                            <span class="title-bd"
-                                >2022 충남지역 주요사업 공동박람회 개최</span
-                            >
-                            <span class="body-me">2022.01.26</span>
-                        </div>
-                        <div>
-                            <span class="title-bd"
-                                >2022 충남지역 주요사업 공동박람회 개최</span
-                            >
-                            <span class="body-me">2022.01.26</span>
-                        </div>
-                        <div>
-                            <span class="title-bd"
-                                >2022 충남지역 주요사업 공동박람회 개최</span
-                            >
-                            <span class="body-me">2022.01.26</span>
-                        </div>
-                        <div>
-                            <span class="title-bd"
-                                >2022 충남지역 주요사업 공동박람회 개최</span
-                            >
-                            <span class="body-me">2022.01.26</span>
+                            <span class="body-me">2022.09.08</span>
                         </div>
                     </div>
                     <pagination-container>
                         <pagination-arrow direction="left"></pagination-arrow>
-                        <pagination-unit link="/1">1</pagination-unit>
-                        <pagination-unit state="focus">2</pagination-unit>
-                        <pagination-unit>3</pagination-unit>
-                        <pagination-unit>4</pagination-unit>
-                        <pagination-unit>5</pagination-unit>
+                        <pagination-unit state="focus">1</pagination-unit>
                         <pagination-arrow direction="right"></pagination-arrow>
                     </pagination-container>
                 </div>
@@ -99,34 +72,10 @@
             <tab-content id="content2">
                 <img class="top-img" src="" alt="" />
                 <div class="content-wrapper">
-                    <div class="post-container">
-                        <div
-                            onclick="location.href='/html/pages/equipment-detail.html'"
-                        >
-                            <img src="/image/empty-thumbnail.png" alt="" />
-                            <div>
-                                <span class="body-me">장비명</span>
-                                <span class="title-bd">모델명</span>
-                            </div>
-                        </div>
-                        <div>
-                            <img src="/image/empty-thumbnail.png" alt="" />
-                            <div>
-                                <span class="body-me">장비명</span>
-                                <span class="title-bd"
-                                    >어어어어어어어어어ㅓㅓㅓㅓㅓ어어어어어어어어어어엄청
-                                    긴 모델명ㅇㅇㅇㅇㅇㅇㅇㅇ</span
-                                >
-                            </div>
-                        </div>
-                    </div>
+                    <div class="post-container"></div>
                     <pagination-container>
                         <pagination-arrow direction="left"></pagination-arrow>
-                        <pagination-unit link="/1">1</pagination-unit>
-                        <pagination-unit state="focus">2</pagination-unit>
-                        <pagination-unit>3</pagination-unit>
-                        <pagination-unit>4</pagination-unit>
-                        <pagination-unit>5</pagination-unit>
+                        <pagination-unit state="focus">1</pagination-unit>
                         <pagination-arrow direction="right"></pagination-arrow>
                     </pagination-container>
                 </div>
@@ -134,50 +83,49 @@
             <tab-content id="content3">
                 <img class="top-img" src="" alt="" />
                 <div class="content-wrapper">
-                    <div class="post-container">
-                        <div
-                            onclick="location.href='/html/pages/tech-data.html'"
-                        >
-                            <span class="title-bd"
-                                >2022 충남지역 주요사업 공동박람회 개최</span
-                            >
-                            <span class="body-me">2022.01.26</span>
-                        </div>
-                        <div>
-                            <span class="title-bd"
-                                >2022 충남지역 주요사업 공동박람회 개최</span
-                            >
-                            <span class="body-me">2022.01.26</span>
-                        </div>
-                        <div>
-                            <span class="title-bd"
-                                >2022 충남지역 주요사업 공동박람회 개최</span
-                            >
-                            <span class="body-me">2022.01.26</span>
-                        </div>
-                        <div>
-                            <span class="title-bd"
-                                >2022 충남지역 주요사업 공동박람회 개최</span
-                            >
-                            <span class="body-me">2022.01.26</span>
-                        </div>
-                        <div>
-                            <span class="title-bd"
-                                >2022 충남지역 주요사업 공동박람회 개최</span
-                            >
-                            <span class="body-me">2022.01.26</span>
-                        </div>
-                    </div>
+                    <div class="post-container"></div>
                     <pagination-container>
                         <pagination-arrow direction="left"></pagination-arrow>
-                        <pagination-unit link="/1">1</pagination-unit>
-                        <pagination-unit state="focus">2</pagination-unit>
-                        <pagination-unit>3</pagination-unit>
-                        <pagination-unit>4</pagination-unit>
-                        <pagination-unit>5</pagination-unit>
+                        <pagination-unit state="focus">1</pagination-unit>
                         <pagination-arrow direction="right"></pagination-arrow>
                     </pagination-container></div
             ></tab-content>
         </tab-content-area>
+
+        <script>
+            let equipments;
+            const postContainer = document.querySelector(
+                '#content2 div.post-container',
+            );
+            const render = (page) => {
+                postContainer.innerHTML = equipments.reduce(
+                    (acc, equipment, idx) => {
+                        return (
+                            acc +
+                            `
+                        <div
+                            onclick="location.href='/html/pages/equipment-detail.html?idx=${idx}'"
+                        >
+                            <img src="${equipment.img}" alt="" />
+                            <div>
+                                <span class="body-me">${equipment.장비명}</span>
+                                <span class="title-bd">${equipment.모델명}</span>
+                            </div>
+                        </div>
+                        `
+                        );
+                    },
+                    '',
+                );
+            };
+
+            (async function () {
+                const res = await fetch(
+                    '/resources/pages/research-field/equipment.json',
+                );
+                equipments = await res.json();
+                render();
+            })();
+        </script>
     </body>
 </html>

@@ -19,17 +19,29 @@ class footer_default extends HTMLElement {
         content_first_ul.setAttribute('class', 'list');
         const content_first_li_1 = document.createElement('li');
         content_first_li_1.innerText = '개인정보처리방침';
-        content_first_li_1.setAttribute('onClick',"location.href='/html/pages/etc.html?tab=0'");
+        content_first_li_1.setAttribute(
+            'onClick',
+            "location.href='/html/pages/etc.html?tab=0'",
+        );
         const content_first_li_2 = document.createElement('li');
         content_first_li_2.innerText = '이메일무단수집거부';
-        content_first_li_2.setAttribute('onClick',"location.href='/html/pages/etc.html?tab=1'");
+        content_first_li_2.setAttribute(
+            'onClick',
+            "location.href='/html/pages/etc.html?tab=1'",
+        );
         const content_first_li_3 = document.createElement('li');
         content_first_li_3.innerText = '이용약관';
-        content_first_li_3.setAttribute('onClick',"location.href='/html/pages/etc.html?tab=2'");
+        content_first_li_3.setAttribute(
+            'onClick',
+            "location.href='/html/pages/etc.html?tab=2'",
+        );
         const content_first_li_4 = document.createElement('li');
         content_first_li_4.innerText = '오시는길';
-        content_first_li_4.setAttribute('onClick',"location.href='/html/pages/introduce.html?tab=2'");
-        
+        content_first_li_4.setAttribute(
+            'onClick',
+            "location.href='/html/pages/introduce.html?tab=2'",
+        );
+
         const content_second = document.createElement('div');
         content_second.setAttribute('class', 'content second left');
         const content_second_hr = document.createElement('hr');
@@ -111,6 +123,7 @@ class footer_default extends HTMLElement {
             font-weight: 500;
             font-size: var(--body-02-me);
             line-height: 160%;
+            height: 346px;
             /* or 19px */
 
             text-align: left;

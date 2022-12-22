@@ -108,6 +108,7 @@ a{
     .card-detail-container{
         max-width: 328px;
         padding: 0px 16px;
+        box-sizing: border-box;
     }
     .company-name{
         font-size: 20px;

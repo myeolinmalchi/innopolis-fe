@@ -431,6 +431,7 @@ promotion-item{
   }
   .content-title{
     text-align: left;
+    font-size: var(--subtitle-03);
   }
   .promotion-card{
     display: none;
@@ -438,5 +439,11 @@ promotion-item{
   }
   #pc1{
     display: block;
+  }
+  .content-subtitle{
+    font-size: var(--subtitle-02);
+  }
+  .content-text{
+    font-size: var(--body-02);
   }
 }

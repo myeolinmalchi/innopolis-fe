@@ -3,6 +3,9 @@ img{
     height: 100%;
     
 }
+li{
+    list-style: none;
+}
 .main-video{
     position: fixed; right: 0; bottom: 0;
             min-width: 100%; min-height: 100%;
@@ -369,6 +372,7 @@ promotion-item{
   }
   .third-content-item ul{
     width: 100%;
+    padding: 0px;
   }
   .third-text-content{
     width: 100%;

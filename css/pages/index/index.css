@@ -3,6 +3,29 @@ img{
     height: 100%;
     
 }
+li{
+    list-style: none;
+}
+.video-container{
+  width: 100%;
+  height: 800px;
+  position: relative;
+  overflow: hidden;
+}
+.video-container video{
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.video-container .content-wrapper{
+  z-index: 1;
+  position: relative;
+
+}
+
 .content-title{
     font-family: 'Pretendard';
     font-style: normal;
@@ -32,9 +55,7 @@ img{
     font-size: var(--title-03);
     line-height: 130%;
     /* or 42px */
-    
     letter-spacing: -0.01em;
-    
     /* BG/White-01 */
     
     color: var(--text-white);    
@@ -362,6 +383,7 @@ promotion-item{
   }
   .third-content-item ul{
     width: 100%;
+    padding: 0px;
   }
   .third-text-content{
     width: 100%;
@@ -420,6 +442,7 @@ promotion-item{
   }
   .content-title{
     text-align: left;
+    font-size: var(--subtitle-03);
   }
   .promotion-card{
     display: none;
@@ -427,5 +450,14 @@ promotion-item{
   }
   #pc1{
     display: block;
+  }
+  .content-subtitle{
+    font-size: var(--subtitle-02);
+  }
+  .content-text{
+    font-size: var(--body-02);
+  }
+  .video-container{
+    height: 400px;
   }
 }

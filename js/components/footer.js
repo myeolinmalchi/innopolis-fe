@@ -126,7 +126,7 @@ class footer_default extends HTMLElement {
             height: 346px;
             /* or 19px */
 
-            text-align: left;
+            text-align: center;
             letter-spacing: -0.01em;
 
             /* Txt/Third */
@@ -137,6 +137,10 @@ class footer_default extends HTMLElement {
             max-width: 1100px;
             width: 100%;
             margin: 0 auto;
+            background-color:#1A2433;
+            display: inline-block;
+            text-align: left;
+            box-sizing: border-box;
         }
         
         .content{
@@ -203,7 +207,7 @@ class footer_default extends HTMLElement {
         
         @media (max-width: 640px) {
             .container{
-                max-width: 328px;
+                padding: 0px 16px;
             }
             footer{
                 font-size: var(--body-01);

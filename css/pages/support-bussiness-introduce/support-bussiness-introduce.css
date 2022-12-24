@@ -1,7 +1,9 @@
 .content-wrapper {
     max-width: 1100px;
 }
-
+li{
+    list-style: none;
+}
 .main-title {
     /* Title/Title03 */
     margin-top: 0px;
@@ -806,7 +808,7 @@
     }
 
     .text-body-02 {
-        font-size: var(--body-01);
+        font-size: 6.95px;
     }
     .text-body-01 {
         font-size: 10px;
@@ -824,9 +826,15 @@
     .lab-process-item-8:nth-child(4n) {
         margin-right: 0px;
     }
-
+    .process-num{
+        width: 23.18px;
+        height: 23.18px;
+        font-size: 13.91px;
+        line-height: 18.08px;
+    }
     .shadow-02 .process-item-text {
-        font-size: var(--subtitle-01);
+        font-size: 10.43px;
+        padding: 6.37px 9.19px 10.82px ;
     }
     .stragy-wrapper {
         padding: 0px;
@@ -881,4 +889,5 @@ tab-content:nth-child(2) > img.top-img {
     tab-content:nth-child(2) > img.top-img {
         content: url(/image/pages/support-bussiness-introduce/2-0-m.png);
     }
+    
 }

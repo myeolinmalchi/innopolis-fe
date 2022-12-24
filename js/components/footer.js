@@ -116,7 +116,7 @@ class footer_default extends HTMLElement {
         footer {
             min-height: 342px;
             width: 100%;
-            background-color:#1A2433;
+            background-color:#111827;
             display: inline-block;
             font-family: 'Pretendard';
             font-style: normal;
@@ -137,7 +137,7 @@ class footer_default extends HTMLElement {
             max-width: 1100px;
             width: 100%;
             margin: 0 auto;
-            background-color:#1A2433;
+            background-color:#111827;
             display: inline-block;
             text-align: left;
             box-sizing: border-box;

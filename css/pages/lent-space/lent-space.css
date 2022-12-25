@@ -1,4 +1,4 @@
-.content-main-img {
+.content-main-nimg {
     display: block;
     background-color: #ddd;
     width: 100%;
@@ -10,8 +10,12 @@ img {
     width: 100%;
     height: 100%;
 }
+.main-btn{
+    font-size: var(--body-04);
+}
 
 .lent-container {
+    letter-spacing: -0.01em;
     display: block;
     max-width: 1100px;
     width: 100%;
@@ -24,12 +28,12 @@ img {
 
 .content-title {
     color: var(--text-white);
-    font-size: var(--subtitle-03);
+    font-size: var(--page-title-01);
 }
 
 .content-body {
     color: var(--text-white);
-    font-size: var(--subtitle-01);
+    font-size: var(--body-03);
     margin-top: 24px;
 }
 
@@ -75,7 +79,7 @@ img {
 .space {
     display: block;
     margin-bottom: 12px;
-    font-size: var(--subtitle-02);
+    font-size: 18px;
     font-weight: 700;
     line-height: 23.4px;
 }
@@ -157,6 +161,7 @@ img {
     line-height: 22.4px;
     height: 90px;
     box-sizing: border-box;
+    font-size: var(--body-02);
     padding: 16px;
     color: var(--text-secondary);
 }
@@ -166,13 +171,14 @@ img {
     box-sizing: border-box;
     padding: 32px;
     float: right;
+    border-radius: 4px 0px 0px 4px;
     background-color: var(--background-gray-01);
 }
 
 .type {
     margin-bottom: 4px;
     color: var(--text-third);
-    font-size: var(--body-03);
+    font-size: var(--body-02);
 }
 
 .value {
@@ -403,5 +409,20 @@ img {
     }
     .summary-detail{
         width: 100%;
+    }
+    .content-title{
+        font-size: var(--subtitle-03);
+    }
+    .main-btn{
+        font-size: var(--body-02);
+    }
+    .space-summary{
+        font-size: var(--body-02);
+    }
+    .map{
+        margin-bottom: 16px;
+    }
+    .line{
+        font-size: var(--body-03);
     }
 }

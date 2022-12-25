@@ -208,6 +208,18 @@ li{
     padding: 16px 0px;
 }
 
+.content2-3 .shadow-02{
+    position:relative;
+}
+.content2-3 .process-summary-wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    box-sizing: border-box;
+    transform: translate(-50%,-50%);
+}
+
 .process .table .first-item {
     color: var(--text-white);
     background-color: var(--background-blue-01);
@@ -277,8 +289,22 @@ li{
     float: left;
     margin-right: 36.72px;
 }
+.process-summary-wrapper{
+    padding: 22px 13px 14px 13px;
+    border-radius: 4px;
+}
+.process-summary-wrapper .text-body-02{
+    padding-top: 14px;
+}
+.content2-4 .process-summary-wrapper{
+    position: relative;
+}
+.content2-4 .process-item-text{
+    height: 46px;
+}
 
 .process-num {
+    z-index: 1;
     background-color: var(--background-blue-01);
     color: var(--text-white);
     border-radius: 50%;
@@ -287,7 +313,8 @@ li{
     text-align: center;
     margin: 0 auto;
     line-height: 40px;
-    margin-bottom: 11px;
+    position: relative;
+    top: 7px;
 
     /* Title/Title01 */
 
@@ -306,8 +333,8 @@ li{
 }
 
 .process-item-text {
-    height: 46px;
-    padding: 11px 16px 14px;
+    height: 82px;
+    padding-bottom: 21px;
     background-color: var(--background-white-01);
     font-family: 'Pretendard';
     font-style: normal;
@@ -315,7 +342,6 @@ li{
     font-size: var(--subtitle-02);
     line-height: 130%;
     text-align: center;
-    border-radius: 4px;
     /* or 23px */
 
     text-align: center;
@@ -486,16 +512,17 @@ li{
 }
 
 .lab-process-item-5 .shadow-02 {
-    padding: 11px 16px 14px 16px;
 }
 
+.lab-process-container > .shadow-02{
+    border-radius: 4px;
+}
 .lab-process-item-5:last-child {
     margin-right: 0px;
 }
 
 .lab-process-item-5 .shadow-02 div:last-child {
     text-align: center;
-    margin-top: 14px;
 }
 
 .shadow-02 .process-item-text {
@@ -507,13 +534,16 @@ li{
     margin-right: 20px;
 }
 
+.lab-process-item-8 .process-item-text{
+    height: 46px;
+}
 .lab-process-item-8:last-child {
     margin-right: 0px;
 }
 
 .lab-process-item-8 .text-body-02 {
-    padding: 14px 12px;
     min-height: 66px;
+    padding-top: 14px;
 }
 
 .mainIssue-container {
@@ -644,6 +674,9 @@ li{
 .support-detail-left .round-04:first-child div {
     line-height: 270px;
 }
+.small-img{
+    display: none;
+}
 
 .support-detail-center {
     width: 616px;
@@ -693,7 +726,6 @@ li{
     max-width: 1100px;
     width: 100%;
     background-color: var(--background-gray-01);
-    padding: 102px 22px;
     box-sizing: border-box;
     display: inline-block;
 }
@@ -759,6 +791,7 @@ li{
     }
 
     .main-title {
+        margin-bottom: 32px;
         font-size: var(--subtitle-03);
     }
 
@@ -834,7 +867,6 @@ li{
     }
     .shadow-02 .process-item-text {
         font-size: 10.43px;
-        padding: 6.37px 9.19px 10.82px ;
     }
     .stragy-wrapper {
         padding: 0px;
@@ -872,6 +904,28 @@ li{
     }
     .process-container .midtab {
         width: 100%;
+    }
+    .large-img{
+        display: none;
+    }
+    .small-img{
+        display: block;
+    }
+    .mainIssue-item div:first-child {
+        width: 100%;
+    }
+    
+    .mainIssue-item div:last-child {
+        width: 100%;
+    }
+    .mainIssue-item div:last-child div{
+        font-size: var(--body-03);
+    }
+    .content-padding .main-title{
+        margin-bottom: 32px;
+    }
+    .main-benefit-container .content-sub-title{
+        font-size: var(--body-03);
     }
 }
 

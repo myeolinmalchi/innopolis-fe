@@ -52,4 +52,8 @@ pagination-container {
         display: inline-block;
         height: 215px;
     }
+    pagination-container{
+        margin-top: 32px;
+        margin-bottom: 120px;
+    }
 }

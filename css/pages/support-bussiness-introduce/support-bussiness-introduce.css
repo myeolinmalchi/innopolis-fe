@@ -943,5 +943,8 @@ tab-content:nth-child(2) > img.top-img {
     tab-content:nth-child(2) > img.top-img {
         content: url(/image/pages/support-bussiness-introduce/2-0-m.png);
     }
+    .text-body-04{
+        font-size: var(--body-03);
+    }
     
 }

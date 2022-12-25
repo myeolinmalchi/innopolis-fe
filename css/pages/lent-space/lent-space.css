@@ -198,7 +198,17 @@ img {
     background-color: var(--color-gray-hover);
     color: var(--text-white);
 }
-
+.map2{
+    width: 50%;
+    height: 420px;
+    text-align: left;
+    position: relative;
+}
+.map2 .inforamtion-wrapper{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
 .map {
     width: 50%;
     height: 484px;
@@ -279,7 +289,7 @@ img {
     font-family: 'Pretendard';
     font-style: normal;
     font-weight: 500;
-    font-size: var(--body-caption);
+    font-size: var(--body-01);
     line-height: 160%;
     /* or 19px */
 
@@ -289,8 +299,21 @@ img {
 
     color: var(--text-third);
 }
+.image-height{
+    height: 400px;
+}
+.preferential .space-item{
+    min-height: 135px;
+}
+.item-height{
+    
+}
 
 @media (max-width: 640px) {
+    
+    .image-height{
+        height: 330px;
+    }
     .lent-container {
         padding-top: 88px;
         padding-bottom: 88px;
@@ -344,6 +367,7 @@ img {
         width: 100%;
     }
 
+
     .benefit-img {
         margin-bottom: 0px;
     }
@@ -359,6 +383,11 @@ img {
 
     .map {
         height: 160px;
+    }
+    .map2{
+        padding: 16px;
+        height: 328px;
+        margin-top: 16px;
     }
 
     .lentBtn {
@@ -409,6 +438,7 @@ img {
     }
     .summary-detail{
         width: 100%;
+        margin-top: 16px;
     }
     .content-title{
         font-size: var(--subtitle-03);
@@ -425,4 +455,5 @@ img {
     .line{
         font-size: var(--body-03);
     }
+    
 }

@@ -19,6 +19,7 @@
     <script type="text/javascript" src="/js/components/lentSpace/companyCard.js"></script>
     <script type="text/javascript" src="/js/components/top-nav.js"></script>
     <script type="text/javascript" src="/js/components/button.js"></script>
+    <script type="text/javascript" src="/js/components/top-image.js"></script>
 </head>
 
 <body style="letter-spacing: -0.01em;">
@@ -539,37 +540,12 @@
                             <span class="space-title">입주절차</span>
                         </div>
 
-                        <div class="process-wrapper">
-                            <div class="process-item">
-                                <div class="process-icon"></div>
-                                <span class="process-item-summary">모집 공고 및 상담</span>
-                            </div>
-                            <div class="process-item">
-                                <div class="process-icon"></div>
-                                <span class="process-item-summary">입주 신청서 접수</span>
-                                <span class="process-item-detail">(홈페이지)</span>
-                            </div>
-                            <div class="process-item">
-                                <div class="process-icon"></div>
-                                <span class="process-item-summary">입주 심사 및 선정</span>
-                            </div>
-                            <div class="process-item">
-                                <div class="process-icon"></div>
-                                <span class="process-item-summary">입주승인 통보</span>
-                            </div>
-                            <div class="process-item">
-                                <div class="process-icon"></div>
-                                <span class="process-item-summary">입주계약 체결</span>
-                                <span class="process-item-detail">(입주 승인 10일 이내)</span>
-                            </div>
-                            <div class="process-item">
-                                <div class="process-icon"></div>
-                                <span class="process-item-summary">입주</span>
-                                <span class="process-item-detail">(지정입주일 15일 이내)</span>
-                            </div>
+                        <div class="process-container">
+                            <img class="large-img" src="../../image/pages/lentspace/3-6.png" width="100%" height="100%">
+                            <img class="small-img" src="../../image/pages/lentspace/3-6-m.png" width="100%"
+                                height="100%">
                         </div>
                     </div>
-                    <hr class="process-line">
                 </div>
             </div>
             <div class="content-wrapper">
@@ -636,25 +612,25 @@
                         </div>
                         <div class="location-item map2">
                             <div class="inforamtion-wrapper">
-                            <div class="information">
-                                <div class="type">
-                                    <span>문의전화</span>
+                                <div class="information">
+                                    <div class="type">
+                                        <span>문의전화</span>
+                                    </div>
+                                    <div class="value">
+                                        <span>041-424-7014</span>
+                                    </div>
                                 </div>
-                                <div class="value">
-                                    <span>041-424-7014</span>
+                                <div class="information">
+                                    <div class="type">
+                                        <span>이메일</span>
+                                    </div>
+                                    <div class="value">
+                                        <span>mjsung@katech.re.kr</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="information">
-                                <div class="type">
-                                    <span>이메일</span>
-                                </div>
-                                <div class="value">
-                                    <span>mjsung@katech.re.kr</span>
-                                </div>
-                            </div>
 
-                            <input type="button" value="입주 문의하기 >" class="body-04 round-04 lentBtn"
-                                onclick="location.href='/html/pages/lent-space.html?tab=2'" />
+                                <input type="button" value="입주 문의하기 >" class="body-04 round-04 lentBtn"
+                                    onclick="location.href='/html/pages/lent-space.html?tab=2'" />
                             </div>
                         </div>
                     </div>
@@ -683,29 +659,12 @@
             </div>
         </tab-content>
         <tab-content id="content4">
-            <div class="content-main-img image-height
-            " style="
-                        background-image: url(../../image/pages/lentspace/4-0.png);
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                    ">
-                <div class="content-wrapper" style="height: 100%;">
-                    <div class="lent-container">
-                        <div class="content-title">
-                            <span>미래 자동차 산업 패러다임을 선도하는<br />새로운
-                                혁신성장의 거점</span>
-                        </div>
-                        <div class="content-body">
-                            <span>미래 자동차 창출의 중심지, 충남천안
-                                아산강소특구</span>
-                        </div>
-                        <div class="content-button" style="justify-content: left">
-                            <input type="button" value="입주 문의하기" class="body-04 round-04"
-                                onclick="location.href='/html/pages/lent-space.html?tab=2'" />
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <top-image 
+            img_src="../../../image/pages/lentspace/3-5.png"
+            title="미래 자동차 산업 패러다임을 선도하는 
+            새로운 혁신성장의 거점"
+            summary="미래 자동차 창출의 중심지, 충남천안 아산강소특구"></top-image>
+            
             <div class="post-lent-container">
                 <subcontent-tab-area>
                     <tab-introduction-container>

@@ -10,7 +10,8 @@ img {
     width: 100%;
     height: 100%;
 }
-.main-btn{
+
+.main-btn {
     font-size: var(--body-04);
 }
 
@@ -198,17 +199,20 @@ img {
     background-color: var(--color-gray-hover);
     color: var(--text-white);
 }
-.map2{
+
+.map2 {
     width: 50%;
     height: 420px;
     text-align: left;
     position: relative;
 }
-.map2 .inforamtion-wrapper{
+
+.map2 .inforamtion-wrapper {
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
 }
+
 .map {
     width: 50%;
     height: 484px;
@@ -282,6 +286,10 @@ img {
     line-height: 25.6px;
 }
 
+.small-img {
+    display: none;
+}
+
 .summary-detail {
     width: 486px;
     /* Body/Caption */
@@ -299,21 +307,119 @@ img {
 
     color: var(--text-third);
 }
-.image-height{
+
+.image-height {
     height: 400px;
 }
-.preferential .space-item{
+
+.preferential .space-item {
     min-height: 135px;
 }
-.item-height{
-    
+
+.item-height {}
+
+
+
+.content-top-img {
+    height: 400px;
+    background-image: url(../../../image/pages/lentspace/3-5.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
-@media (max-width: 640px) {
+.content-top-img .content-wrapper {
+    height: 100%;
+}
+
+.content-top-img .content-container {
+    position: absolute;
+    top: 50%;
+    max-width: 1100px;
+    width: calc(100% - 160px);
+    transform: translate(0%, -50%);
+}
+
+.content-top-img .content-title {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: var(--page-title-01);
+    line-height: 130%;
+    /* or 47px */
+
+    letter-spacing: -0.01em;
+
+    /* Txt/White */
+
+    color: var(--text-white);
+    margin-bottom: 21px;
+}
+
+.content-top-img .content-summary {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 500;
+    font-size: var(--body-03);
+    line-height: 160%;
+    /* identical to box height, or 26px */
+
+    letter-spacing: -0.01em;
     
-    .image-height{
+
+    color: var(--text-white);
+}
+.content-top-img .content-summary .image{
+    width: 25.67px;
+    display: inline-block;
+    margin-right: 9.17px;
+}
+.content-top-img .content-summary span{
+    line-height: 26px;
+}
+
+
+@media (max-width: 640px) {
+    .content-top-img{
         height: 330px;
     }
+    .content-top-img .content-container {
+        position: absolute;
+        top: 50%;
+        width: calc(100% - 32px);
+        transform: translate(0%, -50%);
+    }
+    
+    .content-top-img .content-title {
+        font-size: var(--subtitle-03);
+        margin-bottom: 12px;
+    }
+    
+    .content-top-img .content-summary {
+        font-size: var(--body-02);
+        color: var(--text-white);
+    }
+    .content-top-img .content-summary .image{
+        margin-right: 8.75px;
+        width: 16.5px;
+    }
+    .content-top-img .content-summary span{
+        line-height: 26px;
+    }
+
+
+    .small-img {
+        display: block;
+    }
+
+    .large-img {
+        display: none;
+    }
+
+    .image-height {
+        height: 330px;
+    }
+
     .lent-container {
         padding-top: 88px;
         padding-bottom: 88px;
@@ -384,7 +490,8 @@ img {
     .map {
         height: 160px;
     }
-    .map2{
+
+    .map2 {
         padding: 16px;
         height: 328px;
         margin-top: 16px;
@@ -436,24 +543,30 @@ img {
     .location-item {
         box-sizing: border-box;
     }
-    .summary-detail{
+
+    .summary-detail {
         width: 100%;
         margin-top: 16px;
     }
-    .content-title{
+
+    .content-title {
         font-size: var(--subtitle-03);
     }
-    .main-btn{
+
+    .main-btn {
         font-size: var(--body-02);
     }
-    .space-summary{
+
+    .space-summary {
         font-size: var(--body-02);
     }
-    .map{
+
+    .map {
         margin-bottom: 16px;
     }
-    .line{
+
+    .line {
         font-size: var(--body-03);
     }
-    
+
 }

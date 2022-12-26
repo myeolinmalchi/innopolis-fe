@@ -341,6 +341,11 @@ class report_content extends HTMLElement {
 
         const style = document.createElement('style');
         style.textContent = `
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
         .report_item{
             display: block;
             width: 100%;

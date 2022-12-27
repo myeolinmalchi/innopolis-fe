@@ -141,7 +141,7 @@ class promotion_content extends HTMLElement {
         super();
     }
     connectedCallback() {
-        const img_src = this.getAttribute('img_src') ?? '#';
+        const img_src = this.getAttribute('img_src') ?? 'image/empty-thumbnail.png';
         const name_value =
             this.getAttribute('name') ??
             '법률이 정하는 주요방위산업체에 종사하는 근로자의 단체행동권...';
@@ -191,8 +191,9 @@ class promotion_content extends HTMLElement {
         }
 
         img {
-            object-fit: contain;
-            max-width: 100%;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
         }
         
         .promotionTextContent{

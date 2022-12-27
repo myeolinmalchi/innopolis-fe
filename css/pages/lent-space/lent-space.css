@@ -30,6 +30,7 @@ img {
 .content-title {
     color: var(--text-white);
     font-size: var(--page-title-01);
+    margin-bottom: 40px;
 }
 
 .content-body {
@@ -178,13 +179,34 @@ img {
 
 .type {
     margin-bottom: 4px;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 500;
+
+    line-height: 160%;
+    /* identical to box height, or 26px */
+
+    letter-spacing: -0.01em;
+
+    /* Txt/Third */
+
     color: var(--text-third);
-    font-size: var(--body-02);
+    font-size: var(--body-03);
 }
 
 .value {
     margin-bottom: 32px;
-    columns: var(--text-secondary);
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%;
+    /* identical to box height, or 29px */
+
+    letter-spacing: -0.01em;
+
+    /* Txt/Secondary */
+
+    color: var(--text-secondary);
     font-size: var(--body-04);
 }
 
@@ -365,45 +387,63 @@ img {
     /* identical to box height, or 26px */
 
     letter-spacing: -0.01em;
-    
+
 
     color: var(--text-white);
 }
-.content-top-img .content-summary .image{
+
+.content-top-img .content-summary .image {
     width: 25.67px;
     display: inline-block;
     margin-right: 9.17px;
 }
-.content-top-img .content-summary span{
+
+.content-top-img .content-summary span {
     line-height: 26px;
 }
 
+.top-btn {
+    width: 209px;
+}
 
 @media (max-width: 640px) {
-    .content-top-img{
+    .type{
+        font-size: var(--body-02);
+    }
+    .value{
+        font-size: var(--body-03);
+    }
+    .top-btn {
+        width: 189px;
+    }
+
+    .content-top-img {
         height: 330px;
     }
+
     .content-top-img .content-container {
         position: absolute;
         top: 50%;
         width: calc(100% - 32px);
         transform: translate(0%, -50%);
     }
-    
+
     .content-top-img .content-title {
         font-size: var(--subtitle-03);
         margin-bottom: 12px;
     }
-    
+
     .content-top-img .content-summary {
         font-size: var(--body-02);
         color: var(--text-white);
     }
-    .content-top-img .content-summary .image{
+
+    .content-top-img .content-summary .image {
         margin-right: 8.75px;
         width: 16.5px;
     }
-    .content-top-img .content-summary span{
+
+    .content-top-img .content-summary span {
         line-height: 26px;
     }
 
@@ -485,6 +525,7 @@ img {
 
     .location-item {
         width: 100%;
+        padding: 16px;
     }
 
     .map {

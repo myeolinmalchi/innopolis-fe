@@ -1,14 +1,15 @@
-
 class companycard_content extends HTMLElement {
     constructor() {
         super();
     }
     connectedCallback() {
-        const imgSrc = this.getAttribute('imgSrc') ?? '#';
+        const imgSrc =
+            this.getAttribute('imgSrc') ?? '/image/empty-thumbnail.png';
         const name = this.getAttribute('name') ?? '회사이름';
         const division = this.getAttribute('division') ?? '제 1캠퍼스';
         const type = this.getAttribute('type') ?? '개방형';
-        const summary = this.getAttribute('summary') ?? '회사소개의 내용이 들어와야합니다.';
+        const summary =
+            this.getAttribute('summary') ?? '회사소개의 내용이 들어와야합니다.';
 
         this.attachShadow({ mode: 'open' });
 
@@ -41,7 +42,7 @@ class companycard_content extends HTMLElement {
 
         const divide = document.createElement('span');
         divide.setAttribute('class', 'divide');
-        divide.innerText = "|";
+        divide.innerText = '|';
 
         const open = document.createElement('open');
         open.setAttribute('class', 'open');
@@ -78,7 +79,6 @@ class companycard_content extends HTMLElement {
 
         companyHomepage.appendChild(homepagebtn);
 
-
         const style = document.createElement('style');
         style.textContent = `
         body{
@@ -96,6 +96,11 @@ class companycard_content extends HTMLElement {
         .companyInfo{
             width: 100%;
             float: left;
+        }
+        img {
+        object-fit: cover;
+        max-width: 100%;
+        height: 100%
         }
         
         .companyImg{
@@ -177,11 +182,10 @@ class companycard_content extends HTMLElement {
 
         }
         
-        `
+        `;
 
         this.shadowRoot.appendChild(style);
         this.shadowRoot.appendChild(companyCard);
-
     }
 }
 

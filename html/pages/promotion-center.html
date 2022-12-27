@@ -33,7 +33,14 @@
         <script type="text/javascript" src="/js/components/card.js"></script>
         <script type="text/javascript" src="/js/components/top-nav.js"></script>
         <script type="text/javascript" src="/js/components/button.js"></script>
-        <script type="text/javascript" src="/js/components/top-image.js"></script>
+        <script
+            type="text/javascript"
+            src="/js/components/top-image.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="/js/common/render-components.js"
+        ></script>
     </head>
 
     <body>
@@ -66,13 +73,14 @@
         </tab-area>
         <tab-content-area>
             <tab-content id="content1">
-                <top-image 
-            img_src="../../../image/pages/promotion-center/1-0.png"
-            title="천안아산강소특구에 소속 중인 자동차 산업의 혁신 성장을
+                <top-image
+                    img_src="../../../image/pages/promotion-center/1-0.png"
+                    title="천안아산강소특구에 소속 중인 자동차 산업의 혁신 성장을
             이끌어갈 연구소기업, 첨단기술기업, 입주기업을 소개합니다."
-            summary="기업홍보 확인하기!"></top-image>
+                    summary="기업홍보 확인하기!"
+                ></top-image>
                 <div class="content-wrapper">
-                    <div class="post-container" style="width: 100%">
+                    <div class="" style="width: 100%">
                         <img class="post-img" src="" alt="" />
                         <subcontent-tab-area class="sub-tab">
                             <tab-introduction-container>
@@ -97,8 +105,7 @@
                         <tab-content-area>
                             <tab-content id="content1-1">
                                 <div class="content-wrapper padding0">
-                                    <card-container> </card-container>
-
+                                    <div class="post-container"></div>
                                     <pagination-container>
                                         <pagination-arrow
                                             direction="left"
@@ -115,7 +122,7 @@
 
                             <tab-content id="content1-2">
                                 <div class="content-wrapper padding0">
-                                    <card-container> </card-container>
+                                    <div class="post-container"></div>
                                     <pagination-container>
                                         <pagination-arrow
                                             direction="left"
@@ -132,13 +139,13 @@
 
                             <tab-content id="content1-3">
                                 <div class="content-wrapper padding0">
-                                    <card-container> </card-container>
+                                    <div class="post-container"></div>
                                     <pagination-container>
                                         <pagination-arrow
                                             direction="left"
                                         ></pagination-arrow>
                                         <pagination-unit state="focus"
-                                            >2</pagination-unit
+                                            >1</pagination-unit
                                         >
                                         <pagination-arrow
                                             direction="right"
@@ -149,7 +156,7 @@
 
                             <tab-content id="content1-4">
                                 <div class="content-wrapper padding0">
-                                    <card-container> </card-container>
+                                    <div class="post-container"></div>
 
                                     <pagination-container>
                                         <pagination-arrow
@@ -170,17 +177,14 @@
             </tab-content>
 
             <tab-content id="content2">
-                <top-image 
-            img_src="../../../image/pages/promotion-center/2-0.png"
-            title="충남천안아산강소특구를 소개하는
+                <top-image
+                    img_src="../../../image/pages/promotion-center/2-0.png"
+                    title="충남천안아산강소특구를 소개하는
             홍보 자료를 볼 수 있습니다."
-            summary="홍보자료 확인하기!"></top-image>
+                    summary="홍보자료 확인하기!"
+                ></top-image>
                 <div class="content-wrapper">
-                    <div class="promotion_wrapper">
-                        <promotion-item></promotion-item>
-                        <promotion-item></promotion-item>
-                        <promotion-item></promotion-item>
-                    </div>
+                    <div class="post-container"></div>
                     <pagination-container>
                         <pagination-arrow direction="left"></pagination-arrow>
                         <pagination-unit state="focus">1</pagination-unit>
@@ -190,11 +194,12 @@
             </tab-content>
 
             <tab-content id="content3">
-                <top-image 
-            img_src="../../../image/pages/promotion-center/3-0.png"
-            title="충남천안아산강소특구의
+                <top-image
+                    img_src="../../../image/pages/promotion-center/3-0.png"
+                    title="충남천안아산강소특구의
             새로운 소식을 확인할 수 있습니다."
-            summary="보도자료 확인하기 !"></top-image>
+                    summary="보도자료 확인하기 !"
+                ></top-image>
                 <div class="content-wrapper">
                     <div class="promotion_wrapper">
                         <report-item
@@ -264,50 +269,31 @@
             </tab-content>
 
             <tab-content id="content4">
-                <top-image 
-            img_src="../../../image/pages/promotion-center/4-0.png"
-            title="충남천안아산강소특구는 기술교류회, 설명회 등
+                <top-image
+                    img_src="../../../image/pages/promotion-center/4-0.png"
+                    title="충남천안아산강소특구는 기술교류회, 설명회 등
             다양한 행사를 진행하고 있습니다."
-            summary="행사사진 보러가기!"></top-image>
+                    summary="행사사진 보러가기!"
+                ></top-image>
                 <div class="content-wrapper">
-                    <card-container class="content-margin">
-                        <card-content
-                            link="location.href='/html/pages/promotion-photo.html'"
-                        ></card-content>
-                        <card-content
-                            link="location.href='/html/pages/promotion-photo.html'"
-                        ></card-content>
-                        <card-content
-                            link="location.href='/html/pages/promotion-photo.html'"
-                        ></card-content>
-                        <card-content
-                            link="location.href='/html/pages/promotion-photo.html'"
-                        ></card-content>
-                        <card-content
-                            link="location.href='/html/pages/promotion-photo.html'"
-                        ></card-content>
-                        <card-content
-                            link="location.href='/html/pages/promotion-photo.html'"
-                        ></card-content>
-                        <card-content
-                            link="location.href='/html/pages/promotion-photo.html'"
-                        ></card-content>
-                        <card-content
-                            link="location.href='/html/pages/promotion-photo.html'"
-                        ></card-content>
-                        <card-content
-                            link="location.href='/html/pages/promotion-photo.html'"
-                        ></card-content>
-                        <card-content
-                            link="location.href='/html/pages/promotion-photo.html'"
-                        ></card-content>
-                        <card-content
-                            link="location.href='/html/pages/promotion-photo.html'"
-                        ></card-content>
-                        <card-content
-                            link="location.href='/html/pages/promotion-photo.html'"
-                        ></card-content>
-                    </card-container>
+                    <div class="post-container">
+                        <div class="post-wrapper">
+                            <img
+                                class="post-img"
+                                src="/image/empty-thumbnail.png"
+                                alt=""
+                            />
+                            <div class="post-detail-wrapper">
+                                <span class="post-detail-ti body-bd"
+                                    >도로구조물의 신축이음구조 및 이의
+                                    시공방법</span
+                                >
+                                <span class="post-detail-date body-me">
+                                    YY.MM.DD
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                     <pagination-container>
                         <pagination-arrow direction="left"></pagination-arrow>
                         <pagination-unit link="/1">1</pagination-unit>
@@ -321,34 +307,6 @@
             </tab-content>
         </tab-content-area>
         <footer-default></footer-default>
-        <script>
-            let posts2;
-            const postContainer = document.querySelector(
-                '#content2 div.promotion_wrapper',
-            );
-            const render = () => {
-                postContainer.innerHTML = posts2.reduce((acc, post, idx) => {
-                    return (
-                        acc +
-                        `
-                        <promotion-item
-                            img_src="${post.img}"
-                            name="${post.title}"
-                            date="${post.date}"
-                            link="location.href='/html/pages/promotion-data-detail.html?idx=${idx}'"
-                        ></promotion-item>
-                    `
-                    );
-                }, '');
-            };
-
-            (async function () {
-                const res = await fetch(
-                    '/resources/pages/promotion-center/promotion.json',
-                );
-                posts2 = await res.json();
-                render();
-            })();
-        </script>
+        <script src="/js/pages/promotion-center.js"></script>
     </body>
 </html>

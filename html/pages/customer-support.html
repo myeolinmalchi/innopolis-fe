@@ -28,7 +28,11 @@
             type="text/javascript"
             src="/js/components/calendar.js"
         ></script>
-        <script type="text/javascript" src="/js/components/top-image.js"></script>
+        <script
+            type="text/javascript"
+            src="/js/components/top-image.js"
+        ></script>
+        <script src="/js/common/render-components.js"></script>
     </head>
     <body>
         <top-nav focus="5"></top-nav>
@@ -60,11 +64,12 @@
         </tab-area>
         <tab-content-area>
             <tab-content id="content1">
-                <top-image 
-            img_src="../../../image/pages/customer-support/1-0.png"
-            title="천안아산강소특구의 최신 소식과
+                <top-image
+                    img_src="../../../image/pages/customer-support/1-0.png"
+                    title="천안아산강소특구의 최신 소식과
             공지사항을 확인할 수 있습니다."
-            summary="공지사항 확인하기!"></top-image>
+                    summary="공지사항 확인하기!"
+                ></top-image>
                 <div class="content-wrapper">
                     <div class="post-container"></div>
                     <pagination-container>
@@ -75,12 +80,13 @@
                 </div>
             </tab-content>
             <tab-content id="content2">
-                <top-image 
-            img_src="../../../image/pages/customer-support/2-0.png"
-            title="창업자와 기업에게 필요한
+                <top-image
+                    img_src="../../../image/pages/customer-support/2-0.png"
+                    title="창업자와 기업에게 필요한
             사업공고, 연구기관 지원, 기술사업화 지원 등의
             모집 공고를 확인할 수 있습니다."
-            summary="사업공고 확인하기!"></top-image>
+                    summary="사업공고 확인하기!"
+                ></top-image>
                 <div class="content-wrapper">
                     <div class="post-container">
                         <div
@@ -136,11 +142,12 @@
                 </div>
             </tab-content>
             <tab-content id="content3">
-                <top-image 
-            img_src="../../../image/pages/customer-support/3-0.png"
-            title="천안아산강소특구에서 진행하고 있는
+                <top-image
+                    img_src="../../../image/pages/customer-support/3-0.png"
+                    title="천안아산강소특구에서 진행하고 있는
             프로그램, 행사, 강연 등의 특구 일정을 확인할 수 있습니다."
-            summary="특구일정 확인하기!"></top-image>
+                    summary="특구일정 확인하기!"
+                ></top-image>
                 <div class="content-wrapper">
                     <calendar-container>
                         <calendar-header></calendar-header>
@@ -316,9 +323,8 @@
                         <span class="body-me"
                             >사용승인을 받은 자가 준수사항을 위반함으로써
                             발생하는 모든 사고에 대하여는 그에 대한 책임을 져야
-                            하며 <br />시설이나 비품 등을 훼손·멸실하였을
-                            때에는 지체없이 원상복구하거나 그 손해를 배상하여야
-                            합니다.
+                            하며 <br />시설이나 비품 등을 훼손·멸실하였을 때에는
+                            지체없이 원상복구하거나 그 손해를 배상하여야 합니다.
                         </span>
                     </div>
                     <div class="subcontent-wrapper">
@@ -332,76 +338,9 @@
             </tab-content>
         </tab-content-area>
         <footer-default></footer-default>
-        <script>
-            let posts1;
-            const postContainer1 = document.querySelector(
-                '#content1 div.post-container',
-            );
-
-            const render1 = () => {
-                postContainer1.innerHTML = posts1.reduce((acc, post, index) => {
-                    return (
-                        acc +
-                        `
-                        <div
-                            onclick="location.href='/html/pages/notice-detail.html?idx=${index}'"
-                        >
-                            <span class="title-bd">
-                                ${
-                                    post.공지
-                                        ? '<span class="notice-primary body-bd">공지</span>'
-                                        : ''
-                                }
-                                ${post.title}
-                            </span
-                            >
-                            <span class="body-me">${post.date}</span>
-                        </div>
-                    `
-                    );
-                }, '');
-            };
-
-            (async function () {
-                const res = await fetch(
-                    '/resources/pages/customer-support/notice.json',
-                );
-                posts1 = await res.json();
-                render1();
-            })();
-            let posts2;
-            const postContainer2 = document.querySelector(
-                '#content2 div.post-container',
-            );
-
-            const render2 = () => {
-                postContainer2.innerHTML = posts2.reduce((acc, post, index) => {
-                    return (
-                        acc +
-                        `
-                        <div
-                            onclick="location.href='/html/pages/business-announcement.html?idx=${index}'"
-                        >
-                            <span class="title-bd">
-                                <span class="notice-secondary body-bd"
-                                    >접수 마감</span>
-                                ${post.title}
-                            </span
-                            >
-                            <span class="body-me">${post.date}</span>
-                        </div>
-                    `
-                    );
-                }, '');
-            };
-
-            (async function () {
-                const res = await fetch(
-                    '/resources/pages/customer-support/business-announcement.json',
-                );
-                posts2 = await res.json();
-                render2();
-            })();
-        </script>
+        <script
+            type="text/javascript"
+            src="/js/pages/customer-support.js"
+        ></script>
     </body>
 </html>

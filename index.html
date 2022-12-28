@@ -23,7 +23,17 @@
         }
     </style>
 </head>
-
+<script>
+    function clickFunc(select_id) {
+        let items = document.querySelectorAll('.third-text-content');
+        items.forEach(item => {
+            item.classList.add('none');
+        });
+        document.querySelector('#third-content-large'+select_id).classList.remove('none');
+        document.querySelector('#third-content-small'+select_id).classList.remove('none');
+        document.querySelector('.list-black').classList.remove('list-black');
+    }
+</script>
 <body>
     <top-nav></top-nav>
     <div class="video-container" style="background-color: #111827;">
@@ -174,7 +184,7 @@
                 </tab-container>
             </tab-area>
             <tab-content-area>
-                <tab-content id="content1">
+                <tab-content id="content1-1">
                     <div class="third-content-item">
                         <ul style="
                             padding-left: 0px;
@@ -185,22 +195,60 @@
                                             content-subtitle02
                                             list-black
                                             round-04
-                                        ">
+                                        "
+                                        id="1"
+                                        onclick="clickFunc(this.id)">
                                     양방향 기술 발굴 연계 지원
                                 </button>
+                                <div class="third-text-content small" id="third-content-small1">
+                                    <div class="content-subtitle03">
+                                        양방향 기술 발굴 연계 지원
+                                    </div>
+                                    <div class="content-text third-text-inner">
+                                        공공연구기관의 기술을 직접 사업화하기 위해
+                                        수요기술을 발굴하고 분석하여 기술이전 또는
+                                        출자로 연구소 기업을 설립하고 이를 통한
+                                        공공기술 사업화 성과 창출
+                                    </div>
+                                    <div class="third-detail" onclick="location.href='/html/pages/support-bussiness-introduce.html'">자세히 보기 ></div>
+                                </div>
                             </li>
                             <li>
-                                <button class="content-subtitle02 round-04">
+                                <button class="content-subtitle02 round-04" id="2" onclick="clickFunc(this.id)">
                                     이노폴리스 캠퍼스 사업
                                 </button>
+                                <div class="third-text-content small none" id="third-content-small2">
+                                    <div class="content-subtitle03">
+                                        이노폴리스 캠퍼스 사업
+                                    </div>
+                                    <div class="content-text third-text-inner">
+                                        공공연구기관의 기술을 직접 사업화하기 위해
+                                        수요기술을 발굴하고 분석하여 기술이전 또는
+                                        출자로 연구소 기업을 설립하고 이를 통한
+                                        공공기술 사업화 성과 창출
+                                    </div>
+                                    <div class="third-detail" onclick="location.href='/html/pages/support-bussiness-introduce.html?tab=1'">자세히 보기 ></div>
+                                </div>
                             </li>
                             <li>
-                                <button class="content-subtitle02 round-04">
+                                <button class="content-subtitle02 round-04" id="3" onclick="clickFunc(this.id)">
                                     강소특구 특화성장 지원
                                 </button>
+                                <div class="third-text-content small none" id="third-content-small3">
+                                    <div class="content-subtitle03">
+                                        강소특구 특화성장 지원
+                                    </div>
+                                    <div class="content-text third-text-inner">
+                                        공공연구기관의 기술을 직접 사업화하기 위해
+                                        수요기술을 발굴하고 분석하여 기술이전 또는
+                                        출자로 연구소 기업을 설립하고 이를 통한
+                                        공공기술 사업화 성과 창출
+                                    </div>
+                                    <div class="third-detail" onclick="location.href='/html/pages/support-bussiness-introduce.html?tab=1'">자세히 보기 ></div>
+                                </div>
                             </li>
                         </ul>
-                        <div class="third-text-content" id="third-content1">
+                        <div class="third-text-content large" id="third-content-large1">
                             <div class="content-subtitle03">
                                 양방향 기술 발굴 연계 지원
                             </div>
@@ -210,9 +258,9 @@
                                 출자로 연구소 기업을 설립하고 이를 통한
                                 공공기술 사업화 성과 창출
                             </div>
-                            <div class="third-detail">자세히 보기 ></div>
+                            <div class="third-detail" onclick="location.href='/html/pages/support-bussiness-introduce.html'">자세히 보기 ></div>
                         </div>
-                        <div class="third-text-content" id="third-content2" style="display: none">
+                        <div class="third-text-content large none" id="third-content-large2">
                             <div class="content-subtitle03">
                                 이노폴리스 캠퍼스 사업
                             </div>
@@ -222,9 +270,9 @@
                                 출자로 연구소 기업을 설립하고 이를 통한
                                 공공기술 사업화 성과 창출
                             </div>
-                            <div class="third-detail">자세히 보기 ></div>
+                            <div class="third-detail" onclick="location.href='/html/pages/support-bussiness-introduce.html?tab=1'">자세히 보기 ></div>
                         </div>
-                        <div class="third-text-content" id="third-content3" style="display: none">
+                        <div class="third-text-content large none" id="third-content-large3">
                             <div class="content-subtitle03">
                                 강소특구 특화성장 지원
                             </div>
@@ -234,10 +282,12 @@
                                 출자로 연구소 기업을 설립하고 이를 통한
                                 공공기술 사업화 성과 창출
                             </div>
-                            <div class="third-detail">자세히 보기 ></div>
+                            <div class="third-detail" onclick="location.href='/html/pages/support-bussiness-introduce.html?tab=1'">자세히 보기 ></div>
                         </div>
+                        
                     </div>
                 </tab-content>
+                
             </tab-content-area>
         </div>
     </div>

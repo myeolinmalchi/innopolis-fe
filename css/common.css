@@ -288,7 +288,7 @@ body {
     gap: 9.17px;
 }
 
-.content-top-img div.image {
+.content-top-img div .image {
     display: flex;
 }
 
@@ -305,7 +305,7 @@ body {
     .content-top-img {
         height: 330px;
     }
-    .content-top-img .content-container {
+    .content-top-img > .content-wrapper > .content-container {
         position: absolute;
         top: 50%;
         width: calc(100% - 32px);
@@ -315,12 +315,12 @@ body {
         padding: 0px 16px;
     }
 
-    .content-top-img .content-title {
+    .content-top-img .content-wrapper > .content-container > .content-title {
         font-size: var(--subtitle-03);
         margin-bottom: 12px;
     }
 
-    .content-top-img .content-summary {
+    .content-top-img .content-wrapper > .content-container > .content-summary {
         font-size: var(--body-02);
         color: var(--text-white);
     }

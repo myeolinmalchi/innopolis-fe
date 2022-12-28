@@ -1,0 +1,72 @@
+[
+    {
+        "campus": "\n\t\t\t제1캠퍼스\t",
+        "type": "\n\t\t개방형\t",
+        "name": "\n\t앨지바이오 주식회사\t\t\t\n\t\t",
+        "link": "-",
+        "main_product": "\n\t\t헤마토코쿠스 및 아스타잔틴 대량생산\t"
+    },
+    {
+        "campus": "\n\t\t\t제2캠퍼스\t",
+        "type": "\n\t\t독립형\t",
+        "name": "\n\t엔에스엘테크\t\t\t\n\t\t",
+        "link": "-",
+        "main_product": "\n\t\t용접 전원 장치, 스마트 팩토리 센서 장치\t"
+    },
+    {
+        "campus": "\n\t\t\t제1캠퍼스\t",
+        "type": "\n\t\t개방형\t",
+        "name": "\n\t주식회사 로웨인\t\t\t\n\t\t",
+        "link": "www.rowain.com",
+        "main_product": "\n\t\t로봇 식물공장 플랫폼\t"
+    },
+    {
+        "campus": "\n\t\t\t제1캠퍼스\t",
+        "type": "\n\t\t개방형\t",
+        "name": "\n\t에볼루션 오브 프린팅\t\t\t\n\t\t",
+        "link": "-",
+        "main_product": "\n\t\t저탄소 저전력 스마트 공기 정화 카트\t"
+    },
+    {
+        "campus": "\n\t\t\t제1캠퍼스\t",
+        "type": "\n\t\t개방형\t",
+        "name": "\n\t주식회사 바닐라브레인\t\t\t\n\t\t",
+        "link": "-",
+        "main_product": "\n\t\t중소 커머스 셀러들을 위한 매출정산 데이터분석 서비스\t"
+    },
+    {
+        "campus": "\n\t\t\t제1캠퍼스\t",
+        "type": "\n\t\t개방형\t",
+        "name": "\n\t컵피(CUPI)\t\t\t\n\t\t",
+        "link": "-",
+        "main_product": "\n\t\tAI분류기술이 포함된 일회용컵 수거 자판기\t"
+    },
+    {
+        "campus": "\n\t\t\t제1캠퍼스\t",
+        "type": "\n\t\t개방형\t",
+        "name": "\n\t주식회사 카데아\t\t\t\n\t\t",
+        "link": "-",
+        "main_product": "\n\t\t대형차량 사각지대 해소 및 주행기록용 자유시점 어라운드 뷰 시스템\t"
+    },
+    {
+        "campus": "\n\t\t\t제1캠퍼스\t",
+        "type": "\n\t\t개방형\t",
+        "name": "\n\t주식회사 브이에스엘\t\t\t\n\t\t",
+        "link": "-",
+        "main_product": "\n\t\t진공시스템 성능 시뮬레이션, 최적화 설계 솔루션\t"
+    },
+    {
+        "campus": "\n\t\t\t제2캠퍼스\t",
+        "type": "\n\t\t개방형\t",
+        "name": "\n\t주식회사 그랩실\t\t\t\n\t\t",
+        "link": "-",
+        "main_product": "\n\t\t고용량 실리콘계 음극활물질\t"
+    },
+    {
+        "campus": "\n\t\t\t제1캠퍼스\t",
+        "type": "\n\t\t개방형\t",
+        "name": "\n\t주식회사 위드위\t\t\t\n\t\t",
+        "link": "-",
+        "main_product": "\n\t\tQR기반 폐기물 스마트 트래킹 서비스\t"
+    }
+]

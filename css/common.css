@@ -227,3 +227,124 @@ body {
         padding: 0 16px;
     }
 }
+
+/* --------------top image----------------*/
+.content-top-img {
+    height: 400px;
+    background-image: url(${img_src});
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.content-top-img > .content-wrapper {
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 0px 80px;
+}
+
+.content-top-img > .content-wrapper > .content-container {
+    position: absolute;
+    top: 50%;
+    max-width: 1100px;
+    width: calc(100% - 160px);
+    transform: translate(0%, -50%);
+}
+
+.content-top-img .content-wrapper > .content-container > .content-title {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: var(--page-title-01);
+    line-height: 130%;
+    /* or 47px */
+
+    letter-spacing: -0.01em;
+
+    /* Txt/White */
+
+    color: var(--text-white);
+    margin-bottom: 21px;
+}
+
+.content-top-img .content-wrapper > .content-container > .content-summary {
+    cursor: pointer;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 500;
+    font-size: var(--body-03);
+    line-height: 160%;
+    /* identical to box height, or 26px */
+
+    letter-spacing: -0.01em;
+    margin: 0;
+    width: content-fit;
+
+    color: var(--text-white);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 9.17px;
+}
+
+.content-top-img div.image {
+    display: flex;
+}
+
+.content-top-img .image {
+    width: 25.67px;
+    margin: 0;
+}
+
+.content-top-img .content-summary span {
+    line-height: 26px;
+}
+
+@media (max-width: 640px) {
+    .content-top-img {
+        height: 330px;
+    }
+    .content-top-img .content-container {
+        position: absolute;
+        top: 50%;
+        width: calc(100% - 32px);
+        transform: translate(0%, -50%);
+    }
+    .content-top-img .content-wrapper {
+        padding: 0px 16px;
+    }
+
+    .content-top-img .content-title {
+        font-size: var(--subtitle-03);
+        margin-bottom: 12px;
+    }
+
+    .content-top-img .content-summary {
+        font-size: var(--body-02);
+        color: var(--text-white);
+    }
+    .content-top-img .content-summary .image {
+        margin-right: 8.75px;
+        width: 16.5px;
+    }
+    .content-top-img .content-summary span {
+        line-height: 26px;
+        margin-left: 8px;
+    }
+}
+
+.empty-posts {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.empty-posts > span {
+    font-size: var(--body-05);
+    color: var(--text-third);
+    margin: 0;
+    padding: 192px 0 240px 0;
+}

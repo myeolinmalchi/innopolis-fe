@@ -31,6 +31,7 @@
                 <div>
                     <span class="body-me"><span>* </span>아이디</span>
                     <textfield-default
+                        class="default"
                         placeholder="아이디를 입력해주세요."
                     ></textfield-default>
                 </div>
@@ -39,6 +40,7 @@
                     <textfield-default
                         placeholder="비밀번호를 입력해주세요."
                         type="password"
+                        class="default"
                     ></textfield-default>
                 </div>
                 <div>
@@ -46,6 +48,7 @@
                     <textfield-default
                         placeholder="비밀번호를 한 번 더 입력해주세요."
                         type="password"
+                        class="default"
                     ></textfield-default>
                 </div>
                 <div>
@@ -67,8 +70,10 @@
                         </dropdown-container>
                         <textfield-default
                             placeholder="중간 번호"
+                            class="default"
                         ></textfield-default>
                         <textfield-default
+                            class="default"
                             placeholder="끝 번호"
                         ></textfield-default>
                     </div>
@@ -83,6 +88,7 @@
                     <span class="body-me"><span>* </span>이메일</span>
                     <div class="email-wrapper">
                         <textfield-default
+                            class="default"
                             placeholder="이메일을 입력해주세요."
                         ></textfield-default>
                         <dropdown-container>
@@ -155,22 +161,29 @@
                 <div class="enterprise">
                     <span class="body-me"><span>* </span>기업(기관)명</span>
                     <textfield-default
+                        class="enterprise"
                         placeholder="기업 또는 기관명을 입력해주세요."
                     ></textfield-default>
                 </div>
                 <div class="enterprise">
                     <span class="body-me"><span>* </span>소속</span>
                     <textfield-default
+                        class="enterprise"
                         placeholder="소속을 입력해주세요."
                     ></textfield-default>
                 </div>
                 <div class="enterprise">
                     <span class="body-me"><span>* </span>직위(직책)</span>
                     <textfield-default
+                        class="enterprise"
                         placeholder="직위 또는 직책을 입력해주세요."
                     ></textfield-default>
                 </div>
-                <button-default size="xl" style_="secondary"
+                <button-default
+                    size="xl"
+                    style_="secondary"
+                    id="submit"
+                    state="disabled"
                     >회원가입</button-default
                 >
             </div>
@@ -179,6 +192,10 @@
                 const radios = [
                     ...document.querySelectorAll('input[type="radio"]'),
                 ];
+
+                const radio_personal = radios[0];
+                const radio_enterprise = radios[1];
+
                 const enterprise = [
                     ...document.querySelectorAll('div.enterprise'),
                 ];
@@ -193,6 +210,52 @@
                         e.style.display = 'none';
                     });
                 };
+
+                const defaultInputs = [
+                    ...document.querySelectorAll('textfield-default.default'),
+                ];
+                const enterpriseInputs = [
+                    ...document.querySelectorAll(
+                        'textfield-default.enterprise',
+                    ),
+                ];
+                const submitButton = document.querySelector('#submit');
+
+                const keydownHandler = () => {
+                    const test1 = defaultInputs.reduce(
+                        (acc, input) => acc && input.getValue() !== '',
+                        true,
+                    );
+
+                    if (!test1) {
+                        submitButton.setAttribute('state', 'disabled');
+                        return;
+                    }
+
+                    if (radios[0].checked) {
+                        submitButton.setAttribute('state', 'default');
+                        return;
+                    }
+
+                    const test2 = enterpriseInputs.reduce(
+                        (acc, input) => acc && input.getValue() !== '',
+                        true,
+                    );
+
+                    if (test2) {
+                        submitButton.setAttribute('state', 'default');
+                    } else {
+                        submitButton.setAttribute('state', 'disabled');
+                    }
+                };
+
+                defaultInputs.forEach((input) => {
+                    input.addEventListener('keydown', keydownHandler);
+                });
+                enterpriseInputs.forEach((input) => {
+                    input.addEventListener('keydown', keydownHandler);
+                });
+
                 radios.forEach((radio) => {
                     radio.addEventListener('change', () => {
                         if (radio.checked) {
@@ -200,6 +263,22 @@
                             if (value === 'personal') {
                                 setHidden();
                             } else if (value === 'enterprise') {
+                                const test1 = defaultInputs.reduce(
+                                    (acc, input) =>
+                                        acc && input.getValue() !== '',
+                                    true,
+                                );
+                                const test2 = enterpriseInputs.reduce(
+                                    (acc, input) =>
+                                        acc && input.getValue() !== '',
+                                    true,
+                                );
+                                if (!test1 || !test2) {
+                                    submitButton.setAttribute(
+                                        'state',
+                                        'disabled',
+                                    );
+                                }
                                 setVisible();
                             }
                         }

@@ -120,7 +120,7 @@ img.top-img {
 
 #content4 .top-img > div > span:first-child {
     color: var(--text-white);
-    font-size: var(--title-01);
+    font-size: 36px;
 }
 
 #content4 .top-img > div > button-default {
@@ -144,10 +144,6 @@ img.top-img {
     font-size: var(--title-03);
     color: var(--text-priamry);
     text-align: left;
-}
-
-.subcontent-wrapper:nth-child(n + 2):nth-child(-n + 3) > span:first-child {
-    font-size: var(--title-02);
 }
 
 .subcontent-wrapper > img {
@@ -200,6 +196,15 @@ img.top-img {
     > div:nth-child(3)
     > div
     > span:first-child {
+    width: 100%;
+    font-size: var(--body-04);
+    color: var(--text-primary);
+}
+
+.subcontent-wrapper:nth-child(n + 2):nth-child(-n + 3)
+    > div:nth-child(3)
+    > div
+    > span:nth-child(2) {
     width: 100%;
     font-size: var(--body-02);
     color: var(--text-third);
@@ -315,7 +320,7 @@ li {
     .subcontent-wrapper:nth-child(n + 2):nth-child(-n + 3)
         > div:nth-child(3)
         > div
-        > span:first-child {
+        > span:nth-child(2) {
         font-size: var(--body-01);
     }
 

@@ -43,7 +43,7 @@ const getRenderer = async ({
                     return (
                         acc +
                         `<pagination-unit link="javascript:${name}(${idx + 1}${
-                            keyword ? `, ${keyword}` : ''
+                            keyword ? `, '${keyword}'` : ''
                         })" state="${idx + 1 === page ? 'focus' : 'default'}">${
                             idx + 1
                         }</pagination-unit>`

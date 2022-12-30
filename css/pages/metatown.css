@@ -29,13 +29,13 @@ span {
 
 .top-img > div > span:first-child {
     color: var(--text-white);
-    font-size: var(--title-01);
+    font-size: 36px;
 }
 
 .top-img > div > span:nth-child(2) {
     margin-top: 24px;
     color: var(--text-white);
-    font-size: var(--subtitle-01);
+    font-size: var(--body-03);
 }
 
 .top-img > div > button-default {

@@ -438,6 +438,9 @@ class report_content extends HTMLElement {
             }
             .reportDate{
                 font-size: var(--body-01);
+            }
+            .news{
+                display: none;
             }    
         }
         `;

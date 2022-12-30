@@ -42,6 +42,7 @@ class footer_default extends HTMLElement {
             "location.href='/html/pages/introduce.html?tab=2'",
         );
 
+        
         const content_second = document.createElement('div');
         content_second.setAttribute('class', 'content second left');
         const content_second_hr = document.createElement('hr');
@@ -101,6 +102,8 @@ class footer_default extends HTMLElement {
         content_fivth.appendChild(content_fivth_img_1);
         content_fivth.appendChild(content_fivth_img_2);
 
+        content_fivth_img_1.setAttribute('onClick',"#");
+        content_fivth_img_2.setAttribute('onClick',"#");
         const style = document.createElement('style');
         style.textContent = `
         p{
@@ -170,7 +173,9 @@ class footer_default extends HTMLElement {
             display: inline-block;
             float: right;
         }
-        
+        .right img{
+            cursor: pointer;
+        }
         .list{
             margin-top: 3px;
             margin-left: 24px;
@@ -178,6 +183,7 @@ class footer_default extends HTMLElement {
         }
         
         .list li{
+            cursor: pointer;
             float: left;
             font-size: 16px;
             margin-left: 12px;

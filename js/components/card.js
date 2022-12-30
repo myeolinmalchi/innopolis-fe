@@ -354,6 +354,7 @@ class report_content extends HTMLElement {
             float: left;
             margin-right: 24px;
             margin-bottom: 24px;
+            cursor: pointer;
         }
         
         
@@ -438,6 +439,9 @@ class report_content extends HTMLElement {
             }
             .reportDate{
                 font-size: var(--body-01);
+            }
+            .news{
+                display: none;
             }    
         }
         `;

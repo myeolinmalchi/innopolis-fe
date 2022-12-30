@@ -145,6 +145,9 @@ class companycard_content extends HTMLElement {
             font-size: var(--body-02);
             overflow: hidden;
         }
+        input{
+            cursor: pointer;
+        }
         
         .companyHompage input{
             background-color: var(--background-white-01);

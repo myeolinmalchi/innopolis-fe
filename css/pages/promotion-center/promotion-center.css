@@ -131,6 +131,9 @@ promotion-item:nth-child(4n) {
         font-size: var(--subtitle-03);
     }
 }
+#content1-1 .post-container{
+    margin-top: 48px;
+}
 .post-container {
     display: flex;
     width: 100%;
@@ -138,7 +141,7 @@ promotion-item:nth-child(4n) {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: start;
-    margin-top: 48px;
+    margin-top: 64px;
     gap: 24px;
     box-sizing: border-box;
 }
@@ -216,13 +219,16 @@ promotion-item:nth-child(4n) {
 }
 
 #content1 subcontent-tab-area {
-    padding-bottom: 0px;
+    padding: 0px;
 }
 
 #content1 img.post-img {
     object-fit: contain;
 }
 @media (max-width: 640px) {
+    #content1-1 .post-container{
+        margin-top: 24px;
+    }
     textfield-search {
         margin-top: 32px;
     }

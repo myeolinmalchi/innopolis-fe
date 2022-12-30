@@ -79,6 +79,7 @@ img {
     padding: 7px 14px;
     text-align: center;
     border: 0px;
+    cursor: pointer;
     float: left;
 }
 
@@ -220,6 +221,9 @@ img {
     color: var(--text-third);
     font-size: var(--body-03);
 }
+.content2-1 .space-item{
+    min-height: 161px;
+}
 
 .value {
     margin-bottom: 32px;
@@ -242,6 +246,7 @@ img {
     color: var(--text-white);
     font-size: var(--body-04);
     padding: 7px 14px;
+    cursor: pointer;
 }
 
 .lentBtn:hover {

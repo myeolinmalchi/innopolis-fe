@@ -140,6 +140,7 @@ li{
 
 .promotion-card-inner{
     padding: 32px;
+    cursor: pointer;
 }
 
 .promotion-text{
@@ -165,6 +166,7 @@ li{
     float: left;
     margin: 0px 2px;
     background-color: var(--color-gray-disabled);
+    cursor: pointer;
 }
 .promotion-slide-item:hover{
     background-color: var(--color-gray-hover);
@@ -210,6 +212,13 @@ promotion-item{
     margin-right: 24px;
     float: left;
     margin-top: 64px;
+    cursor: pointer;
+}
+tab-default{
+  cursor: pointer;
+}
+button{
+  cursor: pointer;
 }
 .card{
     margin: 0px;
@@ -297,7 +306,7 @@ promotion-item{
     letter-spacing: -0.01em;
     
     /* Color Blue/Filled */
-    
+    cursor: pointer;
     color: var(--color-blue-filled);    
 }
 
@@ -358,6 +367,7 @@ promotion-item{
 }
 .sixth-detail{
     float: right;
+    cursor: pointer;
     color: var(--text-third);
 }
 
@@ -365,11 +375,15 @@ promotion-item{
     padding: 16px 0px;
     border-bottom: 1px solid var(--stroke-gray-01);
 }
+.news-item div{
+  cursor: pointer;
+}
 
 .news-item-name{
     margin-bottom: 8px;
 }
 .main-btn{
+  cursor: pointer;
     padding: 7px 14px;
     color: var(--text-white);    
     background-color: var(--color-blue-filled);

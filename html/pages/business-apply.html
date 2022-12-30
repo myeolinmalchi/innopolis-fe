@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="/css/common.css" />
         <link
             rel="stylesheet"
-            href="/css/pages/customer-support/business-inquiry.css"
+            href="/css/pages/customer-support/business-apply.css"
         />
         <script type="text/javascript" src="/js/components/button.js"></script>
         <script
@@ -205,11 +205,35 @@
                     >
                 </div>
 
-                <button-default size="xl" style_="secondary"
+                <button-default
+                    size="xl"
+                    style_="secondary"
+                    state="disabled"
+                    id="submit"
                     >신청하기</button-default
                 >
             </div>
         </div>
         <footer-default></footer-default>
+        <script>
+            const agreeCheck = document.querySelector('checkbox-default');
+            const submitButton = document.querySelector('#submit');
+            const inputs = [...document.querySelectorAll('textfield-default')];
+            const keydownHandler = () => {
+                const test = inputs.reduce(
+                    (acc, input) => acc && input.getValue() !== '',
+                    files.length !== 0 && agreeCheck.checkbox.checked,
+                );
+                if (test) {
+                    submitButton.setAttribute('state', 'default');
+                } else {
+                    submitButton.setAttribute('state', 'disabled');
+                }
+            };
+            agreeCheck.checkbox.onchange = keydownHandler;
+            inputs.forEach((input) => {
+                input.addEventListener('keydown', keydownHandler);
+            });
+        </script>
     </body>
 </html>

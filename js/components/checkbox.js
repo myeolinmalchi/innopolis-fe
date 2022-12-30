@@ -1,17 +1,14 @@
 customElements.define(
     'checkbox-default',
     class extends HTMLElement {
-        constructor() {
-            super();
-        }
-
+        checkbox;
         connectedCallback() {
             this.attachShadow({ mode: 'open' });
             const wrapper = document.createElement('div');
             const label = document.createElement('label');
-            const checkbox = document.createElement('input');
+            this.checkbox = document.createElement('input');
             const textbox = document.createElement('span');
-            checkbox.setAttribute('type', 'checkbox');
+            this.checkbox.setAttribute('type', 'checkbox');
 
             const check = this.getAttribute('check');
             const text = this.getAttribute('text');
@@ -28,10 +25,10 @@ customElements.define(
                 }
             })();
             if (check === 'true') {
-                checkbox.checked = true;
+                this.checkbox.checked = true;
             }
             if (state === 'disabled') {
-                checkbox.disabled = true;
+                this.checkbox.disabled = true;
             }
             style.textContent = `
                 .size{
@@ -45,11 +42,11 @@ customElements.define(
 
             textbox.innerText = text;
             label.setAttribute('class', 'font');
-            checkbox.setAttribute('class', 'size');
+            this.checkbox.setAttribute('class', 'size');
             this.shadowRoot.append(style);
             this.shadowRoot.appendChild(wrapper);
             wrapper.appendChild(label);
-            label.appendChild(checkbox);
+            label.appendChild(this.checkbox);
             label.appendChild(textbox);
         }
     },

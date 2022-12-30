@@ -31,7 +31,13 @@ const login = async (id, pw) => {
     }
 };
 
-loginButton.onclick = () => {
-    const [id, pw] = [idInput.getValue(), pwInput.getValue()];
-    login(id, pw);
+const keydownHandler = () => {
+    if (idInput.getValue() !== '' && pwInput.getValue() !== '') {
+        loginButton.setAttribute('state', 'default');
+    } else {
+        loginButton.setAttribute('state', 'disabled');
+    }
 };
+
+idInput.input.addEventListener('keydown', keydownHandler);
+pwInput.input.addEventListener('keydown', keydownHandler);

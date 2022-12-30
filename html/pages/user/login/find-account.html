@@ -22,13 +22,17 @@
                 <div>
                     <span class="body-me">E-mail 주소</span>
                     <textfield-default
+                        id="email"
                         placeholder="E-mail 주소를 입력해주세요."
                     ></textfield-default>
                     <span class="body-me">휴대폰 번호</span>
                     <textfield-default
+                        id="phone"
                         placeholder="휴대폰 번호를 입력해주세요."
                     ></textfield-default>
-                    <button-default size="xl">찾기</button-default>
+                    <button-default size="xl" state="disabled" id="find"
+                        >찾기</button-default
+                    >
                     <span class="body-me">
                         회원가입 시 등록하신 이메일의 주소와 휴대폰 번호를
                         입력해 주세요.<br />
@@ -38,5 +42,25 @@
             </div>
         </div>
         <footer-default></footer-default>
+        <script>
+            const [emailInput, phoneInput, findButton] = [
+                document.querySelector('#email'),
+                document.querySelector('#phone'),
+                document.querySelector('#find'),
+            ];
+            const keydownHandler = () => {
+                if (
+                    emailInput.getValue() !== '' &&
+                    phoneInput.getValue() !== ''
+                ) {
+                    findButton.setAttribute('state', 'default');
+                } else {
+                    findButton.setAttribute('state', 'disabled');
+                }
+            };
+
+            emailInput.input.addEventListener('keydown', keydownHandler);
+            phoneInput.input.addEventListener('keydown', keydownHandler);
+        </script>
     </body>
 </html>

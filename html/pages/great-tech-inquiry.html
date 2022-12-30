@@ -138,11 +138,37 @@
                     >
                 </div>
 
-                <button-default size="xl" style_="secondary"
+                <button-default
+                    size="xl"
+                    style_="secondary"
+                    id="submit"
+                    state="disabled"
                     >신청하기</button-default
                 >
             </div>
         </div>
+        <script>
+            const inputs = [...document.querySelectorAll('textfield-default')];
+            const area = document.querySelector('textfield-area');
+            const agreeCheck = document.querySelector('checkbox-default');
+            const submitButton = document.querySelector('#submit');
+            const keydownHandler = () => {
+                const test = inputs.reduce(
+                    (acc, input) => acc && input.getValue() !== '',
+                    area.input.value !== '' && agreeCheck.checkbox.checked,
+                );
+                if (test) {
+                    submitButton.setAttribute('state', 'default');
+                } else {
+                    submitButton.setAttribute('state', 'disabled');
+                }
+            };
+            agreeCheck.checkbox.onchange = keydownHandler;
+            inputs.forEach((input) => {
+                input.addEventListener('keydown', keydownHandler);
+            });
+            area.input.addEventListener('keydown', keydownHandler);
+        </script>
         <footer-default></footer-default>
     </body>
 </html>

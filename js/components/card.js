@@ -354,6 +354,7 @@ class report_content extends HTMLElement {
             float: left;
             margin-right: 24px;
             margin-bottom: 24px;
+            cursor: pointer;
         }
         
         

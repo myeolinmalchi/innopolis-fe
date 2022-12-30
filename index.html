@@ -29,32 +29,14 @@
         items.forEach(item => {
             item.classList.add('none');
         });
-        document.querySelector('#third-content-large' + select_id).classList.remove('none');
-        document.querySelector('#third-content-small' + select_id).classList.remove('none');
-        document.querySelector('.list-black').classList.remove('list-black');
-        let listblacks = document.querySelectorAll('.list-black');
-        listblacks.forEach(list => {
+        let listBlacks = document.querySelectorAll('.list-black');
+        listBlacks.forEach(list => {
             list.classList.remove('list-black');
         })
-    }
-
-    function clickFunc2(select_id) {
-        let items = document.querySelectorAll('.third-text-content');
-        items.forEach(item => {
-            item.classList.add('none');
-        });
+        document.getElementById(select_id).classList.add('list-black');
         document.querySelector('#third-content-large' + select_id).classList.remove('none');
         document.querySelector('#third-content-small' + select_id).classList.remove('none');
-        
-        document.querySelector('.list-black').classList.remove('list-black');
-        let listblacks = document.querySelectorAll('.list-black');
-        listblacks.forEach(list => {
-            list.classList.remove('list-black');
-        })
     }
-
-
-
     function clickFunc1(select_id) {
         let items = document.querySelectorAll('.slide-page');
         items.forEach(item => {
@@ -69,6 +51,34 @@
         document.querySelector('#page-' + select_id).classList.remove('none');
         document.querySelector('#' + select_id).classList.add('promotion-slide-item-active');
     }
+
+    function clickFunc2(id) {
+        let items = document.querySelectorAll('.third-text-content');
+        items.forEach(item => {
+            item.classList.add('none');
+        });
+        let listBlacks = document.querySelectorAll('.list-black');
+        listBlacks.forEach(list => {
+            list.classList.remove('list-black');
+        })
+        console.log('hi');
+        console.log(id);
+        if(id == 'first'){
+            document.getElementById('1').classList.add('list-black');
+            document.querySelector('#third-content-large1').classList.remove('none');
+            document.querySelector('#third-content-small1').classList.remove('none');
+        }
+        else{
+            document.getElementById('4').classList.add('list-black');
+            document.querySelector('#third-content-large4').classList.remove('none');
+            document.querySelector('#third-content-small4').classList.remove('none');
+        }
+        
+    }
+
+
+
+    
 </script>
 
 <body>
@@ -315,8 +325,8 @@
                     <tab-introduce-text></tab-introduce-text>
                 </tab-introduction-container>
                 <tab-container>
-                    <tab-default type="primary">연구기술사업</tab-default>
-                    <tab-default type="primary">지역기술사업</tab-default>
+                    <div id="first" onclick="clickFunc2(this.id)"><tab-default type="primary">연구기술사업</tab-default></div>
+                    <div id="second" onclick="clickFunc2(this.id)"><tab-default type="primary">지역기술사업</tab-default></div>
                 </tab-container>
             </subcontent-tab-area>
             <tab-content-area>
@@ -426,7 +436,7 @@
                                             content-subtitle02
                                             list-black
                                             round-04
-                                        " id="4" onclick="clickFunc2(this.id)">
+                                        " id="4" onclick="clickFunc(this.id)">
                                         이노폴리스 캠퍼스 사업
                                 </button>
                                 <div class="third-text-content small" id="third-content-small4">
@@ -442,7 +452,7 @@
                                 </div>
                             </li>
                             <li>
-                                <button class="content-subtitle02 round-04" id="5" onclick="clickFunc2(this.id)">
+                                <button class="content-subtitle02 round-04" id="5" onclick="clickFunc(this.id)">
                                     혁신네트워크운영
                                 </button>
                                 <div class="third-text-content small none" id="third-content-small5">
@@ -458,7 +468,7 @@
                                 </div>
                             </li>
                             <li>
-                                <button class="content-subtitle02 round-04" id="6" onclick="clickFunc2(this.id)">
+                                <button class="content-subtitle02 round-04" id="6" onclick="clickFunc(this.id)">
                                     지역특성화 육성
                                 </button>
                                 <div class="third-text-content small none" id="third-content-small6">

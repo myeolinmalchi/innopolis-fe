@@ -220,6 +220,9 @@ img {
     color: var(--text-third);
     font-size: var(--body-03);
 }
+.content2-1 .space-item{
+    min-height: 161px;
+}
 
 .value {
     margin-bottom: 32px;

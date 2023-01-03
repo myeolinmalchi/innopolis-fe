@@ -18,14 +18,13 @@ class footer_default extends HTMLElement {
         content_first_img.setAttribute('src', '/image/logoL.png');
 
         const content_first_img_m = document.createElement('img');
-        content_first_img_m.setAttribute('class','left m')
-        content_first_img_m.setAttribute('src','/image/logoM.png');
+        content_first_img_m.setAttribute('class', 'left m');
+        content_first_img_m.setAttribute('src', '/image/logoM.png');
 
         const content_first_img_s = document.createElement('img');
-        content_first_img_s.setAttribute('class','left s')
-        content_first_img_s.setAttribute('src','/image/logoS.png');
+        content_first_img_s.setAttribute('class', 'left s');
+        content_first_img_s.setAttribute('src', '/image/logoS.png');
 
-        
         const content_first_ul = document.createElement('ul');
         content_first_ul.setAttribute('class', 'list');
         const content_first_li_1 = document.createElement('li');
@@ -53,7 +52,6 @@ class footer_default extends HTMLElement {
             "location.href='/html/pages/introduce.html?tab=2'",
         );
 
-        
         const content_second = document.createElement('div');
         content_second.setAttribute('class', 'content second left');
         const content_second_hr = document.createElement('hr');
@@ -115,8 +113,8 @@ class footer_default extends HTMLElement {
         content_fivth.appendChild(content_fivth_img_1);
         content_fivth.appendChild(content_fivth_img_2);
 
-        content_fivth_img_1.setAttribute('onClick',"#");
-        content_fivth_img_2.setAttribute('onClick',"#");
+        content_fivth_img_1.setAttribute('onClick', '#');
+        content_fivth_img_2.setAttribute('onClick', '#');
         const style = document.createElement('style');
         style.textContent = `
         
@@ -142,6 +140,8 @@ class footer_default extends HTMLElement {
             line-height: 160%;
             height: 346px;
             /* or 19px */
+            padding: 0 80px;
+            box-sizing: border-box;
 
             text-align: center;
             letter-spacing: -0.01em;
@@ -153,7 +153,6 @@ class footer_default extends HTMLElement {
         .container{
             max-width: 1100px;
             width: 100%;
-            padding: 0px 80px;
             margin: 0 auto;
             background-color:#111827;
             display: inline-block;

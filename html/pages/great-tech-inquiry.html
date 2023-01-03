@@ -35,12 +35,14 @@
                 <div>
                     <span class="body-me"><span>* </span>이름</span>
                     <textfield-default
+                        class="neccessary"
                         placeholder="이름을 입력해주세요."
                     ></textfield-default>
                 </div>
                 <div>
                     <span class="body-me"><span>* </span>기업명</span>
                     <textfield-default
+                        class="neccessary"
                         placeholder="기업명을 입력해주세요."
                     ></textfield-default>
                 </div>
@@ -48,6 +50,7 @@
                     <span class="body-me"><span>* </span>소속/직위</span>
                     <textfield-default
                         placeholder="소속/직위를 입력해주세요."
+                        class="neccessary"
                     ></textfield-default>
                 </div>
                 <div>
@@ -55,6 +58,7 @@
                     <div class="email-wrapper">
                         <textfield-default
                             placeholder="이메일을 입력해주세요."
+                            class="neccessary"
                         ></textfield-default>
                         <dropdown-container>
                             <dropdown-header
@@ -90,9 +94,11 @@
                             </dropdown-content>
                         </dropdown-container>
                         <textfield-default
+                            class="neccessary"
                             placeholder="중간 번호"
                         ></textfield-default>
                         <textfield-default
+                            class="neccessary"
                             placeholder="끝 번호"
                         ></textfield-default>
                     </div>
@@ -148,7 +154,9 @@
             </div>
         </div>
         <script>
-            const inputs = [...document.querySelectorAll('textfield-default')];
+            const inputs = [
+                ...document.querySelectorAll('textfield-default.neccessary'),
+            ];
             const area = document.querySelector('textfield-area');
             const agreeCheck = document.querySelector('checkbox-default');
             const submitButton = document.querySelector('#submit');

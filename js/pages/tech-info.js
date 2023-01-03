@@ -98,26 +98,27 @@ getRenderer({
     paginationContainer: document.querySelector(
         '#content3 pagination-container',
     ),
-    convertToPost: (post, idx) =>
-        `
-                    <div class="post-wrapper" onclick="location.href='${
-                        post.link
-                    }'">
-                            <img
-                                class="post-img"
-                                src="${post.img}"
-                                alt=""
-                            />
-                            <div class="post-detail-wrapper">
-                                <span class="post-detail-ti body-bd"
-                                      >${post.title}</span
-                                >
-                                <span class="post-detail-date body-me">
-                                    ${post.date.split(' ')[0]}
-                                </span>
-                            </div>
-                        </div>
-                `,
+    convertToPost: (post, idx) => {
+        const id = post.link.split('/')[3];
+        const img_src = `https://img.youtube.com/vi/${id}/mqdefault.jpg`;
+        return `
+        <div class="post-wrapper" onclick="location.href='${post.link}'">
+                <img
+                    class="post-img"
+                    src="${img_src}"
+                    alt=""
+                />
+                <div class="post-detail-wrapper">
+                    <span class="post-detail-ti body-bd"
+                          >${post.title}</span
+                    >
+                    <span class="post-detail-date body-me">
+                        ${post.date.split(' ')[0]}
+                    </span>
+                </div>
+            </div>
+                `;
+    },
     path: '/resources/pages/tech-info/tech-video.json',
     postsPerPage: 12,
 }).then((renderer) => {

@@ -61,6 +61,7 @@ pagination-container {
 
 #content2 .post-container {
     gap: 24px;
+    align-items: start;
 }
 
 #content2 .post-container > div {
@@ -77,13 +78,13 @@ pagination-container {
     max-width: 100%;
     width: 100%;
     border: 1px solid var(--stroke-gray-01);
+    object-fit: cover;
 }
 
 #content2 .post-container > div > div {
     display: flex;
     flex-direction: column;
     justify-content: top;
-    height: 120px;
     padding: 16px;
     gap: 8px;
     box-sizing: border-box;

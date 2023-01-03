@@ -1,58 +1,58 @@
 @charset "utf-8";
 
-body{
+body {
     width: 100%;
 }
 
 footer {
     min-height: 342px;
     width: 100%;
-    background-color:#1A2433;
+    background-color: #1a2433;
     display: block;
-    color: #9CA3AF;
+    color: #9ca3af;
     padding-top: 60px;
     margin: 0 auto;
     font-family: 'Pretendard';
 }
-.container{
+.container {
     max-width: 1100px;
     width: 100%;
     margin: 0 auto;
 }
 
-.content{
+.content {
     display: inline-block;
     float: left;
 }
 
-.left{
+.left {
     display: inline-block;
     float: left;
 }
-.leftcontent{
+.leftcontent {
     display: block;
     width: 90%;
     float: left;
 }
-.rightcontent{
+.rightcontent {
     display: block;
     width: 10%;
     float: right;
     margin-top: 28px;
 }
-.right{
+.right {
     display: inline-block;
     float: right;
 }
 
-.list{
+.list {
     weight: 50%;
     margin-top: 3px;
     margin-left: 24px;
     float: right;
 }
 
-.list li{
+.list li {
     display: block;
     float: left;
     font-size: 16px;
@@ -60,63 +60,62 @@ footer {
     margin-right: 12px;
 }
 
-.second{
+.second {
     margin-top: 23px;
     width: 100%;
 }
-.third{
+.third {
     margin-top: 28px;
- }
- .third p{
+}
+.third p {
     line-height: 22px;
     line-height: 160%;
- }
-.fourth{
+}
+.fourth {
     margin-top: 20px;
 }
-.fivth{
-
+.fivth {
 }
-.fivth:nth-child(2){
+.fivth:nth-child(2) {
     margin-left: 16px;
 }
 /* 반응형 */
 @media (max-width: 1100px) {
-    .container{
+    .container {
         max-width: 864px;
     }
 }
 
 @media (max-width: 864px) {
-    .container{
+    .container {
         max-width: 350px;
     }
-    footer{
+    footer {
         padding-top: 32px;
         font-size: 12px;
         line-height: 19px;
         line-height: 160%;
     }
-    .list{
+    .list {
         margin: 0px;
         margin-top: 12px;
     }
-    .list li{
+    .list li {
         font-size: 12px;
         line-height: 19px;
         line-height: 160%;
         margin-left: 16px;
         margin-right: 0px;
     }
-    .list li:nth-child(1){
+    .list li:nth-child(1) {
         margin-left: 0px;
     }
-    .rightcontent{
+    .rightcontent {
         display: block;
         float: left;
         width: 100%;
     }
-    .rightcontent .right{
+    .rightcontent .right {
         float: left;
     }
 }

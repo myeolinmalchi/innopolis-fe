@@ -61,24 +61,24 @@
         listBlacks.forEach(list => {
             list.classList.remove('list-black');
         })
-        
+
         console.log(id);
-        if(id == 'first'){
+        if (id == 'first') {
             document.getElementById('1').classList.add('list-black');
             document.querySelector('#third-content-large1').classList.remove('none');
             document.querySelector('#third-content-small1').classList.remove('none');
         }
-        else{
+        else {
             document.getElementById('4').classList.add('list-black');
             document.querySelector('#third-content-large4').classList.remove('none');
             document.querySelector('#third-content-small4').classList.remove('none');
         }
-        
+
     }
 
 
 
-    
+
 </script>
 
 <body>
@@ -96,7 +96,7 @@
                 <div class="main-sub">
                     미래 자동차 창출의 중심지, 충남천안 아산강소특구
                 </div>
-                
+
             </div>
         </div>
     </div>
@@ -106,37 +106,40 @@
             <div class="content-title">최신 사업 공고</div>
             <div class="slide-container">
                 <div class="slide-page" id="page-slide-1">
-                    <div class="promotion-card" id="pc1" onclick="location.href='/html/pages/business-announcement.html?idx=0'">
+                    <div class="promotion-card" id="pc1"
+                        onclick="location.href='/html/pages/business-announcement.html?idx=0'">
                         <div class="promotion-card-inner">
                             <div class="content-text promotion-text">
-                                
-                
-                                2022년 충남 천안·아산 강소연구개발특구 특화개별사업 수혜기업 모집 추가공고                    
-            
+
+
+                                2022년 충남 천안·아산 강소연구개발특구 특화개별사업 수혜기업 모집 추가공고
+
                             </div>
                             <div class="content-date">2022-07-15</div>
                         </div>
                     </div>
 
-                    <div class="promotion-card" id="pc2" onclick="location.href='/html/pages/business-announcement.html?idx=1'">
+                    <div class="promotion-card" id="pc2"
+                        onclick="location.href='/html/pages/business-announcement.html?idx=1'">
                         <div class="promotion-card-inner">
                             <div class="content-text promotion-text">
-                                
-                
-                                2022년 충남 천안·아산 강소특구 혁신네트워크 운영 위탁연구개발기관 모집                    
-            
+
+
+                                2022년 충남 천안·아산 강소특구 혁신네트워크 운영 위탁연구개발기관 모집
+
                             </div>
                             <div class="content-date">2022-06-08</div>
                         </div>
                     </div>
 
-                    <div class="promotion-card" id="pc3" style="margin-right: 0px" onclick="location.href='/html/pages/business-announcement.html?idx=2'">
+                    <div class="promotion-card" id="pc3" style="margin-right: 0px"
+                        onclick="location.href='/html/pages/business-announcement.html?idx=2'">
                         <div class="promotion-card-inner">
                             <div class="content-text promotion-text">
-                                
-                
-                                2022년 충남 천안·아산 강소연구개발특구 특화개별사업 수혜기업 모집공고                    
-            
+
+
+                                2022년 충남 천안·아산 강소연구개발특구 특화개별사업 수혜기업 모집공고
+
                             </div>
                             <div class="content-date">2022-05-18</div>
                         </div>
@@ -144,25 +147,27 @@
                 </div>
 
                 <div class="slide-page none" id="page-slide-2">
-                    <div class="promotion-card" id="pc1" onclick="location.href='/html/pages/business-announcement.html?idx=3'">
+                    <div class="promotion-card" id="pc1"
+                        onclick="location.href='/html/pages/business-announcement.html?idx=3'">
                         <div class="promotion-card-inner">
                             <div class="content-text promotion-text">
-                                
-                
-                                2022년 이노폴리스캠퍼스사업 제2기 예비·초기창업자 모집                    
-            
+
+
+                                2022년 이노폴리스캠퍼스사업 제2기 예비·초기창업자 모집
+
                             </div>
                             <div class="content-date">2022-05-12</div>
                         </div>
                     </div>
 
-                    <div class="promotion-card" id="pc2"  onclick="location.href='/html/pages/business-announcement.html?idx=4'">
+                    <div class="promotion-card" id="pc2"
+                        onclick="location.href='/html/pages/business-announcement.html?idx=4'">
                         <div class="promotion-card-inner">
                             <div class="content-text promotion-text">
-                                
-                
-                                2022년 강소특구 기술이전사업화(기술이전 R&BD, 연구소기업 R&BD)                    
-            
+
+
+                                2022년 강소특구 기술이전사업화(기술이전 R&BD, 연구소기업 R&BD)
+
                             </div>
                             <div class="content-date">2022-04-14</div>
                         </div>
@@ -244,7 +249,8 @@
             </div>
 
             <div class="promotion-slide">
-                <div class="promotion-slide-item promotion-slide-item-active" id="slide-1" onclick="clickFunc1(this.id)"></div>
+                <div class="promotion-slide-item promotion-slide-item-active" id="slide-1"
+                    onclick="clickFunc1(this.id)"></div>
                 <div class="promotion-slide-item" id="slide-2" onclick="clickFunc1(this.id)"></div>
                 <div class="promotion-slide-item" id="slide-3" onclick="clickFunc1(this.id)"></div>
                 <div class="promotion-slide-item" id="slide-4" onclick="clickFunc1(this.id)"></div>
@@ -313,15 +319,18 @@
         <div class="third-content inner-content-wrapper">
             <div class="content-title">기술영상</div>
             <div class="promotion-container">
-                <promotion-item img_src="https://img.youtube.com/vi/sKozXRTczhQ/0.jpg" link="location.href='https://youtu.be/sKozXRTczhQ'" 
-                name="[KATECH] 유연회로기판용 폴리이미드 필름의 유전손실을 낮추기 위한 필름 제조 방법 - 오미혜" date="22-07-27"></promotion-item>
-                <promotion-item img_src="https://img.youtube.com/vi/88rbQE_568Y/0.jpg" link="location.href='https://youtu.be/88rbQE_568Y'" 
-                name="[KATECH] 후방 차량에 추월 정보를 제공하는 장치 및 방법 - 김용은" date="22-07-27"></promotion-item>
-                <promotion-item img_src="https://img.youtube.com/vi/tT7NtxFDcto/0.jpg" link="location.href='https://youtu.be/tT7NtxFDcto'" 
-                name="[KATECH] 고강도 고압출성 알루미늄 전신재 합금 - 성시영" date="22-07-27"></promotion-item>
-                <promotion-item style="margin-right: 0px" img_src="https://img.youtube.com/vi/sKozXRTczhQ/0.jpg" link="location.href='https://youtu.be/uaBn5Unr8ms'" 
-                name="[KATECH] 리튬이온 이차전지용 전극 소재 및 그 제조방법 - 엄지용"
-                 date="22-07-27"></promotion-item>
+                <promotion-item img_src="https://img.youtube.com/vi/sKozXRTczhQ/0.jpg"
+                    link="location.href='https://youtu.be/sKozXRTczhQ'"
+                    name="[KATECH] 유연회로기판용 폴리이미드 필름의 유전손실을 낮추기 위한 필름 제조 방법 - 오미혜" date="22-07-27"></promotion-item>
+                <promotion-item img_src="https://img.youtube.com/vi/88rbQE_568Y/0.jpg"
+                    link="location.href='https://youtu.be/88rbQE_568Y'" name="[KATECH] 후방 차량에 추월 정보를 제공하는 장치 및 방법 - 김용은"
+                    date="22-07-27"></promotion-item>
+                <promotion-item img_src="https://img.youtube.com/vi/tT7NtxFDcto/0.jpg"
+                    link="location.href='https://youtu.be/tT7NtxFDcto'" name="[KATECH] 고강도 고압출성 알루미늄 전신재 합금 - 성시영"
+                    date="22-07-27"></promotion-item>
+                <promotion-item style="margin-right: 0px" img_src="https://img.youtube.com/vi/sKozXRTczhQ/0.jpg"
+                    link="location.href='https://youtu.be/uaBn5Unr8ms'" name="[KATECH] 리튬이온 이차전지용 전극 소재 및 그 제조방법 - 엄지용"
+                    date="22-07-27"></promotion-item>
             </div>
         </div>
     </div>
@@ -329,14 +338,15 @@
     <div class="content-wrapper">
         <div class="fourth-content inner-content-wrapper">
             <div class="content-title">지원 사업 소개</div>
-            <subcontent-tab-area  style="padding: 0px; padding-bottom: 48px;">
+            <subcontent-tab-area style="padding: 0px; padding-bottom: 48px;">
                 <tab-introduction-container>
                     <tab-introduce-text></tab-introduce-text>
                     <tab-introduce-text></tab-introduce-text>
                 </tab-introduction-container>
                 <tab-container>
                     <div id="first" onclick="clickFunc2(this.id)"><tab-default type="primary">연구기술사업</tab-default></div>
-                    <div id="second" onclick="clickFunc2(this.id)"><tab-default type="primary">지역기술사업</tab-default></div>
+                    <div id="second" onclick="clickFunc2(this.id)"><tab-default type="primary">지역기술사업</tab-default>
+                    </div>
                 </tab-container>
             </subcontent-tab-area>
             <tab-content-area>
@@ -359,7 +369,8 @@
                                         양방향 기술 발굴 연계 지원
                                     </div>
                                     <div class="content-text third-text-inner">
-                                        공공연구기관의 기술을 직접 사업화하기 위해 수요기술을 발굴하고 분석하여 기술이전 또는 출자로 연구소 기업을 설립하고 이를 통한 공공기술 사업화 성과 창출
+                                        공공연구기관의 기술을 직접 사업화하기 위해 수요기술을 발굴하고 분석하여 기술이전 또는 출자로 연구소 기업을 설립하고 이를 통한 공공기술 사업화
+                                        성과 창출
                                     </div>
                                     <div class="third-detail"
                                         onclick="location.href='/html/pages/support-bussiness-introduce.html'">자세히 보기 >
@@ -375,7 +386,8 @@
                                         연구소기업설립지원
                                     </div>
                                     <div class="content-text third-text-inner">
-                                        공공연구기관의 기술을 직접 사업화하기 위한 목적으로 설립신사업, 업종 전환 및 개편 등이 필요한 기업으로서, 기술이전 수요가 있으며, 연구소기업 추진이 가능한 기업 또는 예비 창업자
+                                        공공연구기관의 기술을 직접 사업화하기 위한 목적으로 설립신사업, 업종 전환 및 개편 등이 필요한 기업으로서, 기술이전 수요가 있으며, 연구소기업
+                                        추진이 가능한 기업 또는 예비 창업자
                                     </div>
                                     <div class="third-detail"
                                         onclick="location.href='/html/pages/support-bussiness-introduce.html'">자세히
@@ -414,7 +426,8 @@
                                 연구소기업설립지원
                             </div>
                             <div class="content-text third-text-inner">
-                                공공연구기관의 기술을 직접 사업화하기 위한 목적으로 설립신사업, 업종 전환 및 개편 등이 필요한 기업으로서, 기술이전 수요가 있으며, 연구소기업 추진이 가능한 기업 또는 예비 창업자
+                                공공연구기관의 기술을 직접 사업화하기 위한 목적으로 설립신사업, 업종 전환 및 개편 등이 필요한 기업으로서, 기술이전 수요가 있으며, 연구소기업 추진이 가능한
+                                기업 또는 예비 창업자
                             </div>
                             <div class="third-detail"
                                 onclick="location.href='/html/pages/support-bussiness-introduce.html'">자세히 보기 >
@@ -447,7 +460,7 @@
                                             list-black
                                             round-04
                                         " id="4" onclick="clickFunc(this.id)">
-                                        이노폴리스 캠퍼스 사업
+                                    이노폴리스 캠퍼스 사업
                                 </button>
                                 <div class="third-text-content small" id="third-content-small4">
                                     <div class="content-subtitle03">
@@ -457,7 +470,8 @@
                                         지역 내 예비·초기 창업자를 모집하여 창업아이템 발굴·검증, 멘토링, 투자연계 등 창업 역량강화를 통한 기술창업 활성화
                                     </div>
                                     <div class="third-detail"
-                                        onclick="location.href='/html/pages/support-bussiness-introduce.html?tab=1'">자세히 보기 >
+                                        onclick="location.href='/html/pages/support-bussiness-introduce.html?tab=1'">자세히
+                                        보기 >
                                     </div>
                                 </div>
                             </li>
@@ -470,7 +484,8 @@
                                         혁신네트워크운영
                                     </div>
                                     <div class="content-text third-text-inner">
-                                        충남천안아산강소특구 활성화를 위해 지역내 혁신네트워크를 조성해 구성원 간 협력체계 구축 및 이를 기반으로 한 충남 천안·아산 기술사업화 생태계 조성
+                                        충남천안아산강소특구 활성화를 위해 지역내 혁신네트워크를 조성해 구성원 간 협력체계 구축 및 이를 기반으로 한 충남 천안·아산 기술사업화 생태계
+                                        조성
                                     </div>
                                     <div class="third-detail"
                                         onclick="location.href='/html/pages/support-bussiness-introduce.html?tab=1'">자세히
@@ -486,7 +501,8 @@
                                         지역특성화 육성
                                     </div>
                                     <div class="content-text third-text-inner">
-                                        천안·아산 지역 소재 기업의 제품(기술) 사업화 지원을 통한 ‘ 충남 천안·아산 강소연구개발특구(차세대 자동차 부품 혁신클러스터)’ 육성 및 지역경제 발전 이바지
+                                        천안·아산 지역 소재 기업의 제품(기술) 사업화 지원을 통한 ‘ 충남 천안·아산 강소연구개발특구(차세대 자동차 부품 혁신클러스터)’ 육성 및
+                                        지역경제 발전 이바지
                                     </div>
                                     <div class="third-detail"
                                         onclick="location.href='/html/pages/support-bussiness-introduce.html?tab=1'">자세히
@@ -502,7 +518,8 @@
                                 지역 내 예비·초기 창업자를 모집하여 창업아이템 발굴·검증, 멘토링, 투자연계 등 창업 역량강화를 통한 기술창업 활성화
                             </div>
                             <div class="third-detail"
-                                onclick="location.href='/html/pages/support-bussiness-introduce.html?tab=1'">자세히 보기 ></div>
+                                onclick="location.href='/html/pages/support-bussiness-introduce.html?tab=1'">자세히 보기 >
+                            </div>
                         </div>
                         <div class="third-text-content large none" id="third-content-large5">
                             <div class="content-subtitle03">
@@ -520,7 +537,8 @@
                                 지역특성화 육성
                             </div>
                             <div class="content-text third-text-inner">
-                                천안·아산 지역 소재 기업의 제품(기술) 사업화 지원을 통한 ‘ 충남 천안·아산 강소연구개발특구(차세대 자동차 부품 혁신클러스터)’ 육성 및 지역경제 발전 이바지
+                                천안·아산 지역 소재 기업의 제품(기술) 사업화 지원을 통한 ‘ 충남 천안·아산 강소연구개발특구(차세대 자동차 부품 혁신클러스터)’ 육성 및 지역경제 발전
+                                이바지
                             </div>
                             <div class="third-detail"
                                 onclick="location.href='/html/pages/support-bussiness-introduce.html?tab=1'">자세히 보기 >
@@ -538,25 +556,28 @@
             <div class="content-title">
                 함께 만들어가는 천안아산강소특구
             </div>
-            <div class="logo-container">
-                <div>
-                    <img src="/image/pages/introduce/index/image 183.png"
-                        onclick="location.href='//www.innopolis.or.kr/mps'" />
-                </div>
-                <div>
-                    <img src="/image/pages/introduce/index/image 184.png" onclick="location.href='//www.msit.go.kr/'" />
-                </div>
-                <div>
-                    <img src="/image/pages/introduce/index/image 185.png"
-                        onclick="location.href='//www.chungnam.go.kr/'" />
-                </div>
-                <div>
-                    <img src="/image/pages/introduce/index/image 186.png"
-                        onclick="location.href='//www.cheonan.go.kr//'" />
-                </div>
-                <div>
-                    <img src="/image/pages/introduce/index/image 187.png"
-                        onclick="location.href='//www.katech.re.kr/'" />
+            <div class="logo-overflow">
+                <div class="logo-container">
+                    <div>
+                        <img src="/image/pages/introduce/index/image 183.png"
+                            onclick="location.href='//www.innopolis.or.kr/mps'" />
+                    </div>
+                    <div>
+                        <img src="/image/pages/introduce/index/image 184.png"
+                            onclick="location.href='//www.msit.go.kr/'" />
+                    </div>
+                    <div>
+                        <img src="/image/pages/introduce/index/image 185.png"
+                            onclick="location.href='//www.chungnam.go.kr/'" />
+                    </div>
+                    <div>
+                        <img src="/image/pages/introduce/index/image 186.png"
+                            onclick="location.href='//www.cheonan.go.kr//'" />
+                    </div>
+                    <div>
+                        <img src="/image/pages/introduce/index/image 187.png"
+                            onclick="location.href='//www.katech.re.kr/'" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -603,7 +624,8 @@
                 </div>
             </div>
 
-            <div class="news-item" onclick="location.href='//www.dnews.co.kr/uhtml/view.jsp?idxno=202211181607462140370'">
+            <div class="news-item"
+                onclick="location.href='//www.dnews.co.kr/uhtml/view.jsp?idxno=202211181607462140370'">
                 <div>
                     <div class="content-text news-item-name">
                         한자연, ‘충남 스타트업 컨퍼런스’ 참여…충남지역 창업 생태계 지원

@@ -140,8 +140,6 @@ class footer_default extends HTMLElement {
             line-height: 160%;
             height: 346px;
             /* or 19px */
-            padding: 0 80px;
-            box-sizing: border-box;
 
             text-align: center;
             letter-spacing: -0.01em;
@@ -153,6 +151,7 @@ class footer_default extends HTMLElement {
         .container{
             max-width: 1100px;
             width: 100%;
+            padding: 0px 80px;
             margin: 0 auto;
             background-color:#111827;
             display: inline-block;

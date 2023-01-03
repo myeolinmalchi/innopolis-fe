@@ -26,6 +26,7 @@ a {
     content: url(/image/headerLogoDefault.png);
     width: 140px;
     height: 42px;
+    cursor: pointer;
 }
 
 .container > div:nth-child(3) {

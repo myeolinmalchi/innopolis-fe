@@ -187,7 +187,7 @@ class promotion_content extends HTMLElement {
         
         .promotionImg{
             width: 100%;
-            height: 180px;
+            aspect-ratio: 16/9;
         }
 
         img {
@@ -255,7 +255,8 @@ class promotion_content extends HTMLElement {
             
 
             .promotionImg{
-                height: 104px;
+                
+                aspect-ratio: 16/9;
             }
             .promotionTextContent{
                 height: 109px;

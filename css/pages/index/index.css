@@ -321,7 +321,13 @@ button{
     display: block;
     padding: 120px 0px;
 }
-
+.logo-overflow{
+  width: 100%;
+  scrollbar-width: none;
+}
+.logo-overflow::-webkit-scrollbar{
+  display: none;
+}
 .fivth-content{
     display: block;
     padding: 64px 0px;
@@ -332,11 +338,7 @@ button{
 }
 .logo-container{
     width: 1100px;
-    overflow-x: scroll;
     display: flex;
-    white-space: nowrap;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
     flex-direction: row;
     cursor: pointer;
 }
@@ -395,6 +397,15 @@ button{
 
 .marginbottom{
     margin-bottom: 64px;
+}
+
+@media (max-width: 1100px) {
+  .logo-overflow{
+    overflow-x: scroll;
+    white-space: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
 @media (max-width: 640px) {
   .second-text-content div:first-child{
@@ -480,7 +491,6 @@ button{
   }
   .logo-container{
     height: 48px;
-    overflow-x: scroll;
   }
   .main-sub{
     font-size: var(--body-02);

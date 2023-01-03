@@ -12,9 +12,20 @@ class footer_default extends HTMLElement {
 
         const content_first = document.createElement('div');
         content_first.setAttribute('class', 'content first');
+
         const content_first_img = document.createElement('img');
-        content_first_img.setAttribute('class', 'left');
-        content_first_img.setAttribute('src', '/image/logo.png');
+        content_first_img.setAttribute('class', 'left l');
+        content_first_img.setAttribute('src', '/image/logoL.png');
+
+        const content_first_img_m = document.createElement('img');
+        content_first_img_m.setAttribute('class','left m')
+        content_first_img_m.setAttribute('src','/image/logoM.png');
+
+        const content_first_img_s = document.createElement('img');
+        content_first_img_s.setAttribute('class','left s')
+        content_first_img_s.setAttribute('src','/image/logoS.png');
+
+        
         const content_first_ul = document.createElement('ul');
         content_first_ul.setAttribute('class', 'list');
         const content_first_li_1 = document.createElement('li');
@@ -77,6 +88,8 @@ class footer_default extends HTMLElement {
 
         footer_container.appendChild(footer_content_wrapper);
         footer_content_wrapper.appendChild(content_first);
+        content_first.appendChild(content_first_img_s);
+        content_first.appendChild(content_first_img_m);
         content_first.appendChild(content_first_img);
         content_first.appendChild(content_first_ul);
         content_first_ul.appendChild(content_first_li_1);
@@ -106,6 +119,7 @@ class footer_default extends HTMLElement {
         content_fivth_img_2.setAttribute('onClick',"#");
         const style = document.createElement('style');
         style.textContent = `
+        
         p{
             margin: 0px;
         }
@@ -139,13 +153,22 @@ class footer_default extends HTMLElement {
         .container{
             max-width: 1100px;
             width: 100%;
+            padding: 0px 80px;
             margin: 0 auto;
             background-color:#111827;
             display: inline-block;
             text-align: left;
             box-sizing: border-box;
         }
-        
+        .first .l{
+            display: block;
+        }
+        .first .m{
+            display: none;   
+        }
+        .first .s{
+            display: none;
+        }
         .content{
             display: inline-block;
             float: left;
@@ -210,8 +233,30 @@ class footer_default extends HTMLElement {
         .mleft{
             margin-left: 16px;
         }
-        
+        @media (max-width: 1024px){
+            .first .l{
+                display: none;
+            }
+            .first .m{
+                display: block;   
+            }
+            .first .s{
+                display: none;
+            }
+        }
         @media (max-width: 640px) {
+            hr{
+                display: none;
+            }
+            .first .l{
+                display: none;
+            }
+            .first .m{
+                display: none;
+            }
+            .first .s{
+                display: block;
+            }
             .container{
                 padding: 0px 16px;
             }
@@ -222,9 +267,10 @@ class footer_default extends HTMLElement {
                 margin-top: 32px;
             }
             .list{
+                border-top: 1px solid #374151;
                 margin: 0px;
                 margin-top: 12px;
-                padding: 0px;
+                padding: 12px 0px;
             }
             .list li{
                 font-size: 12px;

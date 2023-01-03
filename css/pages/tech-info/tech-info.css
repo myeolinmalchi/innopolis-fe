@@ -37,6 +37,10 @@ pagination-container {
     border: 1px solid var(--stroke-gray-01);
 }
 
+#content3 .post-img {
+    height: auto;
+}
+
 .post-detail-wrapper {
     box-sizing: border-box;
     display: flex;

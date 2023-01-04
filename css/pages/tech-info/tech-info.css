@@ -105,11 +105,11 @@ pagination-container {
     }
 
     .post-wrapper {
-        width: calc(50% - 8px);
+        width: calc(33.3% - 10.7px);
     }
 
     .post-img {
-        height: 104px;
+        height: 150px;
     }
 
     .post-detail-wrapper {
@@ -129,6 +129,15 @@ pagination-container {
     }
     .post-detail-date {
         font-size: var(--body-01);
+    }
+}
+
+@media (max-width: 640px) {
+    .post-wrapper {
+        width: calc(50% - 8px);
+    }
+    .post-img {
+        height: 104px;
     }
 }
 #tech-trend .post-container {

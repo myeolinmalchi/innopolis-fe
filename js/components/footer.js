@@ -127,6 +127,9 @@ class footer_default extends HTMLElement {
         body{
             width: 100%;
         }
+        hr{
+            border: solid 1px #374151;
+        }
         
         footer {
             min-height: 342px;
@@ -181,7 +184,7 @@ class footer_default extends HTMLElement {
         }
         .leftcontent{
             display: block;
-            width: 90%;
+            width: 100%;
             float: left;
         }
         .rightcontent{
@@ -217,6 +220,7 @@ class footer_default extends HTMLElement {
         }
         .third{
             margin-top: 28px;
+            width: 100%;
          }
          .third p{
             line-height: 22px;

@@ -378,16 +378,11 @@ button {
 .news-item div {
     cursor: pointer;
 }
-<<<<<<< Updated upstream
-button-text{
-  width: fit-content;
-  justify-content: flex-start;
+button-text {
+    width: fit-content;
+    justify-content: flex-start;
 }
-.news-item-name{
-=======
-
 .news-item-name {
->>>>>>> Stashed changes
     margin-bottom: 8px;
 }
 .main-btn {
@@ -550,4 +545,8 @@ button-text{
     .video-container {
         height: 400px;
     }
+}
+
+div.content-wrapper button-default {
+    width: fit-content;
 }

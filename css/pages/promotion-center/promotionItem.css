@@ -5,7 +5,7 @@
 }
 
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
     .promotion_wrapper{
         margin-top: 32px;
         margin-bottom: 32px;

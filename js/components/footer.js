@@ -248,7 +248,7 @@ class footer_default extends HTMLElement {
                 margin-left: 0px;
             }
         }
-        @media (max-width: 640px) {
+        @media (max-width: 1024px) {
             hr{
                 display: none;
             }

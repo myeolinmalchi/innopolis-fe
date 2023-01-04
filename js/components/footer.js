@@ -15,15 +15,15 @@ class footer_default extends HTMLElement {
 
         const content_first_img = document.createElement('img');
         content_first_img.setAttribute('class', 'left l');
-        content_first_img.setAttribute('src', '/image/logoL.png');
+        content_first_img.setAttribute('src', '/image/logoL.svg');
 
         const content_first_img_m = document.createElement('img');
         content_first_img_m.setAttribute('class', 'left m');
-        content_first_img_m.setAttribute('src', '/image/logoM.png');
+        content_first_img_m.setAttribute('src', '/image/logoM.svg');
 
         const content_first_img_s = document.createElement('img');
         content_first_img_s.setAttribute('class', 'left s');
-        content_first_img_s.setAttribute('src', '/image/logoS.png');
+        content_first_img_s.setAttribute('src', '/image/logoS.svg');
 
         const content_first_ul = document.createElement('ul');
         content_first_ul.setAttribute('class', 'list');
@@ -80,9 +80,9 @@ class footer_default extends HTMLElement {
         const content_fivth = document.createElement('div');
         content_fivth.setAttribute('class', 'content fivth right');
         const content_fivth_img_1 = document.createElement('img');
-        content_fivth_img_1.setAttribute('src', '/image/facebook.png');
+        content_fivth_img_1.setAttribute('src', '/image/facebook.svg');
         const content_fivth_img_2 = document.createElement('img');
-        content_fivth_img_2.setAttribute('src', '/image/instagram.png');
+        content_fivth_img_2.setAttribute('src', '/image/instagram.svg');
 
         footer_container.appendChild(footer_content_wrapper);
         footer_content_wrapper.appendChild(content_first);
@@ -126,6 +126,9 @@ class footer_default extends HTMLElement {
         }
         body{
             width: 100%;
+        }
+        hr{
+            border: solid 1px #374151;
         }
         
         footer {
@@ -181,7 +184,7 @@ class footer_default extends HTMLElement {
         }
         .leftcontent{
             display: block;
-            width: 90%;
+            width: 100%;
             float: left;
         }
         .rightcontent{
@@ -217,6 +220,7 @@ class footer_default extends HTMLElement {
         }
         .third{
             margin-top: 28px;
+            width: 100%;
          }
          .third p{
             line-height: 22px;
@@ -248,7 +252,7 @@ class footer_default extends HTMLElement {
                 margin-left: 0px;
             }
         }
-        @media (max-width: 640px) {
+        @media (max-width: 1024px) {
             hr{
                 display: none;
             }
@@ -294,6 +298,9 @@ class footer_default extends HTMLElement {
             }
             .rightcontent .right{
                 float: left;
+            }
+            .second{
+                margin-top: 0px;
             }
             .fivth{
                 margin-bottom: 48px;

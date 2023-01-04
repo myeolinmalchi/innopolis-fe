@@ -31,7 +31,7 @@ pagination-container {
     margin-bottom: 120px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
     .cardContainer {
         width: 100%;
     }

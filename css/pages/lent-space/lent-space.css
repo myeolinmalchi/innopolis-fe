@@ -455,7 +455,7 @@ img {
     height: 420px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
     .preferential .item3-2{
         min-height: auto;
     }

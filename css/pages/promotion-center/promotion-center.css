@@ -79,7 +79,7 @@ report-item:nth-child(4n) {
 promotion-item:nth-child(4n) {
     margin-right: 0px;
 }
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
     card-container {
         max-height: 1250px;
         margin: 0;

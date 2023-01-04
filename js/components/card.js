@@ -98,7 +98,7 @@ class card_content extends HTMLElement {
             -webkit-box-orient: vertical; 
         }
         
-        @media(max-width: 640px){
+        @media(max-width: 1024px){
             .card{
                 height: 192px;
                 float: left;
@@ -242,7 +242,7 @@ class promotion_content extends HTMLElement {
             
         }
         
-        @media (max-width: 640px) {
+        @media (max-width: 1024px) {
             .promotion_wrapper{
                 margin-top: 32px;
                 margin-bottom: 32px;
@@ -413,7 +413,7 @@ class report_content extends HTMLElement {
             
         }
         
-        @media (max-width: 640px) {
+        @media (max-width: 1024px) {
             .report_item{
                 width: 100%;
                 height: 257px;

@@ -348,3 +348,9 @@ body {
     margin: 0;
     padding: 192px 0 240px 0;
 }
+
+.rightArrow{
+    width: 4px;
+    height: 8px;
+    margin-left: 6px;
+  }

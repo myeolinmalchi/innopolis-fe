@@ -299,6 +299,9 @@ class footer_default extends HTMLElement {
             .rightcontent .right{
                 float: left;
             }
+            .second{
+                margin-top: 0px;
+            }
             .fivth{
                 margin-bottom: 48px;
             }

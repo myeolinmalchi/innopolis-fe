@@ -149,7 +149,7 @@ class footer_default extends HTMLElement {
             color: var(--text-third);
         }
         .container{
-            max-width: 1100px;
+            max-width: 1260px;
             width: 100%;
             padding: 0px 80px;
             margin: 0 auto;
@@ -265,6 +265,7 @@ class footer_default extends HTMLElement {
                 margin-top: 32px;
             }
             .list{
+                width: 100%;
                 border-top: 1px solid #374151;
                 margin: 0px;
                 margin-top: 12px;

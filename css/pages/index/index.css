@@ -23,6 +23,11 @@ li{
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
+.rightArrow{
+  width: 4px;
+  height: 8px;
+  margin-left: 6px;
+}
 .video-container .content-wrapper{
   z-index: 1;
   max-width: 1260px;

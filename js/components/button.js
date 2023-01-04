@@ -119,7 +119,7 @@ customElements.define(
                 }
             })();
 
-            this.classList += font_class;
+            this.classList.add(font_class);
 
             this.onmouseover = () => {
                 if (state === 'default') {

@@ -241,6 +241,12 @@ class footer_default extends HTMLElement {
             .first .s{
                 display: none;
             }
+            .list{
+                width: 100%
+            }
+            .list li:first-child{
+                margin-left: 0px;
+            }
         }
         @media (max-width: 640px) {
             hr{

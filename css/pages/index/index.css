@@ -382,7 +382,9 @@ button{
 .news-item div{
   cursor: pointer;
 }
-
+button-text{
+  justify-content: flex-start;
+}
 .news-item-name{
     margin-bottom: 8px;
 }

@@ -383,6 +383,7 @@ button{
   cursor: pointer;
 }
 button-text{
+  width: fit-content;
   justify-content: flex-start;
 }
 .news-item-name{

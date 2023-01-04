@@ -203,7 +203,7 @@ tab-content:nth-child(2) > img {
     }
 
     .last-content > div > img {
-        /*content: url(/image/pages/introduce/2-5-m.png);*/
+        content: url(/image/pages/introduce/2-5-m.svg);
     }
 
     .subitem-container {

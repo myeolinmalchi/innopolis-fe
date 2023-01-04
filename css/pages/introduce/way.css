@@ -102,7 +102,7 @@ tab-content:nth-child(3) > img {
     content: url(/image/pages/introduce/3-0.png);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
     .location-container {
         padding: 64px 0;
     }

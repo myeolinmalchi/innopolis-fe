@@ -175,14 +175,16 @@ a {
     .container > div:nth-child(2) > input[type='checkbox']:checked + label {
         background: url(/image/menuClose.png) no-repeat 0 0px / contain;
     }
-}
-
-@media (max-width: 640px) {
+    #hamburger-container {
+        padding: 24px 16px;
+    }
     nav > .container {
         padding: 16px;
         height: 64px;
     }
+}
 
+@media (max-width: 640px) {
     .container > img:first-child {
         width: 106px;
         height: 32px;
@@ -192,9 +194,5 @@ a {
     }
     .menu-container > div {
         width: 100%;
-    }
-
-    #hamburger-container {
-        padding: 24px 16px;
     }
 }

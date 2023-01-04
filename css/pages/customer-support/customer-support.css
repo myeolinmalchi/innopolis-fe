@@ -84,7 +84,7 @@ img.top-img {
     content: url(/image/pages/customer-support/3-0.png);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
     #content1 .post-container,
     #content2 .post-container {
         margin: 32px 0;
@@ -256,7 +256,7 @@ li {
     color: var(--text-primary);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
     #content4 .top-img {
         background: url(/image/pages/customer-support/4-0-m.png) no-repeat;
         background-size: cover;

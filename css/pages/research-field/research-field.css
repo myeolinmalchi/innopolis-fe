@@ -42,7 +42,7 @@ pagination-container {
     margin-bottom: 120px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
     #content1 .post-container,
     #content3 .post-container {
         margin: 32px 0;
@@ -109,7 +109,7 @@ pagination-container {
     color: var(--text-third);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
     #content2 .post-container {
         gap: 8px;
         margin: 32px 0;
@@ -146,7 +146,7 @@ pagination-container {
     content: url(/image/pages/research-field/3-0.png);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
     #content1 > .top-img {
         content: url(/image/pages/research-field/1-0-m.png);
     }

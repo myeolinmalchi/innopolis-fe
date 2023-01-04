@@ -53,7 +53,7 @@ tab-content:first-child > img {
     content: url(/image/pages/introduce/1-0.png);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
     .large-text-wrapper {
         font-size: var(--subtitle-03);
         margin-top: 64px;

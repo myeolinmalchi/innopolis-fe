@@ -90,7 +90,7 @@ pagination-container {
     text-align: right;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
     textfield-search {
         margin-top: 32px;
     }
@@ -184,7 +184,7 @@ pagination-container {
     justify-content: right;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
     #tech-trend .post-container {
         flex-direction: column;
         justify-content: center;
@@ -218,7 +218,7 @@ tab-content:nth-child(4) > img {
     content: url(/image/pages/tech-info/4-0.png);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
     tab-content:first-child > img {
         content: url(/image/pages/tech-info/1-0-m.png);
     }

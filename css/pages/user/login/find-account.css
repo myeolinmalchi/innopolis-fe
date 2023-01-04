@@ -46,7 +46,7 @@ button-default {
     color: var(--text-third);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
     .content-wrapper > div > span:first-child {
         font-size: var(--title-01);
     }

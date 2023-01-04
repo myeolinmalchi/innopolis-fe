@@ -184,7 +184,7 @@ tab-content:nth-child(2) > img {
     content: url(/image/pages/introduce/2-4.png);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
     .item-wrapper {
         padding: 64px 16px;
     }

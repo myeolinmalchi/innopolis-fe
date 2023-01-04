@@ -38,7 +38,7 @@ span {
     margin-top: 32px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
     .content-wrapper > div {
         padding: 48px 0;
     }

@@ -96,7 +96,7 @@ span {
     color: var(--text-third);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
     .content-wrapper > div {
         padding: 64px 0;
         box-sizing: border-box;

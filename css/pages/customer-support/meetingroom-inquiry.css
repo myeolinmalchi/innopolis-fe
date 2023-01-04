@@ -138,7 +138,7 @@ textfield-area {
     justify-content: space-between;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
     .form-container {
         gap: 25px;
     }

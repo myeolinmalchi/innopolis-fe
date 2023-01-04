@@ -216,7 +216,7 @@ body {
     object-fit: cover;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
     .top-img {
         height: 330px;
     }
@@ -301,7 +301,7 @@ body {
     line-height: 26px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
     .content-top-img {
         height: 330px;
     }

@@ -104,7 +104,7 @@ td:nth-child(even) {
     margin-bottom: 120px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
     .main-title {
         font-size: var(--subtitle-03);
         margin-top: 36px;

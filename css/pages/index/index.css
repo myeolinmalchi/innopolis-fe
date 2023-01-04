@@ -380,6 +380,7 @@ button {
 }
 <<<<<<< Updated upstream
 button-text{
+  width: fit-content;
   justify-content: flex-start;
 }
 .news-item-name{

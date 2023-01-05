@@ -1,654 +1,931 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8" />
-    <title>Insert title here.</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="styleshee" href="css/reset.css" />
-    <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/top-nav.css" />
-    <link rel="stylesheet" href="css/pages/index/index.css" />
-    <link rel="stylesheet" href="/css/tab-area.css" />
-    <script src="js/components/button.js"></script>
-    <script src="js/components/top-nav.js"></script>
-    <script src="js/components/card.js"></script>
-    <script src="js/components/footer.js"></script>
-    <script type="text/javascript" src="/js/components/tab.js"></script>
-    <script type="text/javascript" src="/js/components/tab-area.js"></script>
-    <style>
-        body {
-            padding: 0;
-            margin: 0;
+    <head>
+        <meta charset="UTF-8" />
+        <title>Insert title here.</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="styleshee" href="css/reset.css" />
+        <link rel="stylesheet" href="css/common.css" />
+        <link rel="stylesheet" href="css/top-nav.css" />
+        <link rel="stylesheet" href="css/pages/index/index.css" />
+        <link rel="stylesheet" href="/css/tab-area.css" />
+        <script src="js/components/button.js"></script>
+        <script src="js/components/top-nav.js"></script>
+        <script src="js/components/card.js"></script>
+        <script src="js/components/footer.js"></script>
+        <script type="text/javascript" src="/js/components/tab.js"></script>
+        <script
+            type="text/javascript"
+            src="/js/components/tab-area.js"
+        ></script>
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+    </head>
+    <script>
+        function clickFunc(select_id) {
+            let items = document.querySelectorAll('.third-text-content');
+            items.forEach((item) => {
+                item.classList.add('none');
+            });
+            let listBlacks = document.querySelectorAll('.list-black');
+            listBlacks.forEach((list) => {
+                list.classList.remove('list-black');
+            });
+            document.getElementById(select_id).classList.add('list-black');
+            document
+                .querySelector('#third-content-large' + select_id)
+                .classList.remove('none');
+            document
+                .querySelector('#third-content-small' + select_id)
+                .classList.remove('none');
         }
-    </style>
-</head>
-<script>
-    function clickFunc(select_id) {
-        let items = document.querySelectorAll('.third-text-content');
-        items.forEach(item => {
-            item.classList.add('none');
-        });
-        let listBlacks = document.querySelectorAll('.list-black');
-        listBlacks.forEach(list => {
-            list.classList.remove('list-black');
-        })
-        document.getElementById(select_id).classList.add('list-black');
-        document.querySelector('#third-content-large' + select_id).classList.remove('none');
-        document.querySelector('#third-content-small' + select_id).classList.remove('none');
-    }
-    function clickFunc1(select_id) {
-        let items = document.querySelectorAll('.slide-page');
-        items.forEach(item => {
-            item.classList.add('none');
-            document.querySelector('.promotion-slide-item').classList.remove('promotion-slide-item-active');
-        });
+        function clickFunc1(select_id) {
+            let items = document.querySelectorAll('.slide-page');
+            items.forEach((item) => {
+                item.classList.add('none');
+                document
+                    .querySelector('.promotion-slide-item')
+                    .classList.remove('promotion-slide-item-active');
+            });
 
-        let btns = document.querySelectorAll('.promotion-slide-item');
-        btns.forEach(btn => {
-            btn.classList.remove('promotion-slide-item-active');
-        });
-        document.querySelector('#page-' + select_id).classList.remove('none');
-        document.querySelector('#' + select_id).classList.add('promotion-slide-item-active');
-    }
-
-    function clickFunc2(id) {
-        let items = document.querySelectorAll('.third-text-content');
-        items.forEach(item => {
-            item.classList.add('none');
-        });
-        let listBlacks = document.querySelectorAll('.list-black');
-        listBlacks.forEach(list => {
-            list.classList.remove('list-black');
-        })
-
-        console.log(id);
-        if (id == 'first') {
-            document.getElementById('1').classList.add('list-black');
-            document.querySelector('#third-content-large1').classList.remove('none');
-            document.querySelector('#third-content-small1').classList.remove('none');
-        }
-        else {
-            document.getElementById('4').classList.add('list-black');
-            document.querySelector('#third-content-large4').classList.remove('none');
-            document.querySelector('#third-content-small4').classList.remove('none');
+            let btns = document.querySelectorAll('.promotion-slide-item');
+            btns.forEach((btn) => {
+                btn.classList.remove('promotion-slide-item-active');
+            });
+            document
+                .querySelector('#page-' + select_id)
+                .classList.remove('none');
+            document
+                .querySelector('#' + select_id)
+                .classList.add('promotion-slide-item-active');
         }
 
-    }
+        function clickFunc2(id) {
+            let items = document.querySelectorAll('.third-text-content');
+            items.forEach((item) => {
+                item.classList.add('none');
+            });
+            let listBlacks = document.querySelectorAll('.list-black');
+            listBlacks.forEach((list) => {
+                list.classList.remove('list-black');
+            });
 
+            console.log(id);
+            if (id == 'first') {
+                document.getElementById('1').classList.add('list-black');
+                document
+                    .querySelector('#third-content-large1')
+                    .classList.remove('none');
+                document
+                    .querySelector('#third-content-small1')
+                    .classList.remove('none');
+            } else {
+                document.getElementById('4').classList.add('list-black');
+                document
+                    .querySelector('#third-content-large4')
+                    .classList.remove('none');
+                document
+                    .querySelector('#third-content-small4')
+                    .classList.remove('none');
+            }
+        }
+    </script>
 
+    <body>
+        <top-nav></top-nav>
+        <div class="video-container" style="background-color: #111827">
+            <video muted loop autoplay style="opacity: 0.7">
+                <source
+                    src="/image/pages/introduce/index/mainvideo.mp4"
+                    type="video/mp4"
+                />
+            </video>
+            <div class="content-wrapper">
+                <div class="main-display inner-content-wrapper">
+                    <div class="main-title">
+                        미래 자동차 산업 페러다임을 선도하는<br />
+                        새로운 혁신성장의 거점
+                    </div>
+                    <div class="main-sub">
+                        미래 자동차 창출의 중심지, 충남천안 아산강소특구
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div class="content-wrapper" style="background-color: var(--background-gray-01);">
+            <div class="first-content inner-content-wrapper">
+                <div class="content-title">최신 사업 공고</div>
+                <div class="slide-container">
+                    <div class="slide-page" id="page-slide-1">
+                        <div
+                            class="promotion-card"
+                            id="pc1"
+                            onclick="location.href='/html/pages/business-announcement.html?idx=0'"
+                        >
+                            <div class="promotion-card-inner">
+                                <div class="content-text promotion-text">
+                                    2022년 충남 천안·아산 강소연구개발특구
+                                    특화개별사업 수혜기업 모집 추가공고
+                                </div>
+                                <div class="content-date">2022-07-15</div>
+                            </div>
+                        </div>
 
-</script>
+                        <div
+                            class="promotion-card"
+                            id="pc2"
+                            onclick="location.href='/html/pages/business-announcement.html?idx=1'"
+                        >
+                            <div class="promotion-card-inner">
+                                <div class="content-text promotion-text">
+                                    2022년 충남 천안·아산 강소특구 혁신네트워크
+                                    운영 위탁연구개발기관 모집
+                                </div>
+                                <div class="content-date">2022-06-08</div>
+                            </div>
+                        </div>
 
-<body>
-    <top-nav></top-nav>
-    <div class="video-container" style="background-color: #111827;">
-        <video muted loop autoplay style="opacity: 0.7;">
-            <source src="/image/pages/introduce/index/mainvideo.mp4" type="video/mp4">
-        </video>
+                        <div
+                            class="promotion-card"
+                            id="pc3"
+                            style="margin-right: 0px"
+                            onclick="location.href='/html/pages/business-announcement.html?idx=2'"
+                        >
+                            <div class="promotion-card-inner">
+                                <div class="content-text promotion-text">
+                                    2022년 충남 천안·아산 강소연구개발특구
+                                    특화개별사업 수혜기업 모집공고
+                                </div>
+                                <div class="content-date">2022-05-18</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide-page none" id="page-slide-2">
+                        <div
+                            class="promotion-card"
+                            id="pc1"
+                            onclick="location.href='/html/pages/business-announcement.html?idx=3'"
+                        >
+                            <div class="promotion-card-inner">
+                                <div class="content-text promotion-text">
+                                    2022년 이노폴리스캠퍼스사업 제2기
+                                    예비·초기창업자 모집
+                                </div>
+                                <div class="content-date">2022-05-12</div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="promotion-card"
+                            id="pc2"
+                            onclick="location.href='/html/pages/business-announcement.html?idx=4'"
+                        >
+                            <div class="promotion-card-inner">
+                                <div class="content-text promotion-text">
+                                    2022년 강소특구 기술이전사업화(기술이전
+                                    R&BD, 연구소기업 R&BD)
+                                </div>
+                                <div class="content-date">2022-04-14</div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="promotion-card"
+                            id="pc3"
+                            style="margin-right: 0px"
+                        >
+                            <div class="promotion-card-inner">
+                                <div class="content-text promotion-text">
+                                    2022년 이노폴리스 캠퍼스사업 제2기 예비,
+                                    초기창업자 모집2
+                                </div>
+                                <div class="content-date">2022-05-12</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide-page none" id="page-slide-3">
+                        <div class="promotion-card" id="pc1">
+                            <div class="promotion-card-inner">
+                                <div class="content-text promotion-text">
+                                    2022년 이노폴리스 캠퍼스사업 제2기 예비,
+                                    초기창업자 모집3
+                                </div>
+                                <div class="content-date">2022-05-12</div>
+                            </div>
+                        </div>
+
+                        <div class="promotion-card" id="pc2">
+                            <div class="promotion-card-inner">
+                                <div class="content-text promotion-text">
+                                    2022년 이노폴리스 캠퍼스사업 제2기 예비,
+                                    초기창업자 모집3
+                                </div>
+                                <div class="content-date">2022-05-12</div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="promotion-card"
+                            id="pc3"
+                            style="margin-right: 0px"
+                        >
+                            <div class="promotion-card-inner">
+                                <div class="content-text promotion-text">
+                                    2022년 이노폴리스 캠퍼스사업 제2기 예비,
+                                    초기창업자 모집3
+                                </div>
+                                <div class="content-date">2022-05-12</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide-page none" id="page-slide-4">
+                        <div class="promotion-card" id="pc1">
+                            <div class="promotion-card-inner">
+                                <div class="content-text promotion-text">
+                                    2022년 이노폴리스 캠퍼스사업 제2기 예비,
+                                    초기창업자 모집4
+                                </div>
+                                <div class="content-date">2022-05-12</div>
+                            </div>
+                        </div>
+
+                        <div class="promotion-card" id="pc2">
+                            <div class="promotion-card-inner">
+                                <div class="content-text promotion-text">
+                                    2022년 이노폴리스 캠퍼스사업 제2기 예비,
+                                    초기창업자 모집4
+                                </div>
+                                <div class="content-date">2022-05-12</div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="promotion-card"
+                            id="pc3"
+                            style="margin-right: 0px"
+                        >
+                            <div class="promotion-card-inner">
+                                <div class="content-text promotion-text">
+                                    2022년 이노폴리스 캠퍼스사업 제2기 예비,
+                                    초기창업자 모집4
+                                </div>
+                                <div class="content-date">2022-05-12</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="promotion-slide">
+                    <div
+                        class="promotion-slide-item promotion-slide-item-active"
+                        id="slide-1"
+                        onclick="clickFunc1(this.id)"
+                    ></div>
+                    <div
+                        class="promotion-slide-item"
+                        id="slide-2"
+                        onclick="clickFunc1(this.id)"
+                    ></div>
+                    <div
+                        class="promotion-slide-item"
+                        id="slide-3"
+                        onclick="clickFunc1(this.id)"
+                    ></div>
+                    <div
+                        class="promotion-slide-item"
+                        id="slide-4"
+                        onclick="clickFunc1(this.id)"
+                    ></div>
+                </div>
+            </div>
+        </div>
+
         <div class="content-wrapper">
-            <div class="main-display inner-content-wrapper">
-                <div class="main-title">
-                    미래 자동차 산업 페러다임을 선도하는<br />
-                    새로운 혁신성장의 거점
-                </div>
-                <div class="main-sub">
-                    미래 자동차 창출의 중심지, 충남천안 아산강소특구
+            <div class="second-content inner-content-wrapper">
+                <div class="content-title">
+                    천안아산강소특구<br />
+                    차세대 자동차 혁신클러스터
                 </div>
 
-            </div>
-        </div>
-    </div>
-
-    <div class="content-wrapper" style="background-color: var(--background-gray-01);">
-        <div class="first-content inner-content-wrapper">
-            <div class="content-title">최신 사업 공고</div>
-            <div class="slide-container">
-                <div class="slide-page" id="page-slide-1">
-                    <div class="promotion-card" id="pc1"
-                        onclick="location.href='/html/pages/business-announcement.html?idx=0'">
-                        <div class="promotion-card-inner">
-                            <div class="content-text promotion-text">
-
-
-                                2022년 충남 천안·아산 강소연구개발특구 특화개별사업 수혜기업 모집 추가공고
-
-                            </div>
-                            <div class="content-date">2022-07-15</div>
-                        </div>
+                <div class="second-content-item">
+                    <div class="second-content-img">
+                        <img src="/image/pages/introduce/index/1-3.svg" />
                     </div>
-
-                    <div class="promotion-card" id="pc2"
-                        onclick="location.href='/html/pages/business-announcement.html?idx=1'">
-                        <div class="promotion-card-inner">
-                            <div class="content-text promotion-text">
-
-
-                                2022년 충남 천안·아산 강소특구 혁신네트워크 운영 위탁연구개발기관 모집
-
-                            </div>
-                            <div class="content-date">2022-06-08</div>
+                    <div class="second-text-content">
+                        <div class="content-subtitle">
+                            차량용 디스플레이 · 인포테인먼트
                         </div>
-                    </div>
-
-                    <div class="promotion-card" id="pc3" style="margin-right: 0px"
-                        onclick="location.href='/html/pages/business-announcement.html?idx=2'">
-                        <div class="promotion-card-inner">
-                            <div class="content-text promotion-text">
-
-
-                                2022년 충남 천안·아산 강소연구개발특구 특화개별사업 수혜기업 모집공고
-
-                            </div>
-                            <div class="content-date">2022-05-18</div>
+                        <div class="content-text">
+                            기존의 영상과 음악 감상에 머물렀던 인포테인먼트
+                            범위를 넘어서 기술적인 부분에서 한 단계 발전한
+                            콘텐츠를 제공하고자 합니다.
                         </div>
                     </div>
                 </div>
 
-                <div class="slide-page none" id="page-slide-2">
-                    <div class="promotion-card" id="pc1"
-                        onclick="location.href='/html/pages/business-announcement.html?idx=3'">
-                        <div class="promotion-card-inner">
-                            <div class="content-text promotion-text">
-
-
-                                2022년 이노폴리스캠퍼스사업 제2기 예비·초기창업자 모집
-
-                            </div>
-                            <div class="content-date">2022-05-12</div>
-                        </div>
+                <div class="second-content-item">
+                    <div class="second-content-img">
+                        <img src="/image/pages/introduce/index/1-1.svg" />
                     </div>
-
-                    <div class="promotion-card" id="pc2"
-                        onclick="location.href='/html/pages/business-announcement.html?idx=4'">
-                        <div class="promotion-card-inner">
-                            <div class="content-text promotion-text">
-
-
-                                2022년 강소특구 기술이전사업화(기술이전 R&BD, 연구소기업 R&BD)
-
-                            </div>
-                            <div class="content-date">2022-04-14</div>
+                    <div class="second-text-content">
+                        <div class="content-subtitle">
+                            차세대 배터리 소재 ‧ 부품
                         </div>
-                    </div>
-
-                    <div class="promotion-card" id="pc3" style="margin-right: 0px">
-                        <div class="promotion-card-inner">
-                            <div class="content-text promotion-text">
-                                2022년 이노폴리스 캠퍼스사업 제2기 예비, 초기창업자
-                                모집2
-                            </div>
-                            <div class="content-date">2022-05-12</div>
+                        <div class="content-text">
+                            지구 환경을 품은 미래형 모빌리티 최적화된 설계와
+                            구조, 표준화된 대용량 배터리 시스템, 길어진 항속
+                            거리, 혁신적 공간 등 차별화된 장점을 두루 갖추고
+                            있습니다.
                         </div>
                     </div>
                 </div>
 
-                <div class="slide-page none" id="page-slide-3">
-                    <div class="promotion-card" id="pc1">
-                        <div class="promotion-card-inner">
-                            <div class="content-text promotion-text">
-                                2022년 이노폴리스 캠퍼스사업 제2기 예비, 초기창업자
-                                모집3
-                            </div>
-                            <div class="content-date">2022-05-12</div>
+                <div class="second-content-item">
+                    <div class="second-content-img">
+                        <img src="/image/pages/introduce/index/1-2.svg" />
+                    </div>
+                    <div class="second-text-content">
+                        <div class="content-subtitle">
+                            미래형 자동차 융복합 부품
                         </div>
-                    </div>
-
-                    <div class="promotion-card" id="pc2">
-                        <div class="promotion-card-inner">
-                            <div class="content-text promotion-text">
-                                2022년 이노폴리스 캠퍼스사업 제2기 예비, 초기창업자
-                                모집3
-                            </div>
-                            <div class="content-date">2022-05-12</div>
+                        <div class="content-text">
+                            자체적으로도 평가 기준을 상향 조정해 다양한 시험과
+                            해석을 통한 기초 설계를 탄탄히 하고 있습니다. 탄탄한
+                            기초 위에 첨단 기술을 더해 더욱 안전한 자동차로
+                            거듭나고 있습니다.
                         </div>
-                    </div>
-
-                    <div class="promotion-card" id="pc3" style="margin-right: 0px">
-                        <div class="promotion-card-inner">
-                            <div class="content-text promotion-text">
-                                2022년 이노폴리스 캠퍼스사업 제2기 예비, 초기창업자
-                                모집3
-                            </div>
-                            <div class="content-date">2022-05-12</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide-page none" id="page-slide-4">
-                    <div class="promotion-card" id="pc1">
-                        <div class="promotion-card-inner">
-                            <div class="content-text promotion-text">
-                                2022년 이노폴리스 캠퍼스사업 제2기 예비, 초기창업자
-                                모집4
-                            </div>
-                            <div class="content-date">2022-05-12</div>
-                        </div>
-                    </div>
-
-                    <div class="promotion-card" id="pc2">
-                        <div class="promotion-card-inner">
-                            <div class="content-text promotion-text">
-                                2022년 이노폴리스 캠퍼스사업 제2기 예비, 초기창업자
-                                모집4
-                            </div>
-                            <div class="content-date">2022-05-12</div>
-                        </div>
-                    </div>
-
-                    <div class="promotion-card" id="pc3" style="margin-right: 0px">
-                        <div class="promotion-card-inner">
-                            <div class="content-text promotion-text">
-                                2022년 이노폴리스 캠퍼스사업 제2기 예비, 초기창업자
-                                모집4
-                            </div>
-                            <div class="content-date">2022-05-12</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="promotion-slide">
-                <div class="promotion-slide-item promotion-slide-item-active" id="slide-1"
-                    onclick="clickFunc1(this.id)"></div>
-                <div class="promotion-slide-item" id="slide-2" onclick="clickFunc1(this.id)"></div>
-                <div class="promotion-slide-item" id="slide-3" onclick="clickFunc1(this.id)"></div>
-                <div class="promotion-slide-item" id="slide-4" onclick="clickFunc1(this.id)"></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="content-wrapper">
-        <div class="second-content inner-content-wrapper">
-            <div class="content-title">
-                천안아산강소특구<br />
-                차세대 자동차 혁신클러스터
-            </div>
-
-            <div class="second-content-item">
-                <div class="second-content-img">
-                    <img
-                        src="/image/pages/introduce/index/1-3.svg" />
-                </div>
-                <div class="second-text-content">
-                    <div class="content-subtitle">
-                        차량용 디스플레이 · 인포테인먼트
-                    </div>
-                    <div class="content-text">
-                        기존의 영상과 음악 감상에 머물렀던 인포테인먼트
-                        범위를 넘어서 기술적인 부분에서 한 단계 발전한
-                        콘텐츠를 제공하고자 합니다.
-                    </div>
-                </div>
-            </div>
-
-            <div class="second-content-item">
-                <div class="second-content-img">
-                    <img
-                        src="/image/pages/introduce/index/1-1.svg" />
-                </div>
-                <div class="second-text-content">
-                    <div class="content-subtitle">
-                        차세대 배터리 소재 ‧ 부품
-                    </div>
-                    <div class="content-text">
-                        지구 환경을 품은 미래형 모빌리티 최적화된 설계와 구조, 표준화된 대용량 배터리 시스템, 길어진 항속 거리, 혁신적 공간 등 차별화된 장점을 두루 갖추고 있습니다.
-                    </div>
-                </div>
-            </div>
-
-            <div class="second-content-item">
-                <div class="second-content-img">
-                    <img
-                        src="/image/pages/introduce/index/1-2.svg" />
-                </div>
-                <div class="second-text-content">
-                    <div class="content-subtitle">
-                        미래형 자동차 융복합 부품
-                    </div>
-                    <div class="content-text">
-                        자체적으로도 평가 기준을 상향 조정해 다양한 시험과 해석을 통한 기초 설계를 탄탄히 하고 있습니다. 탄탄한 기초 위에 첨단 기술을 더해 더욱 안전한 자동차로 거듭나고
-                        있습니다.
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="content-wrapper">
-        <div class="third-content inner-content-wrapper">
-            <div class="content-title">기술영상</div>
-            <div class="promotion-container">
-                <promotion-item img_src="https://img.youtube.com/vi/sKozXRTczhQ/0.jpg"
-                    link="location.href='https://youtu.be/sKozXRTczhQ'"
-                    name="[KATECH] 유연회로기판용 폴리이미드 필름의 유전손실을 낮추기 위한 필름 제조 방법 - 오미혜" date="22-07-27"></promotion-item>
-                <promotion-item img_src="https://img.youtube.com/vi/88rbQE_568Y/0.jpg"
-                    link="location.href='https://youtu.be/88rbQE_568Y'" name="[KATECH] 후방 차량에 추월 정보를 제공하는 장치 및 방법 - 김용은"
-                    date="22-07-27"></promotion-item>
-                <promotion-item img_src="https://img.youtube.com/vi/tT7NtxFDcto/0.jpg"
-                    link="location.href='https://youtu.be/tT7NtxFDcto'" name="[KATECH] 고강도 고압출성 알루미늄 전신재 합금 - 성시영"
-                    date="22-07-27"></promotion-item>
-                <promotion-item style="margin-right: 0px" img_src="https://img.youtube.com/vi/sKozXRTczhQ/0.jpg"
-                    link="location.href='https://youtu.be/uaBn5Unr8ms'" name="[KATECH] 리튬이온 이차전지용 전극 소재 및 그 제조방법 - 엄지용"
-                    date="22-07-27"></promotion-item>
+        <div class="content-wrapper">
+            <div class="third-content inner-content-wrapper">
+                <div class="content-title">기술영상</div>
+                <div class="promotion-container">
+                    <promotion-item
+                        img_src="https://img.youtube.com/vi/sKozXRTczhQ/0.jpg"
+                        link="location.href='https://youtu.be/sKozXRTczhQ'"
+                        name="[KATECH] 유연회로기판용 폴리이미드 필름의 유전손실을 낮추기 위한 필름 제조 방법 - 오미혜"
+                        date="22-07-27"
+                    ></promotion-item>
+                    <promotion-item
+                        img_src="https://img.youtube.com/vi/88rbQE_568Y/0.jpg"
+                        link="location.href='https://youtu.be/88rbQE_568Y'"
+                        name="[KATECH] 후방 차량에 추월 정보를 제공하는 장치 및 방법 - 김용은"
+                        date="22-07-27"
+                    ></promotion-item>
+                    <promotion-item
+                        img_src="https://img.youtube.com/vi/tT7NtxFDcto/0.jpg"
+                        link="location.href='https://youtu.be/tT7NtxFDcto'"
+                        name="[KATECH] 고강도 고압출성 알루미늄 전신재 합금 - 성시영"
+                        date="22-07-27"
+                    ></promotion-item>
+                    <promotion-item
+                        style="margin-right: 0px"
+                        img_src="https://img.youtube.com/vi/sKozXRTczhQ/0.jpg"
+                        link="location.href='https://youtu.be/uaBn5Unr8ms'"
+                        name="[KATECH] 리튬이온 이차전지용 전극 소재 및 그 제조방법 - 엄지용"
+                        date="22-07-27"
+                    ></promotion-item>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="content-wrapper">
-        <div class="fourth-content inner-content-wrapper">
-            <div class="content-title">지원 사업 소개</div>
-            <subcontent-tab-area style="padding: 0px; padding-bottom: 48px;">
-                <tab-introduction-container>
-                    <tab-introduce-text></tab-introduce-text>
-                    <tab-introduce-text></tab-introduce-text>
-                </tab-introduction-container>
-                <tab-container>
-                    <div id="first" onclick="clickFunc2(this.id)"><tab-default type="primary">연구기술사업</tab-default></div>
-                    <div id="second" onclick="clickFunc2(this.id)"><tab-default type="primary">지역기술사업</tab-default>
-                    </div>
-                </tab-container>
-            </subcontent-tab-area>
-            <tab-content-area>
-                <tab-content>
-                    <div class="third-content-item">
-                        <ul style="
-                            padding-left: 0px;
-                            margin-top: 0px;
-                        ">
-                            <li>
-                                <button class="
+        <div class="content-wrapper">
+            <div class="fourth-content inner-content-wrapper">
+                <div class="content-title">지원 사업 소개</div>
+                <subcontent-tab-area style="padding: 0px; padding-bottom: 48px">
+                    <tab-introduction-container>
+                        <tab-introduce-text></tab-introduce-text>
+                        <tab-introduce-text></tab-introduce-text>
+                    </tab-introduction-container>
+                    <tab-container>
+                        <div id="first" onclick="clickFunc2(this.id)">
+                            <tab-default type="primary"
+                                >연구기술사업</tab-default
+                            >
+                        </div>
+                        <div id="second" onclick="clickFunc2(this.id)">
+                            <tab-default type="primary"
+                                >지역기술사업</tab-default
+                            >
+                        </div>
+                    </tab-container>
+                </subcontent-tab-area>
+                <tab-content-area>
+                    <tab-content>
+                        <div class="third-content-item">
+                            <ul style="padding-left: 0px; margin-top: 0px">
+                                <li>
+                                    <button
+                                        class="
                                             content-subtitle02
                                             list-black
                                             round-04
-                                        " id="1" onclick="clickFunc(this.id)">
-                                    양방향 기술 발굴 연계 지원
-                                </button>
-                                <div class="third-text-content small" id="third-content-small1">
-                                    <div class="content-subtitle03">
+                                        "
+                                        id="1"
+                                        onclick="clickFunc(this.id)"
+                                    >
                                         양방향 기술 발굴 연계 지원
+                                    </button>
+                                    <div
+                                        class="third-text-content small"
+                                        id="third-content-small1"
+                                    >
+                                        <div class="content-subtitle03">
+                                            양방향 기술 발굴 연계 지원
+                                        </div>
+                                        <div
+                                            class="
+                                                content-text
+                                                third-text-inner
+                                            "
+                                        >
+                                            공공연구기관의 기술을 직접
+                                            사업화하기 위해 수요기술을 발굴하고
+                                            분석하여 기술이전 또는 출자로 연구소
+                                            기업을 설립하고 이를 통한 공공기술
+                                            사업화 성과 창출
+                                        </div>
+                                        <button-text
+                                            icon="right"
+                                            onclick="location.href='/html/pages/support-bussiness-introduce.html'"
+                                            >자세히 보기</button-text
+                                        >
                                     </div>
-                                    <div class="content-text third-text-inner">
-                                        공공연구기관의 기술을 직접 사업화하기 위해 수요기술을 발굴하고 분석하여 기술이전 또는 출자로 연구소 기업을 설립하고 이를 통한 공공기술 사업화
-                                        성과 창출
-                                    </div>
-                                    <button-text icon="right" onclick="location.href='/html/pages/support-bussiness-introduce.html'">자세히 보기</button-default>
-                                </div>
-                            </li>
-                            <li>
-                                <button class="content-subtitle02 round-04" id="2" onclick="clickFunc(this.id)">
-                                    연구소기업설립지원
-                                </button>
-                                <div class="third-text-content small none" id="third-content-small2">
-                                    <div class="content-subtitle03">
+                                </li>
+                                <li>
+                                    <button
+                                        class="content-subtitle02 round-04"
+                                        id="2"
+                                        onclick="clickFunc(this.id)"
+                                    >
                                         연구소기업설립지원
+                                    </button>
+                                    <div
+                                        class="third-text-content small none"
+                                        id="third-content-small2"
+                                    >
+                                        <div class="content-subtitle03">
+                                            연구소기업설립지원
+                                        </div>
+                                        <div
+                                            class="
+                                                content-text
+                                                third-text-inner
+                                            "
+                                        >
+                                            공공연구기관의 기술을 직접
+                                            사업화하기 위한 목적으로 설립신사업,
+                                            업종 전환 및 개편 등이 필요한
+                                            기업으로서, 기술이전 수요가 있으며,
+                                            연구소기업 추진이 가능한 기업 또는
+                                            예비 창업자
+                                        </div>
+                                        <button-text
+                                            icon="right"
+                                            onclick="location.href='/html/pages/support-bussiness-introduce.html'"
+                                            >자세히 보기</button-text
+                                        >
                                     </div>
-                                    <div class="content-text third-text-inner">
-                                        공공연구기관의 기술을 직접 사업화하기 위한 목적으로 설립신사업, 업종 전환 및 개편 등이 필요한 기업으로서, 기술이전 수요가 있으며, 연구소기업
-                                        추진이 가능한 기업 또는 예비 창업자
-                                    </div>
-                                    <button-text icon="right" onclick="location.href='/html/pages/support-bussiness-introduce.html'">자세히 보기</button-default>
-                                </div>
-                            </li>
-                            <li>
-                                <button class="content-subtitle02 round-04" id="3" onclick="clickFunc(this.id)">
-                                    첨단기술기업설립지원
-                                </button>
-                                <div class="third-text-content small none" id="third-content-small3">
-                                    <div class="content-subtitle03">
+                                </li>
+                                <li>
+                                    <button
+                                        class="content-subtitle02 round-04"
+                                        id="3"
+                                        onclick="clickFunc(this.id)"
+                                    >
                                         첨단기술기업설립지원
+                                    </button>
+                                    <div
+                                        class="third-text-content small none"
+                                        id="third-content-small3"
+                                    >
+                                        <div class="content-subtitle03">
+                                            첨단기술기업설립지원
+                                        </div>
+                                        <div
+                                            class="
+                                                content-text
+                                                third-text-inner
+                                            "
+                                        >
+                                            첨단기술분야에서 일정한 생산능력과
+                                            연구개발능력을 보유한 기업에 대해
+                                            세제지원 등으로 특구내
+                                            첨단기술분야의 유망기업
+                                            육성지역기술사업
+                                        </div>
+                                        <button-text
+                                            icon="right"
+                                            onclick="location.href='/html/pages/support-bussiness-introduce.html'"
+                                            >자세히 보기</button-text
+                                        >
                                     </div>
-                                    <div class="content-text third-text-inner">
-                                        첨단기술분야에서 일정한 생산능력과 연구개발능력을 보유한 기업에 대해 세제지원 등으로 특구내 첨단기술분야의 유망기업 육성지역기술사업
-                                    </div>
-                                    <button-text icon="right" onclick="location.href='/html/pages/support-bussiness-introduce.html'">자세히 보기</button-default>
+                                </li>
+                            </ul>
+                            <div
+                                class="third-text-content large"
+                                id="third-content-large1"
+                            >
+                                <div class="content-subtitle03">
+                                    양방향 기술 발굴 연계 지원
                                 </div>
-                            </li>
-                        </ul>
-                        <div class="third-text-content large" id="third-content-large1">
-                            <div class="content-subtitle03">
-                                양방향 기술 발굴 연계 지원
+                                <div class="content-text third-text-inner">
+                                    공공연구기관의 기술을 직접 사업화하기 위해
+                                    수요기술을 발굴하고 분석하여 기술이전 또는
+                                    출자로 연구소 기업을 설립하고 이를 통한
+                                    공공기술 사업화 성과 창출
+                                </div>
+                                <button-text
+                                    icon="right"
+                                    onclick="location.href='/html/pages/support-bussiness-introduce.html'"
+                                    >자세히 보기</button-text
+                                >
                             </div>
-                            <div class="content-text third-text-inner">
-                                공공연구기관의 기술을 직접 사업화하기 위해 수요기술을 발굴하고 분석하여 기술이전 또는 출자로 연구소 기업을 설립하고 이를 통한 공공기술 사업화 성과 창출
+                            <div
+                                class="third-text-content large none"
+                                id="third-content-large2"
+                            >
+                                <div class="content-subtitle03">
+                                    연구소기업설립지원
+                                </div>
+                                <div class="content-text third-text-inner">
+                                    공공연구기관의 기술을 직접 사업화하기 위한
+                                    목적으로 설립신사업, 업종 전환 및 개편 등이
+                                    필요한 기업으로서, 기술이전 수요가 있으며,
+                                    연구소기업 추진이 가능한 기업 또는 예비
+                                    창업자
+                                </div>
+                                <button-text
+                                    icon="right"
+                                    onclick="location.href='/html/pages/support-bussiness-introduce.html'"
+                                    >자세히 보기</button-text
+                                >
                             </div>
-                            <button-text icon="right" onclick="location.href='/html/pages/support-bussiness-introduce.html'">자세히 보기</button-default>
+                            <div
+                                class="third-text-content large none"
+                                id="third-content-large3"
+                            >
+                                <div class="content-subtitle03">
+                                    첨단기술기업설립지원
+                                </div>
+                                <div class="content-text third-text-inner">
+                                    첨단기술분야에서 일정한 생산능력과
+                                    연구개발능력을 보유한 기업에 대해 세제지원
+                                    등으로 특구내 첨단기술분야의 유망기업
+                                    육성지역기술사업
+                                </div>
+                                <button-text
+                                    icon="right"
+                                    onclick="location.href='/html/pages/support-bussiness-introduce.html'"
+                                    >자세히 보기</button-text
+                                >
+                            </div>
                         </div>
-                        <div class="third-text-content large none" id="third-content-large2">
-                            <div class="content-subtitle03">
-                                연구소기업설립지원
-                            </div>
-                            <div class="content-text third-text-inner">
-                                공공연구기관의 기술을 직접 사업화하기 위한 목적으로 설립신사업, 업종 전환 및 개편 등이 필요한 기업으로서, 기술이전 수요가 있으며, 연구소기업 추진이 가능한
-                                기업 또는 예비 창업자
-                            </div>
-                            <button-text icon="right" onclick="location.href='/html/pages/support-bussiness-introduce.html'">자세히 보기</button-default>
-                        </div>
-                        <div class="third-text-content large none" id="third-content-large3">
-                            <div class="content-subtitle03">
-                                첨단기술기업설립지원
-                            </div>
-                            <div class="content-text third-text-inner">
-                                첨단기술분야에서 일정한 생산능력과 연구개발능력을 보유한 기업에 대해 세제지원 등으로 특구내 첨단기술분야의 유망기업 육성지역기술사업
-                            </div>
-                            <button-text icon="right" onclick="location.href='/html/pages/support-bussiness-introduce.html'">자세히 보기</button-default>
-                        </div>
+                    </tab-content>
 
-                    </div>
-                </tab-content>
-
-                <tab-content>
-                    <div class="third-content-item">
-                        <ul style="
-                            padding-left: 0px;
-                            margin-top: 0px;
-                        ">
-                            <li>
-                                <button class="
+                    <tab-content>
+                        <div class="third-content-item">
+                            <ul style="padding-left: 0px; margin-top: 0px">
+                                <li>
+                                    <button
+                                        class="
                                             content-subtitle02
                                             list-black
                                             round-04
-                                        " id="4" onclick="clickFunc(this.id)">
-                                    이노폴리스 캠퍼스 사업
-                                </button>
-                                <div class="third-text-content small" id="third-content-small4">
-                                    <div class="content-subtitle03">
+                                        "
+                                        id="4"
+                                        onclick="clickFunc(this.id)"
+                                    >
                                         이노폴리스 캠퍼스 사업
+                                    </button>
+                                    <div
+                                        class="third-text-content small"
+                                        id="third-content-small4"
+                                    >
+                                        <div class="content-subtitle03">
+                                            이노폴리스 캠퍼스 사업
+                                        </div>
+                                        <div
+                                            class="
+                                                content-text
+                                                third-text-inner
+                                            "
+                                        >
+                                            지역 내 예비·초기 창업자를 모집하여
+                                            창업아이템 발굴·검증, 멘토링,
+                                            투자연계 등 창업 역량강화를 통한
+                                            기술창업 활성화
+                                        </div>
+                                        <button-text
+                                            icon="right"
+                                            onclick="location.href='/html/pages/support-bussiness-introduce.html?tab=1'"
+                                            >자세히 보기</button-text
+                                        >
                                     </div>
-                                    <div class="content-text third-text-inner">
-                                        지역 내 예비·초기 창업자를 모집하여 창업아이템 발굴·검증, 멘토링, 투자연계 등 창업 역량강화를 통한 기술창업 활성화
-                                    </div>
-                                    <button-text icon="right" onclick="location.href='/html/pages/support-bussiness-introduce.html?tab=1'">자세히 보기</button-default>
-                                </div>
-                            </li>
-                            <li>
-                                <button class="content-subtitle02 round-04" id="5" onclick="clickFunc(this.id)">
-                                    혁신네트워크운영
-                                </button>
-                                <div class="third-text-content small none" id="third-content-small5">
-                                    <div class="content-subtitle03">
+                                </li>
+                                <li>
+                                    <button
+                                        class="content-subtitle02 round-04"
+                                        id="5"
+                                        onclick="clickFunc(this.id)"
+                                    >
                                         혁신네트워크운영
+                                    </button>
+                                    <div
+                                        class="third-text-content small none"
+                                        id="third-content-small5"
+                                    >
+                                        <div class="content-subtitle03">
+                                            혁신네트워크운영
+                                        </div>
+                                        <div
+                                            class="
+                                                content-text
+                                                third-text-inner
+                                            "
+                                        >
+                                            충남천안아산강소특구 활성화를 위해
+                                            지역내 혁신네트워크를 조성해 구성원
+                                            간 협력체계 구축 및 이를 기반으로 한
+                                            충남 천안·아산 기술사업화 생태계
+                                            조성
+                                        </div>
+                                        <button-text
+                                            icon="right"
+                                            onclick="location.href='/html/pages/support-bussiness-introduce.html?tab=1'"
+                                            >자세히 보기</button-text
+                                        >
                                     </div>
-                                    <div class="content-text third-text-inner">
-                                        충남천안아산강소특구 활성화를 위해 지역내 혁신네트워크를 조성해 구성원 간 협력체계 구축 및 이를 기반으로 한 충남 천안·아산 기술사업화 생태계
-                                        조성
-                                    </div>
-                                    <button-text icon="right" onclick="location.href='/html/pages/support-bussiness-introduce.html?tab=1'">자세히 보기</button-default>
-                                </div>
-                            </li>
-                            <li>
-                                <button class="content-subtitle02 round-04" id="6" onclick="clickFunc(this.id)">
-                                    지역특성화 육성
-                                </button>
-                                <div class="third-text-content small none" id="third-content-small6">
-                                    <div class="content-subtitle03">
+                                </li>
+                                <li>
+                                    <button
+                                        class="content-subtitle02 round-04"
+                                        id="6"
+                                        onclick="clickFunc(this.id)"
+                                    >
                                         지역특성화 육성
+                                    </button>
+                                    <div
+                                        class="third-text-content small none"
+                                        id="third-content-small6"
+                                    >
+                                        <div class="content-subtitle03">
+                                            지역특성화 육성
+                                        </div>
+                                        <div
+                                            class="
+                                                content-text
+                                                third-text-inner
+                                            "
+                                        >
+                                            천안·아산 지역 소재 기업의
+                                            제품(기술) 사업화 지원을 통한 ‘ 충남
+                                            천안·아산 강소연구개발특구(차세대
+                                            자동차 부품 혁신클러스터)’ 육성 및
+                                            지역경제 발전 이바지
+                                        </div>
+                                        <button-text
+                                            icon="right"
+                                            onclick="location.href='/html/pages/support-bussiness-introduce.html?tab=1'"
+                                            >자세히 보기</button-text
+                                        >
                                     </div>
-                                    <div class="content-text third-text-inner">
-                                        천안·아산 지역 소재 기업의 제품(기술) 사업화 지원을 통한 ‘ 충남 천안·아산 강소연구개발특구(차세대 자동차 부품 혁신클러스터)’ 육성 및
-                                        지역경제 발전 이바지
-                                    </div>
-                                    <button-text icon="right" onclick="location.href='/html/pages/support-bussiness-introduce.html?tab=1'">자세히 보기</button-default>
+                                </li>
+                            </ul>
+                            <div
+                                class="third-text-content large"
+                                id="third-content-large4"
+                            >
+                                <div class="content-subtitle03">
+                                    이노폴리스 캠퍼스 사업
                                 </div>
-                            </li>
-                        </ul>
-                        <div class="third-text-content large" id="third-content-large4">
-                            <div class="content-subtitle03">
-                                이노폴리스 캠퍼스 사업
+                                <div class="content-text third-text-inner">
+                                    지역 내 예비·초기 창업자를 모집하여
+                                    창업아이템 발굴·검증, 멘토링, 투자연계 등
+                                    창업 역량강화를 통한 기술창업 활성화
+                                </div>
+                                <button-text
+                                    icon="right"
+                                    onclick="location.href='/html/pages/support-bussiness-introduce.html?tab=1'"
+                                    >자세히 보기</button-text
+                                >
                             </div>
-                            <div class="content-text third-text-inner">
-                                지역 내 예비·초기 창업자를 모집하여 창업아이템 발굴·검증, 멘토링, 투자연계 등 창업 역량강화를 통한 기술창업 활성화
+                            <div
+                                class="third-text-content large none"
+                                id="third-content-large5"
+                            >
+                                <div class="content-subtitle03">
+                                    혁신네트워크운영
+                                </div>
+                                <div class="content-text third-text-inner">
+                                    충남천안아산강소특구 활성화를 위해 지역내
+                                    혁신네트워크를 조성해 구성원 간 협력체계
+                                    구축 및 이를 기반으로 한 충남 천안·아산
+                                    기술사업화 생태계 조성
+                                </div>
+                                <button-text
+                                    icon="right"
+                                    onclick="location.href='/html/pages/support-bussiness-introduce.html?tab=1'"
+                                    >자세히 보기</button-text
+                                >
                             </div>
-                            <button-text icon="right" onclick="location.href='/html/pages/support-bussiness-introduce.html?tab=1'">자세히 보기</button-default>
-                            
+                            <div
+                                class="third-text-content large none"
+                                id="third-content-large6"
+                            >
+                                <div class="content-subtitle03">
+                                    지역특성화 육성
+                                </div>
+                                <div class="content-text third-text-inner">
+                                    천안·아산 지역 소재 기업의 제품(기술) 사업화
+                                    지원을 통한 ‘ 충남 천안·아산
+                                    강소연구개발특구(차세대 자동차 부품
+                                    혁신클러스터)’ 육성 및 지역경제 발전 이바지
+                                </div>
+                                <button-text
+                                    icon="right"
+                                    onclick="location.href='/html/pages/support-bussiness-introduce.html?tab=1'"
+                                    >자세히 보기</button-text
+                                >
+                            </div>
                         </div>
-                        <div class="third-text-content large none" id="third-content-large5">
-                            <div class="content-subtitle03">
-                                혁신네트워크운영
-                            </div>
-                            <div class="content-text third-text-inner">
-                                충남천안아산강소특구 활성화를 위해 지역내 혁신네트워크를 조성해 구성원 간 협력체계 구축 및 이를 기반으로 한 충남 천안·아산 기술사업화 생태계 조성
-                            </div>
-                            <button-text icon="right" onclick="location.href='/html/pages/support-bussiness-introduce.html?tab=1'">자세히 보기</button-default>
-                            
-                        </div>
-                        <div class="third-text-content large none" id="third-content-large6">
-                            <div class="content-subtitle03">
-                                지역특성화 육성
-                            </div>
-                            <div class="content-text third-text-inner">
-                                천안·아산 지역 소재 기업의 제품(기술) 사업화 지원을 통한 ‘ 충남 천안·아산 강소연구개발특구(차세대 자동차 부품 혁신클러스터)’ 육성 및 지역경제 발전
-                                이바지
-                            </div>
-                            <button-text icon="right" onclick="location.href='/html/pages/support-bussiness-introduce.html?tab=1'">자세히 보기</button-default>
-                            
-                        </div>
-                    </div>
-                </tab-content>
-
-            </tab-content-area>
-        </div>
-    </div>
-
-    <div class="content-wrapper">
-        <div class="fivth-content inner-content-wrapper">
-            <div class="content-title">
-                함께 만들어가는 천안아산강소특구
-            </div>
-            <div class="logo-overflow">
-                <div class="logo-container">
-                    <div>
-                        <img src="/image/pages/introduce/index/image 183.svg"
-                            onclick="location.href='//www.innopolis.or.kr/mps'" />
-                    </div>
-                    <div>
-                        <img src="/image/pages/introduce/index/image 184.svg"
-                            onclick="location.href='//www.msit.go.kr/'" />
-                    </div>
-                    <div>
-                        <img src="/image/pages/introduce/index/image 185.svg"
-                            onclick="location.href='//www.chungnam.go.kr/'" />
-                    </div>
-                    <div>
-                        <img src="/image/pages/introduce/index/image 186.svg"
-                            onclick="location.href='//www.cheonan.go.kr//'" />
-                    </div>
-                    <div>
-                        <img src="/image/pages/introduce/index/image 187.svg"
-                            onclick="location.href='//www.katech.re.kr/'" />
-                    </div>
-                </div>
+                    </tab-content>
+                </tab-content-area>
             </div>
         </div>
-    </div>
 
-    <div class="content-wrapper">
-        <div class="sixth-content inner-content-wrapper">
-            <div class="title-wrapper">
-                <div class="content-title">보도자료</div>
-                <div class="sixth-detail" onclick="location.href='/html/pages/promotion-center.html?tab=2'">자세히 보기 <img  class="rightArrow" src="image/rightArrowBlack.svg">
+        <div class="content-wrapper">
+            <div class="fivth-content inner-content-wrapper">
+                <div class="content-title">
+                    함께 만들어가는 천안아산강소특구
                 </div>
-            </div>
-
-            <div class="news-item" onclick="location.href='//moneys.mt.co.kr/news/mwView.php?no=2022121317210847859'">
-                <div>
-                    <div class="content-text news-item-name">
-                        한국자동차연구원, 충남 과학기술 투자협의체 발족
-                    </div>
-                    <div class="content-date">
-                        <span>머니S</span> | <span>22.12.13</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="news-item" onclick="location.href='//daily.hankooki.com/news/articleView.html?idxno=899787'">
-                <div>
-                    <div class="content-text news-item-name">
-                        DSC지역혁신플랫폼 구성원 워크숍 개최
-                    </div>
-                    <div class="content-date">
-                        <span>데일리한국</span> | <span>22.12.01</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="news-item" onclick="location.href='//www.etnews.com/20221201000157'">
-                <div>
-                    <div class="content-text news-item-name">
-                        울산·전북·충남 3개 강소특구, 모빌리티 분야 협력
-                    </div>
-                    <div class="content-date">
-                        <span>전자신문</span> | <span>22.12.01</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="news-item"
-                onclick="location.href='//www.dnews.co.kr/uhtml/view.jsp?idxno=202211181607462140370'">
-                <div>
-                    <div class="content-text news-item-name">
-                        한자연, ‘충남 스타트업 컨퍼런스’ 참여…충남지역 창업 생태계 지원
-                    </div>
-                    <div class="content-date">
-                        <span>대한경제</span> | <span>22.11.18</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="news-item" onclick="location.href='//www.kdpress.co.kr/news/articleView.html?idxno=116383'">
-                <div>
-                    <div class="content-text news-item-name">
-                        한자연, 2022년 국제부품소재산업전 공동관 운영
-                    </div>
-                    <div class="content-date">
-                        <span>데일리경제</span> | <span>22.11.16</span>
+                <div class="logo-overflow">
+                    <div class="logo-container">
+                        <div>
+                            <img
+                                src="/image/pages/introduce/index/image 183.svg"
+                                onclick="location.href='//www.innopolis.or.kr/mps'"
+                            />
+                        </div>
+                        <div>
+                            <img
+                                src="/image/pages/introduce/index/image 184.svg"
+                                onclick="location.href='//www.msit.go.kr/'"
+                            />
+                        </div>
+                        <div>
+                            <img
+                                src="/image/pages/introduce/index/image 185.svg"
+                                onclick="location.href='//www.chungnam.go.kr/'"
+                            />
+                        </div>
+                        <div>
+                            <img
+                                src="/image/pages/introduce/index/image 186.svg"
+                                onclick="location.href='//www.cheonan.go.kr//'"
+                            />
+                        </div>
+                        <div>
+                            <img
+                                src="/image/pages/introduce/index/image 187.svg"
+                                onclick="location.href='//www.katech.re.kr/'"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div style="
+
+        <div class="content-wrapper">
+            <div class="sixth-content inner-content-wrapper">
+                <div class="title-wrapper">
+                    <div class="content-title">보도자료</div>
+                    <div
+                        class="sixth-detail"
+                        onclick="location.href='/html/pages/promotion-center.html?tab=2'"
+                    >
+                        자세히 보기
+                        <img
+                            class="rightArrow"
+                            src="image/rightArrowBlack.svg"
+                        />
+                    </div>
+                </div>
+
+                <div
+                    class="news-item"
+                    onclick="location.href='//moneys.mt.co.kr/news/mwView.php?no=2022121317210847859'"
+                >
+                    <div>
+                        <div class="content-text news-item-name">
+                            한국자동차연구원, 충남 과학기술 투자협의체 발족
+                        </div>
+                        <div class="content-date">
+                            <span>머니S</span> | <span>22.12.13</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="news-item"
+                    onclick="location.href='//daily.hankooki.com/news/articleView.html?idxno=899787'"
+                >
+                    <div>
+                        <div class="content-text news-item-name">
+                            DSC지역혁신플랫폼 구성원 워크숍 개최
+                        </div>
+                        <div class="content-date">
+                            <span>데일리한국</span> | <span>22.12.01</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="news-item"
+                    onclick="location.href='//www.etnews.com/20221201000157'"
+                >
+                    <div>
+                        <div class="content-text news-item-name">
+                            울산·전북·충남 3개 강소특구, 모빌리티 분야 협력
+                        </div>
+                        <div class="content-date">
+                            <span>전자신문</span> | <span>22.12.01</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="news-item"
+                    onclick="location.href='//www.dnews.co.kr/uhtml/view.jsp?idxno=202211181607462140370'"
+                >
+                    <div>
+                        <div class="content-text news-item-name">
+                            한자연, ‘충남 스타트업 컨퍼런스’ 참여…충남지역 창업
+                            생태계 지원
+                        </div>
+                        <div class="content-date">
+                            <span>대한경제</span> | <span>22.11.18</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="news-item"
+                    onclick="location.href='//www.kdpress.co.kr/news/articleView.html?idxno=116383'"
+                >
+                    <div>
+                        <div class="content-text news-item-name">
+                            한자연, 2022년 국제부품소재산업전 공동관 운영
+                        </div>
+                        <div class="content-date">
+                            <span>데일리경제</span> | <span>22.11.16</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            style="
                 background-image: url('/image/pages/introduce/index/image\ 189.svg');
                 background-repeat: no-repeat;
                 background-size: cover;
-            ">
-        <div class="content-wrapper padding0" style="width: 100%; max-width: 1260px; box-sizing: border-box;">
-            <div class="seventh-content inner-content-wrapper">
-                <div>
-                    <div class="main-title" style="margin-top: 0px">
-                        차세대 자동차 산업을 혁신해나갈<br />기업을
-                        찾습니다.
+            "
+        >
+            <div
+                class="content-wrapper padding0"
+                style="width: 100%; max-width: 1260px; box-sizing: border-box"
+            >
+                <div class="seventh-content inner-content-wrapper">
+                    <div>
+                        <div class="main-title" style="margin-top: 0px">
+                            차세대 자동차 산업을 혁신해나갈<br />기업을
+                            찾습니다.
+                        </div>
+                        <div
+                            class="main-sub marginbottom"
+                            style="color: var(--text-third)"
+                        >
+                            미래 자동차 창출의 중심지, 충남천안 아산강소특구
+                        </div>
+                        <button-default
+                            size="l"
+                            onclick="location.href='html/pages/lent-space.html'"
+                            >입주마당 바로가기</button-default
+                        >
                     </div>
-                    <div class="main-sub marginbottom" style="color: var(--text-third)">
-                        미래 자동차 창출의 중심지, 충남천안 아산강소특구
-                    </div>
-                    <input type="button" value="입주마당 바로가기" class="round-04 content-text main-btn"
-                        onclick="location.href='html/pages/lent-space.html'" />
                 </div>
             </div>
         </div>
-    </div>
-    <footer-default></footer-default>
-</body>
-
+        <footer-default></footer-default>
+    </body>
 </html>

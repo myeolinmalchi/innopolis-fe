@@ -384,5 +384,31 @@ li {
     text-align: left;
     font-size: var(--body-03);
     color: var(--text-third);
-    width: 100%;
+    width: calc(100% - 36px) %;
+    word-wrap: break-word;
+}
+
+@media (max-width: 1024px) {
+    .top-img br {
+        display: none;
+    }
+    #content3 > div.content-wrapper > div:nth-child(2) > div > ul {
+        margin-top: 0;
+    }
+    #content3
+        > div.content-wrapper
+        > div:nth-child(2)
+        > div
+        > span:first-child {
+        font-size: var(--body-03);
+    }
+    #content3 > div.content-wrapper > div:nth-child(2) > div > ul > li {
+        font-size: var(--body-02);
+    }
+    #content3 > div.content-wrapper > div:nth-child(2) > div {
+        padding: 16px 0;
+    }
+    #content3 > div.content-wrapper > div:nth-child(2) {
+        padding: 24px 0;
+    }
 }

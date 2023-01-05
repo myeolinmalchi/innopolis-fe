@@ -184,12 +184,12 @@ class footer_default extends HTMLElement {
         }
         .leftcontent{
             display: block;
-            width: 100%;
+            width: calc(100% - 80px);
             float: left;
         }
         .rightcontent{
             display: block;
-            width: 10%;
+            width: fit-content;
             float: right;
             margin-top: 28px;
         }
@@ -247,6 +247,9 @@ class footer_default extends HTMLElement {
             }
             .list{
                 width: 100%
+            }
+            .leftcontent{
+                width: 100%;
             }
             .list li:first-child{
                 margin-left: 0px;

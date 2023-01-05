@@ -177,6 +177,8 @@ class promotion_content extends HTMLElement {
         style.textContent = `
         .promotion_item{
             display: block;
+            border-radius: 4px;
+            overflow: hidden;
             width: 100%;
             height: 300px;
             float: left;

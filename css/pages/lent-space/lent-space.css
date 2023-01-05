@@ -72,7 +72,9 @@ img {
     font-size: var(--body-04);
     justify-content: left;
 }
-
+.text{
+    font-size: var(--body-03);
+}
 .content-button input {
     background-color: var(--background-blue-01);
     color: var(--text-white);
@@ -112,6 +114,7 @@ img {
     font-size: 18px;
     font-weight: 700;
     line-height: 23.4px;
+    color: var(--text-secondary);
 }
 
 .space-title {
@@ -120,12 +123,14 @@ img {
     font-weight: 700;
     font-size: var(--title-02);
     line-height: 36.4px;
+    color: var(--color-gray-hover);
 }
 
 .space-summary {
     display: block;
     font-size: var(--body-03);
     line-height: 25.6px;
+    color: var(--text-priamry);
 }
 
 .space-img {
@@ -199,6 +204,7 @@ img {
 .location-item {
     width: 50%;
     box-sizing: border-box;
+    height: 484px;
     padding: 32px;
     float: right;
     border-radius: 4px 0px 0px 4px;
@@ -226,7 +232,7 @@ img {
 }
 
 .value {
-    margin-bottom: 32px;
+    margin-bottom: 25px;
     font-family: 'Pretendard';
     font-style: normal;
     font-weight: 500;
@@ -426,11 +432,6 @@ img {
     color: var(--text-white);
 }
 
-.content-top-img .content-summary .image {
-    width: 25.67px;
-    display: inline-block;
-    margin-right: 9.17px;
-}
 
 .content-top-img .content-summary span {
     line-height: 26px;

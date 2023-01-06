@@ -784,7 +784,22 @@ li{
     width: calc(100% - 132px);
     float: left;
 }
+.wrap{
+    width: 100%;
+    display: inline-block;
+}
+.wrap div:first-child{
+    width: 9px;
+    float: left;
+}
+.wrap div:last-child{
+    width: calc(100% - 9px);
+    float: left;
+}
 @media (max-width: 1024px) {
+    .horizontal-item .content-sub-text {
+        width: 100%;
+    }
     .horizontal-item .content-sub-title{
         width: 100%;
     }

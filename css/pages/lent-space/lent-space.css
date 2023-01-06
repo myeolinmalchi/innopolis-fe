@@ -349,6 +349,9 @@ img {
 .small-img {
     display: none;
 }
+#content2 .content-main-img{
+    background-image: url(../../../image/pages/lentspace/2-0.svg);
+}
 
 .summary-detail {
     margin-top: 12px;
@@ -454,8 +457,18 @@ img {
 .mapimage{
     height: 420px;
 }
+.lent-container .subtitle-01 span{
+    font-weight: 700;
+}
+
 
 @media (max-width: 1024px) {
+    #content2 .content-main-img{
+        background-image: url(../../../image/pages/lentspace/2-0-m.svg);
+    }
+    .lent-container .subtitle-01 span{
+        font-weight: 500;
+    }
     .preferential .item3-2{
         min-height: auto;
     }

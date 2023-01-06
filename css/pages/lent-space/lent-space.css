@@ -461,6 +461,7 @@ img {
     font-weight: 700;
 }
 
+
 @media (max-width: 1024px) {
     #content2 .content-main-img{
         background-image: url(../../../image/pages/lentspace/2-0-m.svg);

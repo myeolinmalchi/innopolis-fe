@@ -3,6 +3,10 @@ body {
     font-family: 'Pretendard';
 }
 
+span {
+    word-break: keep-all;
+}
+
 :root {
     /* ---------------Colors---------------*/
     --color-blue-filled: #008dff;
@@ -349,7 +353,7 @@ body {
     padding: 192px 0 240px 0;
 }
 
-.rightArrow{
+.rightArrow {
     width: 7px;
     margin-left: 6px;
-  }
+}

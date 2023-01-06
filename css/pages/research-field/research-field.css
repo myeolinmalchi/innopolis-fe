@@ -134,6 +134,10 @@ pagination-container {
     #content2 .post-container > div > div > span:first-child {
         font-size: var(--body-01);
     }
+
+    top-image br {
+        display: none;
+    }
 }
 
 #content1 > .top-img {

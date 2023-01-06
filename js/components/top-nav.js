@@ -83,7 +83,7 @@ customElements.define(
                                     서비스를 이용할 수 있습니다.
                                 </span>
                                 <button-default onclick="location.href='/html/pages/user/login/login.html'" style_="default">로그인</button-default>
-                                <button-default style_="outline">회원가입</button-default>
+                                <button-default onclick="location.href='/html/pages/user/regist/terms.html'" style_="outline">회원가입</button-default>
                                 `
                         }
                     </div>
@@ -99,8 +99,8 @@ customElements.define(
                         <div>
                             <span>지원사업소개</span>
                             <div>
-                                <a href="">연구기관기술</a>
-                                <a href="">지역기술</a>
+                                <a href="/html/pages/support-bussiness-introduce.html?tab=0">연구기관기술</a>
+                                <a href="/html/pages/support-bussiness-introduce.html?tab=1">지역기술</a>
                             </div>
                         </div>
                         <div>
@@ -109,6 +109,7 @@ customElements.define(
                                 <a href="/html/pages/tech-info.html?tab=0">기술검색</a>
                                 <a href="/html/pages/tech-info.html?tab=1">우수기술</a>
                                 <a href="/html/pages/tech-info.html?tab=2">기술동향</a>
+                                <a href="/html/pages/tech-info.html?tab=3">기술영상</a>
                             </div>
                         </div>
                         <div>
@@ -116,7 +117,7 @@ customElements.define(
                             <div>
                                 <a href="/html/pages/research-field.html?tab=0">연구분야</a>
                                 <a href="/html/pages/research-field.html?tab=1">보유장비</a>
-                                <a href="/html/pages/research-field.html?tab=2">기술동향</a>
+                                <a href="/html/pages/research-field.html?tab=2">기술자료</a>
                             </div>
                         </div>
                         <div>
@@ -131,6 +132,7 @@ customElements.define(
                                 <a href="/html/pages/customer-support.html?tab=0">공지사항</a>
                                 <a href="/html/pages/customer-support.html?tab=1">사업공고</a>
                                 <a href="/html/pages/customer-support.html?tab=2">특구일정</a>
+                                <a href="/html/pages/customer-support.html?tab=3">회의실 예약</a>
                             </div>
                         </div>
                         <div>
@@ -139,6 +141,7 @@ customElements.define(
                                 <a href="/html/pages/promotion-center.html?tab=0">기업홍보</a>
                                 <a href="/html/pages/promotion-center.html?tab=1">홍보자료</a>
                                 <a href="/html/pages/promotion-center.html?tab=2">보도자료</a>
+                                <a href="/html/pages/promotion-center.html?tab=3">행사사진</a>
                             </div>
                         </div>
                         <div>

@@ -146,4 +146,8 @@ span {
     .content-wrapper > div > span:nth-child(2) {
         font-size: var(--subtitle-03);
     }
+
+    .top-img br {
+        display: none;
+    }
 }

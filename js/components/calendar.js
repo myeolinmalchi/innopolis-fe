@@ -68,21 +68,22 @@ customElements.define(
                 this.getAttribute('mode') ?? 'normal',
             ];
 
-            this.style = `
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 14%;
-            `;
-
             this.state = state;
-            this.setCommonStyle(mode);
-            this.typeStyleMap.get(type)();
+            //this.setCommonStyle(mode);
+            this.classList.add(type === 'one' ? 'checked' : 'none');
+            this.classList.add(mode === 'normal' ? 'normal' : 'top');
+            this.classList.add(this.state);
+            //this.typeStyleMap.get(type)();
             this.append(this.content);
         }
 
         setCommonStyle(mode) {
-            this.style.height = mode === 'normal' ? '95px' : '51px';
+            //this.style.height = mode === 'normal' ? '95px' : '51px';
+            this.style.height = mode === 'normal' ? '0' : '51px';
+            this.style.paddingBottom =
+                mode === 'normal' ? 'max(calc(4.5% + 21px + 2px), 46px)' : '0';
+            this.style.paddingTop =
+                mode === 'normal' ? 'max(calc(4.5% - 21px + 2px), 0px)' : '0';
             this.style.boxSizing = 'border-box';
             this.style.display = 'flex';
             this.style.alignItems = 'center';
@@ -93,8 +94,8 @@ customElements.define(
             this.style.textAlign = 'center';
             this.content.style = `
                 cursor: pointer;
-                width: 32px;
-                height: 32px;
+                width: 42px;
+                height: 42px;
                 text-align: center;
                 margin: auto;
                 display: flex;
@@ -108,16 +109,7 @@ customElements.define(
 customElements.define(
     'calendar-container',
     class extends HTMLElement {
-        connectedCallback() {
-            this.style.display = 'flex';
-            this.style.flexDirection = 'column';
-            this.style.padding = '64px 20px';
-            this.style.width = '100%';
-            this.style.margin = '0px';
-            this.style.boxSizing = 'border-box';
-            this.style.marginTop = '16px';
-            this.style.borderBottom = '1px solid var(--stroke-gray-01)';
-        }
+        connectedCallback() {}
     },
 );
 
@@ -357,18 +349,8 @@ customElements.define(
         constructor() {
             super();
             this.container = document.createElement('div');
-            this.container.style.display = 'flex';
-            this.container.style.flexDirection = 'row';
-            this.container.style.alignItems = 'center';
-            this.container.style.justifyContent = 'center';
-            this.container.style.width = '100%';
-            this.container.style.marginBottom = '72px';
-            this.container.style.gap = '28px';
 
             this.unit_container = document.createElement('div');
-            this.unit_container.style.display = 'flex';
-            this.unit_container.style.width = '100%';
-            this.unit_container.style.justifyContent = 'center';
 
             ['일', '월', '화', '수', '목', '금', '토']
                 .map((date) => {
@@ -387,7 +369,7 @@ customElements.define(
         connectedCallback() {
             setTimeout(() => {
                 this.units = this.nextElementSibling;
-                this.classList += 'subtitle-03';
+                this.classList += 'title';
                 this.style.display = 'flex';
                 this.style.flexDirection = 'row';
                 this.style.alignItems = 'center';
@@ -430,7 +412,6 @@ customElements.define(
             const center = document.createElement('span');
             center.innerText = `${year}.${month}`;
             center.style.order = '1';
-            center.style.fontSize = '36px';
 
             this.container.append(leftArrow, center, rightArrow);
             this.append(this.container, this.unit_container);

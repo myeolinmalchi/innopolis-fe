@@ -1,0 +1,123 @@
+calendar-unit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 14%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    text-align: center;
+}
+
+calendar-unit > span {
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--body-04);
+}
+
+calendar-unit.none {
+    background: var(--background-white-01);
+}
+
+calendar-unit.default > span {
+    color: var(--text-primary);
+}
+
+calendar-unit.disabled > span {
+    color: var(--text-disabled);
+}
+calendar-unit.accent > span {
+    color: var(--text-red);
+}
+
+calendar-unit.checked > span {
+    background: var(--color-blue-filled);
+    border-radius: 48px;
+    color: var(--text-white);
+}
+
+calendar-unit.normal {
+    height: 0;
+    padding-bottom: calc(4.5% + 24px + 2px);
+    padding-top: calc(4.5% - 24px + 2px);
+}
+
+calendar-unit.top {
+    height: 51px;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+calendar-container {
+    display: flex;
+    flex-direction: column;
+    padding: 64px 20px;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    margin-top: 16px;
+    border-bottom: 1px solid var(--stroke-gray-01);
+}
+
+calendar-header > div:first-child {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 72px;
+    gap: 28px;
+}
+
+calendar-header > div:first-child > span:nth-child(2) {
+    font-size: 36px;
+}
+
+calendar-header > div:nth-child(2) {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+@media (max-width: 1024px) {
+    calendar-container {
+        padding: 32px 14px;
+    }
+    calendar-unit.checked {
+        border-radius: 42px;
+    }
+    calendar-unit.normal {
+        height: 0;
+        padding-bottom: 44px;
+        padding-top: 2px;
+    }
+
+    calendar-unit > span {
+        width: 42px;
+        height: 42px;
+        font-size: var(--body-03);
+    }
+
+    calendar-header > div:first-child {
+        margin-bottom: 32px;
+        justify-content: space-between;
+    }
+
+    calendar-header > div:first-child > span:nth-child(2) {
+        font-size: var(--subtitle-03);
+    }
+
+    calendar-header > div:nth-child(2) {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+}

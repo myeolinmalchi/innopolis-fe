@@ -784,10 +784,13 @@ li{
     width: calc(100% - 132px);
     float: left;
 }
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
+    .horizontal-item .content-sub-title{
+        width: 100%;
+    }
     .content-wrapper {
         padding: 0px 18px;
-        max-width: 640px;
+        max-width: 1024px;
     }
     .content-padding {
         padding: 48px 0px;

@@ -134,6 +134,8 @@ img {
 }
 
 .space-img {
+    border-radius: 4px;
+    overflow: hidden;
     width: 100%;
     background-color: #ddd;
     height: 320px;
@@ -175,6 +177,7 @@ img {
     width: calc(25% - 18px);
     float: left;
     box-sizing: border-box;
+    overflow: hidden;
     margin: 16px 24px 16px 0px;
     background-color: var(--background-white-01);
 }

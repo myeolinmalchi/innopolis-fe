@@ -357,3 +357,7 @@ span {
     width: 7px;
     margin-left: 6px;
 }
+
+img{
+    image-rendering: -webkit-optimize-contrast;
+}

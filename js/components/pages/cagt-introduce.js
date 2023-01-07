@@ -29,12 +29,14 @@ customElements.define(
                 campus,
                 address,
                 car,
+                [x, y],
                 [public1_title, public1_content],
                 [public2_title, public2_content],
             ] = [
                 this.getAttribute('campus'),
                 this.getAttribute('address'),
                 this.getAttribute('car'),
+                [this.getAttribute('x'), this.getAttribute('y')],
                 [
                     this.getAttribute('public1-title'),
                     this.getAttribute('public1-content'),
@@ -122,31 +124,34 @@ customElements.define(
             `;
             location_detail_wrapper.append(this.location_map, location_detail);
             this.append(location_title, location_detail_wrapper);
-            setTimeout(() => {
-                const content_area = this.parentNode.parentNode.parentNode;
+            const content_area = this.parentNode.parentNode.parentNode;
+
+            kakao.maps.load(() => {
+                const position = new daum.maps.LatLng(x, y);
+                const map = new kakao.maps.Map(this.location_map, {
+                    center: position,
+                    level: 3,
+                });
+                const marker = new kakao.maps.Marker({
+                    position: position,
+                });
+                marker.setMap(map);
+
                 const observer = new MutationObserver((mutations) => {
                     mutations.forEach((m) => {
                         if (
                             m.type === 'attributes' &&
                             m.attributeName === 'tab-number'
                         ) {
-                            const map = new kakao.maps.Map(this.location_map, {
-                                center: new kakao.maps.LatLng(
-                                    33.450701,
-                                    126.570667,
-                                ),
-                                level: 3,
-                            });
+                            map.relayout();
+                            map.setCenter(position);
+                            map.setLevel(2);
                         }
                     });
                 });
 
                 observer.observe(content_area, {
                     attributes: true,
-                });
-                const map = new kakao.maps.Map(this.location_map, {
-                    center: new kakao.maps.LatLng(33.450701, 126.570667),
-                    level: 3,
                 });
             });
         }

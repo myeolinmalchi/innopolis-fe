@@ -139,6 +139,9 @@ pagination-container {
     .post-img {
         height: 104px;
     }
+    top-image br {
+        display: none;
+    }
 }
 #tech-trend .post-container {
     width: 100%;

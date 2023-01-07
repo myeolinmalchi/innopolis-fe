@@ -74,6 +74,7 @@
 
 .last-content > div > img {
     max-width: 100%;
+    width: 100%;
     height: auto;
     content: url(/image/pages/introduce/2-5.svg);
 }

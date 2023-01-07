@@ -15,15 +15,20 @@ class footer_default extends HTMLElement {
 
         const content_first_img = document.createElement('img');
         content_first_img.setAttribute('class', 'left l');
-        content_first_img.setAttribute('src', '/image/logoL.svg');
+        content_first_img.setAttribute('src', '/image/logoL.png');
+        content_first_img.setAttribute('onClick',"location.href='index.html'");
 
         const content_first_img_m = document.createElement('img');
         content_first_img_m.setAttribute('class', 'left m');
-        content_first_img_m.setAttribute('src', '/image/logoM.svg');
+        content_first_img_m.setAttribute('src', '/image/logoM.png');
+        content_first_img_m.setAttribute('onClick',"location.href='index.html'");
 
         const content_first_img_s = document.createElement('img');
         content_first_img_s.setAttribute('class', 'left s');
-        content_first_img_s.setAttribute('src', '/image/logoS.svg');
+        content_first_img_s.setAttribute('src', '/image/logoS.png');
+        content_first_img_s.setAttribute('onClick',"location.href='index.html'");
+        content_first_img.setAttribute('src', '/image/logoL.png');
+        content_first_img.setAttribute('onClick',"location.href='index.html'");
 
         const content_first_ul = document.createElement('ul');
         content_first_ul.setAttribute('class', 'list');
@@ -163,12 +168,15 @@ class footer_default extends HTMLElement {
         }
         .first .l{
             display: block;
+            height: 44px;
         }
         .first .m{
-            display: none;   
+            display: none;
+            height: 36px;   
         }
         .first .s{
             display: none;
+            height: 32px;
         }
         .content{
             display: inline-block;

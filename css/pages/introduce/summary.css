@@ -173,19 +173,19 @@ tab-content:nth-child(2) > img {
 
 #image1 {
     border-radius: 4px;
-    content: url(/image/pages/introduce/2-1.svg);
+    content: url(/image/pages/introduce/2-1.png);
 }
 #image2 {
     border-radius: 4px;
-    content: url(/image/pages/introduce/2-2.svg);
+    content: url(/image/pages/introduce/2-2.png);
 }
 #image3 {
     border-radius: 4px;
-    content: url(/image/pages/introduce/2-3.svg);
+    content: url(/image/pages/introduce/2-3.png);
 }
 #image4 {
     border-radius: 4px;
-    content: url(/image/pages/introduce/2-4.svg);
+    content: url(/image/pages/introduce/2-4.png);
 }
 
 @media (max-width: 1024px) {
@@ -263,15 +263,15 @@ tab-content:nth-child(2) > img {
         content: url(/image/pages/introduce/2-0-m.png);
     }
     #image1 {
-        content: url(/image/pages/introduce/2-1-m.svg);
+        content: url(/image/pages/introduce/2-1-m.png);
     }
     #image2 {
-        content: url(/image/pages/introduce/2-2-m.svg);
+        content: url(/image/pages/introduce/2-2-m.png);
     }
     #image3 {
-        content: url(/image/pages/introduce/2-3-m.svg);
+        content: url(/image/pages/introduce/2-3-m.png);
     }
     #image4 {
-        content: url(/image/pages/introduce/2-4-m.svg);
+        content: url(/image/pages/introduce/2-4-m.png);
     }
 }

@@ -353,7 +353,7 @@ img {
     display: none;
 }
 #content2 .content-main-img{
-    background-image: url(../../../image/pages/lentspace/2-0.svg);
+    background-image: url(../../../image/pages/lentspace/2-0.png);
 }
 
 .summary-detail {
@@ -467,7 +467,7 @@ img {
 
 @media (max-width: 1024px) {
     #content2 .content-main-img{
-        background-image: url(../../../image/pages/lentspace/2-0-m.svg);
+        background-image: url(../../../image/pages/lentspace/2-0-m.png);
     }
     .lent-container .subtitle-01 span{
         font-weight: 500;

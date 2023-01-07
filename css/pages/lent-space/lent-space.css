@@ -205,9 +205,8 @@ img {
 }
 
 .location-item {
-    width: 50%;
+    width: 100%;
     box-sizing: border-box;
-    height: 484px;
     padding: 32px;
     float: right;
     border-radius: 4px 0px 0px 4px;
@@ -277,8 +276,8 @@ img {
 }
 
 .map {
-    width: 50%;
-    height: 484px;
+    width: 100%;
+    height: 100%;
     text-align: center;
 }
 
@@ -464,8 +463,15 @@ img {
     font-weight: 700;
 }
 
-
+.map-wrapper{
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+}
 @media (max-width: 1024px) {
+    .map-wrapper{
+        display: flex;
+        flex-direction: column-reverse;
+    }
     #content2 .content-main-img{
         background-image: url(../../../image/pages/lentspace/2-0-m.png);
     }

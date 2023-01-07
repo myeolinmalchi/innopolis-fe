@@ -76,7 +76,7 @@
     max-width: 100%;
     width: 100%;
     height: auto;
-    content: url(/image/pages/introduce/2-5.svg);
+    content: url(/image/pages/introduce/2-5.png);
 }
 
 .subitem-container {
@@ -208,7 +208,7 @@ tab-content:nth-child(2) > img {
 
     .last-content > div > img {
         width: 100%;
-        content: url(/image/pages/introduce/2-5-m.svg);
+        content: url(/image/pages/introduce/2-5-m.png);
     }
 
     .subitem-container {

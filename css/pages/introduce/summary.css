@@ -8,6 +8,7 @@
 }
 
 .title-wrapper {
+    color: var(--text-primary);
     font-size: var(--title-03);
     width: 100%;
     max-width: 1100px;
@@ -16,6 +17,7 @@
 
 .explanation-wrapper {
     font-size: var(--body-04);
+    color: var(--text-primary);
     width: 100%;
     max-width: 1100px;
     text-align: left;
@@ -139,6 +141,7 @@
 }
 .img-content-content-title {
     width: 100%;
+    color: var(--text-primary);
     text-align: left;
     font-size: var(--title-01);
 }

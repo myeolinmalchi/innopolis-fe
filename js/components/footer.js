@@ -368,3 +368,21 @@ customElements.define('footer-default', footer_default);
     pluginKey: "2b9c9842-0d0c-4300-8fac-0b6bd996f79b",
   });
   
+
+  //going up btn
+  customElements.define(
+    'going-up',
+    class extends HTMLElement {
+        connectedCallback() {
+            const tag = '<div></div>';
+            
+
+            this.onclick = () => {
+                window.scroll({top:0, behavior: "smooth"});
+            }
+
+            this.innerHTML = tag;
+        }
+    },
+);
+

@@ -1,0 +1,24 @@
+going-up{
+    position: fixed;
+    bottom: 104px;
+    right: 24px;
+
+    width: 60px;
+    height: 60px;
+    border-radius: 40%;
+    background: #008dff;
+    background-image: url('../../image/icon-arrow-16-top-black.svg');
+    box-shadow: 0px 0px 1px rgba(66, 66, 66, 0.04), 0px 2px 4px rgba(117, 117, 117, 0.16);
+    cursor: pointer;
+    z-index: 999;
+}
+
+@media (max-width: 414px) {
+    going-up{
+        width: 42px;
+        height: 42px;
+        bottom: 80px;
+        right: 16px;
+        background-image: url('../../image/icon-arrow-16-top-black-s.svg');
+    }
+}

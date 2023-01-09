@@ -197,9 +197,7 @@ div.content-wrapper:nth-child(3) {
 .second-content-img {
     border-radius: 4px;
     overflow: hidden;
-    height: 212px;
     width: 351px;
-    background-color: #ddd;
     float: left;
 }
 img {

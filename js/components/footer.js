@@ -15,15 +15,20 @@ class footer_default extends HTMLElement {
 
         const content_first_img = document.createElement('img');
         content_first_img.setAttribute('class', 'left l');
-        content_first_img.setAttribute('src', '/image/logoL.svg');
+        content_first_img.setAttribute('src', '/image/logoL.png');
+        content_first_img.setAttribute('onClick',"location.href='index.html'");
 
         const content_first_img_m = document.createElement('img');
         content_first_img_m.setAttribute('class', 'left m');
-        content_first_img_m.setAttribute('src', '/image/logoM.svg');
+        content_first_img_m.setAttribute('src', '/image/logoM.png');
+        content_first_img_m.setAttribute('onClick',"location.href='index.html'");
 
         const content_first_img_s = document.createElement('img');
         content_first_img_s.setAttribute('class', 'left s');
-        content_first_img_s.setAttribute('src', '/image/logoS.svg');
+        content_first_img_s.setAttribute('src', '/image/logoS.png');
+        content_first_img_s.setAttribute('onClick',"location.href='index.html'");
+        content_first_img.setAttribute('src', '/image/logoL.png');
+        content_first_img.setAttribute('onClick',"location.href='index.html'");
 
         const content_first_ul = document.createElement('ul');
         content_first_ul.setAttribute('class', 'list');
@@ -163,12 +168,15 @@ class footer_default extends HTMLElement {
         }
         .first .l{
             display: block;
+            height: 44px;
         }
         .first .m{
-            display: none;   
+            display: none;
+            height: 36px;   
         }
         .first .s{
             display: none;
+            height: 32px;
         }
         .content{
             display: inline-block;
@@ -316,3 +324,65 @@ class footer_default extends HTMLElement {
 }
 
 customElements.define('footer-default', footer_default);
+
+
+
+(function () {
+    var w = window;
+    if (w.ChannelIO) {
+      return (window.console.error || window.console.log || function () {})(
+        "ChannelIO script included twice."
+      );
+    }
+    var ch = function () {
+      ch.c(arguments);
+    };
+    ch.q = [];
+    ch.c = function (args) {
+      ch.q.push(args);
+    };
+    w.ChannelIO = ch;
+    function l() {
+      if (w.ChannelIOInitialized) {
+        return;
+      }
+      w.ChannelIOInitialized = true;
+      var s = document.createElement("script");
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = "https://cdn.channel.io/plugin/ch-plugin-web.js";
+      s.charset = "UTF-8";
+      var x = document.getElementsByTagName("script")[0];
+      x.parentNode.insertBefore(s, x);
+    }
+    if (document.readyState === "complete") {
+      l();
+    } else if (window.attachEvent) {
+      window.attachEvent("onload", l);
+    } else {
+      window.addEventListener("DOMContentLoaded", l, false);
+      window.addEventListener("load", l, false);
+    }
+  })();
+  ChannelIO("boot", {
+    pluginKey: "2b9c9842-0d0c-4300-8fac-0b6bd996f79b",
+  });
+  
+
+  //going up btn
+  customElements.define(
+    'going-up',
+    class extends HTMLElement {
+        connectedCallback() {
+            const tag = '<div></div>';
+            
+
+            this.onclick = () => {
+                window.scroll({top:0, behavior: "smooth"});
+            }
+
+            this.innerHTML = tag;
+        }
+    },
+);
+

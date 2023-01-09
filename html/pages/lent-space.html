@@ -1,1131 +1,1028 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>Insert title here.</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script
-            type="text/javascript"
-            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5c71a5ee7132e19292d9d6fe6e8daf46"
-        ></script>
-        <link rel="stylesheet" href="/css/reset.css" />
-        <link rel="stylesheet" href="/css/top-nav.css" />
-        <link rel="stylesheet" href="/css/common.css" />
-        <link rel="stylesheet" href="/css/tab-area.css" />
-        <link rel="stylesheet" href="/css/pages/lent-space/lent-space.css" />
-        <link rel="stylesheet" href="/css/pages/lent-space/companyCard.css" />
-        <script type="text/javascript" src="/js/components/footer.js"></script>
-        <script type="text/javascript" src="/js/components/tab.js"></script>
-        <script
-            type="text/javascript"
-            src="/js/components/tab-area.js"
-        ></script>
-        <script type="text/javascript" src="/js/components/card.js"></script>
-        <script
-            type="text/javascript"
-            src="/js/components/pagination.js"
-        ></script>
-        <script
-            type="text/javascript"
-            src="/js/components/lentSpace/companyCard.js"
-        ></script>
-        <script type="text/javascript" src="/js/components/top-nav.js"></script>
-        <script type="text/javascript" src="/js/components/button.js"></script>
-        <script
-            type="text/javascript"
-            src="/js/components/top-image.js"
-        ></script>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5c71a5ee7132e19292d9d6fe6e8daf46"
+    ></script>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/top-nav.css" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/tab-area.css" />
+    <link rel="stylesheet" href="/css/pages/lent-space/lent-space.css" />
+    <link rel="stylesheet" href="/css/pages/lent-space/companyCard.css" />
+    <script type="text/javascript" src="/js/components/footer.js"></script>
+    <script type="text/javascript" src="/js/components/tab.js"></script>
+    <script type="text/javascript" src="/js/components/tab-area.js"></script>
+    <script type="text/javascript" src="/js/components/card.js"></script>
+    <script type="text/javascript" src="/js/components/pagination.js"></script>
+    <script
+      type="text/javascript"
+      src="/js/components/lentSpace/companyCard.js"
+    ></script>
+    <script type="text/javascript" src="/js/components/top-nav.js"></script>
+    <script type="text/javascript" src="/js/components/button.js"></script>
+    <script type="text/javascript" src="/js/components/top-image.js"></script>
+  </head>
 
-    <body style="letter-spacing: -0.01em">
-        <top-nav focus="7"></top-nav>
-        <tab-area>
+  <body style="letter-spacing: -0.01em">
+    <going-up></going-up>
+    <top-nav focus="7"></top-nav>
+    <tab-area>
+      <tab-introduction-container>
+        <tab-introduction-content>
+          천안아산강소특구의<br />
+          제 1캠퍼스를 소개합니다.
+        </tab-introduction-content>
+        <tab-introduction-content>
+          천안아산강소특구의<br />
+          제 2캠퍼스를 소개합니다.
+        </tab-introduction-content>
+        <tab-introduction-content>
+          천안아산강소특구의<br />
+          입주공간 신청 안내입니다.
+        </tab-introduction-content>
+        <tab-introduction-content>
+          천안아산강소특구의<br />
+          입주 기업을 소개합니다.
+        </tab-introduction-content>
+      </tab-introduction-container>
+      <tab-container>
+        <tab-default type="primary">제 1캠퍼스</tab-default>
+        <tab-default type="primary">제 2캠퍼스</tab-default>
+        <tab-default type="primary">입주공간 신청</tab-default>
+        <tab-default type="primary">입주기업</tab-default>
+      </tab-container>
+    </tab-area>
+    <tab-content-area>
+      <tab-content id="content1">
+        <div
+          class="content-main-img image-height"
+          style="
+            background-image: url(../../image/pages/lentspace/1-0.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+          "
+        >
+          <div class="content-wrapper image-height">
+            <div class="lent-container">
+              <div class="content-title">
+                <span
+                  >초기 창업자들의 빠른 성장을 위해 다양한 <br />오피스 공간을
+                  지원합니다.</span
+                >
+              </div>
+
+              <button-default
+                style="width: fit-content"
+                class="top-btn"
+                size="l"
+                style_="primary"
+                state="default"
+                icon="none"
+                onclick="location.href='/html/pages/lent-space.html?tab=2'"
+                >제 1캠퍼스 확인하기!</button-default
+              >
+            </div>
+          </div>
+        </div>
+        <div class="content-wrapper">
+          <div class="content-space">
+            <div class="content-space-container">
+              <div class="content-space-text">
+                <span class="space">SPACE 01</span>
+                <span class="space-title">도약을 위한 사무공간 제공</span>
+                <span class="space-summary"
+                  >창업가들이 일에 집중하고 휴식할 수 있는 공간을
+                  구성했습니다.</span
+                >
+              </div>
+              <div class="space-img round-04">
+                <img src="../../image/pages/lentspace/lentspace1.png" />
+              </div>
+              <div class="space-item space-item-first-child round-04 item1">
+                <span class="space-item-title">개방형 입주공간</span>
+                <span class="space-item-summary"
+                  >개방형 입주공간은 창의적인 생각과 실험을 통한 연구 및 개발을
+                  지원하는 공간입니다. 1인 창업자와 예비창업자에게 적합한
+                  공간입니다.</span
+                >
+              </div>
+              <div class="space-item round-04 item1">
+                <span class="space-item-title">독립형 입주공간</span>
+                <span class="space-item-summary"
+                  >개인이나 소규모 팀이 자신만의 작업공간을 갖출 수 있도록
+                  독립적인 셀이 준비되어 있습니다. 이 공간은 4~6명의 팀원을
+                  보유한 창업 기업에 적합한 공간입니다.</span
+                >
+              </div>
+              <div class="space-item round-04 item1">
+                <span class="space-item-title">휴게실</span>
+                <span class="space-item-summary"
+                  >휴게실은 직원들이 휴식을 취할 수 있는 공간입니다. 편안하고
+                  쾌적한 환경에서 잠시 쉴 수 있도록 준비되어 있습니다.</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="content-space">
+            <div class="content-space-container">
+              <div class="content-space-text">
+                <span class="space">SPACE 02</span>
+                <span class="space-title">성장을 위한 회의 공간 제공</span>
+                <span class="space-summary"
+                  >초기 창업가들이 최고의 입지에 오피스를 마련한 수 있도록
+                  공간을 설계했습니다.</span
+                >
+              </div>
+              <div class="space-img round-04">
+                <img src="../../image/pages/lentspace/lentspace2.png" />
+              </div>
+              <div class="space-item space-item-first-child round-04 item2">
+                <span class="space-item-title">소회의실</span>
+                <span class="space-item-summary"
+                  >최신의 영상통신 장비를 이용할 수 있도록 구비되어 있어,
+                  원격지의 참석자와의 원활한 커뮤니케이션이 가능합니다.</span
+                >
+              </div>
+              <div class="space-item round-04 item2">
+                <span class="space-item-title">대회의실</span>
+                <span class="space-item-summary"
+                  >최신의 영상통신 장비를 이용할 수 있도록 구비되어 있어,
+                  원격지의 참석자와의 원활한 커뮤니케이션이 가능합니다.</span
+                >
+              </div>
+              <div class="space-item round-04 item2">
+                <span class="space-item-title">메타버스 미팅룸</span>
+                <span class="space-item-summary"
+                  >천안아산강소특구에서 구축한 가상현실의 회의 공간입니다.
+                  입주기업에게는 메타버스 공간에서 화상회의를 할 수 있도록
+                  화상회의 환경을 제공합니다.</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="content-wrapper"
+          style="background-color: var(--background-gray-01)"
+        >
+          <div class="content-space benefit">
+            <div class="content-space-container">
+              <div class="content-space-text">
+                <span class="space">Benefits</span>
+                <span class="space-title">추가 입주 혜택</span>
+              </div>
+
+              <div class="benefit-item round-04">
+                <div class="benefit-img">
+                  <img src="../../image/pages/lentspace/lentspace3.png" />
+                </div>
+                <span class="benefit-item-summary"
+                  >한국자동차연구원 시험분석 의뢰시<br />
+                  수수료 10% 감면</span
+                >
+              </div>
+              <div class="benefit-item round-04">
+                <div class="benefit-img">
+                  <img src="../../image/pages/lentspace/lentspace4.png" />
+                </div>
+                <span class="benefit-item-summary"
+                  >회의실, 휴게공간, 사무기기, 인터넷 등<br />
+                  무상제공 지원</span
+                >
+              </div>
+              <div class="benefit-item round-04">
+                <div class="benefit-img">
+                  <img src="../../image/pages/lentspace/lentspace5.png" />
+                </div>
+                <span class="benefit-item-summary"
+                  >책상, 의자, 서랍장 등 사무집기류<br />
+                  무상제공 지원</span
+                >
+              </div>
+              <div class="benefit-item benefit-last round-04">
+                <div class="benefit-img">
+                  <img src="../../image/pages/lentspace/lentspace6.png" />
+                </div>
+                <span class="benefit-item-summary"
+                  >창업보육기업의 성장을 위한<br />
+                  맞춤형 사업화 지원</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-wrapper">
+          <div class="content-space">
+            <div class="content-space-container">
+              <div class="content-space-text">
+                <span class="space">Location</span>
+                <span class="space-title">제1 캠퍼스 위치</span>
+                <span class="space-summary" style="font-size: 14px"
+                  >R&D 창업 융합지구 (아산탕정-천안불당 개발지구)</span
+                >
+              </div>
+              <div class="map-wrapper">
+                <div class="location-item">
+                  <div class="information">
+                    <div class="type">
+                      <span>주소</span>
+                    </div>
+                    <div class="value">
+                      <span
+                        >충남 아산시 탕정면 선문로 254번길 12, 사무동 3층
+                        서편</span
+                      >
+                    </div>
+                  </div>
+                  <div class="information">
+                    <div class="type">
+                      <span>입주공간</span>
+                    </div>
+                    <div class="value">
+                      <span
+                        >365m (개방형 168m, 독립형 197),<br />
+                        개방형 24석 독립형 6실</span
+                      >
+                    </div>
+                  </div>
+
+                  <div class="information">
+                    <div class="type">
+                      <span>입주자격</span>
+                    </div>
+                    <div class="value">
+                      <table>
+                        <tr class="line">
+                          <td class="num">1.&nbsp;</td>
+                          <td class="text">
+                            예비창업자 또는 7년 미만 중소기업(신청일 기준)
+                          </td>
+                        </tr>
+                        <tr class="line">
+                          <td class="num">2.&nbsp;</td>
+                          <td class="text">
+                            특화분야(차입주자격량용 디스플레이·인포테인먼트,
+                            차세대 배터리 소재‧부품, 미래형 자동차 융복합 부품)
+                            기업 우대
+                          </td>
+                        </tr>
+                        <tr class="line">
+                          <td class="num">3.&nbsp;</td>
+                          <td class="text">
+                            예비창업자는 입주 후 6개월 이내 법인 또는 개인사업자
+                            전환 필수
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                  <button-default
+                    style_="secondary"
+                    state="default"
+                    size="L"
+                    icon="right"
+                    style="width: fit-content"
+                    onclick="location.href='/html/pages/lent-space.html?tab=2'"
+                    >입주 문의하기</button-default
+                  >
+                </div>
+                <div class="location-item map">
+                  <div>Map</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </tab-content>
+      <tab-content id="content2">
+        <div
+          class="content-main-img image-height"
+          style="background-repeat: no-repeat; background-size: cover"
+        >
+          <div class="content-wrapper image-height">
+            <div class="lent-container">
+              <div class="content-title">
+                <span
+                  >초기 창업자들의 빠른 성장을 위해 다양한 <br />오피스 공간을
+                  지원합니다.</span
+                >
+              </div>
+
+              <button-default
+                style="width: fit-content"
+                class="top-btn"
+                size="l"
+                style_="primary"
+                state="default"
+                icon="none"
+                onclick="location.href='/html/pages/lent-space.html?tab=2'"
+                >제 2캠퍼스 확인하기!</button-default
+              >
+            </div>
+          </div>
+        </div>
+        <div class="content-wrapper">
+          <div class="content-space">
+            <div class="content-space-container content2-1">
+              <div class="content-space-text">
+                <span class="space">SPACE 01</span>
+                <span class="space-title">성장을 위한 다양한 공간 제공</span>
+                <span class="space-summary"
+                  >초기 창업가들이 편안한 공간에서 업무에 집중할 수 있도록
+                  입주공간을 설계했습니다.</span
+                >
+              </div>
+              <div class="space-img round-04">
+                <img src="../../image/pages/lentspace/lentspace8.png" />
+              </div>
+              <div class="space-item space-item-first-child round-04">
+                <span class="space-item-title">개방형 입주공간</span>
+                <span class="space-item-summary"
+                  >창의적인 생각과 실험을 통한 연구 및 개발을 지원하는
+                  공간입니다. 1인 창업자와 예비창업자에게 적합한
+                  공간입니다.</span
+                >
+              </div>
+              <div class="space-item round-04">
+                <span class="space-item-title">독립형 입주공간</span>
+                <span class="space-item-summary"
+                  >개인이나 소규모 팀이 자신만의 작업공간을 갖출 수 있도록
+                  독립적인 셀이 준비되어 있습니다. 이 공간은 4~6명의 팀원을
+                  보유한 창업 기업에 적합한 공간입니다.</span
+                >
+              </div>
+              <div class="space-item round-04">
+                <span class="space-item-title">휴게실</span>
+                <span class="space-item-summary"
+                  >휴게실은 직원들이 휴식을 취할 수 있는 공간입니다. 편안하고
+                  쾌적한 환경에서 잠시 쉴 수 있도록 준비되어 있습니다.</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="content-space">
+            <div class="content-space-container">
+              <div class="content-space-text">
+                <span class="space">SPACE 02</span>
+                <span class="space-title">미팅과 교육을 위한 공간 제공</span>
+                <span class="space-summary"
+                  >외부 강사를 초빙해서 세미나를 진행하거나 클라이언트와 미팅을
+                  진행할 수 있습니다.</span
+                >
+              </div>
+              <div class="space-img round-04">
+                <img src="../../image/pages/lentspace/lentspace7.png" />
+              </div>
+              <div class="space-item space-item-first-child round-04">
+                <span class="space-item-title">소회의실</span>
+                <span class="space-item-summary"
+                  >미팅이나 컨퍼런스를 진행할 수 있는 공간입니다. 최신의
+                  영상통신 장비를 이용할 수 있도록 구비되어 있어, 원격지의
+                  참석자와의 원활한 커뮤니케이션이 가능합니다.</span
+                >
+              </div>
+              <div class="space-item round-04">
+                <span class="space-item-title">중회의실</span>
+                <span class="space-item-summary"
+                  >다수의 참석자를 수용할 수 있는 공간입니다. 최신의 영상통신
+                  장비를 이용할 수 있도록 구비되어 있어, 원격지의 참석자와의
+                  원활한 커뮤니케이션이 가능합니다</span
+                >
+              </div>
+              <div class="space-item round-04">
+                <span class="space-item-title">세미나실</span>
+                <span class="space-item-summary">
+                  강의, 교육 등을 진행할 수 있는 공간입니다. 최신의 영상통신
+                  장비를 이용할 수 있도록 구비되어 있어, 원격지의 참석자와의
+                  원활한 커뮤니케이션이 가능합니다.</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="content-wrapper"
+          style="background-color: var(--background-gray-01)"
+        >
+          <div class="content-space benefit">
+            <div class="content-space-container">
+              <div class="content-space-text">
+                <span class="space">Benefits</span>
+                <span class="space-title">추가 입주 혜택</span>
+              </div>
+
+              <div class="benefit-item round-04">
+                <div class="benefit-img">
+                  <img src="../../image/pages/lentspace/lentspace3.png" />
+                </div>
+                <span class="benefit-item-summary"
+                  >한국자동차연구원 시험분석 의뢰시<br />
+                  수수료 10% 감면</span
+                >
+              </div>
+              <div class="benefit-item round-04">
+                <div class="benefit-img">
+                  <img src="../../image/pages/lentspace/lentspace4.png" />
+                </div>
+                <span class="benefit-item-summary"
+                  >회의실, 휴게공간, 사무기기, 인터넷 등<br />
+                  무상제공 지원</span
+                >
+              </div>
+              <div class="benefit-item round-04">
+                <div class="benefit-img">
+                  <img src="../../image/pages/lentspace/lentspace5.png" />
+                </div>
+                <span class="benefit-item-summary"
+                  >책상, 의자, 서랍장 등 사무집기류<br />
+                  무상제공 지원</span
+                >
+              </div>
+              <div class="benefit-item benefit-last round-04">
+                <div class="benefit-img">
+                  <img src="../../image/pages/lentspace/lentspace6.png" />
+                </div>
+                <span class="benefit-item-summary"
+                  >창업보육기업의 성장을 위한<br />
+                  맞춤형 사업화 지원</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-wrapper">
+          <div class="content-space">
+            <div class="content-space-container">
+              <div class="content-space-text">
+                <span class="space">Location</span>
+                <span class="space-title">제2 캠퍼스 위치</span>
+                <span class="space-summary"
+                  >R&D 창업 융합지구 (아산탕정-천안불당 개발지구)</span
+                >
+              </div>
+              <div class="map-wrapper">
+                <div class="location-item">
+                  <div class="information">
+                    <div class="type">
+                      <span>주소</span>
+                    </div>
+                    <div class="value">
+                      <span
+                        >충남 아산시 탕정면 선문로 254번길 12, 사무동 3층
+                        서편</span
+                      >
+                    </div>
+                  </div>
+                  <div class="information">
+                    <div class="type">
+                      <span>입주공간</span>
+                    </div>
+                    <div class="value">
+                      <span
+                        >365m (개방형 168m, 독립형 197),<br />
+                        개방형 24석 독립형 6실</span
+                      >
+                    </div>
+                  </div>
+
+                  <div class="information">
+                    <div class="type">
+                      <span>입주자격</span>
+                    </div>
+                    <div class="value">
+                      <table>
+                        <tr class="line">
+                          <td class="num">1.&nbsp;</td>
+                          <td class="text">
+                            예비창업자 또는 7년 미만 중소기업(신청일 기준)
+                          </td>
+                        </tr>
+                        <tr class="line">
+                          <td class="num">2.&nbsp;</td>
+                          <td class="text">
+                            특화분야(차입주자격량용 디스플레이·인포테인먼트,
+                            차세대 배터리 소재‧부품, 미래형 자동차 융복합 부품)
+                            기업 우대
+                          </td>
+                        </tr>
+                        <tr class="line">
+                          <td class="num">3.&nbsp;</td>
+                          <td class="text">
+                            예비창업자는 입주 후 6개월 이내 법인 또는 개인사업자
+                            전환 필수
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                  <button-default
+                    style_="secondary"
+                    state="default"
+                    size="L"
+                    icon="right"
+                    style="width: fit-content"
+                    onclick="location.href='/html/pages/lent-space.html?tab=2'"
+                    >입주 문의하기</button-default
+                  >
+                </div>
+                <div class="location-item map">
+                  <div>Map</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </tab-content>
+      <tab-content id="content3">
+        <div
+          class="content-main-img"
+          style="
+            background-image: url(../../image/pages/lentspace/3-0.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+          "
+        >
+          <div class="content-wrapper image-height">
+            <div class="lent-container">
+              <div class="content-title">
+                <span
+                  >천안아산강소특구에서는 입주 기업들을<br />위한 사무실 공간을
+                  지원합니다.</span
+                >
+              </div>
+              <div
+                class="content-button"
+                style="justify-content: left; margin-top: 0px"
+              >
+                <button-default
+                  style="width: fit-content"
+                  class="top-btn"
+                  size="l"
+                  style_="primary"
+                  state="default"
+                  icon="none"
+                  onclick="location.href='/html/pages/occupancy-aply-submit.html'"
+                  >입주공간 신청하기!</button-default
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-wrapper">
+          <div class="content-space">
+            <div class="content-space-container preferential">
+              <div class="content-space-text">
+                <span class="space">Qualification</span>
+                <span class="space-title">입주 필수 자격</span>
+              </div>
+              <div class="space-img round-04">
+                <img src="../../image/pages/lentspace/3-1.png" />
+              </div>
+              <div class="space-item space-item-first-child round-04">
+                <span class="space-item-title"
+                  >예비창업자 또는 7년 미만 중소기업</span
+                >
+                <span class="space-item-summary"
+                  >예비창업자 또는 7년 미만 중소기업(신청일 기준)</span
+                >
+              </div>
+              <div class="space-item round-04">
+                <span class="space-item-title">자동차 관련 특화분야</span>
+                <span class="space-item-summary"
+                  >(차량용 디스플레이·인포테인먼트, 차세대 배터리 소재‧부품,
+                  미래형 자동차 융복합 부품) 기업 우대</span
+                >
+              </div>
+              <div class="space-item round-04">
+                <span class="space-item-title"
+                  >입주 6개월 내 법인, 개인사업자 전환 필수</span
+                >
+                <span class="space-item-summary"
+                  >예비창업자는 입주 후 6개월 이내 법인 또는 개인사업자 전환
+                  필수</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="content-space">
+            <div class="content-space-container preferential">
+              <div class="content-space-text">
+                <span class="space">Preferential</span>
+                <span class="space-title">입주 우대자격</span>
+              </div>
+              <div class="space-img round-04">
+                <img src="../../image/pages/lentspace/3-2.png" />
+              </div>
+              <div class="space-item space-item-first-child round-04 item3-2">
+                <span class="space-item-title"
+                  >충남 천안·아산 강소특구 육성사업 수혜기업</span
+                >
+                <span class="space-item-summary"
+                  >충남 천안·아산 강소특구 육성사업 수혜기업</span
+                >
+              </div>
+              <div class="space-item round-04 item3-2">
+                <span class="space-item-title"
+                  >연구소기업 및 연구소기업 신청 예정 기업</span
+                >
+                <span class="space-item-summary"
+                  >연구소기업 및 연구소기업 신청 예정 기업(기술이전 협상 단계에
+                  있는 기업에 한함)</span
+                >
+              </div>
+              <div class="space-item round-04 item3-2">
+                <span class="space-item-title"
+                  >차세대 자동차 부품 분야 해당 기업</span
+                >
+                <span class="space-item-summary"
+                  >차량용 디스플레이·인포테인먼트 분야<br />
+                  배터리(전체 배터리 시스템) 분야<br />
+                  자동차 융복합 부품(편의·안전·공조·고기능성 소재) 분야</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="content-wrapper"
+          style="background-color: var(--background-gray-01)"
+        >
+          <div class="content-space benefit">
+            <div class="content-space-container">
+              <div class="content-space-text">
+                <span class="space">Process</span>
+                <span class="space-title">입주절차</span>
+              </div>
+
+              <div class="process-container">
+                <img
+                  class="large-img"
+                  src="../../image/pages/lentspace/3-6.png"
+                  width="100%"
+                  height="100%"
+                />
+                <img
+                  class="small-img"
+                  src="../../image/pages/lentspace/3-6-m.png"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-wrapper">
+          <div class="content-space">
+            <div class="content-space-container">
+              <div class="content-space-text">
+                <span class="space">
+                  <Inp>Price</Inp>
+                </span>
+                <span class="space-title">입주비용</span>
+              </div>
+              <div class="map-wrapper2">
+                <div
+                  class="location-item mapimage round-04"
+                  style="
+                    float: left;
+                    background-image: url(../../image/pages/lentspace/3-3.png);
+                    background-size: cover;
+                  "
+                ></div>
+                <div class="location-item map2">
+                  <div class="inforamtion-wrapper">
+                    <div class="information">
+                      <div class="type">
+                        <span>입주보증금</span>
+                      </div>
+                      <div class="value">
+                        <span
+                          >충남 아산시 탕정면 선문로 254번길 12, 사무동 3층
+                          서편</span
+                        >
+                      </div>
+                    </div>
+                    <div class="information">
+                      <div class="type">
+                        <span>임대료</span>
+                      </div>
+                      <div class="value">
+                        <span>6,970원/㎡(계약면적 기준)</span>
+                      </div>
+                    </div>
+
+                    <div class="information">
+                      <div class="type">
+                        <span>관리비</span>
+                      </div>
+                      <div class="value">
+                        <span>3,000원/㎡(계약면적 기준)</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="summary-detail">
+                납부는 VAT 별도입니다.<br />
+                월관리비에는 경비/청소 용역비(면적 안분), 화장실 소모품비,
+                오폐수 처리 비용 등이 포함되며 전기료는 실비정산
+              </div>
+            </div>
+          </div>
+
+          <div class="content-space">
+            <div class="content-space-container">
+              <div class="content-space-text">
+                <span class="space">
+                  <Inp>Inquiry</Inp>
+                </span>
+                <span class="space-title">입주문의</span>
+              </div>
+              <div class="map-wrapper2">
+                <div
+                  class="location-item mapimage round-04"
+                  style="
+                    float: left;
+                    background-image: url(../../image/pages/lentspace/3-4.png);
+                    background-size: cover;
+                  "
+                >
+                </div>
+                <div class="location-item map2">
+                  <div class="inforamtion-wrapper">
+                    <div class="information">
+                      <div class="type">
+                        <span>문의전화</span>
+                      </div>
+                      <div class="value">
+                        <span>041-424-7014</span>
+                      </div>
+                    </div>
+                    <div class="information">
+                      <div class="type">
+                        <span>이메일</span>
+                      </div>
+                      <div class="value">
+                        <span>mjsung@katech.re.kr</span>
+                      </div>
+                    </div>
+                    <button-default
+                      style_="secondary"
+                      state="default"
+                      size="L"
+                      icon="right"
+                      style="width: fit-content"
+                      onclick="location.href='/html/pages/lent-space.html?tab=2'"
+                      >입주 문의하기</button-default
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="content-main-img image-height"
+          style="
+            background-image: url(../../image/pages/lentspace/3-5.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+          "
+        >
+          <div class="content-wrapper" style="height: 100%">
+            <div class="lent-container image-height">
+              <div class="title-01">
+                <span>스타트업의 성장판이 될 오피스</span>
+              </div>
+              <div class="subtitle-01">
+                <span>미래 자동차 창출의 중심지, 충남천안 아산강소특구</span>
+              </div>
+              <div class="content-button" style="justify-content: left">
+                <button-default
+                  style_="priamry"
+                  state="default"
+                  size="L"
+                  style="width: fit-content"
+                  onclick="location.href='/html/pages/occupancy-aply-submit.html'"
+                  >신청서 제출하기</button-default
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </tab-content>
+      <tab-content id="content4">
+        <top-image
+          img_src="../../../image/pages/lentspace/4-0.png"
+          title="천안아산강소특구 내 소속중인
+            입주 기업을 소개합니다."
+          summary="입주기업 확인하기!"
+        ></top-image>
+
+        <div class="post-lent-container">
+          <subcontent-tab-area>
             <tab-introduction-container>
-                <tab-introduction-content>
-                    천안아산강소특구의<br />
-                    제 1캠퍼스를 소개합니다.
-                </tab-introduction-content>
-                <tab-introduction-content>
-                    천안아산강소특구의<br />
-                    제 2캠퍼스를 소개합니다.
-                </tab-introduction-content>
-                <tab-introduction-content>
-                    천안아산강소특구의<br />
-                    입주공간 신청 안내입니다.
-                </tab-introduction-content>
-                <tab-introduction-content>
-                    천안아산강소특구의<br />
-                    입주 기업을 소개합니다.
-                </tab-introduction-content>
+              <tab-introduction-conetnt></tab-introduction-conetnt>
+              <tab-introduction-conetnt></tab-introduction-conetnt>
+              <tab-introduction-conetnt></tab-introduction-conetnt>
             </tab-introduction-container>
             <tab-container>
-                <tab-default type="primary">제 1캠퍼스</tab-default>
-                <tab-default type="primary">제 2캠퍼스</tab-default>
-                <tab-default type="primary">입주공간 신청</tab-default>
-                <tab-default type="primary">입주기업</tab-default>
+              <tab-default type="secondary">전체</tab-default>
+              <tab-default type="secondary">제 1캠퍼스</tab-default>
+              <tab-default type="secondary">제 2캠퍼스</tab-default>
             </tab-container>
-        </tab-area>
-        <tab-content-area>
+          </subcontent-tab-area>
+
+          <tab-content-area>
             <tab-content id="content1">
-                <div
-                    class="content-main-img image-height"
-                    style="
-                        background-image: url(../../image/pages/lentspace/1-0.svg);
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                    "
-                >
-                    <div class="content-wrapper">
-                        <div class="lent-container">
-                            <div class="content-title">
-                                <span
-                                    >초기 창업자들의 빠른 성장을 위해 다양한
-                                    <br />오피스 공간을 지원합니다.</span
-                                >
-                            </div>
-
-                            <button-default
-                                style="width: fit-content"
-                                class="top-btn"
-                                size="l"
-                                style_="primary"
-                                state="default"
-                                icon="none"
-                                onclick="location.href='/html/pages/lent-space.html?tab=2'"
-                                >제 1캠퍼스 확인하기!</button-default
-                            >
+              <div class="content-wrapper">
+                <div class="cardContainer">
+                  <div class="companyCard">
+                    <div class="companyInfo">
+                      <div class="companyImg">
+                        <img src="/image/empty-thumbnail.png" />
+                      </div>
+                      <div class="smallwrap">
+                        <div class="companyText">
+                          <div class="companyName">
+                            <span>회사이름</span>
+                          </div>
                         </div>
+                        <div class="companyType">
+                          <span>제1캠퍼스</span>
+                          <span class="divide">|</span>
+                          <span class="open">개방형</span>
+                        </div>
+                      </div>
+                      <div class="companySummary">
+                        회사소개의 내용이 들어와야 합니다.
+                      </div>
+                      <div class="companyHompage round-04">
+                        <input
+                          type="button"
+                          value="홈페이지"
+                          class="round-04"
+                        />
+                      </div>
                     </div>
+                  </div>
                 </div>
-                <div class="content-wrapper">
-                    <div class="content-space">
-                        <div class="content-space-container">
-                            <div class="content-space-text">
-                                <span class="space">SPACE 01</span>
-                                <span class="space-title"
-                                    >도약을 위한 사무공간 제공</span
-                                >
-                                <span class="space-summary"
-                                    >창업가들이 일에 집중하고 휴식할 수 있는
-                                    공간을 구성했습니다.</span
-                                >
-                            </div>
-                            <div class="space-img round-04">
-                                <img
-                                    src="../../image/pages/lentspace/lentspace1.png"
-                                />
-                            </div>
-                            <div
-                                class="space-item space-item-first-child round-04 item1"
-                            >
-                                <span class="space-item-title"
-                                    >개방형 입주공간</span
-                                >
-                                <span class="space-item-summary"
-                                    >개방형 입주공간은 창의적인 생각과 실험을
-                                    통한 연구 및 개발을 지원하는 공간입니다. 1인
-                                    창업자와 예비창업자에게 적합한
-                                    공간입니다.</span
-                                >
-                            </div>
-                            <div class="space-item round-04 item1">
-                                <span class="space-item-title"
-                                    >독립형 입주공간</span
-                                >
-                                <span class="space-item-summary"
-                                    >개인이나 소규모 팀이 자신만의 작업공간을
-                                    갖출 수 있도록 독립적인 셀이 준비되어
-                                    있습니다. 이 공간은 4~6명의 팀원을 보유한
-                                    창업 기업에 적합한 공간입니다.</span
-                                >
-                            </div>
-                            <div class="space-item round-04 item1">
-                                <span class="space-item-title">휴게실</span>
-                                <span class="space-item-summary"
-                                    >휴게실은 직원들이 휴식을 취할 수 있는
-                                    공간입니다. 편안하고 쾌적한 환경에서 잠시 쉴
-                                    수 있도록 준비되어 있습니다.</span
-                                >
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content-space">
-                        <div class="content-space-container">
-                            <div class="content-space-text">
-                                <span class="space">SPACE 02</span>
-                                <span class="space-title"
-                                    >성장을 위한 회의 공간 제공</span
-                                >
-                                <span class="space-summary"
-                                    >초기 창업가들이 최고의 입지에 오피스를
-                                    마련한 수 있도록 공간을 설계했습니다.</span
-                                >
-                            </div>
-                            <div class="space-img round-04">
-                                <img
-                                    src="../../image/pages/lentspace/lentspace2.png"
-                                />
-                            </div>
-                            <div
-                                class="space-item space-item-first-child round-04 item2"
-                            >
-                                <span class="space-item-title">소회의실</span>
-                                <span class="space-item-summary"
-                                    >최신의 영상통신 장비를 이용할 수 있도록
-                                    구비되어 있어, 원격지의 참석자와의 원활한
-                                    커뮤니케이션이 가능합니다.</span
-                                >
-                            </div>
-                            <div class="space-item round-04 item2">
-                                <span class="space-item-title">대회의실</span>
-                                <span class="space-item-summary"
-                                    >최신의 영상통신 장비를 이용할 수 있도록
-                                    구비되어 있어, 원격지의 참석자와의 원활한
-                                    커뮤니케이션이 가능합니다.</span
-                                >
-                            </div>
-                            <div class="space-item round-04 item2">
-                                <span class="space-item-title"
-                                    >메타버스 미팅룸</span
-                                >
-                                <span class="space-item-summary"
-                                    >천안아산강소특구에서 구축한 가상현실의 회의
-                                    공간입니다. 입주기업에게는 메타버스 공간에서
-                                    화상회의를 할 수 있도록 화상회의 환경을
-                                    제공합니다.</span
-                                >
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="content-wrapper"
-                    style="background-color: var(--background-gray-01)"
-                >
-                    <div class="content-space benefit">
-                        <div class="content-space-container">
-                            <div class="content-space-text">
-                                <span class="space">Benefits</span>
-                                <span class="space-title">추가 입주 혜택</span>
-                            </div>
-
-                            <div class="benefit-item round-04">
-                                <div class="benefit-img">
-                                    <img
-                                        src="../../image/pages/lentspace/lentspace3.png"
-                                    />
-                                </div>
-                                <span class="benefit-item-summary"
-                                    >한국자동차연구원 시험분석 의뢰시<br />
-                                    수수료 10% 감면</span
-                                >
-                            </div>
-                            <div class="benefit-item round-04">
-                                <div class="benefit-img">
-                                    <img
-                                        src="../../image/pages/lentspace/lentspace4.png"
-                                    />
-                                </div>
-                                <span class="benefit-item-summary"
-                                    >회의실, 휴게공간, 사무기기, 인터넷 등<br />
-                                    무상제공 지원</span
-                                >
-                            </div>
-                            <div class="benefit-item round-04">
-                                <div class="benefit-img">
-                                    <img
-                                        src="../../image/pages/lentspace/lentspace5.png"
-                                    />
-                                </div>
-                                <span class="benefit-item-summary"
-                                    >책상, 의자, 서랍장 등 사무집기류<br />
-                                    무상제공 지원</span
-                                >
-                            </div>
-                            <div class="benefit-item benefit-last round-04">
-                                <div class="benefit-img">
-                                    <img
-                                        src="../../image/pages/lentspace/lentspace6.png"
-                                    />
-                                </div>
-                                <span class="benefit-item-summary"
-                                    >창업보육기업의 성장을 위한<br />
-                                    맞춤형 사업화 지원</span
-                                >
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="content-wrapper">
-                    <div class="content-space">
-                        <div class="content-space-container">
-                            <div class="content-space-text">
-                                <span class="space">Location</span>
-                                <span class="space-title">제1 캠퍼스 위치</span>
-                                <span
-                                    class="space-summary"
-                                    style="font-size: 14px"
-                                    >R&D 창업 융합지구 (아산탕정-천안불당
-                                    개발지구)</span
-                                >
-                            </div>
-                            <div class="location-item map">
-                                <div>Map</div>
-                            </div>
-                            <div class="location-item">
-                                <div class="information">
-                                    <div class="type">
-                                        <span>주소</span>
-                                    </div>
-                                    <div class="value">
-                                        <span
-                                            >충남 아산시 탕정면 선문로 254번길
-                                            12, 사무동 3층 서편</span
-                                        >
-                                    </div>
-                                </div>
-                                <div class="information">
-                                    <div class="type">
-                                        <span>입주공간</span>
-                                    </div>
-                                    <div class="value">
-                                        <span
-                                            >365m (개방형 168m, 독립형 197),<br />
-                                            개방형 24석 독립형 6실</span
-                                        >
-                                    </div>
-                                </div>
-
-                                <div class="information">
-                                    <div class="type">
-                                        <span>입주자격</span>
-                                    </div>
-                                    <div class="value">
-                                        <table>
-                                            <tr class="line">
-                                                <td class="num">1.&nbsp;</td>
-                                                <td class="text">
-                                                    예비창업자 또는 7년 미만
-                                                    중소기업(신청일 기준)
-                                                </td>
-                                            </tr>
-                                            <tr class="line">
-                                                <td class="num">2.&nbsp;</td>
-                                                <td class="text">
-                                                    특화분야(차입주자격량용
-                                                    디스플레이·인포테인먼트,
-                                                    차세대 배터리 소재‧부품,
-                                                    미래형 자동차 융복합 부품)
-                                                    기업 우대
-                                                </td>
-                                            </tr>
-                                            <tr class="line">
-                                                <td class="num">3.&nbsp;</td>
-                                                <td class="text">
-                                                    예비창업자는 입주 후 6개월
-                                                    이내 법인 또는 개인사업자
-                                                    전환 필수
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </div>
-                                <button-default
-                                    style_="secondary"
-                                    state="default"
-                                    size="L"
-                                    icon="right"
-                                    style="width: fit-content"
-                                    onclick="location.href='/html/pages/lent-space.html?tab=2'"
-                                    >입주 문의하기</button-default
-                                >
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <pagination-container>
+                  <pagination-arrow direction="left"></pagination-arrow>
+                  <pagination-unit link="/1">1</pagination-unit>
+                  <pagination-unit state="focus">2</pagination-unit>
+                  <pagination-unit>3</pagination-unit>
+                  <pagination-unit>4</pagination-unit>
+                  <pagination-unit>5</pagination-unit>
+                  <pagination-arrow direction="right"></pagination-arrow>
+                </pagination-container>
+              </div>
             </tab-content>
+
             <tab-content id="content2">
-                <div
-                    class="content-main-img image-height"
-                    style="background-repeat: no-repeat; background-size: cover"
-                >
-                    <div class="content-wrapper">
-                        <div class="lent-container">
-                            <div class="content-title">
-                                <span
-                                    >초기 창업자들의 빠른 성장을 위해 다양한
-                                    <br />오피스 공간을 지원합니다.</span
-                                >
-                            </div>
-
-                            <button-default
-                                style="width: fit-content"
-                                class="top-btn"
-                                size="l"
-                                style_="primary"
-                                state="default"
-                                icon="none"
-                                onclick="location.href='/html/pages/lent-space.html?tab=2'"
-                                >제 2캠퍼스 확인하기!</button-default
-                            >
+              <div class="content-wrapper">
+                <div class="cardContainer">
+                  <div class="companyCard">
+                    <div class="companyInfo">
+                      <div class="companyImg">
+                        <img src="/image/empty-thumbnail.png" />
+                      </div>
+                      <div class="smallwrap">
+                        <div class="companyText">
+                          <div class="companyName">
+                            <span>회사이름</span>
+                          </div>
                         </div>
+                        <div class="companyType">
+                          <span>제1캠퍼스</span>
+                          <span class="divide">|</span>
+                          <span class="open">개방형</span>
+                        </div>
+                      </div>
+                      <div class="companySummary">
+                        회사소개의 내용이 들어와야 합니다.
+                      </div>
+                      <div class="companyHompage round-04">
+                        <input
+                          type="button"
+                          value="홈페이지"
+                          class="round-04"
+                        />
+                      </div>
                     </div>
+                  </div>
                 </div>
-                <div class="content-wrapper">
-                    <div class="content-space">
-                        <div class="content-space-container content2-1">
-                            <div class="content-space-text">
-                                <span class="space">SPACE 01</span>
-                                <span class="space-title"
-                                    >성장을 위한 다양한 공간 제공</span
-                                >
-                                <span class="space-summary"
-                                    >초기 창업가들이 편안한 공간에서 업무에
-                                    집중할 수 있도록 입주공간을
-                                    설계했습니다.</span
-                                >
-                            </div>
-                            <div class="space-img round-04">
-                                <img
-                                    src="../../image/pages/lentspace/lentspace8.png"
-                                />
-                            </div>
-                            <div
-                                class="space-item space-item-first-child round-04"
-                            >
-                                <span class="space-item-title"
-                                    >개방형 입주공간</span
-                                >
-                                <span class="space-item-summary"
-                                    >창의적인 생각과 실험을 통한 연구 및 개발을
-                                    지원하는 공간입니다. 1인 창업자와
-                                    예비창업자에게 적합한 공간입니다.</span
-                                >
-                            </div>
-                            <div class="space-item round-04">
-                                <span class="space-item-title"
-                                    >독립형 입주공간</span
-                                >
-                                <span class="space-item-summary"
-                                    >개인이나 소규모 팀이 자신만의 작업공간을
-                                    갖출 수 있도록 독립적인 셀이 준비되어
-                                    있습니다. 이 공간은 4~6명의 팀원을 보유한
-                                    창업 기업에 적합한 공간입니다.</span
-                                >
-                            </div>
-                            <div class="space-item round-04">
-                                <span class="space-item-title">휴게실</span>
-                                <span class="space-item-summary"
-                                    >휴게실은 직원들이 휴식을 취할 수 있는
-                                    공간입니다. 편안하고 쾌적한 환경에서 잠시 쉴
-                                    수 있도록 준비되어 있습니다.</span
-                                >
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content-space">
-                        <div class="content-space-container">
-                            <div class="content-space-text">
-                                <span class="space">SPACE 02</span>
-                                <span class="space-title"
-                                    >미팅과 교육을 위한 공간 제공</span
-                                >
-                                <span class="space-summary"
-                                    >외부 강사를 초빙해서 세미나를 진행하거나
-                                    클라이언트와 미팅을 진행할 수
-                                    있습니다.</span
-                                >
-                            </div>
-                            <div class="space-img round-04">
-                                <img
-                                    src="../../image/pages/lentspace/lentspace7.png"
-                                />
-                            </div>
-                            <div
-                                class="space-item space-item-first-child round-04"
-                            >
-                                <span class="space-item-title">소회의실</span>
-                                <span class="space-item-summary"
-                                    >미팅이나 컨퍼런스를 진행할 수 있는
-                                    공간입니다. 최신의 영상통신 장비를 이용할 수
-                                    있도록 구비되어 있어, 원격지의 참석자와의
-                                    원활한 커뮤니케이션이 가능합니다.</span
-                                >
-                            </div>
-                            <div class="space-item round-04">
-                                <span class="space-item-title">중회의실</span>
-                                <span class="space-item-summary"
-                                    >다수의 참석자를 수용할 수 있는 공간입니다.
-                                    최신의 영상통신 장비를 이용할 수 있도록
-                                    구비되어 있어, 원격지의 참석자와의 원활한
-                                    커뮤니케이션이 가능합니다</span
-                                >
-                            </div>
-                            <div class="space-item round-04">
-                                <span class="space-item-title">세미나실</span>
-                                <span class="space-item-summary">
-                                    강의, 교육 등을 진행할 수 있는 공간입니다.
-                                    최신의 영상통신 장비를 이용할 수 있도록
-                                    구비되어 있어, 원격지의 참석자와의 원활한
-                                    커뮤니케이션이 가능합니다.</span
-                                >
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="content-wrapper"
-                    style="background-color: var(--background-gray-01)"
-                >
-                    <div class="content-space benefit">
-                        <div class="content-space-container">
-                            <div class="content-space-text">
-                                <span class="space">Benefits</span>
-                                <span class="space-title">추가 입주 혜택</span>
-                            </div>
-
-                            <div class="benefit-item round-04">
-                                <div class="benefit-img">
-                                    <img
-                                        src="../../image/pages/lentspace/lentspace3.png"
-                                    />
-                                </div>
-                                <span class="benefit-item-summary"
-                                    >한국자동차연구원 시험분석 의뢰시<br />
-                                    수수료 10% 감면</span
-                                >
-                            </div>
-                            <div class="benefit-item round-04">
-                                <div class="benefit-img">
-                                    <img
-                                        src="../../image/pages/lentspace/lentspace4.png"
-                                    />
-                                </div>
-                                <span class="benefit-item-summary"
-                                    >회의실, 휴게공간, 사무기기, 인터넷 등<br />
-                                    무상제공 지원</span
-                                >
-                            </div>
-                            <div class="benefit-item round-04">
-                                <div class="benefit-img">
-                                    <img
-                                        src="../../image/pages/lentspace/lentspace5.png"
-                                    />
-                                </div>
-                                <span class="benefit-item-summary"
-                                    >책상, 의자, 서랍장 등 사무집기류<br />
-                                    무상제공 지원</span
-                                >
-                            </div>
-                            <div class="benefit-item benefit-last round-04">
-                                <div class="benefit-img">
-                                    <img
-                                        src="../../image/pages/lentspace/lentspace6.png"
-                                    />
-                                </div>
-                                <span class="benefit-item-summary"
-                                    >창업보육기업의 성장을 위한<br />
-                                    맞춤형 사업화 지원</span
-                                >
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="content-wrapper">
-                    <div class="content-space">
-                        <div class="content-space-container">
-                            <div class="content-space-text">
-                                <span class="space">Location</span>
-                                <span class="space-title">제2 캠퍼스 위치</span>
-                                <span class="space-summary"
-                                    >R&D 창업 융합지구 (아산탕정-천안불당
-                                    개발지구)</span
-                                >
-                            </div>
-                            <div class="location-item map">
-                                <div>Map</div>
-                            </div>
-                            <div class="location-item">
-                                <div class="information">
-                                    <div class="type">
-                                        <span>주소</span>
-                                    </div>
-                                    <div class="value">
-                                        <span
-                                            >충남 아산시 탕정면 선문로 254번길
-                                            12, 사무동 3층 서편</span
-                                        >
-                                    </div>
-                                </div>
-                                <div class="information">
-                                    <div class="type">
-                                        <span>입주공간</span>
-                                    </div>
-                                    <div class="value">
-                                        <span
-                                            >365m (개방형 168m, 독립형 197),<br />
-                                            개방형 24석 독립형 6실</span
-                                        >
-                                    </div>
-                                </div>
-
-                                <div class="information">
-                                    <div class="type">
-                                        <span>입주자격</span>
-                                    </div>
-                                    <div class="value">
-                                        <table>
-                                            <tr class="line">
-                                                <td class="num">1.&nbsp;</td>
-                                                <td class="text">
-                                                    예비창업자 또는 7년 미만
-                                                    중소기업(신청일 기준)
-                                                </td>
-                                            </tr>
-                                            <tr class="line">
-                                                <td class="num">2.&nbsp;</td>
-                                                <td class="text">
-                                                    특화분야(차입주자격량용
-                                                    디스플레이·인포테인먼트,
-                                                    차세대 배터리 소재‧부품,
-                                                    미래형 자동차 융복합 부품)
-                                                    기업 우대
-                                                </td>
-                                            </tr>
-                                            <tr class="line">
-                                                <td class="num">3.&nbsp;</td>
-                                                <td class="text">
-                                                    예비창업자는 입주 후 6개월
-                                                    이내 법인 또는 개인사업자
-                                                    전환 필수
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </div>
-                                <button-default
-                                    style_="secondary"
-                                    state="default"
-                                    size="L"
-                                    icon="right"
-                                    style="width: fit-content"
-                                    onclick="location.href='/html/pages/lent-space.html?tab=2'"
-                                    >입주 문의하기</button-default
-                                >
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <pagination-container>
+                  <pagination-arrow direction="left"></pagination-arrow>
+                  <pagination-unit link="/1">1</pagination-unit>
+                  <pagination-unit state="focus">2</pagination-unit>
+                  <pagination-unit>3</pagination-unit>
+                  <pagination-unit>4</pagination-unit>
+                  <pagination-unit>5</pagination-unit>
+                  <pagination-arrow direction="right"></pagination-arrow>
+                </pagination-container>
+              </div>
             </tab-content>
+
             <tab-content id="content3">
-                <div
-                    class="content-main-img"
-                    style="
-                        background-image: url(../../image/pages/lentspace/3-0.png);
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                    "
-                >
-                    <div class="content-wrapper image-height">
-                        <div class="lent-container">
-                            <div class="content-title">
-                                <span
-                                    >천안아산강소특구에서는 입주 기업들을<br />위한
-                                    사무실 공간을 지원합니다.</span
-                                >
-                            </div>
-                            <div
-                                class="content-button"
-                                style="justify-content: left; margin-top: 0px"
-                            >
-                                <button-default
-                                    style="width: fit-content"
-                                    class="top-btn"
-                                    size="l"
-                                    style_="primary"
-                                    state="default"
-                                    icon="none"
-                                    onclick="location.href='/html/pages/occupancy-aply-submit.html'"
-                                    >입주공간 신청하기!</button-default
-                                >
-                            </div>
+              <div class="content-wrapper">
+                <div class="cardContainer">
+                  <div class="companyCard">
+                    <div class="companyInfo">
+                      <div class="companyImg">
+                        <img src="/image/empty-thumbnail.png" />
+                      </div>
+                      <div class="smallwrap">
+                        <div class="companyText">
+                          <div class="companyName">
+                            <span>회사이름</span>
+                          </div>
                         </div>
+                        <div class="companyType">
+                          <span>제2캠퍼스</span>
+                          <span class="divide">|</span>
+                          <span class="open">개방형</span>
+                        </div>
+                      </div>
+                      <div class="companySummary">
+                        회사소개의 내용이 들어와야 합니다.
+                      </div>
+                      <div class="companyHompage round-04">
+                        <input
+                          type="button"
+                          value="홈페이지"
+                          class="round-04"
+                        />
+                      </div>
                     </div>
+                  </div>
                 </div>
-                <div class="content-wrapper">
-                    <div class="content-space">
-                        <div class="content-space-container preferential">
-                            <div class="content-space-text">
-                                <span class="space">Qualification</span>
-                                <span class="space-title">입주 필수 자격</span>
-                            </div>
-                            <div class="space-img round-04">
-                                <img
-                                    src="../../image/pages/lentspace/3-1.png"
-                                />
-                            </div>
-                            <div
-                                class="space-item space-item-first-child round-04"
-                            >
-                                <span class="space-item-title"
-                                    >예비창업자 또는 7년 미만 중소기업</span
-                                >
-                                <span class="space-item-summary"
-                                    >예비창업자 또는 7년 미만 중소기업(신청일
-                                    기준)</span
-                                >
-                            </div>
-                            <div class="space-item round-04">
-                                <span class="space-item-title"
-                                    >자동차 관련 특화분야</span
-                                >
-                                <span class="space-item-summary"
-                                    >(차량용 디스플레이·인포테인먼트, 차세대
-                                    배터리 소재‧부품, 미래형 자동차 융복합 부품)
-                                    기업 우대</span
-                                >
-                            </div>
-                            <div class="space-item round-04">
-                                <span class="space-item-title"
-                                    >입주 6개월 내 법인, 개인사업자 전환
-                                    필수</span
-                                >
-                                <span class="space-item-summary"
-                                    >예비창업자는 입주 후 6개월 이내 법인 또는
-                                    개인사업자 전환 필수</span
-                                >
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content-space">
-                        <div class="content-space-container preferential">
-                            <div class="content-space-text">
-                                <span class="space">Preferential</span>
-                                <span class="space-title">입주 우대자격</span>
-                            </div>
-                            <div class="space-img round-04">
-                                <img
-                                    src="../../image/pages/lentspace/3-2.png"
-                                />
-                            </div>
-                            <div
-                                class="space-item space-item-first-child round-04 item3-2"
-                            >
-                                <span class="space-item-title"
-                                    >충남 천안·아산 강소특구 육성사업
-                                    수혜기업</span
-                                >
-                                <span class="space-item-summary"
-                                    >충남 천안·아산 강소특구 육성사업
-                                    수혜기업</span
-                                >
-                            </div>
-                            <div class="space-item round-04 item3-2">
-                                <span class="space-item-title"
-                                    >연구소기업 및 연구소기업 신청 예정
-                                    기업</span
-                                >
-                                <span class="space-item-summary"
-                                    >연구소기업 및 연구소기업 신청 예정
-                                    기업(기술이전 협상 단계에 있는 기업에
-                                    한함)</span
-                                >
-                            </div>
-                            <div class="space-item round-04 item3-2">
-                                <span class="space-item-title"
-                                    >차세대 자동차 부품 분야 해당 기업</span
-                                >
-                                <span class="space-item-summary"
-                                    >차량용 디스플레이·인포테인먼트 분야<br />
-                                    배터리(전체 배터리 시스템) 분야<br />
-                                    자동차 융복합 부품(편의·안전·공조·고기능성
-                                    소재) 분야</span
-                                >
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="content-wrapper"
-                    style="background-color: var(--background-gray-01)"
-                >
-                    <div class="content-space benefit">
-                        <div class="content-space-container">
-                            <div class="content-space-text">
-                                <span class="space">Process</span>
-                                <span class="space-title">입주절차</span>
-                            </div>
-
-                            <div class="process-container">
-                                <img
-                                    class="large-img"
-                                    src="../../image/pages/lentspace/3-6.svg"
-                                    width="100%"
-                                    height="100%"
-                                />
-                                <img
-                                    class="small-img"
-                                    src="../../image/pages/lentspace/3-6-m.svg"
-                                    width="100%"
-                                    height="100%"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="content-wrapper">
-                    <div class="content-space">
-                        <div class="content-space-container">
-                            <div class="content-space-text">
-                                <span class="space">
-                                    <Inp>Price</Inp>
-                                </span>
-                                <span class="space-title">입주비용</span>
-                            </div>
-                            <div
-                                class="location-item mapimage round-04"
-                                style="
-                                    float: left;
-                                    background-image: url(../../image/pages/lentspace/3-3.png);
-                                    background-size: cover;
-                                "
-                            >
-                                <div></div>
-                            </div>
-                            <div class="location-item map2">
-                                <div class="inforamtion-wrapper">
-                                    <div class="information">
-                                        <div class="type">
-                                            <span>입주보증금</span>
-                                        </div>
-                                        <div class="value">
-                                            <span
-                                                >충남 아산시 탕정면 선문로
-                                                254번길 12, 사무동 3층
-                                                서편</span
-                                            >
-                                        </div>
-                                    </div>
-                                    <div class="information">
-                                        <div class="type">
-                                            <span>임대료</span>
-                                        </div>
-                                        <div class="value">
-                                            <span
-                                                >6,970원/㎡(계약면적 기준)</span
-                                            >
-                                        </div>
-                                    </div>
-
-                                    <div class="information">
-                                        <div class="type">
-                                            <span>관리비</span>
-                                        </div>
-                                        <div class="value">
-                                            <span
-                                                >3,000원/㎡(계약면적 기준)</span
-                                            >
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="summary-detail">
-                                납부는 VAT 별도입니다.<br />
-                                월관리비에는 경비/청소 용역비(면적 안분), 화장실
-                                소모품비, 오폐수 처리 비용 등이 포함되며
-                                전기료는 실비정산
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="content-space">
-                        <div class="content-space-container">
-                            <div class="content-space-text">
-                                <span class="space">
-                                    <Inp>Inquiry</Inp>
-                                </span>
-                                <span class="space-title">입주문의</span>
-                            </div>
-                            <div
-                                class="location-item mapimage round-04"
-                                style="
-                                    float: left;
-                                    background-image: url(../../image/pages/lentspace/3-4.png);
-                                    background-size: cover;
-                                "
-                            >
-                                <div></div>
-                            </div>
-                            <div class="location-item map2">
-                                <div class="inforamtion-wrapper">
-                                    <div class="information">
-                                        <div class="type">
-                                            <span>문의전화</span>
-                                        </div>
-                                        <div class="value">
-                                            <span>041-424-7014</span>
-                                        </div>
-                                    </div>
-                                    <div class="information">
-                                        <div class="type">
-                                            <span>이메일</span>
-                                        </div>
-                                        <div class="value">
-                                            <span>mjsung@katech.re.kr</span>
-                                        </div>
-                                    </div>
-                                    <button-default
-                                        style_="secondary"
-                                        state="default"
-                                        size="L"
-                                        icon="right"
-                                        style="width: fit-content"
-                                        onclick="location.href='/html/pages/lent-space.html?tab=2'"
-                                        >입주 문의하기</button-default
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="content-main-img image-height"
-                    style="
-                        background-image: url(../../image/pages/lentspace/3-5.png);
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                    "
-                >
-                    <div class="content-wrapper" style="height: 100%">
-                        <div class="lent-container">
-                            <div class="title-01">
-                                <span>스타트업의 성장판이 될 오피스</span>
-                            </div>
-                            <div class="subtitle-01">
-                                <span
-                                    >미래 자동차 창출의 중심지, 충남천안
-                                    아산강소특구</span
-                                >
-                            </div>
-                            <div
-                                class="content-button"
-                                style="justify-content: left"
-                            >
-                                <button-default
-                                    style_="priamry"
-                                    state="default"
-                                    size="L"
-                                    style="width: fit-content"
-                                    onclick="location.href='/html/pages/occupancy-aply-submit.html'"
-                                    >신청서 제출하기</button-default
-                                >
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <pagination-container>
+                  <pagination-arrow direction="left"></pagination-arrow>
+                  <pagination-unit link="/1">1</pagination-unit>
+                  <pagination-unit state="focus">2</pagination-unit>
+                  <pagination-unit>3</pagination-unit>
+                  <pagination-unit>4</pagination-unit>
+                  <pagination-unit>5</pagination-unit>
+                  <pagination-arrow direction="right"></pagination-arrow>
+                </pagination-container>
+              </div>
             </tab-content>
-            <tab-content id="content4">
-                <top-image
-                    img_src="../../../image/pages/lentspace/4-0.png"
-                    title="천안아산강소특구 내 소속중인
-            입주 기업을 소개합니다."
-                    summary="입주기업 확인하기!"
-                ></top-image>
+          </tab-content-area>
+        </div>
+      </tab-content>
+    </tab-content-area>
 
-                <div class="post-lent-container">
-                    <subcontent-tab-area>
-                        <tab-introduction-container>
-                            <tab-introduction-conetnt></tab-introduction-conetnt>
-                            <tab-introduction-conetnt></tab-introduction-conetnt>
-                            <tab-introduction-conetnt></tab-introduction-conetnt>
-                        </tab-introduction-container>
-                        <tab-container>
-                            <tab-default type="secondary">전체</tab-default>
-                            <tab-default type="secondary"
-                                >제 1캠퍼스</tab-default
-                            >
-                            <tab-default type="secondary"
-                                >제 2캠퍼스</tab-default
-                            >
-                        </tab-container>
-                    </subcontent-tab-area>
+    <tab-content-area> </tab-content-area>
 
-                    <tab-content-area>
-                        <tab-content id="content1">
-                            <div class="content-wrapper">
-                                <div class="cardContainer">
-                                    <div class="companyCard">
-                                        <div class="companyInfo">
-                                            <div class="companyImg">
-                                                <img
-                                                    src="/image/empty-thumbnail.png"
-                                                />
-                                            </div>
-                                            <div class="smallwrap">
-                                                <div class="companyText">
-                                                    <div class="companyName">
-                                                        <span>회사이름</span>
-                                                    </div>
-                                                </div>
-                                                <div class="companyType">
-                                                    <span>제1캠퍼스</span>
-                                                    <span class="divide"
-                                                        >|</span
-                                                    >
-                                                    <span class="open"
-                                                        >개방형</span
-                                                    >
-                                                </div>
-                                            </div>
-                                            <div class="companySummary">
-                                                회사소개의 내용이 들어와야
-                                                합니다.
-                                            </div>
-                                            <div
-                                                class="companyHompage round-04"
-                                            >
-                                                <input
-                                                    type="button"
-                                                    value="홈페이지"
-                                                    class="round-04"
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <pagination-container>
-                                    <pagination-arrow
-                                        direction="left"
-                                    ></pagination-arrow>
-                                    <pagination-unit link="/1"
-                                        >1</pagination-unit
-                                    >
-                                    <pagination-unit state="focus"
-                                        >2</pagination-unit
-                                    >
-                                    <pagination-unit>3</pagination-unit>
-                                    <pagination-unit>4</pagination-unit>
-                                    <pagination-unit>5</pagination-unit>
-                                    <pagination-arrow
-                                        direction="right"
-                                    ></pagination-arrow>
-                                </pagination-container>
-                            </div>
-                        </tab-content>
+    <footer-default></footer-default>
+    <script>
+      const [map1, map2] = [
+        document.querySelector("#content1 div.location-item.map"),
+        document.querySelector("#content2 div.location-item.map"),
+      ];
 
-                        <tab-content id="content2">
-                            <div class="content-wrapper">
-                                <div class="post-container">
-                                    <div class="cardContainer">
-                                        <company-card></company-card>
-                                        <company-card></company-card>
-                                        <company-card></company-card>
-                                    </div>
-                                    <pagination-container>
-                                        <pagination-arrow
-                                            direction="left"
-                                        ></pagination-arrow>
-                                        <pagination-unit link="/1"
-                                            >1</pagination-unit
-                                        >
-                                        <pagination-unit state="focus"
-                                            >2</pagination-unit
-                                        >
-                                        <pagination-unit>3</pagination-unit>
-                                        <pagination-unit>4</pagination-unit>
-                                        <pagination-unit>5</pagination-unit>
-                                        <pagination-arrow
-                                            direction="right"
-                                        ></pagination-arrow>
-                                    </pagination-container>
-                                </div>
-                            </div>
-                        </tab-content>
+      const position1 = new kakao.maps.LatLng(36.8020107, 127.091351);
+      const position2 = new kakao.maps.LatLng(36.8020107, 127.091351);
 
-                        <tab-content id="content3">
-                            <div class="content-wrapper">
-                                <div class="post-container">
-                                    <div class="cardContainer">
-                                        <company-card
-                                            name="주식회사 로웨인"
-                                            summary="㈜KDT의 BAS기반 디지털 트윈 개발 플랫폼 “WAiSER”와 자동차 Domain Knowledge를 활용한 교육용 SW 플랫폼 개발차"
-                                        ></company-card>
-                                        <company-card></company-card>
-                                        <company-card></company-card>
-                                    </div>
-                                    <pagination-container>
-                                        <pagination-arrow
-                                            direction="left"
-                                        ></pagination-arrow>
-                                        <pagination-unit link="/1"
-                                            >1</pagination-unit
-                                        >
-                                        <pagination-unit state="focus"
-                                            >2</pagination-unit
-                                        >
-                                        <pagination-unit>3</pagination-unit>
-                                        <pagination-unit>4</pagination-unit>
-                                        <pagination-unit>5</pagination-unit>
-                                        <pagination-arrow
-                                            direction="right"
-                                        ></pagination-arrow>
-                                    </pagination-container>
-                                </div>
-                            </div>
-                        </tab-content>
-                    </tab-content-area>
-                </div>
-            </tab-content>
-        </tab-content-area>
+      const map_object1 = new kakao.maps.Map(map1, {
+        center: position1,
+        level: 3,
+      });
+      const map_object2 = new kakao.maps.Map(map2, {
+        center: position2,
+        level: 3,
+      });
 
-        <tab-content-area> </tab-content-area>
+      const marker1 = new kakao.maps.Marker({
+        position: position1,
+      });
+      marker1.setMap(map_object1);
+      const marker2 = new kakao.maps.Marker({
+        position: position2,
+      });
+      marker2.setMap(map_object2);
 
-        <footer-default></footer-default>
-        <script>
-            const [map1, map2] = [
-                document.querySelector('#content1 div.location-item.map'),
-                document.querySelector('#content2 div.location-item.map'),
-            ];
+      const content_area = document.querySelector("tab-content-area");
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((m) => {
+          if (m.type === "attributes" && m.attributeName === "tab-number") {
+            map_object1.relayout();
+            map_object1.setCenter(position1);
+            map_object2.relayout();
+            map_object2.setCenter(position2);
+          }
+        });
+      });
 
-            const position1 = new kakao.maps.LatLng(36.8020107, 127.091351);
-            const position2 = new kakao.maps.LatLng(36.8020107, 127.091351);
-
-            const map_object1 = new kakao.maps.Map(map1, {
-                center: position1,
-                level: 3,
-            });
-            const map_object2 = new kakao.maps.Map(map2, {
-                center: position2,
-                level: 3,
-            });
-
-            const marker1 = new kakao.maps.Marker({
-                position: position1,
-            });
-            marker1.setMap(map_object1);
-            const marker2 = new kakao.maps.Marker({
-                position: position2,
-            });
-            marker2.setMap(map_object2);
-
-            const content_area = document.querySelector('tab-content-area');
-            const observer = new MutationObserver((mutations) => {
-                mutations.forEach((m) => {
-                    if (
-                        m.type === 'attributes' &&
-                        m.attributeName === 'tab-number'
-                    ) {
-                        map_object1.relayout();
-                        map_object1.setCenter(position1);
-                        map_object2.relayout();
-                        map_object2.setCenter(position2);
-                    }
-                });
-            });
-
-            observer.observe(content_area, {
-                attributes: true,
-            });
-        </script>
-    </body>
+      observer.observe(content_area, {
+        attributes: true,
+      });
+    </script>
+  </body>
 </html>

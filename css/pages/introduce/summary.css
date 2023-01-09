@@ -8,6 +8,7 @@
 }
 
 .title-wrapper {
+    color: var(--text-primary);
     font-size: var(--title-03);
     width: 100%;
     max-width: 1100px;
@@ -16,6 +17,7 @@
 
 .explanation-wrapper {
     font-size: var(--body-04);
+    color: var(--text-primary);
     width: 100%;
     max-width: 1100px;
     text-align: left;
@@ -72,8 +74,9 @@
 
 .last-content > div > img {
     max-width: 100%;
+    width: 100%;
     height: auto;
-    content: url(/image/pages/introduce/2-5.svg);
+    content: url(/image/pages/introduce/2-5.png);
 }
 
 .subitem-container {
@@ -139,6 +142,7 @@
 }
 .img-content-content-title {
     width: 100%;
+    color: var(--text-primary);
     text-align: left;
     font-size: var(--title-01);
 }
@@ -203,7 +207,8 @@ tab-content:nth-child(2) > img {
     }
 
     .last-content > div > img {
-        content: url(/image/pages/introduce/2-5-m.svg);
+        width: 100%;
+        content: url(/image/pages/introduce/2-5-m.png);
     }
 
     .subitem-container {

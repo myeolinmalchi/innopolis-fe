@@ -152,7 +152,7 @@ img.top-img {
 }
 
 .subcontent-wrapper:first-child > img {
-    content: url(/image/pages/customer-support/4-1.svg);
+    content: url(/image/pages/customer-support/4-1.png);
     height: auto;
     max-width: 100%;
 }
@@ -275,7 +275,7 @@ li {
     }
 
     .subcontent-wrapper:first-child > img {
-        content: url(/image/pages/customer-support/4-1-m.svg);
+        content: url(/image/pages/customer-support/4-1-m.png);
         max-width: 150%;
         object-fit: contain;
     }

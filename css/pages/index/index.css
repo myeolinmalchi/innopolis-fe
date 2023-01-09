@@ -1,6 +1,5 @@
 img {
     width: 100%;
-    height: 100%;
 }
 li {
     list-style: none;
@@ -198,9 +197,7 @@ div.content-wrapper:nth-child(3) {
 .second-content-img {
     border-radius: 4px;
     overflow: hidden;
-    height: 212px;
     width: 351px;
-    background-color: #ddd;
     float: left;
 }
 img {
@@ -351,7 +348,7 @@ button {
     line-height: 60px;
 }
 .logo-container div img {
-    height: auto;
+    object-fit: fill;
 }
 
 .sixth-content {

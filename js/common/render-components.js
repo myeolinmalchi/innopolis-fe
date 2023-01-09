@@ -16,46 +16,6 @@
  * @return {Promise<(page: number, keyword?: string) => void>}
  */
 const getRenderer = async ({
-<<<<<<< Updated upstream
-  name,
-  filter,
-  postContainer,
-  paginationContainer,
-  convertToPost,
-  path,
-  postsPerPage,
-}) => {
-  const res = await fetch(path);
-  /** @type {any[]} */
-  const posts = await res.json().then((json) => {
-    return filter ? json.filter(filter) : json;
-  });
-
-  return (page, keyword) => {
-    const currentPosts = keyword
-      ? posts.filter(({ title }) => title.includes(keyword))
-      : posts;
-
-    paginationContainer.style.display = "flex";
-    paginationContainer.innerHTML =
-      new Array(Math.ceil(currentPosts.length / postsPerPage))
-        .fill(0)
-        .reduce((acc, _, idx) => {
-          return (
-            acc +
-            `<pagination-unit link="javascript:${name}(${idx + 1}${
-              keyword ? `, '${keyword}'` : ""
-            })" state="${idx + 1 === page ? "focus" : "default"}">${
-              idx + 1
-            }</pagination-unit>`
-          );
-        }, `<pagination-arrow direction="left"></pagination-arrow>`) +
-      `<pagination-arrow direction="right"></pagination-arrow>`;
-
-    if (!currentPosts || currentPosts.length === 0) {
-      paginationContainer.style.display = "none";
-      postContainer.innerHTML = `
-=======
     name,
     postContainer,
     paginationContainer,
@@ -79,15 +39,9 @@ const getRenderer = async ({
                 return { list: [], count: 0 };
             }
         });
-<<<<<<< Updated upstream
 
         console.log(res?.list);
 
-=======
-
-        console.log(res?.list);
-
->>>>>>> Stashed changes
         const pagePerSection = window.innerWidth < 1024 ? 5 : 10;
         const lastPage = Math.ceil(res?.count / postsPerPage);
         const pageSection = Math.floor((page - 1) / pagePerSection);
@@ -118,28 +72,15 @@ const getRenderer = async ({
         if (!res?.list || res?.list.length === 0) {
             paginationContainer.style.display = 'none';
             postContainer.innerHTML = `
->>>>>>> Stashed changes
                 <span class="empty-posts">
                     <span class="body-me">등록된 자료가 없습니다.</span>
                 </span>
             `;
-      return;
-    }
+            return;
+        }
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    postContainer.innerHTML = currentPosts
-      .slice(postsPerPage * (page - 1), postsPerPage * page)
-      .reduce((acc, post, idx) => {
-        return acc + convertToPost(post, idx + postsPerPage * (page - 1));
-      }, "");
-  };
-=======
-=======
->>>>>>> Stashed changes
         postContainer.innerHTML = res.list.reduce((acc, post, idx) => {
             return acc + convertToPost(post, idx + postsPerPage * (page - 1));
         }, '');
     };
->>>>>>> Stashed changes
 };

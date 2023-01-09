@@ -472,6 +472,9 @@ img {
     grid-template-columns:  1fr 1fr;
 }
 @media (max-width: 1024px) {
+    .content-title{
+        margin-bottom: 32px;
+    }
     .map-wrapper{
         display: flex;
         flex-direction: column-reverse;

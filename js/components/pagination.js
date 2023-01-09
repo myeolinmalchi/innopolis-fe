@@ -145,9 +145,6 @@ customElements.define(
                 this.onmouseout = () => {
                     this.style.background = 'var(--color-white-01)';
                 };
-                this.onclick = () => {
-                    window.location.href = link;
-                };
             }
 
             this.innerHTML = arrow;

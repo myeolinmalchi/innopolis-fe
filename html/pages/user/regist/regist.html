@@ -221,7 +221,7 @@
                 ];
                 const submitButton = document.querySelector('#submit');
 
-                const keydownHandler = () => {
+                const keydownHandler = (e) => {
                     const test1 = defaultInputs.reduce(
                         (acc, input) => acc && input.getValue() !== '',
                         true,
@@ -250,10 +250,10 @@
                 };
 
                 defaultInputs.forEach((input) => {
-                    input.addEventListener('keydown', keydownHandler);
+                    input.addEventListener('keyup', keydownHandler);
                 });
                 enterpriseInputs.forEach((input) => {
-                    input.addEventListener('keydown', keydownHandler);
+                    input.addEventListener('keyup', keydownHandler);
                 });
 
                 radios.forEach((radio) => {

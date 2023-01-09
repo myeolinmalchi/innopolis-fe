@@ -39,5 +39,5 @@ const keydownHandler = () => {
     }
 };
 
-idInput.input.addEventListener('keydown', keydownHandler);
-pwInput.input.addEventListener('keydown', keydownHandler);
+idInput.input.addEventListener('keyup', keydownHandler);
+pwInput.input.addEventListener('keyup', keydownHandler);

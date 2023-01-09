@@ -10,14 +10,14 @@ getRenderer({
         <div
             onclick="location.href='/html/pages/equipment-detail.html?idx=${idx}'"
         >
-            <img src="${post.img}" alt="" />
+            <img src="${post.thumnail}" alt="" />
             <div>
-                <span class="body-me">${post.장비명}</span>
-                <span class="title-bd">${post.모델명}</span>
+                <span class="body-me">${post.title}</span>
+                <span class="title-bd">${post.wr_1}</span>
             </div>
         </div>
     `,
-    path: '/resources/pages/research-field/equipment.json',
+    path: 'v1/board.php?bo_table=board2',
     postsPerPage: 12,
 }).then((renderer) => {
     render2 = renderer;
@@ -37,11 +37,11 @@ getRenderer({
                     <span class="title-bd"
                         >${post.title}</span
                     >
-                    <span class="body-me">${post.date}</span>
+                    <span class="body-me">${post.datetime.split(' ')[0]}</span>
                 </div>
             </div>
     `,
-    path: '/resources/pages/research-field/research-field.json',
+    path: 'v1/board.php?bo_table=board1',
     postsPerPage: 12,
 }).then((renderer) => {
     render1 = renderer;
@@ -61,11 +61,11 @@ getRenderer({
                     <span class="title-bd"
                         >${post.title}</span
                     >
-                    <span class="body-me">${post.date}</span>
+                    <span class="body-me">${post.datetime.split(' ')[0]}</span>
                 </div>
             </div>
     `,
-    path: '/resources/pages/research-field/tech-data.json',
+    path: 'v1/board.php?bo_table=board3',
     postsPerPage: 12,
 }).then((renderer) => {
     render3 = renderer;

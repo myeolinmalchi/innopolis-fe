@@ -5,17 +5,18 @@ customElements.define(
             setTimeout(() => {
                 const units = [...this.children];
                 const header = this.previousElementSibling;
-
-                this.style.position = 'absolute';
-                this.style.zIndex = '1';
-                this.style.display = 'none';
-                this.style.background = 'var(--background-white-01)';
-                this.style.textAlign = 'center';
-                this.style.padding = '4px 4px';
                 this.classList += 'shadow-01';
-                this.style.boxSizing = 'border-box';
-                this.style.flexDirection = 'column';
-                this.style.width = '100%';
+                this.style = `
+                    position: absolute;
+                    z-index: 1;
+                    display: none;
+                    background: var(--background-white-01);
+                    text-align: center;
+                    padding: 4px 4px;
+                    box-sizing: border-box;
+                    flex-direction: column;
+                    width: 100%;
+                `;
 
                 if (header.state === 'default') {
                     header.onclick = () => {
@@ -26,15 +27,17 @@ customElements.define(
                         }
                     };
                     units.forEach((u) => {
-                        u.style.boxSizing = 'border-box';
                         u.className += 'body-01-me';
-                        u.style.border = 'none';
-                        u.style.padding = '4px 12px';
-                        u.style.borderRadius = '4px';
-                        u.style.background = 'none';
-                        u.style.width = '100%';
-                        u.style.clear = 'both';
-                        u.style.cursor = 'pointer';
+                        u.style = `
+                            box-sizing: border-box;
+                            border: none;
+                            padding: 4px 12px;
+                            border-radius: 4px;
+                            background: none;
+                            width: 100%;
+                            clear: both;
+                            cursor: pointer;
+                        `;
                         u.onmouseover = () => {
                             u.style.background = 'var(--background-gray-02)';
                         };
@@ -44,6 +47,7 @@ customElements.define(
                         u.onclick = () => {
                             const value = u.innerHTML;
                             header.setText(value);
+                            this.style.display = 'none';
                         };
                     });
                 }

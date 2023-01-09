@@ -25,25 +25,25 @@ getRenderer({
     ),
     convertToPost: (post, idx) =>
         `
-                    <div
-                        class="post-wrapper"
-                        onclick="location.href='/html/pages/search-tech-detail.html?idx=${idx}'"
+            <div
+                class="post-wrapper"
+                onclick="location.href='/html/pages/search-tech-detail.html?idx=${idx}'"
+            >
+                <img class="post-img" src="/image/empty-thumbnail.png" alt="" />
+                <div class="post-detail-wrapper">
+                        <span class="post-detail-subti body-me">
+                            ${post.Author}
+                        </span>
+                    <span class="post-detail-ti body-bd"
+                        >${post.title}</span
                     >
-                        <img class="post-img" src="/image/empty-thumbnail.png" alt="" />
-                        <div class="post-detail-wrapper">
-                                <span class="post-detail-subti body-me">
-                                    ${post.detail.발명자}
-                                </span>
-                            <span class="post-detail-ti body-bd"
-                                >${post.title}</span
-                            >
-                            <div class="post-detail-hashtag-wrapper body-me">
-                                <span class="post-detail-hashtag">출원번호 ${post.detail.출원번호}</span>
-                            </div>
-                        </div>
+                    <div class="post-detail-hashtag-wrapper body-me">
+                        <span class="post-detail-hashtag">출원번호 ${post.no}</span>
                     </div>
-                `,
-    path: '/resources/pages/tech-info/search-tech.json',
+                </div>
+            </div>
+        `,
+    path: 'v1/tech_search.php?',
     postsPerPage: 12,
 }).then((renderer) => {
     render1 = renderer;
@@ -58,34 +58,35 @@ getRenderer({
     ),
     convertToPost: (post, idx) =>
         `
-                    <div
-                        class="post-wrapper"
-                        onclick="location.href='/html/pages/great-tech-detail.html?idx=${idx}'"
+            <div
+                class="post-wrapper"
+                onclick="location.href='/html/pages/great-tech-detail.html?idx=${idx}'"
+            >
+                <img class="post-img" src="https://innopolis-katech.re.kr/${
+                    post.img ?? '/image/empty-thumbnail.png'
+                }" alt="" />
+               <div class="post-detail-wrapper">
+                    <span class="post-detail-subti body-me">TRL${
+                        post.TRL ? ` ${post.TRL}` : ''
+                    }</span>
+                    <span class="post-detail-ti body-bd"
+                        >${post.title}</span
                     >
-                        <img class="post-img" src="https://innopolis-katech.re.kr/${
-                            post.img ?? '/image/empty-thumbnail.png'
-                        }" alt="" />
-                       <div class="post-detail-wrapper">
-                            <span class="post-detail-subti body-me">${
-                                post.type
-                            }</span>
-                            <span class="post-detail-ti body-bd"
-                                >${post.title}</span
-                            >
-                            <div class="post-detail-hashtag-wrapper body-me">
-                                ${post.tags.reduce((acc, tag) => {
-                                    return (
-                                        acc +
-                                        `
-                                        <span class="post-detail-hashtag">#${tag}</span>
-                                    `
-                                    );
-                                }, '')}
-                            </div>
-                        </div>
+                    <div class="post-detail-hashtag-wrapper body-me">
+                        ${new Array(7).fill(0).reduce((acc, _, idx) => {
+                            const tag = post['category' + (idx + 1).toString()];
+                            return (
+                                acc +
+                                (tag
+                                    ? `<span class="post-detail-hashtag">#${tag}</span>`
+                                    : '')
+                            );
+                        }, '')}
                     </div>
-                `,
-    path: '/resources/pages/tech-info/great-tech.json',
+                </div>
+            </div>
+        `,
+    path: 'v1/excellent_tech.php?',
     postsPerPage: 12,
 }).then((renderer) => {
     render2 = renderer;
@@ -113,13 +114,13 @@ getRenderer({
                           >${post.title}</span
                     >
                     <span class="post-detail-date body-me">
-                        ${post.date.split(' ')[0]}
+                        ${post.datetime.split(' ')[0]}
                     </span>
                 </div>
             </div>
                 `;
     },
-    path: '/resources/pages/tech-info/tech-video.json',
+    path: 'v1/board.php?bo_table=video',
     postsPerPage: 12,
 }).then((renderer) => {
     render3 = renderer;

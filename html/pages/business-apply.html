@@ -241,7 +241,7 @@
             };
             agreeCheck.checkbox.onchange = keydownHandler;
             inputs.forEach((input) => {
-                input.addEventListener('keydown', keydownHandler);
+                input.addEventListener('keyup', keydownHandler);
             });
         </script>
     </body>

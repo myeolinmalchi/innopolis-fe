@@ -125,7 +125,6 @@ pagination-container {
     #content2 .post-container > div > div {
         padding: 8px;
         gap: 8px;
-        height: 88px;
     }
 
     #content2 .post-container > div > div > span:last-child {

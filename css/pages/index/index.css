@@ -22,7 +22,7 @@ div.content-wrapper:nth-child(3) {
     min-width: 100%;
     min-height: 100%;
     position: absolute;
-    top: -30%;
+    top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
 }
@@ -411,9 +411,6 @@ button-text {
     }
 }
 @media (max-width: 1024px) {
-    .video-container video{
-        top:-100%;
-    }
     .second-text-content div:first-child {
         margin-bottom: 12px;
     }

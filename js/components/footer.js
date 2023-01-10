@@ -146,7 +146,6 @@ class footer_default extends HTMLElement {
             font-weight: 500;
             font-size: var(--body-02-me);
             line-height: 160%;
-            height: 346px;
             /* or 19px */
 
             text-align: center;

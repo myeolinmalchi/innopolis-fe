@@ -70,6 +70,7 @@ a{
 
 .value{
     display: inline-block;
+    overflow: hidden;
     height: 26px;
     font-size: var(--body-03);
     width: 201px;
@@ -106,7 +107,6 @@ a{
 
 @media (max-width: 1024px) {
     .card-detail-container{
-        max-width: 328px;
         padding: 0px 16px;
         box-sizing: border-box;
     }

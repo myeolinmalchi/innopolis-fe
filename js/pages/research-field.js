@@ -10,7 +10,7 @@ getRenderer({
         <div
             onclick="location.href='/html/pages/equipment-detail.html?idx=${idx}'"
         >
-            <img src="${post.thumnail}" alt="" />
+            <img src="${post.thumbnail}" alt="" />
             <div>
                 <span class="body-me">${post.title}</span>
                 <span class="title-bd">${post.wr_1}</span>

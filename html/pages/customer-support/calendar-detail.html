@@ -8,21 +8,17 @@
         <link rel="stylesheet" href="/css/common.css" />
         <link
             rel="stylesheet"
-            href="/css/pages/customer-support/notice-detail.css"
+            href="/css/pages/customer-support/calendar-detail.css"
         />
         <link rel="stylesheet" href="/css/top-nav.css" />
         <script type="text/javascript" src="/js/components/top-nav.js"></script>
         <script type="text/javascript" src="/js/components/button.js"></script>
-        <script type="text/javascript" src="/js/components/footer.js"></script>
     </head>
     <body>
-        <going-up></going-up>
         <top-nav focus="5"></top-nav>
+        <going-up></going-up>
         <div class="detail-container">
-            <span class="title-bd">
-                <span class="notice-primary body-bd">공지</span>
-                2022 충남지역 주요사업 공동박람회 개최
-            </span>
+            <span class="title-bd">2022 충남지역 주요사업 공동박람회 개최</span>
             <span class="body-me">YY.MM.DD</span>
             <span class="body-me"
                 >일반사면을 명하려면 국회의 동의를 얻어야 한다. 국가는 여자의
@@ -73,97 +69,13 @@
                 선거인명부의 작성등 선거사무와 국민투표사무에 관하여 관계
                 행정기관에 필요한 지시를 할 수 있다</span
             >
-            <div class="file-container">
-                <div>
-                    <div></div>
-                    <div>
-                        <span class="body-bd"
-                            >[강소특구 제 2캠퍼스]입주신청서 및 사업계획서
-                            양식.hwp</span
-                        >
-                        <span class="body-me">10.00mb</span>
-                    </div>
-                    <button-text style_="secondary">다운로드</button-text>
-                </div>
-                <div>
-                    <div></div>
-                    <div>
-                        <span class="body-bd"
-                            >[강소특구 제 2캠퍼스]입주신청서 및 사업계획서
-                            양식.hwp</span
-                        >
-                        <span class="body-me">10.00mb</span>
-                    </div>
-                    <button-text style_="secondary">다운로드</button-text>
-                </div>
-            </div>
             <div class="button-container">
                 <button-default
                     style_="outline"
-                    onclick="location.href='/html/pages/customer-support.html'"
+                    onclick="location.href='/html/pages/customer-support/customer-support.html?tab=2'"
                     >목록으로</button-default
                 >
             </div>
         </div>
-        <footer-default></footer-default>
-        <script>
-            let post;
-            const contentWrapper = document.querySelector(
-                'div.detail-container',
-            );
-            const render = () => {
-                contentWrapper.innerHTML = `
-            <span class="title-bd">
-            ${
-                post.공지
-                    ? '<span class="notice-primary body-bd">공지</span>'
-                    : ''
-            }
-                ${post.title}
-            </span>
-            <span class="body-me">${post.date}</span>
-            <span class="body-me"
-                >${post.content}</span
-            >
-            <div class="file-container">
-                ${post.files.reduce((acc, file) => {
-                    return (
-                        acc +
-                        `
-                        <div>
-                            <div></div>
-                            <div>
-                                <span class="body-bd"
-                                    >${file.name}</span
-                                >
-                                <span class="body-me">${file.size}</span>
-                            </div>
-                            <button-text style_="secondary" onclick="location.href='${file.link}'">다운로드</button-text>
-                        </div>
-                    `
-                    );
-                }, '')}
-            </div>
-            <div class="button-container">
-                <button-default
-                    style_="outline"
-                    onclick="location.href='/html/pages/customer-support.html'"
-                    >목록으로</button-default
-                >
-            </div>
-                    
-                `;
-            };
-            window.onload = async () => {
-                const urlParams = new URLSearchParams(window.location.search);
-                const index = urlParams.get('idx');
-                const res = await fetch(
-                    '/resources/pages/customer-support/notice.json',
-                );
-                const posts = await res.json();
-                post = posts[index];
-                render();
-            };
-        </script>
     </body>
 </html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Insert title here.</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="/css/reset.css" />
+        <link rel="stylesheet" href="/css/common.css" />
+        <link
+            rel="stylesheet"
+            href="/css/pages/customer-support/notice-detail.css"
+        />
+        <link rel="stylesheet" href="/css/top-nav.css" />
+        <script type="text/javascript" src="/js/components/top-nav.js"></script>
+        <script type="text/javascript" src="/js/components/button.js"></script>
+        <script type="text/javascript" src="/js/components/footer.js"></script>
+        <script type="text/javascript" src="/js/common/channelTalk.js"></script>
+    </head>
+    <body>
+        <top-nav focus="5"></top-nav>
+        <going-up></going-up>
+        <div class="detail-container">
+            <span class="title-bd">
+                <span class="notice-secondary body-bd">접수 마감</span>
+                <!--<span class="notice-primary body-bd">접수중</span> -->
+                사업명
+            </span>
+            <span class="body-me">23.11.11</span>
+            <span class="body-me">내용</span>
+            <div class="button-container" style="margin-bottom: 0px">
+                <button-default
+                    style_="primary"
+                    size="xl"
+                    icon="right"
+                    state="disabled"
+                >
+                    신청하기
+                </button-default>
+                <!--<button-default
+                    style_="primary"
+                    size="xl"
+                    icon="right"
+                    state="default"
+                    onclick="location.href='/html/pages/customer-support/business-apply.html'"
+                >
+                    신청하기
+                </button-default>-->
+            </div>
+            <div class="file-container">
+                <div>
+                    <div></div>
+                    <div>
+                        <span class="body-bd">파일명</span>
+                        <span class="body-me">파일 크기</span>
+                    </div>
+                    <button-text
+                        style_="secondary"
+                        onclick="location.href='파일 다운로드 링크'"
+                        >다운로드</button-text
+                    >
+                </div>
+                <div>
+                    <div></div>
+                    <div>
+                        <span class="body-bd">파일명</span>
+                        <span class="body-me">파일 크기</span>
+                    </div>
+                    <button-text
+                        style_="secondary"
+                        onclick="location.href='파일 다운로드 링크'"
+                        >다운로드</button-text
+                    >
+                </div>
+            </div>
+            <div class="button-container">
+                <button-default
+                    style_="outline"
+                    onclick="location.href='/html/pages/customer-support/customer-support.html?tab=1'"
+                    >목록으로</button-default
+                >
+            </div>
+        </div>
+        <footer-default></footer-default>
+    </body>
+</html>

@@ -41,6 +41,7 @@ const getRenderer = async ({
         });
 
         console.log(res?.list);
+        console.log(res?.count);
 
         const pagePerSection = window.innerWidth < 1024 ? 5 : 10;
         const lastPage = Math.ceil(res?.count / postsPerPage);

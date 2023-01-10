@@ -17,14 +17,14 @@
     </head>
     <body>
         <going-up></going-up>
-        <top-nav focus="3"></top-nav>
+        <top-nav focus="6"></top-nav>
         <div class="detail-container">
             <span class="title-bd"
                 >(연구분야) 전기자동차용 에너지저장시스템(ESS) 부품 소재
                 개발</span
             >
             <span class="body-me">22.09.08</span>
-            <span class="body-me"> </span>
+            <span class="body-me"> content </span>
             <div class="button-container">
                 <button-default
                     style_="outline"
@@ -34,40 +34,5 @@
             </div>
         </div>
         <footer-default></footer-default>
-        <script>
-            let post;
-            const contentWrapper = document.querySelector(
-                'div.detail-container',
-            );
-            const render = () => {
-                contentWrapper.innerHTML = `
-            <span class="title-bd"
-                >${post.title}</span
-            >
-            <span class="body-me">${post.date}</span>
-            <span class="body-me"
-                >
-                ${post.content}
-            </span>
-            <div class="button-container">
-                <button-default
-                    style_="outline"
-                    onclick="location.href='/html/pages/promotion-center.html?tab=3'"
-                    >목록으로</button-default
-                >
-            </div>
-                `;
-            };
-            window.onload = async () => {
-                const urlParams = new URLSearchParams(window.location.search);
-                const index = urlParams.get('idx');
-                const res = await fetch(
-                    '/resources/pages/promotion-center/pictures.json',
-                );
-                const posts = await res.json();
-                post = posts[index];
-                render();
-            };
-        </script>
     </body>
 </html>

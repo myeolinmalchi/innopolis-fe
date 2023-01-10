@@ -6,21 +6,21 @@ getRenderer({
     paginationContainer: document.querySelector(
         '#content1 pagination-container',
     ),
-    path: '/resources/pages/customer-support/notice.json',
+    path: 'v1/board.php?bo_table=notice',
     convertToPost: (post, idx) => `
         <div
             onclick="location.href='/html/pages/notice-detail.html?idx=${idx}'"
         >
             <span class="title-bd">
                 ${
-                    post.공지
+                    post.is_notice
                         ? '<span class="notice-primary body-bd">공지</span>'
                         : ''
                 }
                 ${post.title}
             </span
             >
-            <span class="body-me">${post.date}</span>
+            <span class="body-me">${post.datetime.split(' ')[0]}</span>
         </div>
     `,
     postsPerPage: 10,

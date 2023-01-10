@@ -1,5 +1,5 @@
 let render1_1, render1_2, render1_3, render1_4;
-let render2, render4;
+let render2, render3, render4;
 
 const renderParams = {
     convertToPost: (post, idx) => `
@@ -73,18 +73,42 @@ getRenderer({
     ),
     convertToPost: (post, idx) => `
         <div class="post-wrapper" onclick="location.href='/html/pages/promotion-data-detail.html?idx=${idx}'">
-            <img class="post-img" src="${post.img}" alt="">
+            <img class="post-img" src="${post.thumbnail}" alt="">
             <div class="post-detail-wrapper">
                 <span class="post-detail-ti body-bd">${post.title}</span>
-                <span class="post-detail-date body-me">${post.date}</span>
+                <span class="post-detail-date body-me">${
+                    post.datetime.split(' ')[0]
+                }</span>
             </div>
         </div>
     `,
-    path: '/resources/pages/promotion-center/promotion.json',
+    path: 'v1/board.php?bo_table=promotion2',
     postsPerPage: 12,
 }).then((renderer) => {
     render2 = renderer;
     render2(1);
+});
+
+getRenderer({
+    name: 'render3',
+    postContainer: document.querySelector('#content3 div.promotion_wrapper'),
+    paginationContainer: document.querySelector(
+        '#content3 pagination-container',
+    ),
+    convertToPost: (post, idx) => `
+        <report-item
+            name="${post.title}"
+            summary="${post.summary}"
+            date="${post.datetime.split(' ')[0]}"
+            link="${post.link}"
+            maker="${post.wr_2}"
+        ></report-item>
+    `,
+    path: 'v1/board.php?bo_table=bodo',
+    postsPerPage: 12,
+}).then((renderer) => {
+    render3 = renderer;
+    render3(1);
 });
 
 getRenderer({
@@ -95,14 +119,16 @@ getRenderer({
     ),
     convertToPost: (post, idx) => `
         <div class="post-wrapper" onclick="location.href='/html/pages/event-photo-detail.html?idx=${idx}'">
-            <img class="post-img" src="${post.img}" alt="">
+            <img class="post-img" src="${post.thumbnail}" alt="">
             <div class="post-detail-wrapper">
                 <span class="post-detail-ti body-bd">${post.title}</span>
-                <span class="post-detail-date body-me">${post.date}</span>
+                <span class="post-detail-date body-me">${
+                    post.datetime.split(' ')[0]
+                }</span>
             </div>
         </div>
     `,
-    path: '/resources/pages/promotion-center/pictures.json',
+    path: 'v1/board.php?bo_table=gallery',
     postsPerPage: 12,
 }).then((renderer) => {
     render4 = renderer;

@@ -20,41 +20,20 @@
         <script type="text/javascript" src="/js/components/button.js"></script>
     </head>
     <body>
-        <top-nav></top-nav>
+        <top-nav focus="6"></top-nav>
         <going-up></going-up>
-        <div class="detail-container"></div>
-        <footer-default></footer-default>
-
-        <script>
-            let post;
-            const postWrapper = document.querySelector('div.detail-container');
-            const render = () => {
-                postWrapper.innerHTML = `
-            <span class="title-bd"
-                >${post.title}</span
-            >
-            <span class="body-me">${post.date}</span>
-            <span class="body-me"
-                >${post.content}</span>
+        <div class="detail-container">
+            <span class="title-bd">제목</span>
+            <span class="body-me">23.11.11</span>
+            <span class="body-me">content</span>
             <div class="button-container">
                 <button-default
                     style_="outline"
-                    onclick="location.href='/html/pages/promotion-center.html?tab=1'"
+                    onclick="location.href='/html/pages/promotion-center/promotion-center.html?tab=1'"
                     >목록으로</button-default
                 >
             </div>
-                `;
-            };
-            window.onload = async () => {
-                const urlParams = new URLSearchParams(window.location.search);
-                const index = urlParams.get('idx');
-                const res = await fetch(
-                    '/resources/pages/promotion-center/promotion.json',
-                );
-                const posts = await res.json();
-                post = posts[index];
-                render();
-            };
-        </script>
+        </div>
+        <footer-default></footer-default>
     </body>
 </html>

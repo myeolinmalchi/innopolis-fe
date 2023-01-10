@@ -26,28 +26,28 @@ customElements.define(
                         <div class="title-02">
                             <a class="${
                                 focus === 0 ? 'focus' : ''
-                            }" href="/html/pages/introduce.html">강소특구소개</a>
+                            }" href="/html/pages/introduce/introduce.html">강소특구소개</a>
                             <a class="${
                                 focus === 1 ? 'focus' : ''
-                            }" href="/html/pages/support-bussiness-introduce.html">지원사업소개</a>
+                            }" href="/html/pages/support-bussiness-introduce/support-bussiness-introduce.html">지원사업소개</a>
                             <a class="${
                                 focus === 2 ? 'focus' : ''
-                            }" href="/html/pages/tech-info.html">기술정보</a>
+                            }" href="/html/pages/tech-info/tech-info.html">기술정보</a>
                             <a class="${
                                 focus === 3 ? 'focus' : ''
-                            }" href="/html/pages/research-field.html">연구마당</a>
+                            }" href="/html/pages/research-field/research-field.html">연구마당</a>
                             <a class="${
                                 focus === 4 ? 'focus' : ''
-                            }" href="/html/pages/metatown.html">메타타운</a>
+                            }" href="/html/pages/metatown/metatown.html">메타타운</a>
                             <a class="${
                                 focus === 5 ? 'focus' : ''
-                            }" href="/html/pages/customer-support.html">고객지원</a>
+                            }" href="/html/pages/customer-support/customer-support.html">고객지원</a>
                             <a class="${
                                 focus === 6 ? 'focus' : ''
-                            }" href="/html/pages/promotion-center.html">홍보센터</a>
+                            }" href="/html/pages/promotion-center/promotion-center.html">홍보센터</a>
                             <a class="${
                                 focus === 7 ? 'focus' : ''
-                            }" href="/html/pages/lent-space.html">입주마당</a>
+                            }" href="/html/pages/lent-space/lent-space.html">입주마당</a>
                         </div>
                         <div>
                             ${
@@ -91,33 +91,33 @@ customElements.define(
                         <div>
                             <span>강소특구소개</span>
                             <div>
-                                <a href="/html/pages/introduce.html?tab=0">인사말</a>
-                                <a href="/html/pages/introduce.html?tab=1">강소특구개요</a>
-                                <a href="/html/pages/introduce.html?tab=2">오시는길</a>
+                                <a href="/html/pages/introduce/introduce.html?tab=0">인사말</a>
+                                <a href="/html/pages/introduce/introduce.html?tab=1">강소특구개요</a>
+                                <a href="/html/pages/introduce/introduce.html?tab=2">오시는길</a>
                             </div>
                         </div>
                         <div>
                             <span>지원사업소개</span>
                             <div>
-                                <a href="/html/pages/support-bussiness-introduce.html?tab=0">연구기관기술</a>
-                                <a href="/html/pages/support-bussiness-introduce.html?tab=1">지역기술</a>
+                                <a href="/html/pages/support-bussiness-introduce/support-bussiness-introduce.html?tab=0">연구기관기술</a>
+                                <a href="/html/pages/support-bussiness-introduce/support-bussiness-introduce.html?tab=1">지역기술</a>
                             </div>
                         </div>
                         <div>
                             <span>기술정보</span>
                             <div>
-                                <a href="/html/pages/tech-info.html?tab=0">기술검색</a>
-                                <a href="/html/pages/tech-info.html?tab=1">우수기술</a>
-                                <a href="/html/pages/tech-info.html?tab=2">기술동향</a>
-                                <a href="/html/pages/tech-info.html?tab=3">기술영상</a>
+                                <a href="/html/pages/tech-info/tech-info.html?tab=0">기술검색</a>
+                                <a href="/html/pages/tech-info/tech-info.html?tab=1">우수기술</a>
+                                <a href="/html/pages/tech-info/tech-info.html?tab=2">기술동향</a>
+                                <a href="/html/pages/tech-info/tech-info.html?tab=3">기술영상</a>
                             </div>
                         </div>
                         <div>
                             <span>연구마당</span>
                             <div>
-                                <a href="/html/pages/research-field.html?tab=0">연구분야</a>
-                                <a href="/html/pages/research-field.html?tab=1">보유장비</a>
-                                <a href="/html/pages/research-field.html?tab=2">기술자료</a>
+                                <a href="/html/pages/research-field/research-field.html?tab=0">연구분야</a>
+                                <a href="/html/pages/research-field/research-field.html?tab=1">보유장비</a>
+                                <a href="/html/pages/research-field/research-field.html?tab=2">기술자료</a>
                             </div>
                         </div>
                         <div>
@@ -129,28 +129,28 @@ customElements.define(
                         <div>
                             <span>고객지원</span>
                             <div>
-                                <a href="/html/pages/customer-support.html?tab=0">공지사항</a>
-                                <a href="/html/pages/customer-support.html?tab=1">사업공고</a>
-                                <a href="/html/pages/customer-support.html?tab=2">특구일정</a>
-                                <a href="/html/pages/customer-support.html?tab=3">회의실 예약</a>
+                                <a href="/html/pages/customer-support/customer-support.html?tab=0">공지사항</a>
+                                <a href="/html/pages/customer-support/customer-support.html?tab=1">사업공고</a>
+                                <a href="/html/pages/customer-support/customer-support.html?tab=2">특구일정</a>
+                                <a href="/html/pages/customer-support/customer-support.html?tab=3">회의실 예약</a>
                             </div>
                         </div>
                         <div>
                             <span>홍보센터</span>
                             <div>
-                                <a href="/html/pages/promotion-center.html?tab=0">기업홍보</a>
-                                <a href="/html/pages/promotion-center.html?tab=1">홍보자료</a>
-                                <a href="/html/pages/promotion-center.html?tab=2">보도자료</a>
-                                <a href="/html/pages/promotion-center.html?tab=3">행사사진</a>
+                                <a href="/html/pages/promotion-center/promotion-center.html?tab=0">기업홍보</a>
+                                <a href="/html/pages/promotion-center/promotion-center.html?tab=1">홍보자료</a>
+                                <a href="/html/pages/promotion-center/promotion-center.html?tab=2">보도자료</a>
+                                <a href="/html/pages/promotion-center/promotion-center.html?tab=3">행사사진</a>
                             </div>
                         </div>
                         <div>
                             <span>입주마당</span>
                             <div>
-                                <a href="/html/pages/lent-space.html?tab=0">제1 캠퍼스</a>
-                                <a href="/html/pages/lent-space.html?tab=1">제2 캠퍼스</a>
-                                <a href="/html/pages/lent-space.html?tab=2">입주공간 신청</a>
-                                <a href="/html/pages/lent-space.html?tab=3">입주기업</a>
+                                <a href="/html/pages/lent-space/lent-space.html?tab=0">제1 캠퍼스</a>
+                                <a href="/html/pages/lent-space/lent-space.html?tab=1">제2 캠퍼스</a>
+                                <a href="/html/pages/lent-space/lent-space.html?tab=2">입주공간 신청</a>
+                                <a href="/html/pages/lent-space/lent-space.html?tab=3">입주기업</a>
                             </div>
                         </div>
                     </div>

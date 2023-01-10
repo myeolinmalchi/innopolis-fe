@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="/css/common.css" />
         <link
             rel="stylesheet"
-            href="/css/pages/research-field/research-field-detail.css"
+            href="/css/pages/customer-support/notice-detail.css"
         />
         <link rel="stylesheet" href="/css/top-nav.css" />
         <script type="text/javascript" src="/js/components/top-nav.js"></script>
@@ -16,10 +16,13 @@
         <script type="text/javascript" src="/js/components/footer.js"></script>
     </head>
     <body>
-        <top-nav focus="3"></top-nav>
         <going-up></going-up>
+        <top-nav focus="5"></top-nav>
         <div class="detail-container">
-            <span class="title-bd">2022 충남지역 주요사업 공동박람회 개최</span>
+            <span class="title-bd">
+                <!--<span class="notice-primary body-bd">공지</span>-->
+                2022 충남지역 주요사업 공동박람회 개최
+            </span>
             <span class="body-me">YY.MM.DD</span>
             <span class="body-me"
                 >일반사면을 명하려면 국회의 동의를 얻어야 한다. 국가는 여자의
@@ -80,7 +83,11 @@
                         >
                         <span class="body-me">10.00mb</span>
                     </div>
-                    <button-text style_="secondary">다운로드</button-text>
+                    <button-text
+                        style_="secondary"
+                        onclick="location.href='다운로드 링크'"
+                        >다운로드</button-text
+                    >
                 </div>
                 <div>
                     <div></div>
@@ -97,7 +104,7 @@
             <div class="button-container">
                 <button-default
                     style_="outline"
-                    onclick="location.href='/html/pages/research-field.html'"
+                    onclick="location.href='/html/pages/customer-support/customer-support.html'"
                     >목록으로</button-default
                 >
             </div>

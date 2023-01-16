@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Insert title here.</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script
+            type="text/javascript"
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5c71a5ee7132e19292d9d6fe6e8daf46"
+        ></script>
+        <link rel="stylesheet" href="/css/reset.css" />
+        <link rel="stylesheet" href="/css/top-nav.css" />
+        <link rel="stylesheet" href="/css/common.css" />
+        <link rel="stylesheet" href="/css/tab-area.css" />
+        <link rel="stylesheet" href="/css/pages/lent-space/lent-space.css" />
+        <link rel="stylesheet" href="/css/pages/lent-space/companyCard.css" />
+        <script type="text/javascript" src="/js/components/footer.js"></script>
+        <script type="text/javascript" src="/js/components/tab.js"></script>
+        <script
+            type="text/javascript"
+            src="/js/components/tab-area.js"
+        ></script>
+        <script type="text/javascript" src="/js/components/card.js"></script>
+        <script
+            type="text/javascript"
+            src="/js/components/pagination.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="/js/components/lentSpace/companyCard.js"
+        ></script>
+        <script type="text/javascript" src="/js/components/top-nav.js"></script>
+        <script type="text/javascript" src="/js/components/button.js"></script>
+        <script
+            type="text/javascript"
+            src="/js/components/top-image.js"
+        ></script>
+    </head>
+
+    <body style="letter-spacing: -0.01em">
+        <going-up></going-up>
+        <top-nav focus="7"></top-nav>
+        <div class="tab-area">
+            <div class="inner-content introduce">
+              <div class="title" style="color: var(--text-primary)">
+                천안아산강소특구의<br />입주 기업을 소개합니다.
+              </div>
+            </div>
+            <div class="inner-content tab-container">
+              <div
+                class="tab title blue"
+                onclick="location.href='/html/pages/lent-space/first-campus.html'"
+              >
+                제 1캠퍼스
+              </div>
+              <div
+                class="tab title blue"
+                onclick="location.href='/html/pages/lent-space/second-campus.html'"
+              >
+                제 2캠퍼스
+              </div>
+              <div
+                class="tab title blue"
+                onclick="location.href='/html/pages/lent-space/apply-space.html'"
+              >
+                입주공간 신청
+              </div>
+              <div
+                class="tab title blue-filled"
+                onclick="location.href='/html/pages/lent-space/occupancy-company/all.html'"
+              >
+                입주기업
+              </div>
+            </div>
+          </div>
+        <top-image
+                    img_src="/image/pages/lentspace/4-0.png"
+                    title="천안아산강소특구 내 소속중인
+            입주 기업을 소개합니다."
+                    summary="입주기업 확인하기!"
+                ></top-image>
+
+                <div class="post-lent-container">
+                    <div class="tab-area">
+                        <div class="inner-content tab-container">
+                          <div class="tab title primary" onclick="location.href='/html/pages/lent-space/occupancy-company/all.html'">전체</div>
+                          <div class="tab title primary-filled" onclick="location.href='/html/pages/lent-space/occupancy-company/first-campus.html'">제 1캠퍼스</div>
+                          <div class="tab title primary" onclick="location.href='/html/pages/lent-space/occupancy-company/second-campus.html'">제 2캠퍼스</div>
+                        </div>
+                      </div>
+
+                    <div class="content-wrapper">
+                        <div class="cardContainer">
+                            <div class="companyCard">
+                                <div class="companyInfo">
+                                    <div class="companyImg">
+                                        <img
+                                            src="/image/empty-thumbnail.png"
+                                        />
+                                    </div>
+                                    <div class="smallwrap">
+                                        <div class="companyText">
+                                            <div class="companyName">
+                                                <span>회사이름</span>
+                                            </div>
+                                        </div>
+                                        <div class="companyType">
+                                            <span>제1캠퍼스</span>
+                                            <span class="divide"
+                                                >|</span
+                                            >
+                                            <span class="open"
+                                                >개방형</span
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="companySummary">
+                                        회사소개의 내용이 들어와야
+                                        합니다.
+                                    </div>
+                                    <div
+                                        class="companyHompage round-04"
+                                    >
+                                        <input
+                                            type="button"
+                                            value="홈페이지"
+                                            class="round-04"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <pagination-container>
+                            <pagination-arrow
+                                direction="left"
+                            ></pagination-arrow>
+                            <pagination-unit link="/1"
+                                >1</pagination-unit
+                            >
+                            <pagination-unit state="focus"
+                                >2</pagination-unit
+                            >
+                            <pagination-unit>3</pagination-unit>
+                            <pagination-unit>4</pagination-unit>
+                            <pagination-unit>5</pagination-unit>
+                            <pagination-arrow
+                                direction="right"
+                            ></pagination-arrow>
+                        </pagination-container>
+                    </div>
+                </div>
+
+        <tab-content-area> </tab-content-area>
+
+        <footer-default></footer-default>
+        <script>
+            const [map1, map2] = [
+                document.querySelector('#content1 div.location-item.map'),
+                document.querySelector('#content2 div.location-item.map'),
+            ];
+
+            const position1 = new kakao.maps.LatLng(36.8020107, 127.091351);
+            const position2 = new kakao.maps.LatLng(36.8020107, 127.091351);
+
+            const map_object1 = new kakao.maps.Map(map1, {
+                center: position1,
+                level: 3,
+            });
+            const map_object2 = new kakao.maps.Map(map2, {
+                center: position2,
+                level: 3,
+            });
+
+            const marker1 = new kakao.maps.Marker({
+                position: position1,
+            });
+            marker1.setMap(map_object1);
+            const marker2 = new kakao.maps.Marker({
+                position: position2,
+            });
+            marker2.setMap(map_object2);
+
+            const content_area = document.querySelector('tab-content-area');
+            const observer = new MutationObserver((mutations) => {
+                mutations.forEach((m) => {
+                    if (
+                        m.type === 'attributes' &&
+                        m.attributeName === 'tab-number'
+                    ) {
+                        map_object1.relayout();
+                        map_object1.setCenter(position1);
+                        map_object2.relayout();
+                        map_object2.setCenter(position2);
+                    }
+                });
+            });
+
+            observer.observe(content_area, {
+                attributes: true,
+            });
+        </script>
+    </body>
+</html>

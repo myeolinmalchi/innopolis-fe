@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5c71a5ee7132e19292d9d6fe6e8daf46"
+    ></script>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/top-nav.css" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/tab-area.css" />
+    <link rel="stylesheet" href="/css/pages/lent-space/lent-space.css" />
+    <link rel="stylesheet" href="/css/pages/lent-space/companyCard.css" />
+    <script type="text/javascript" src="/js/components/footer.js"></script>
+    <script type="text/javascript" src="/js/components/tab.js"></script>
+    <script type="text/javascript" src="/js/components/tab-area.js"></script>
+    <script type="text/javascript" src="/js/components/card.js"></script>
+    <script type="text/javascript" src="/js/components/pagination.js"></script>
+    <script
+      type="text/javascript"
+      src="/js/components/lentSpace/companyCard.js"
+    ></script>
+    <script type="text/javascript" src="/js/components/top-nav.js"></script>
+    <script type="text/javascript" src="/js/components/button.js"></script>
+    <script type="text/javascript" src="/js/components/top-image.js"></script>
+  </head>
+
+  <body style="letter-spacing: -0.01em">
+    <going-up></going-up>
+    <top-nav focus="7"></top-nav>
+    <div class="tab-area">
+        <div class="inner-content introduce">
+          <div class="title" style="color: var(--text-primary)">
+            천안아산강소특구의<br />입주공간 신청 안내입니다.
+          </div>
+        </div>
+        <div class="inner-content tab-container">
+          <div
+            class="tab title blue"
+            onclick="location.href='/html/pages/lent-space/first-campus.html'"
+          >
+            제 1캠퍼스
+          </div>
+          <div
+            class="tab title blue"
+            onclick="location.href='/html/pages/lent-space/second-campus.html'"
+          >
+            제 2캠퍼스
+          </div>
+          <div
+            class="tab title blue-filled"
+            onclick="location.href='/html/pages/lent-space/apply-space.html'"
+          >
+            입주공간 신청
+          </div>
+          <div
+            class="tab title blue"
+            onclick="location.href='/html/pages/lent-space/occupancy-company/all.html'"
+          >
+            입주기업
+          </div>
+        </div>
+      </div>
+    <div
+      class="content-main-img"
+      style="
+        background-image: url(/image/pages/lentspace/3-0.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+      "
+    >
+      <div class="content-wrapper image-height">
+        <div class="lent-container">
+          <div class="content-title">
+            <span
+              >천안아산강소특구에서는 입주 기업들을<br />위한 사무실 공간을
+              지원합니다.</span
+            >
+          </div>
+          <div
+            class="content-button"
+            style="justify-content: left; margin-top: 0px"
+          >
+            <button-default
+              style="width: fit-content"
+              class="top-btn"
+              size="l"
+              style_="primary"
+              state="default"
+              icon="none"
+              onclick="location.href='/html/pages/lent-space/occupancy-aply-submit.html'"
+              >입주공간 신청하기!</button-default
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-wrapper">
+      <div class="content-space">
+        <div class="content-space-container preferential">
+          <div class="content-space-text">
+            <span class="space">Qualification</span>
+            <span class="space-title">입주 필수 자격</span>
+          </div>
+          <div class="space-img round-04">
+            <img src="/image/pages/lentspace/3-1.png" />
+          </div>
+          <div class="space-item space-item-first-child round-04">
+            <span class="space-item-title"
+              >예비창업자 또는 7년 미만 중소기업</span
+            >
+            <span class="space-item-summary"
+              >예비창업자 또는 7년 미만 중소기업(신청일 기준)</span
+            >
+          </div>
+          <div class="space-item round-04">
+            <span class="space-item-title">자동차 관련 특화분야</span>
+            <span class="space-item-summary"
+              >(차량용 디스플레이·인포테인먼트, 차세대 배터리 소재‧부품, 미래형
+              자동차 융복합 부품) 기업 우대</span
+            >
+          </div>
+          <div class="space-item round-04">
+            <span class="space-item-title"
+              >입주 6개월 내 법인, 개인사업자 전환 필수</span
+            >
+            <span class="space-item-summary"
+              >예비창업자는 입주 후 6개월 이내 법인 또는 개인사업자 전환
+              필수</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="content-space">
+        <div class="content-space-container preferential">
+          <div class="content-space-text">
+            <span class="space">Preferential</span>
+            <span class="space-title">입주 우대자격</span>
+          </div>
+          <div class="space-img round-04">
+            <img src="/image/pages/lentspace/3-2.png" />
+          </div>
+          <div class="space-item space-item-first-child round-04 item3-2">
+            <span class="space-item-title"
+              >충남 천안·아산 강소특구 육성사업 수혜기업</span
+            >
+            <span class="space-item-summary"
+              >충남 천안·아산 강소특구 육성사업 수혜기업</span
+            >
+          </div>
+          <div class="space-item round-04 item3-2">
+            <span class="space-item-title"
+              >연구소기업 및 연구소기업 신청 예정 기업</span
+            >
+            <span class="space-item-summary"
+              >연구소기업 및 연구소기업 신청 예정 기업(기술이전 협상 단계에 있는
+              기업에 한함)</span
+            >
+          </div>
+          <div class="space-item round-04 item3-2">
+            <span class="space-item-title"
+              >차세대 자동차 부품 분야 해당 기업</span
+            >
+            <span class="space-item-summary"
+              >차량용 디스플레이·인포테인먼트 분야<br />
+              배터리(전체 배터리 시스템) 분야<br />
+              자동차 융복합 부품(편의·안전·공조·고기능성 소재) 분야</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="content-wrapper"
+      style="background-color: var(--background-gray-01)"
+    >
+      <div class="content-space benefit">
+        <div class="content-space-container">
+          <div class="content-space-text">
+            <span class="space">Process</span>
+            <span class="space-title">입주절차</span>
+          </div>
+
+          <div class="process-container">
+            <img
+              class="large-img"
+              src="/image/pages/lentspace/3-6.png"
+              width="100%"
+              height="100%"
+            />
+            <img
+              class="small-img"
+              src="/image/pages/lentspace/3-6-m.png"
+              width="100%"
+              height="100%"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-wrapper">
+      <div class="content-space">
+        <div class="content-space-container">
+          <div class="content-space-text">
+            <span class="space">
+              <Inp>Price</Inp>
+            </span>
+            <span class="space-title">입주비용</span>
+          </div>
+          <div class="map-wrapper2">
+            <div
+              class="location-item mapimage round-04"
+              style="
+                float: left;
+                background-image: url(/image/pages/lentspace/3-3.png);
+                background-size: cover;
+              "
+            ></div>
+            <div class="location-item map2">
+              <div class="inforamtion-wrapper">
+                <div class="information">
+                  <div class="type">
+                    <span>입주보증금</span>
+                  </div>
+                  <div class="value">
+                    <span
+                      >충남 아산시 탕정면 선문로 254번길 12, 사무동 3층
+                      서편</span
+                    >
+                  </div>
+                </div>
+                <div class="information">
+                  <div class="type">
+                    <span>임대료</span>
+                  </div>
+                  <div class="value">
+                    <span>6,970원/㎡(계약면적 기준)</span>
+                  </div>
+                </div>
+
+                <div class="information">
+                  <div class="type">
+                    <span>관리비</span>
+                  </div>
+                  <div class="value">
+                    <span>3,000원/㎡(계약면적 기준)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="summary-detail">
+            납부는 VAT 별도입니다.<br />
+            월관리비에는 경비/청소 용역비(면적 안분), 화장실 소모품비, 오폐수
+            처리 비용 등이 포함되며 전기료는 실비정산
+          </div>
+        </div>
+      </div>
+
+      <div class="content-space">
+        <div class="content-space-container">
+          <div class="content-space-text">
+            <span class="space">
+              <Inp>Inquiry</Inp>
+            </span>
+            <span class="space-title">입주문의</span>
+          </div>
+          <div class="map-wrapper2">
+            <div
+              class="location-item mapimage round-04"
+              style="
+                float: left;
+                background-image: url(/image/pages/lentspace/3-4.png);
+                background-size: cover;
+              "
+            ></div>
+            <div class="location-item map2">
+              <div class="inforamtion-wrapper">
+                <div class="information">
+                  <div class="type">
+                    <span>문의전화</span>
+                  </div>
+                  <div class="value">
+                    <span>041-424-7014</span>
+                  </div>
+                </div>
+                <div class="information">
+                  <div class="type">
+                    <span>이메일</span>
+                  </div>
+                  <div class="value">
+                    <span>mjsung@katech.re.kr</span>
+                  </div>
+                </div>
+                <button-default
+                  style_="secondary"
+                  state="default"
+                  size="L"
+                  icon="right"
+                  style="width: fit-content"
+                  onclick="location.href='/html/pages/lent-space.html?tab=2'"
+                  >입주 문의하기</button-default
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="content-main-img image-height"
+      style="
+        background-image: url(/image/pages/lentspace/3-5.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+      "
+    >
+      <div class="content-wrapper" style="height: 100%">
+        <div class="lent-container image-height">
+          <div class="title-01">
+            <span>스타트업의 성장판이 될 오피스</span>
+          </div>
+          <div class="subtitle-01">
+            <span>미래 자동차 창출의 중심지, 충남천안 아산강소특구</span>
+          </div>
+          <div class="content-button" style="justify-content: left">
+            <button-default
+              style_="priamry"
+              state="default"
+              size="L"
+              style="width: fit-content"
+              onclick="location.href='/html/pages/occupancy-aply-submit.html'"
+              >신청서 제출하기</button-default
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer-default></footer-default>
+    <script>
+      const [map1, map2] = [
+        document.querySelector("#content1 div.location-item.map"),
+        document.querySelector("#content2 div.location-item.map"),
+      ];
+
+      const position1 = new kakao.maps.LatLng(36.8020107, 127.091351);
+      const position2 = new kakao.maps.LatLng(36.8020107, 127.091351);
+
+      const map_object1 = new kakao.maps.Map(map1, {
+        center: position1,
+        level: 3,
+      });
+      const map_object2 = new kakao.maps.Map(map2, {
+        center: position2,
+        level: 3,
+      });
+
+      const marker1 = new kakao.maps.Marker({
+        position: position1,
+      });
+      marker1.setMap(map_object1);
+      const marker2 = new kakao.maps.Marker({
+        position: position2,
+      });
+      marker2.setMap(map_object2);
+
+      const content_area = document.querySelector("tab-content-area");
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((m) => {
+          if (m.type === "attributes" && m.attributeName === "tab-number") {
+            map_object1.relayout();
+            map_object1.setCenter(position1);
+            map_object2.relayout();
+            map_object2.setCenter(position2);
+          }
+        });
+      });
+
+      observer.observe(content_area, {
+        attributes: true,
+      });
+    </script>
+  </body>
+</html>

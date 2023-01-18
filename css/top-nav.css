@@ -24,8 +24,8 @@ a {
 
 .container > img:first-child {
     content: url(/image/headerLogoDefault.png);
-    width: 140px;
-    height: 42px;
+    width: auto;
+    height: 48px;
     cursor: pointer;
 }
 

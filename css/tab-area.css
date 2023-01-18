@@ -23,14 +23,40 @@
 
 .tab {
     font-size: var(--title-01);
+    cursor: pointer;
 }
 .introduce {
     font-size: var(--title-03);
 }
+.blue{
+    color: var(--color-blue-disabled);
+}
+.blue:hover{
+    color: var(--color-blue-hover);
+}
+.blue-filled{
+    color: var(--color-blue-filled);
+}
+.blue-filled:hover{
+    color: var(--color-blue-hover);
+}
+
+.primary{
+    color: var(--color-gray-disabled);
+}
+.primary:hover{
+    color: var(--color-gray-hover);
+}
+.primary-filled{
+    color: var(--color-gray-filled);
+}
+.primary-filled:hover{
+    color: var(--color-gray-hover);
+}
 
 @media (max-width: 1024px) {
     .tab-area {
-        padding: 48px 0px 32px 0;
+        padding: 48px 16px 32px 16px;
     }
 
     tab-introduction-content {

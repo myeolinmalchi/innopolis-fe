@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/tab-area.css" />
+    <link rel="stylesheet" href="/css/top-nav.css" />
+    <link
+      rel="stylesheet"
+      href="/css/pages/promotion-center/promotion-center.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/css/pages/promotion-center/promotionItem.css"
+    />
+    <link rel="stylesheet" href="/css/pages/promotion-center/report-card.css" />
+    <script type="text/javascript" src="/js/components/footer.js"></script>
+    <script type="text/javascript" src="/js/components/tab.js"></script>
+    <script type="text/javascript" src="/js/components/tab-area.js"></script>
+    <script type="text/javascript" src="/js/components/pagination.js"></script>
+    <script type="text/javascript" src="/js/components/card.js"></script>
+    <script type="text/javascript" src="/js/components/top-nav.js"></script>
+    <script type="text/javascript" src="/js/components/button.js"></script>
+    <script type="text/javascript" src="/js/components/top-image.js"></script>
+    <script
+      type="text/javascript"
+      src="/js/common/render-components.js"
+    ></script>
+  </head>
+
+  <body>
+    <top-nav focus="6"></top-nav>
+    <going-up></going-up>
+    <div class="tab-area">
+      <div class="inner-content introduce">
+        <div class="title" style="color: var(--text-primary);">천안아산강소특구의<br>행사사진입니다.</div>
+      </div>
+      <div class="inner-content tab-container">
+        <div class="tab title blue" onclick="location.href='/html/pages/promotion-center/company-promotion/all.html'">기업홍보</div>
+        <div class="tab title blue" onclick="location.href='/html/pages/promotion-center/promotion-data.html'">홍보자료</div>
+        <div class="tab title blue" onclick="location.href='/html/pages/promotion-center/news.html'">보도자료</div>
+        <div class="tab title blue-filled" onclick="location.href='/html/pages/promotion-center/event-photo.html'">행사사진</div>
+      </div>
+    </div>
+    <top-image
+          img_src="/image/pages/promotion-center/4-0.png"
+          title="충남천안아산강소특구는 기술교류회, 설명회 등
+            다양한 행사를 진행하고 있습니다."
+          summary="행사사진 보러가기!"
+        ></top-image>
+        <div class="content-wrapper">
+          <div class="post-container">
+            <div class="post-wrapper">
+              <img class="post-img" src="/image/empty-thumbnail.png" alt="" />
+              <div class="post-detail-wrapper">
+                <span class="post-detail-ti body-bd"
+                  >도로구조물의 신축이음구조 및 이의 시공방법</span
+                >
+                <span class="post-detail-date body-me"> YY.MM.DD </span>
+              </div>
+            </div>
+          </div>
+          <pagination-container>
+            <pagination-arrow direction="left"></pagination-arrow>
+            <pagination-unit link="/1">1</pagination-unit>
+            <pagination-unit state="focus">2</pagination-unit>
+            <pagination-unit>3</pagination-unit>
+            <pagination-unit>4</pagination-unit>
+            <pagination-unit>5</pagination-unit>
+            <pagination-arrow direction="right"></pagination-arrow>
+          </pagination-container>
+        </div>
+    <footer-default></footer-default>
+    <script src="/js/pages/promotion-center.js"></script>
+  </body>
+</html>

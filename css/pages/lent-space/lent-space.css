@@ -351,8 +351,8 @@ img {
 .small-img {
     display: none;
 }
-#content2 .content-main-img{
-    background-image: url(../../../image/pages/lentspace/2-0.png);
+.second-img{
+    background-image: url(/image/pages/lentspace/2-0.png);
 }
 
 .summary-detail {
@@ -388,7 +388,7 @@ img {
 
 .content-top-img {
     height: 400px;
-    background-image: url(../../../image/pages/lentspace/3-5.png);
+    background-image: url(/image/pages/lentspace/3-5.png);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -483,8 +483,8 @@ img {
         display: flex;
         flex-direction: column;
     }
-    #content2 .content-main-img{
-        background-image: url(../../../image/pages/lentspace/2-0-m.png);
+    .second-img{
+        background-image: url(/image/pages/lentspace/2-0-m.png);
     }
     .lent-container .subtitle-01 span{
         font-weight: 500;

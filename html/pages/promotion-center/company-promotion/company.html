@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/tab-area.css" />
+    <link rel="stylesheet" href="/css/top-nav.css" />
+    <link
+      rel="stylesheet"
+      href="/css/pages/promotion-center/promotion-center.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/css/pages/promotion-center/promotionItem.css"
+    />
+    <link rel="stylesheet" href="/css/pages/promotion-center/report-card.css" />
+    <script type="text/javascript" src="/js/components/footer.js"></script>
+    <script type="text/javascript" src="/js/components/pagination.js"></script>
+    <script type="text/javascript" src="/js/components/card.js"></script>
+    <script type="text/javascript" src="/js/components/top-nav.js"></script>
+    <script type="text/javascript" src="/js/components/button.js"></script>
+    <script type="text/javascript" src="/js/components/top-image.js"></script>
+    <script
+      type="text/javascript"
+      src="/js/common/render-components.js"
+    ></script>
+  </head>
+
+  <body>
+    <top-nav focus="6"></top-nav>
+    <going-up></going-up>
+    <div class="tab-area">
+      <div class="inner-content introduce">
+        <div class="title" style="color: var(--text-primary)">
+          충남천안•아산강소특구의<br />기업홍보 자료입니다.
+        </div>
+      </div>
+      <div class="inner-content tab-container">
+        <div
+          class="tab title blue-filled"
+          onclick="location.href='/html/pages/promotion-center/company-promotion/all.html'"
+        >
+          기업홍보
+        </div>
+        <div
+          class="tab title blue"
+          onclick="location.href='/html/pages/promotion-center/promotion-data.html'"
+        >
+          홍보자료
+        </div>
+        <div
+          class="tab title blue"
+          onclick="location.href='/html/pages/promotion-center/news.html'"
+        >
+          보도자료
+        </div>
+        <div
+          class="tab title blue"
+          onclick="location.href='/html/pages/promotion-center/event-photo.html'"
+        >
+          행사사진
+        </div>
+      </div>
+    </div>
+    <top-image
+      img_src="/image/pages/promotion-center/1-0.png"
+      title="충남천안•아산강소특구에 소속 중인 자동차 산업의 혁신 성장을
+  이끌어갈 연구소기업, 첨단기술기업, 입주기업을 소개합니다."
+      summary="기업홍보 확인하기!"
+    ></top-image>
+    <div class="content-wrapper">
+      <div class="" style="width: 100%">
+        <img class="post-img" src="" alt="" />
+        <div class="tab-area" style="padding: 0px">
+          <div class="inner-content tab-container">
+            <div
+              class="tab title primary"
+              onclick="location.href='/html/pages/promotion-center/company-promotion/all.html'"
+            >
+              전체
+            </div>
+            <div
+              class="tab title primary"
+              onclick="location.href='/html/pages/promotion-center/company-promotion/lab.html'"
+            >
+              연구소기업
+            </div>
+            <div
+              class="tab title primary"
+              onclick="location.href='/html/pages/promotion-center/company-promotion/tech.html'"
+            >
+              첨단기술 기업
+            </div>
+            <div
+              class="tab title primary-filled"
+              onclick="location.href='/html/pages/promotion-center/company-promotion/company.html'"
+            >
+              입주기업
+            </div>
+          </div>
+        </div>
+        <div class="content-wrapper padding0">
+          <div class="post-container"></div>
+          <pagination-container>
+            <pagination-arrow direction="left"></pagination-arrow>
+            <pagination-unit state="focus">1</pagination-unit>
+            <pagination-arrow direction="right"></pagination-arrow>
+          </pagination-container>
+        </div>
+      </div>
+    </div>
+    <footer-default></footer-default>
+    <script src="/js/pages/promotion-center.js"></script>
+  </body>
+</html>

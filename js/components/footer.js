@@ -72,7 +72,7 @@ class footer_default extends HTMLElement {
             '(31214) 충청남도 천안시 동남구 풍세면 풍세로 303 한국자동차연구원 강소특구캠퍼스';
         const content_third_p_2 = document.createElement('p');
         content_third_p_2.innerText =
-            '상호명 : 한국자동차 연구원 대표 전화번호 : 041-424-7017 사업자번호 : 312-82-04676 대표자명 : 나승식';
+            '상호명 : 한국자동차연구원 대표 전화번호 : 041-424-7017 사업자번호 : 312-82-04676 대표자명 : 나승식';
 
         const content_fourth_content = document.createElement('div');
         content_fourth_content.setAttribute('class', 'content fourth left');
@@ -384,4 +384,10 @@ customElements.define('footer-default', footer_default);
         }
     },
 );
+
+window.addEventListener("copy", (e) => {
+    alert("본 데이터는 연구목적으로만 활용이 가능하며, 무단 전재 및 재배포를 금지합니다. 저작권에 위배되는 행위 시 사전 경고 없이 형사 고발 조치됨을 알려드립니다.");
+    e.preventDefault();
+    e.clipboardData.clearData("Text"); // 클립보드에 저장된 컨텐츠 삭제
+  });
 

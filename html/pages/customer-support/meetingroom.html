@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Insert title here.</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="/css/reset.css" />
+        <link rel="stylesheet" href="/css/common.css" />
+        <link rel="stylesheet" href="/css/tab-area.css" />
+        <link rel="stylesheet" href="/css/top-nav.css" />
+        <link
+            rel="stylesheet"
+            href="/css/pages/customer-support/customer-support.css"
+        />
+        <link rel="stylesheet" href="/css/calendar.css" />
+        <link
+            rel="stylesheet"
+            href="/css/customer-support/customer-support.css"
+        />
+        <script type="text/javascript" src="/js/components/tab.js"></script>
+        <script
+            type="text/javascript"
+            src="/js/components/tab-area.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="/js/components/pagination.js"
+        ></script>
+        <script type="text/javascript" src="/js/components/top-nav.js"></script>
+        <script type="text/javascript" src="/js/components/button.js"></script>
+        <script type="text/javascript" src="/js/components/footer.js"></script>
+        <script
+            type="text/javascript"
+            src="/js/components/calendar.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="/js/components/top-image.js"
+        ></script>
+        <script src="/js/common/render-components.js"></script>
+    </head>
+    <body>
+        <top-nav focus="5"></top-nav>
+        <going-up></going-up>
+        <div class="tab-area">
+            <div class="inner-content introduce">
+                <div class="title" style="color: var(--text-primary)">
+                    충남천안•아산강소특구의<br />
+                    회의실 예약 안내입니다.
+                </div>
+            </div>
+            <div class="inner-content tab-container">
+                <div
+                    class="tab title blue"
+                    onclick="location.href='/html/pages/customer-support/notice.html'"
+                >
+                    공지사항
+                </div>
+                <div
+                    class="tab title blue"
+                    onclick="location.href='/html/pages/customer-support/business.html'"
+                >
+                    사업공고
+                </div>
+                <div
+                    class="tab title blue"
+                    onclick="location.href='/html/pages/customer-support/calendar.html'"
+                >
+                    특구일정
+                </div>
+                <div
+                    class="tab title blue-filled"
+                    onclick="location.href='/html/pages/customer-support/meetingroom.html'"
+                >
+                    회의실 예약
+                </div>
+            </div>
+        </div>
+        <div id="content4">
+            <div class="top-img">
+                <div>
+                    <span class="title-bd"
+                        >천안아산강소연구개발특구 캠퍼스에는 입주기업들을<br />위한
+                        회의실 예약 서비스를 지원합니다.</span
+                    >
+                    <button-default
+                        size="l"
+                        onclick="location.href='/html/pages/customer-support/meetingroom-list.html'"
+                        >회의실 예약하기!</button-default
+                    >
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <div class="subcontent-wrapper">
+                    <span class="title-bd">이용방법</span>
+                    <img src="" alt="" />
+                </div>
+                <div class="subcontent-wrapper">
+                    <span class="title-bd">제 1캠퍼스 회의실</span>
+                    <img src="" alt="" />
+                    <div>
+                        <div>
+                            <span class="body-bd">보유 회의실</span>
+                            <span class="body-me"
+                                >소회의실 1개, 세미나실 1개</span
+                            >
+                        </div>
+                        <div>
+                            <span class="body-bd">위치</span>
+                            <span class="body-me"
+                                >충남 아산시 탕정면 선문로 254번길 12,<br />
+                                사무동 3층 서편</span
+                            >
+                        </div>
+                        <div>
+                            <span class="body-bd">이용가격</span>
+                            <span class="body-me">무료</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="subcontent-wrapper">
+                    <span class="title-bd">제 2캠퍼스 회의실</span>
+                    <img src="" alt="" />
+                    <div>
+                        <div>
+                            <span class="body-bd">보유 회의실</span>
+                            <span class="body-me"
+                                >소회의실 2개, 세미나실 1개</span
+                            >
+                        </div>
+                        <div>
+                            <span class="body-bd">위치</span>
+                            <span class="body-me"
+                                >충남 아산시 배방읍 광장로 210, 와이몰 2층</span
+                            >
+                        </div>
+                        <div>
+                            <span class="body-bd">이용가격</span>
+                            <span class="body-me">무료</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="subcontent-wrapper">
+                    <span class="title-bd">유의사항</span>
+                    <span class="body-me">사용의 제한 및 취소 가능 사유</span>
+                    <ul class="body-me">
+                        <li>업무에 지장을 초래할 우려가 있다고 판단될 때</li>
+                        <li>
+                            시설 및 설비를 훼손할 우려가 있거나 관리유지상
+                            부적절한 행사라고 판단되는 경우
+                        </li>
+                        <li>사용권을 타인에게 양도 또는 전대한 경우</li>
+                        <li>사용조건이나 관계 규정을 준수하지 않은 경우</li>
+                    </ul>
+                </div>
+                <div class="subcontent-wrapper">
+                    <span class="title-bd">준수사항</span>
+                    <span class="body-me">안전수칙과 사용자 준수사항</span>
+                    <ul class="body-me">
+                        <li>
+                            안전사항의 예방을 위하여 필요하다고 판단되어 즉시
+                            조치할 것을 요구한 사항
+                        </li>
+                        <li>
+                            회의 또는 행사가 종결된 후 회의실을 원상회복하고
+                            청결하게 정돈할 사항
+                        </li>
+                        <li>회의실 내 음식물 반입 금지</li>
+                    </ul>
+                </div>
+                <div class="subcontent-wrapper">
+                    <span class="title-bd">손해배상</span>
+                    <span class="body-me"
+                        >사용승인을 받은 자가 준수사항을 위반함으로써 발생하는
+                        모든 사고에 대하여는 그에 대한 책임을 져야 하며
+                        <br />시설이나 비품 등을 훼손·멸실하였을 때에는 지체없이
+                        원상복구하거나 그 손해를 배상하여야 합니다.
+                    </span>
+                </div>
+                <div class="subcontent-wrapper">
+                    <span class="title-bd">예약문의</span>
+                    <span class="title-bd">문의전화</span>
+                    <span class="body-me">041-424-7017</span>
+                    <span class="title-bd">이메일</span>
+                    <span class="body-me">ikhan@katech.re.kr</span>
+                </div>
+            </div>
+        </div>
+        <footer-default></footer-default>
+    </body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Insert title here.</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="/css/reset.css" />
+        <link rel="stylesheet" href="/css/common.css" />
+        <link rel="stylesheet" href="/css/tab-area.css" />
+        <link rel="stylesheet" href="/css/pages/tech-info/tech-info.css" />
+        <link rel="stylesheet" href="/css/tab-area.css" />
+        <script
+            type="text/javascript"
+            src="/js/common/render-components.js"
+        ></script>
+        <script type="text/javascript" src="/js/components/top-nav.js"></script>
+        <script type="text/javascript" src="/js/components/button.js"></script>
+        <script type="text/javascript" src="/js/components/tab.js"></script>
+        <script type="text/javascript" src="/js/components/footer.js"></script>
+        <script
+            type="text/javascript"
+            src="/js/components/top-image.js"
+        ></script>
+
+        <script
+            type="text/javascript"
+            src="/js/components/tab-area.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="/js/components/text-field.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="/js/components/pagination.js"
+        ></script>
+        <link rel="stylesheet" href="/css/top-nav.css" />
+    </head>
+    <body>
+        <top-nav focus="2"></top-nav>
+        <going-up></going-up>
+        <div class="tab-area">
+            <div class="inner-content introduce">
+                <div class="title" style="color: var(--text-primary)">
+                    충남천안•아산강소특구의<br />
+                    기술홍보영상을 소개합니다.
+                </div>
+            </div>
+            <div class="inner-content tab-container">
+                <div
+                    class="tab title blue"
+                    onclick="location.href='/html/pages/tech-info/search-tech.html'"
+                >
+                    기술검색
+                </div>
+                <div
+                    class="tab title blue"
+                    onclick="location.href='/html/pages/tech-info/excellent-tech.html'"
+                >
+                    우수기술
+                </div>
+                <div
+                    class="tab title blue"
+                    onclick="location.href='/html/pages/tech-info/video.html'"
+                >
+                    기술영상
+                </div>
+                <div
+                    class="tab title blue-filled"
+                    onclick="location.href='/html/pages/tech-info/trend.html'"
+                >
+                    기술동향
+                </div>
+            </div>
+        </div>
+        <div id="tech-trend">
+            <top-image
+                img_src="/image/pages/tech-info/4-0.png"
+                title="유망 기술시장의 정보와 국내외 산업 기술, 산업 트렌드
+            이슈를 분석한 기술 동향의 정보를 신속하게 확인할 수 있습니다."
+                summary="기술동향 확인하기!"
+            ></top-image>
+            <div class="content-wrapper">
+                <div class="post-container">
+                    <div class="post-wrapper">
+                        <img
+                            class="post-img"
+                            src="/image/empty-thumbnail.png"
+                            alt=""
+                        />
+                        <div class="post-detail-wrapper">
+                            <span class="post-title title-bd"
+                                >글로벌 시장동향 보고서</span
+                            >
+                            <span class="post-content body-me"
+                                >연구개발특구진흥재단 사이트 내 유망 기술시장
+                                정보제공 페이지로 이동합니다.</span
+                            >
+                            <div class="button-wrapper">
+                                <button-default
+                                    style_="outline"
+                                    onclick="location.href='https://www.innopolis.or.kr/board?menuId=MENU00999&siteId=null'"
+                                    >보러가기</button-default
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-wrapper">
+                        <img
+                            class="post-img"
+                            src="/image/empty-thumbnail.png"
+                            alt=""
+                        />
+                        <div class="post-detail-wrapper">
+                            <span class="post-title title-bd"
+                                >산업동향 분석</span
+                            >
+                            <span class="post-content body-me"
+                                >국내외의 산업·기술과 관련된 실물경제의 동향과
+                                정보를 확인하실 수 있습니다.</span
+                            >
+                            <div class="button-wrapper">
+                                <button-default
+                                    style_="outline"
+                                    onclick="location.href='https://www.katech.re.kr/page/07090450-89fd-4a3f-8373-ee74cbb3e738'"
+                                    >보러가기</button-default
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-wrapper">
+                        <img
+                            class="post-img"
+                            src="/image/empty-thumbnail.png"
+                            alt=""
+                        />
+                        <div class="post-detail-wrapper">
+                            <span class="post-title title-bd"
+                                >모빌리티 인사이트</span
+                            >
+                            <span class="post-content body-me"
+                                >자동차 기술 및 산업 트렌드 이슈 분석을 이곳에서
+                                만나보실 수 있습니다.</span
+                            >
+                            <div class="button-wrapper">
+                                <button-default
+                                    onclick="location.href='https://www.katech.re.kr/page/07090450-89fd-4a3f-8373-ee74cbb3e738'"
+                                    style_="outline"
+                                    >보러가기</button-default
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer-default></footer-default>
+    </body>
+</html>

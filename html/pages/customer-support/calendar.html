@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Insert title here.</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="/css/reset.css" />
+        <link rel="stylesheet" href="/css/common.css" />
+        <link rel="stylesheet" href="/css/tab-area.css" />
+        <link rel="stylesheet" href="/css/top-nav.css" />
+        <link
+            rel="stylesheet"
+            href="/css/pages/customer-support/customer-support.css"
+        />
+        <link rel="stylesheet" href="/css/calendar.css" />
+        <link
+            rel="stylesheet"
+            href="/css/customer-support/customer-support.css"
+        />
+        <script type="text/javascript" src="/js/components/tab.js"></script>
+        <script
+            type="text/javascript"
+            src="/js/components/tab-area.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="/js/components/pagination.js"
+        ></script>
+        <script type="text/javascript" src="/js/components/top-nav.js"></script>
+        <script type="text/javascript" src="/js/components/button.js"></script>
+        <script type="text/javascript" src="/js/components/footer.js"></script>
+        <script
+            type="text/javascript"
+            src="/js/components/calendar.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="/js/components/top-image.js"
+        ></script>
+        <script src="/js/common/render-components.js"></script>
+    </head>
+    <body>
+        <top-nav focus="5"></top-nav>
+        <going-up></going-up>
+        <div class="tab-area">
+            <div class="inner-content introduce">
+                <div class="title" style="color: var(--text-primary)">
+                    충남천안•아산강소특구의<br />
+                    특구일정입니다.
+                </div>
+            </div>
+            <div class="inner-content tab-container">
+                <div
+                    class="tab title blue"
+                    onclick="location.href='/html/pages/customer-support/notice.html'"
+                >
+                    공지사항
+                </div>
+                <div
+                    class="tab title blue"
+                    onclick="location.href='/html/pages/customer-support/business.html'"
+                >
+                    사업공고
+                </div>
+                <div
+                    class="tab title blue-filled"
+                    onclick="location.href='/html/pages/customer-support/calendar.html'"
+                >
+                    특구일정
+                </div>
+                <div
+                    class="tab title blue"
+                    onclick="location.href='/html/pages/customer-support/meetingroom.html'"
+                >
+                    회의실 예약
+                </div>
+            </div>
+        </div>
+        <div id="content3">
+            <top-image
+                img_src="/image/pages/customer-support/3-0.png"
+                title="충남천안•아산강소특구에서 진행하고 있는
+            프로그램, 행사, 강연 등의 특구 일정을 확인할 수 있습니다."
+                summary="특구일정 확인하기!"
+            ></top-image>
+            <div class="content-wrapper">
+                <div class="calendar-container">
+                    <div class="calendar-header title">
+                        <div>
+                            <span
+                                ><svg
+                                    width="8"
+                                    height="12"
+                                    viewBox="0 0 8 12"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M6.875 11L1.875 6L6.875 1"
+                                        stroke="#4B5563"
+                                        stroke-width="1.875"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    /></svg
+                            ></span>
+                            <span class="title-bd">2023.1</span>
+                            <span>
+                                <svg
+                                    width="8"
+                                    height="12"
+                                    viewBox="0 0 8 12"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M1.125 11L6.125 6L1.125 1"
+                                        stroke="#4B5563"
+                                        stroke-width="1.875"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    /></svg
+                                >`
+                            </span>
+                        </div>
+                        <div>
+                            <div class="calendar-unit top none accent">
+                                <span>일</span>
+                            </div>
+                            <div class="calendar-unit top none default">
+                                <span>월</span>
+                            </div>
+                            <div class="calendar-unit top none default">
+                                <span>화</span>
+                            </div>
+                            <div class="calendar-unit top none default">
+                                <span>수</span>
+                            </div>
+                            <div class="calendar-unit top none default">
+                                <span>목</span>
+                            </div>
+                            <div class="calendar-unit top none default">
+                                <span>금</span>
+                            </div>
+                            <div class="calendar-unit top none default">
+                                <span>토</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calendar-units body-me">
+                        <!-- 이전달 -->
+
+                        <!-- 이번달 -->
+                        <div class="calendar-unit normal accent">
+                            <span>1</span>
+                        </div>
+                        <div class="calendar-unit normal default">
+                            <span>2</span>
+                        </div>
+                        <div class="calendar-unit normal default">
+                            <span>3</span>
+                        </div>
+                        <div class="calendar-unit normal default">
+                            <span>4</span>
+                        </div>
+                        <div class="calendar-unit normal default">
+                            <span>5</span>
+                        </div>
+                        <div class="calendar-unit normal default">
+                            <span>6</span>
+                        </div>
+                        <div class="calendar-unit normal default">
+                            <span>7</span>
+                        </div>
+                        <div class="calendar-unit normal accent">
+                            <span>8</span>
+                        </div>
+                        <div class="calendar-unit normal default">
+                            <span>9</span>
+                        </div>
+                        <div class="calendar-unit normal default">
+                            <span>10</span>
+                        </div>
+                        <div class="calendar-unit normal default">
+                            <span>11</span>
+                        </div>
+                        <div class="calendar-unit normal default">
+                            <span>12</span>
+                        </div>
+                        <div class="calendar-unit normal default">
+                            <span>13</span>
+                        </div>
+                        <div class="calendar-unit normal default">
+                            <span>14</span>
+                        </div>
+                        <div class="calendar-unit normal accent">
+                            <span>15</span>
+                        </div>
+                        <div class="calendar-unit normal default">
+                            <span>16</span>
+                        </div>
+                        <div class="calendar-unit normal default">
+                            <span>17</span>
+                        </div>
+                        <div class="calendar-unit normal default">
+                            <span>18</span>
+                        </div>
+                        <div class="calendar-unit checked">
+                            <span>19</span>
+                        </div>
+                        <div class="calendar-unit checked">
+                            <span>20</span>
+                        </div>
+                        <div class="calendar-unit checked">
+                            <span>21</span>
+                        </div>
+                        <div class="calendar-unit normal accent">
+                            <span>22</span>
+                        </div>
+                        <div class="calendar-unit normal default">
+                            <span>23</span>
+                        </div>
+                        <div class="calendar-unit normal default">
+                            <span>24</span>
+                        </div>
+                        <div class="calendar-unit normal default">
+                            <span>25</span>
+                        </div>
+                        <div class="calendar-unit normal default">
+                            <span>26</span>
+                        </div>
+                        <div class="calendar-unit normal default">
+                            <span>27</span>
+                        </div>
+                        <div class="calendar-unit normal default">
+                            <span>28</span>
+                        </div>
+                        <div class="calendar-unit normal accent">
+                            <span>29</span>
+                        </div>
+                        <div class="calendar-unit normal default">
+                            <span>30</span>
+                        </div>
+                        <div class="calendar-unit normal default">
+                            <span>31</span>
+                        </div>
+                        <!-- 다음달 -->
+                        <div class="calendar-unit normal disabled">
+                            <span>1</span>
+                        </div>
+                        <div class="calendar-unit normal disabled">
+                            <span>2</span>
+                        </div>
+                        <div class="calendar-unit normal disabled">
+                            <span>3</span>
+                        </div>
+                        <div class="calendar-unit normal disabled">
+                            <span>4</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <span class="title"
+                            >12월 01일 (목) ~ 12월 02일 (금)</span
+                        >
+                        <ul>
+                            <li class="body">
+                                강소특구 연구소기업 협의회 하반기 Workshop
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="title">12월 13일 (화)</span>
+                        <ul>
+                            <li class="body">CSI 협의체 발족식 & 세미나</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="title">12월 14일 (수)</span>
+                        <ul>
+                            <li class="body">
+                                기술핵심기관(양방향) 실무자 회의
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="title">12월 15일 (목)</span>
+                        <ul>
+                            <li class="body">광주특구 연계협력 회의</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="title">12월 20일 (화)</span>
+                        <ul>
+                            <li class="body">기업 홍보책자 제작 회의</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="title"
+                            >12월 21일 (수) ~ 12월 22일 (목)</span
+                        >
+                        <ul>
+                            <li class="body">스케일업 TIPS Day</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="title"
+                            >12월 26일 (월) ~ 12월 27일 (화)</span
+                        >
+                        <ul>
+                            <li class="body">
+                                액셀러레이터 역량 강화 전문교육
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="title">12월 29일 (목)</span>
+                        <ul>
+                            <li class="body">
+                                TIPS 프로그램 컨소시엄 구성 회의
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer-default></footer-default>
+    </body>
+</html>

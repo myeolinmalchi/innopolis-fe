@@ -26,22 +26,22 @@ customElements.define(
                         <div class="title-02">
                             <a class="${
                                 focus === 0 ? 'focus' : ''
-                            }" href="/html/pages/introduce/introduce.html">강소특구소개</a>
+                            }" href="/html/pages/introduce/greeting.html">강소특구소개</a>
                             <a class="${
                                 focus === 1 ? 'focus' : ''
                             }" href="/html/pages/support-bussiness-introduce/support-bussiness-introduce.html">지원사업소개</a>
                             <a class="${
                                 focus === 2 ? 'focus' : ''
-                            }" href="/html/pages/tech-info/tech-info.html">기술정보</a>
+                            }" href="/html/pages/tech-info/search-tech.html">기술정보</a>
                             <a class="${
                                 focus === 3 ? 'focus' : ''
-                            }" href="/html/pages/research-field/research-field.html">연구마당</a>
+                            }" href="/html/pages/research-field/field.html">연구마당</a>
                             <a class="${
                                 focus === 4 ? 'focus' : ''
                             }" href="/html/pages/metatown/metatown.html">메타타운</a>
                             <a class="${
                                 focus === 5 ? 'focus' : ''
-                            }" href="/html/pages/customer-support/customer-support.html">고객지원</a>
+                            }" href="/html/pages/customer-support/notice.html">고객지원</a>
                             <a class="${
                                 focus === 6 ? 'focus' : ''
                             }" href="/html/pages/promotion-center/company-promotion/all.html">홍보센터</a>
@@ -91,9 +91,9 @@ customElements.define(
                         <div>
                             <span>강소특구소개</span>
                             <div>
-                                <a href="/html/pages/introduce/introduce.html?tab=0">인사말</a>
-                                <a href="/html/pages/introduce/introduce.html?tab=1">강소특구개요</a>
-                                <a href="/html/pages/introduce/introduce.html?tab=2">오시는길</a>
+                                <a href="/html/pages/introduce/greeting.html">인사말</a>
+                                <a href="/html/pages/introduce/summary.html">강소특구개요</a>
+                                <a href="/html/pages/introduce/way.html">오시는길</a>
                             </div>
                         </div>
                         <div>
@@ -106,18 +106,18 @@ customElements.define(
                         <div>
                             <span>기술정보</span>
                             <div>
-                                <a href="/html/pages/tech-info/tech-info.html?tab=0">기술검색</a>
-                                <a href="/html/pages/tech-info/tech-info.html?tab=1">우수기술</a>
-                                <a href="/html/pages/tech-info/tech-info.html?tab=2">기술동향</a>
-                                <a href="/html/pages/tech-info/tech-info.html?tab=3">기술영상</a>
+                                <a href="/html/pages/tech-info/search-tech.html">기술검색</a>
+                                <a href="/html/pages/tech-info/excellent-tech.html">우수기술</a>
+                                <a href="/html/pages/tech-info/video.html">기술영상</a>
+                                <a href="/html/pages/tech-info/trend.html">기술동향</a>
                             </div>
                         </div>
                         <div>
                             <span>연구마당</span>
                             <div>
-                                <a href="/html/pages/research-field/research-field.html?tab=0">연구분야</a>
-                                <a href="/html/pages/research-field/research-field.html?tab=1">보유장비</a>
-                                <a href="/html/pages/research-field/research-field.html?tab=2">기술자료</a>
+                                <a href="/html/pages/research-field/field.html">연구분야</a>
+                                <a href="/html/pages/research-field/equipment.html">보유장비</a>
+                                <a href="/html/pages/research-field/data.html">기술자료</a>
                             </div>
                         </div>
                         <div>
@@ -129,10 +129,10 @@ customElements.define(
                         <div>
                             <span>고객지원</span>
                             <div>
-                                <a href="/html/pages/customer-support/customer-support.html?tab=0">공지사항</a>
-                                <a href="/html/pages/customer-support/customer-support.html?tab=1">사업공고</a>
-                                <a href="/html/pages/customer-support/customer-support.html?tab=2">특구일정</a>
-                                <a href="/html/pages/customer-support/customer-support.html?tab=3">회의실 예약</a>
+                                <a href="/html/pages/customer-support/notice.html">공지사항</a>
+                                <a href="/html/pages/customer-support/bussiness.html">사업공고</a>
+                                <a href="/html/pages/customer-support/calendar.html">특구일정</a>
+                                <a href="/html/pages/customer-support/meetingroom.html">회의실 예약</a>
                             </div>
                         </div>
                         <div>

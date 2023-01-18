@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Insert title here.</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script
+            type="text/javascript"
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5c71a5ee7132e19292d9d6fe6e8daf46"
+        ></script>
+        <link rel="stylesheet" href="/css/reset.css" />
+        <link rel="stylesheet" href="/css/common.css" />
+        <link rel="stylesheet" href="/css/tab-area.css" />
+        <link rel="stylesheet" href="/css/pages/introduce/way.css" />
+        <link rel="stylesheet" href="/css/top-nav.css" />
+        <link rel="stylesheet" href="/css/tab-area.css" />
+        <script type="text/javascript" src="/js/components/tab.js"></script>
+        <script
+            type="text/javascript"
+            src="/js/components/tab-area.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="/js/components/pages/cagt-introduce.js"
+        ></script>
+        <script type="text/javascript" src="/js/components/top-nav.js"></script>
+        <script type="text/javascript" src="/js/components/footer.js"></script>
+        <script type="text/javascript" src="/js/components/button.js"></script>
+        <script
+            type="text/javascript"
+            src="/js/components/top-image.js"
+        ></script>
+    </head>
+    <body>
+        <top-nav focus="0"></top-nav>
+        <going-up></going-up>
+        <div class="tab-area">
+            <div class="inner-content introduce">
+                <div class="title" style="color: var(--text-primary)">
+                    충남천안•아산강소특구의<br />
+                    오시는길 안내입니다.
+                </div>
+            </div>
+            <div class="inner-content tab-container">
+                <div
+                    class="tab title blue"
+                    onclick="location.href='/html/pages/introduce/greeting.html'"
+                >
+                    인사말
+                </div>
+                <div
+                    class="tab title blue"
+                    onclick="location.href='/html/pages/introduce/summary.html'"
+                >
+                    충남천안•아산강소특구 개요
+                </div>
+                <div
+                    class="tab title blue-filled"
+                    onclick="location.href='/html/pages/introduce/way.html'"
+                >
+                    오시는길
+                </div>
+            </div>
+        </div>
+        <div class="content3">
+            <top-image
+                img_src="/image/pages/introduce/3-0.png"
+                title="R&D 거점지구, R&D·창업 융합지구, 기술사업화
+            지구 위치 정보입니다."
+                summary="위치정보 확인하기!"
+            ></top-image>
+            <div class="content-wrapper">
+                <location-container
+                    title="거점지구"
+                    address="충남 천안시 동남구 풍세면 풍세로 303 한국자동차연구원"
+                    campus="R&D 거점지구"
+                    car="남풍세IC → 세종평택로(2.8km) → 태학산로(0.5km) → 용두4길(1.3km) → 한국자동차연구원"
+                    public1-title="시외버스터미널"
+                    public1-content="신세계백화점 앞 시내버스 정류장 / 광덕, 풍세방향 시내버스 600번, 601번, 650번"
+                    public2-title="천안역동부광장"
+                    public2-content="천안역 앞 우측 시내버스 정류장 / 광덕, 풍세방면 시내버스 600번, 601번, 650번"
+                    x="36.7412164"
+                    y="127.118197"
+                >
+                </location-container>
+                <location-container
+                    title="R&D·창업 융합지구"
+                    subtitle="제 1캠퍼스"
+                    campus="R&D·창업 융합지구"
+                    address="충남 아산시 탕정면 선문로 254번길 12, 사무동 3층 서편"
+                    car="천안IC → 삼성대로 → 번영로 → 이순신대로 → R&D·창업 융합지구 제1캠퍼스"
+                    public1-title="천안아산역"
+                    public1-content="천안아산역 시내버스 정류장 / 직산대림아파트방면 시내버스 19번"
+                    public2-title="탕정역"
+                    public2-content="탕정역건너 시내버스 정류장 / 아산시평생학습관방면 시내버스 702번"
+                    x="36.8020107"
+                    y="127.091351"
+                >
+                </location-container>
+                <location-container
+                    title="R&D·창업 융합지구"
+                    subtitle="제 2캠퍼스"
+                    campus="R&D·창업 융합지구"
+                    address="충남 아산시 배방읍 광장로 210, 와이몰 1, 2층"
+                    car="천안IC → 삼성대로 → 번영로 → 고속철대로 → R&D·창업 융합지구 제2캠퍼스"
+                    public1-title="천안아산역"
+                    public1-content="천안아산역 도보 15분"
+                    x="36.7958510"
+                    y="127.108442"
+                >
+                </location-container>
+                <location-container
+                    title="기술사업화 지구"
+                    campus="기술사업화 지구"
+                    address="충남 천안시 동남구 풍세면 풍세산단로 215"
+                    car="남풍세IC → 세종평택로 → 광풍로 → 용무길 → 기술사업화 지구"
+                    public1-title="시외버스터미널"
+                    public1-content="신세계백화점 앞 시내버스 정류장 / 광덕, 풍세방향 시내버스 600번, 601번"
+                    public2-title="천안역동부광장"
+                    public2-content="천안역 앞 우측 시내버스 정류장 / 광덕, 풍세방면 시내버스 600번, 601번"
+                    x="36.7236879"
+                    y="127.100293"
+                >
+                </location-container>
+            </div>
+        </div>
+        <footer-default></footer-default>
+    </body>
+</html>

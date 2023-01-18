@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Insert title here.</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="/css/reset.css" />
+        <link rel="stylesheet" href="/css/common.css" />
+        <link rel="stylesheet" href="/css/tab-area.css" />
+        <link rel="stylesheet" href="/css/pages/tech-info/tech-info.css" />
+        <link rel="stylesheet" href="/css/tab-area.css" />
+        <script
+            type="text/javascript"
+            src="/js/common/render-components.js"
+        ></script>
+        <script type="text/javascript" src="/js/components/top-nav.js"></script>
+        <script type="text/javascript" src="/js/components/button.js"></script>
+        <script type="text/javascript" src="/js/components/tab.js"></script>
+        <script type="text/javascript" src="/js/components/footer.js"></script>
+        <script
+            type="text/javascript"
+            src="/js/components/top-image.js"
+        ></script>
+
+        <script
+            type="text/javascript"
+            src="/js/components/tab-area.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="/js/components/text-field.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="/js/components/pagination.js"
+        ></script>
+        <link rel="stylesheet" href="/css/top-nav.css" />
+    </head>
+    <body>
+        <top-nav focus="2"></top-nav>
+        <going-up></going-up>
+        <div class="tab-area">
+            <div class="inner-content introduce">
+                <div class="title" style="color: var(--text-primary)">
+                    충남천안•아산강소특구의<br />
+                    우수기술을 소개합니다.
+                </div>
+            </div>
+            <div class="inner-content tab-container">
+                <div
+                    class="tab title blue"
+                    onclick="location.href='/html/pages/tech-info/search-tech.html'"
+                >
+                    기술검색
+                </div>
+                <div
+                    class="tab title blue-filled"
+                    onclick="location.href='/html/pages/tech-info/excellent-tech.html'"
+                >
+                    우수기술
+                </div>
+                <div
+                    class="tab title blue"
+                    onclick="location.href='/html/pages/tech-info/video.html'"
+                >
+                    기술영상
+                </div>
+                <div
+                    class="tab title blue"
+                    onclick="location.href='/html/pages/tech-info/trend.html'"
+                >
+                    기술동향
+                </div>
+            </div>
+        </div>
+        <div id="content2">
+            <top-image
+                img_src="/image/pages/tech-info/2-0.png"
+                title="충남천안•아산강소특구 내
+            유망하는 우수 기술을 확인할 수 있습니다."
+                summary="우수기술 찾아보기!"
+            ></top-image>
+            <div class="content-wrapper">
+                <textfield-search
+                    size="l"
+                    placeholder="검색어를 입력하세요"
+                ></textfield-search>
+                <div class="post-container">
+                    <div
+                        class="post-wrapper"
+                        onclick="location.href='/html/pages/great-tech-detail.html?idx=${idx}'"
+                    >
+                        <img
+                            class="post-img"
+                            src="/image/empty-thumbnail.png"
+                            alt=""
+                        />
+                        <div class="post-detail-wrapper">
+                            <span class="post-detail-subti body-me">TRL</span>
+                            <span class="post-detail-ti body-bd">제목</span>
+                            <div class="post-detail-hashtag-wrapper body-me">
+                                <span class="post-detail-hashtag">#태그</span>
+                                <span class="post-detail-hashtag">#태그</span>
+                                <span class="post-detail-hashtag">#태그</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="post-wrapper"
+                        onclick="location.href='/html/pages/great-tech-detail.html?idx=${idx}'"
+                    >
+                        <img
+                            class="post-img"
+                            src="/image/empty-thumbnail.png"
+                            alt=""
+                        />
+                        <div class="post-detail-wrapper">
+                            <span class="post-detail-subti body-me">TRL</span>
+                            <span class="post-detail-ti body-bd">제목</span>
+                            <div class="post-detail-hashtag-wrapper body-me">
+                                <span class="post-detail-hashtag">#태그</span>
+                                <span class="post-detail-hashtag">#태그</span>
+                                <span class="post-detail-hashtag">#태그</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <pagination-container>
+                    <pagination-arrow direction="left"></pagination-arrow>
+                    <pagination-unit link="/1">1</pagination-unit>
+                    <pagination-unit state="focus">2</pagination-unit>
+                    <pagination-unit>3</pagination-unit>
+                    <pagination-unit>4</pagination-unit>
+                    <pagination-unit>5</pagination-unit>
+                    <pagination-arrow direction="right"></pagination-arrow>
+                </pagination-container>
+            </div>
+        </div>
+        <footer-default></footer-default>
+    </body>
+</html>

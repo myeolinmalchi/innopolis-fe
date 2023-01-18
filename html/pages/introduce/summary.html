@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Insert title here.</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script
+            type="text/javascript"
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5c71a5ee7132e19292d9d6fe6e8daf46"
+        ></script>
+        <link rel="stylesheet" href="/css/reset.css" />
+        <link rel="stylesheet" href="/css/common.css" />
+        <link rel="stylesheet" href="/css/tab-area.css" />
+        <link rel="stylesheet" href="/css/pages/introduce/summary.css" />
+        <link rel="stylesheet" href="/css/top-nav.css" />
+        <link rel="stylesheet" href="/css/tab-area.css" />
+        <script type="text/javascript" src="/js/components/tab.js"></script>
+        <script
+            type="text/javascript"
+            src="/js/components/tab-area.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="/js/components/pages/cagt-introduce.js"
+        ></script>
+        <script type="text/javascript" src="/js/components/top-nav.js"></script>
+        <script type="text/javascript" src="/js/components/footer.js"></script>
+        <script type="text/javascript" src="/js/components/button.js"></script>
+        <script
+            type="text/javascript"
+            src="/js/components/top-image.js"
+        ></script>
+    </head>
+    <body>
+        <top-nav focus="0"></top-nav>
+        <going-up></going-up>
+        <div class="tab-area">
+            <div class="inner-content introduce">
+                <div class="title" style="color: var(--text-primary)">
+                    충남천안•아산강소특구<br />
+                    사업개요를 소개합니다.
+                </div>
+            </div>
+            <div class="inner-content tab-container">
+                <div
+                    class="tab title blue"
+                    onclick="location.href='/html/pages/introduce/greeting.html'"
+                >
+                    인사말
+                </div>
+                <div
+                    class="tab title blue-filled"
+                    onclick="location.href='/html/pages/introduce/summary.html'"
+                >
+                    충남천안•아산강소특구 개요
+                </div>
+                <div
+                    class="tab title blue"
+                    onclick="location.href='/html/pages/introduce/way.html'"
+                >
+                    오시는길
+                </div>
+            </div>
+        </div>
+        <div class="content2">
+            <top-image
+                img_src="/image/pages/introduce/2-0.png"
+                title="차세대 자동차 부품의 혁신 클러스터 특구는
+            충남천안•아산강소특구, 자동차 부품 혁신 클러스터 특구로 구성되어 있습니다."
+                summary="충남천안•아산강소특구 확인하기!"
+            ></top-image>
+            <div class="content-wrapper-full">
+                <div class="item-wrapper">
+                    <span class="title-wrapper title-bd">
+                        충남천안•아산강소특구 소개
+                    </span>
+                    <span class="explanation-wrapper body-me">
+                        충남 천안아산 강소연구개발특구는 차세대 자동차 부품의
+                        혁신 클러스트 특구로<br />아산탕정 천안불당 개발지구와
+                        천안풍세일반산업단지, 한국자동차연구원으로 구성되어
+                        있습니다.
+                    </span>
+                    <div class="video-container">
+                        <iframe
+                            src="https://www.youtube.com/embed/_F31sS5RyPc?start=77"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+                </div>
+                <div class="item-wrapper">
+                    <span class="title-wrapper title-bd">
+                        자동차 부품 혁신 클러스트 특구
+                    </span>
+                    <img src="" alt="" class="visual-content" id="image1" />
+                    <div class="subitem-container">
+                        <div class="subitem-wrapper">
+                            <span class="subitem-title body-bd"
+                                >R&D 거점지구</span
+                            >
+                            <span class="subitem-content body-me"
+                                >국내유일의 자동차 전문 연구원
+                                '한국자동차연구원'을 통해 각종 시험인증을
+                                지원함</span
+                            >
+                        </div>
+                        <div class="subitem-wrapper">
+                            <span class="subitem-title body-bd"
+                                >R&D 창업 융합지구</span
+                            >
+                            <span class="subitem-content body-me"
+                                >생산현장 중심의 제조지원 R&D 창업 융합
+                                지원</span
+                            >
+                        </div>
+                        <div class="subitem-wrapper">
+                            <span class="subitem-title body-bd"
+                                >기술사업화 지구</span
+                            >
+                            <span class="subitem-content body-me"
+                                >기술 사업성 검증 및 연구지원<br />스타트업
+                                창업보육 및 중소기업 인력 재교육</span
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="item-wrapper gap"
+                    style="background: var(--background-gray-01)"
+                >
+                    <div class="img-content-wrapper">
+                        <img
+                            class="img-content-img"
+                            id="image2"
+                            src=""
+                            alt=""
+                        />
+                        <div class="img-content-content-wrapper">
+                            <span class="img-content-content-title title-bd"
+                                >차량용 디스플레이 · 인포테인먼트</span
+                            >
+                            <span class="img-content-content-subtitle body-bd"
+                                >정의</span
+                            >
+                            <span class="img-content-content-content body-me"
+                                >자동차 주행정보와 내/외부 환경정보 및 편의성
+                                제공을 위한 엔터테인먼트 통합 기술</span
+                            >
+                            <span class="img-content-content-subtitle body-bd"
+                                >세부분야</span
+                            >
+                            <span class="img-content-content-content body-me"
+                                >조작‧입력 디바이스 / 커넥티드 디바이스 /
+                                표시‧출력 디바이스</span
+                            >
+                        </div>
+                    </div>
+                    <div class="img-content-wrapper">
+                        <img
+                            class="img-content-img"
+                            id="image3"
+                            src=""
+                            alt=""
+                        />
+                        <div class="img-content-content-wrapper">
+                            <span class="img-content-content-title title-bd"
+                                >차세대 배터리 소재 ‧ 부품</span
+                            >
+                            <span class="img-content-content-subtitle body-bd"
+                                >정의</span
+                            >
+                            <span class="img-content-content-content body-me"
+                                >차세대 배터리 소재‧셀‧모듈‧팩 제조공정기술,
+                                에너지 제어기술 및 충전시스템 기술</span
+                            >
+                            <span class="img-content-content-subtitle body-bd"
+                                >세부분야</span
+                            >
+                            <span class="img-content-content-content body-me"
+                                >Material&Cell / Module&Pack / 전기에너지
+                                제어기술</span
+                            >
+                        </div>
+                    </div>
+                    <div class="img-content-wrapper">
+                        <img
+                            class="img-content-img"
+                            id="image4"
+                            src=""
+                            alt=""
+                        />
+                        <div class="img-content-content-wrapper">
+                            <span class="img-content-content-title title-bd"
+                                >미래형 자동차 융복합 부품</span
+                            >
+                            <span class="img-content-content-subtitle body-bd"
+                                >정의</span
+                            >
+                            <span class="img-content-content-content body-me"
+                                >미래자동차 산업 전환 및 신사업을 위한
+                                편의/안정선 소재‧부품‧모듈 기술</span
+                            >
+                            <span class="img-content-content-subtitle body-bd"
+                                >세부분야</span
+                            >
+                            <span class="img-content-content-content body-me"
+                                >편의성 향상 제품 / 안전성 향상 제품 /
+                                공조시스템 / 고기능성 소재</span
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="item-wrapper">
+                    <span class="title-wrapper title-bd"> 육성전략 </span>
+                    <span class="explanation-wrapper body-me"
+                        >KATECH 강소특구캠퍼스, 지자체 및 협력기관, 기업이
+                        기술사업화 플랫폼을 통해 자동차 부품산업 혁신클러스터
+                        조성</span
+                    >
+                    <div class="last-content">
+                        <div>
+                            <img src="" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer-default></footer-default>
+    </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Insert title here.</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="/css/reset.css" />
+        <link rel="stylesheet" href="/css/common.css" />
+        <link rel="stylesheet" href="/css/tab-area.css" />
+        <link rel="stylesheet" href="/css/pages/introduce/greetings.css" />
+        <link rel="stylesheet" href="/css/top-nav.css" />
+        <link rel="stylesheet" href="/css/tab-area.css" />
+        <script type="text/javascript" src="/js/components/tab.js"></script>
+        <script
+            type="text/javascript"
+            src="/js/components/tab-area.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="/js/components/pages/cagt-introduce.js"
+        ></script>
+        <script type="text/javascript" src="/js/components/top-nav.js"></script>
+        <script type="text/javascript" src="/js/components/footer.js"></script>
+        <script type="text/javascript" src="/js/components/button.js"></script>
+        <script
+            type="text/javascript"
+            src="/js/components/top-image.js"
+        ></script>
+        <link
+            rel="stylesheet"
+            href="/css/pages/research-field/research-field.css"
+        />
+        <script
+            type="text/javascript"
+            src="/js/components/pagination.js"
+        ></script>
+    </head>
+    <body>
+        <top-nav focus="3"></top-nav>
+        <going-up></going-up>
+        <div class="tab-area">
+            <div class="inner-content introduce">
+                <div class="title" style="color: var(--text-primary)">
+                    충남천안•아산강소특구의<br />
+                    특구기술자료를 소개합니다.
+                </div>
+            </div>
+            <div class="inner-content tab-container">
+                <div
+                    class="tab title blue"
+                    onclick="location.href='/html/pages/research-field/field.html'"
+                >
+                    특화연구분야
+                </div>
+                <div
+                    class="tab title blue"
+                    onclick="location.href='/html/pages/research-field/equipment.html'"
+                >
+                    특구보유장비
+                </div>
+                <div
+                    class="tab title blue-filled"
+                    onclick="location.href='/html/pages/research-field/data.html'"
+                >
+                    특구기술자료
+                </div>
+            </div>
+        </div>
+        <div id="content1">
+            <top-image
+                img_src="/image/pages/research-field/3-0.png"
+                title="창업자와 기업의 기술사업화를 활성화하기 위해
+            우수기술 발굴과 거래를 지원합니다."
+                summary="특구기술자료 확인하기!"
+            ></top-image>
+            <div class="content-wrapper">
+                <div class="post-container">
+                    <div
+                        onclick="location.href='/html/pages/research-field/data-detail.html'"
+                    >
+                        <span class="title-bd">제목</span>
+                        <span class="body-me">22.11.11</span>
+                    </div>
+                    <div
+                        onclick="location.href='/html/pages/research-field/data-detail.html'"
+                    >
+                        <span class="title-bd">제목</span>
+                        <span class="body-me">22.11.11</span>
+                    </div>
+                </div>
+                <pagination-container>
+                    <pagination-arrow direction="left"></pagination-arrow>
+                    <pagination-unit state="focus">1</pagination-unit>
+                    <pagination-arrow direction="right"></pagination-arrow>
+                </pagination-container>
+            </div>
+        </div>
+        <footer-default></footer-default>
+    </body>
+</html>

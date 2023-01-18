@@ -47,7 +47,7 @@ customElements.define(
                             }" href="/html/pages/promotion-center/company-promotion/all.html">홍보센터</a>
                             <a class="${
                                 focus === 7 ? 'focus' : ''
-                            }" href="/html/pages/lent-space/lent-space.html">입주마당</a>
+                            }" href="/html/pages/lent-space/first-campus.html">입주마당</a>
                         </div>
                         <div>
                             ${

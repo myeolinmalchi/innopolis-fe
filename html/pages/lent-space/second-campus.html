@@ -43,7 +43,7 @@
         <div class="tab-area">
             <div class="inner-content introduce">
                 <div class="title" style="color: var(--text-primary)">
-                    충남천안•아산강소특구의<br />제 1캠퍼스를 소개합니다.
+                    충남천안•아산강소특구의<br />제 2캠퍼스를 소개합니다.
                 </div>
             </div>
             <div class="inner-content tab-container">
@@ -330,7 +330,7 @@
         <footer-default></footer-default>
         <script>
             const [map1, map2] = [
-                document.querySelector('#content1 div.location-item.map'),
+                document.querySelector('#content2 div.location-item.map'),
                 document.querySelector('#content2 div.location-item.map'),
             ];
 
@@ -339,11 +339,11 @@
 
             const map_object1 = new kakao.maps.Map(map1, {
                 center: position1,
-                level: 3,
+                level: 6,
             });
             const map_object2 = new kakao.maps.Map(map2, {
                 center: position2,
-                level: 3,
+                level: 6,
             });
 
             const marker1 = new kakao.maps.Marker({
@@ -354,25 +354,6 @@
                 position: position2,
             });
             marker2.setMap(map_object2);
-
-            const content_area = document.querySelector('tab-content-area');
-            const observer = new MutationObserver((mutations) => {
-                mutations.forEach((m) => {
-                    if (
-                        m.type === 'attributes' &&
-                        m.attributeName === 'tab-number'
-                    ) {
-                        map_object1.relayout();
-                        map_object1.setCenter(position1);
-                        map_object2.relayout();
-                        map_object2.setCenter(position2);
-                    }
-                });
-            });
-
-            observer.observe(content_area, {
-                attributes: true,
-            });
         </script>
     </body>
 </html>

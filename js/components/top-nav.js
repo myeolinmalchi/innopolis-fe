@@ -99,8 +99,8 @@ customElements.define(
                         <div>
                             <span>지원사업소개</span>
                             <div>
-                                <a href="/html/pages/support-bussiness-introduce/support-bussiness-introduce.html?tab=0">연구기관기술</a>
-                                <a href="/html/pages/support-bussiness-introduce/support-bussiness-introduce.html?tab=1">지역기술</a>
+                                <a href="/html/pages/support-bussiness-introduce/support-bussiness-introduce.html">연구기관기술</a>
+                                <a href="/html/pages/support-bussiness-introduce/local-tech-bussiness.html">지역기술</a>
                             </div>
                         </div>
                         <div>
@@ -138,19 +138,19 @@ customElements.define(
                         <div>
                             <span>홍보센터</span>
                             <div>
-                                <a href="/html/pages/promotion-center/promotion-center.html?tab=0">기업홍보</a>
-                                <a href="/html/pages/promotion-center/promotion-center.html?tab=1">홍보자료</a>
-                                <a href="/html/pages/promotion-center/promotion-center.html?tab=2">보도자료</a>
-                                <a href="/html/pages/promotion-center/promotion-center.html?tab=3">행사사진</a>
+                                <a href="/html/pages/promotion-center/company-promotion/all.html">기업홍보</a>
+                                <a href="/html/pages/promotion-center/promotion-data.html">홍보자료</a>
+                                <a href="/html/pages/promotion-center/news.html">보도자료</a>
+                                <a href="/html/pages/promotion-center/event-photo.html">행사사진</a>
                             </div>
                         </div>
                         <div>
                             <span>입주마당</span>
                             <div>
-                                <a href="/html/pages/lent-space/lent-space.html?tab=0">제1 캠퍼스</a>
-                                <a href="/html/pages/lent-space/lent-space.html?tab=1">제2 캠퍼스</a>
-                                <a href="/html/pages/lent-space/lent-space.html?tab=2">입주공간 신청</a>
-                                <a href="/html/pages/lent-space/lent-space.html?tab=3">입주기업</a>
+                                <a href="/html/pages/lent-space/first-campus.html">제1 캠퍼스</a>
+                                <a href="/html/pages/lent-space/second-campus.html">제2 캠퍼스</a>
+                                <a href="/html/pages/lent-space/apply-space.html">입주공간 신청</a>
+                                <a href="/html/pages/lent-space/occupancy-company/all.html">입주기업</a>
                             </div>
                         </div>
                     </div>

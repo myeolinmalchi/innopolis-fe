@@ -78,7 +78,7 @@ class footer_default extends HTMLElement {
         content_fourth_content.setAttribute('class', 'content fourth left');
         const content_fourth_p = document.createElement('p');
         content_fourth_p.innerText =
-            'Copyright(c) 2023 천안아산강소특구. All right reser';
+            'Copyright(c) 2023 충남천안•아산강소특구. All right reser';
 
         const content_fivth_right_content = document.createElement('div');
         content_fivth_right_content.setAttribute('class', 'rightcontent');

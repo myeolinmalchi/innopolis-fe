@@ -130,7 +130,7 @@ customElements.define(
                 const position = new daum.maps.LatLng(x, y);
                 const map = new kakao.maps.Map(this.location_map, {
                     center: position,
-                    level: 3,
+                    level: 6,
                 });
                 const marker = new kakao.maps.Marker({
                     position: position,
@@ -145,7 +145,7 @@ customElements.define(
                         ) {
                             map.relayout();
                             map.setCenter(position);
-                            map.setLevel(2);
+                            map.setLevel(6);
                         }
                     });
                 });

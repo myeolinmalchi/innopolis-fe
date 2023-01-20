@@ -34,40 +34,5 @@
             </div>
         </div>
         <footer-default></footer-default>
-        <script>
-            let post;
-            const contentWrapper = document.querySelector(
-                'div.detail-container',
-            );
-            const render = () => {
-                contentWrapper.innerHTML = `
-            <span class="title-bd"
-                >${post.title}</span
-            >
-            <span class="body-me">${post.type}</span>
-            <span class="body-me"
-                >
-                ${post.content}
-            </span>
-            <div class="button-container">
-                <button-default
-                    style_="outline"
-                    onclick="location.href='/html/pages/promotion-center.html?tab=0'"
-                    >목록으로</button-default
-                >
-            </div>
-                `;
-            };
-            window.onload = async () => {
-                const urlParams = new URLSearchParams(window.location.search);
-                const index = urlParams.get('idx');
-                const res = await fetch(
-                    '/resources/pages/promotion-center/company-promotion.json',
-                );
-                const posts = await res.json();
-                post = posts[index];
-                render();
-            };
-        </script>
     </body>
 </html>

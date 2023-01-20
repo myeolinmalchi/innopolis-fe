@@ -32,11 +32,17 @@ a{
 }
 .company-img{
     margin-top: 48px;
-    width: 725px;
+    width: calc(100% - 365px);
     height: 400px;
     float: left;
     background-color: #666666;
-
+    overflow: hidden;
+    border-radius: 4px;
+}
+.company-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .company-info{
     margin-top: 48px;

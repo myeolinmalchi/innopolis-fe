@@ -32,7 +32,7 @@ customElements.define(
                             }" href="/html/pages/support-bussiness-introduce/support-bussiness-introduce.html">지원사업소개</a>
                             <a class="${
                                 focus === 2 ? 'focus' : ''
-                            }" href="/html/pages/tech-info/search-tech.html">기술정보</a>
+                            }" href="/html/pages/tech-info/excellent-tech.html">기술정보</a>
                             <a class="${
                                 focus === 3 ? 'focus' : ''
                             }" href="/html/pages/research-field/field.html">연구마당</a>
